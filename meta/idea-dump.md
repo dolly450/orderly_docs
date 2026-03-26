@@ -5,3 +5,4 @@
 - [Ethniki Fasoladoula] αλλαζουμε ονομα;
 - [Ethniki Fasoladoula] σε τι events θα μπορούσαμε να κάνουμε validate το προϊόν;
 - [Ethniki Fasoladoula] χρήση πιλωτικά για δημιουργία metrics και proof για καλύτερο selling point
+- [Ethniki Fasoladoula] διαφορα extra module ασφαλειας για το καθε μαγαζι εστιασης (authenticate σερβιτορος, wifi τοπικο, πληρωμη μονο με καρτα )
