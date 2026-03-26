@@ -3,3 +3,4 @@ venv/
 __pycache__/
 *.log
 opencode_session.json
+orderly_bot.log
