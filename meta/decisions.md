@@ -1,0 +1,1 @@
+- [Ethniki Fasoladoula] Approved Poll: πράσινο χρώμα logo
