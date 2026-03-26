@@ -1,0 +1,15 @@
+[Unit]
+Description=Orderly Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=harold
+WorkingDirectory=/home/harold/.openclaw/workspace/projects/orderly_docs
+Environment="PYTHONPATH=/home/harold/.openclaw/workspace/projects/orderly_docs/src"
+ExecStart=/home/harold/.openclaw/workspace/projects/orderly_docs/venv/bin/python /home/harold/.openclaw/workspace/projects/orderly_docs/src/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
