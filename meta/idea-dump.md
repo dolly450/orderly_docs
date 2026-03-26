@@ -3,3 +3,4 @@
 - να πληρώνουν με κάρτα
 - [Ethniki Fasoladoula] na valoume affiliate links
 - [Ethniki Fasoladoula] αλλαζουμε ονομα;
+- [Ethniki Fasoladoula] σε τι events θα μπορούσαμε να κάνουμε validate το προϊόν;
