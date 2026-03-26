@@ -1,7 +1,3 @@
 - να μπαίνουν οι πελάτες απευθείας στη σελίδα όταν συνδέονται στο τοπικό wifi
 - θα προσθέσουμε qr codes στα τραπέζια
 - να πληρώνουν με κάρτα
-- [Ethniki Fasoladoula] νεα ιδέα
-- [Ethniki Fasoladoula] άλλη ιδέα
-- [Ethniki Fasoladoula] nea idea
-- [Ethniki Fasoladoula] new

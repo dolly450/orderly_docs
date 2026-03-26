@@ -37,17 +37,29 @@ def call_llm(prompt: str, system_prompt: str, full_permissions: bool = False) ->
     full_message = f"{system_prompt}\n\n{prompt}"
     
     try:
-        # Run opencode ask
+        # Run opencode run (one-shot mode)
         process = subprocess.run(
-            [OPENCODE_BIN, "ask", full_message],
+            [OPENCODE_BIN, "run", full_message],
             capture_output=True,
             text=True,
             timeout=60
         )
         
         if process.returncode == 0:
-            response = process.stdout.strip()
-            # If opencode output is empty, check stderr (some tools use it for output)
+            lines = process.stdout.strip().split('\n')
+            # Filter out opencode headers and tool markers
+            filtered_lines = [
+                line for line in lines 
+                if not line.startswith('> build') 
+                and not line.startswith('→ ') 
+                and not line.startswith('← ')
+                and not line.startswith('Index: ')
+                and not line.startswith('===')
+                and not line.startswith('---')
+                and not line.startswith('+++')
+            ]
+            response = '\n'.join(filtered_lines).strip()
+            
             if not response:
                 response = process.stderr.strip()
             return response if response else "Error: Empty response from opencode"
