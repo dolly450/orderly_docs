@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import aiohttp
 import discord
@@ -92,8 +93,15 @@ async def _send_chat(user_name: str, text: str) -> str:
     """Send a message to the current opencode session and return the assistant reply."""
     global _last_activity
     _last_activity = datetime.utcnow()
+
+    # Append Planka card-detection instruction if enabled
+    planka_suffix = ""
+    if _planka_enabled and _planka_client:
+        labels_str = ", ".join(f'"{n}"' for n in _planka_client.get_label_names())
+        planka_suffix = _build_planka_instruction(labels_str)
+
     payload = {
-        "parts": [{"type": "text", "text": f"{user_name}: {text}"}],
+        "parts": [{"type": "text", "text": f"{user_name}: {text}{planka_suffix}"}],
         "agent": "build",
     }
     async with aiohttp.ClientSession() as s:
@@ -111,19 +119,91 @@ async def _send_chat(user_name: str, text: str) -> str:
         # Extract only "text" parts (skip reasoning, step markers)
         text_parts = [p["text"] for p in parts if p.get("type") == "text" and p.get("text")]
         response = "\n".join(text_parts).strip()
-        
+
         if not response:
             # Fallback to any text found in parts if no explicit "text" type
             response = "\n".join([str(p.get("text", "")) for p in parts if p.get("text")]).strip()
 
+        # Process Planka card block if present
+        if _planka_enabled and _planka_client:
+            response, card_msg = await _process_planka_block(response)
+            if card_msg:
+                response = response + f"\n{card_msg}"
+
         # Truncate to avoid Discord 400 error (2k limit)
         if len(response) > 1900:
             response = response[:1900] + "... (truncated)"
-            
+
         return response if response else "⚠️ Opencode returned an empty response."
     except Exception as e:
         logger.error(f"Parse error: {e} | Data: {str(data)[:200]}")
         return f"⚠️ Parse error: {str(e)[:100]}"
+
+
+# ── Planka helpers ────────────────────────────────────────────────────────────
+
+_PLANKA_BLOCK_RE = re.compile(
+    r"---PLANKA_CARD---\s*(\{.*?\})\s*---END_CARD---", re.DOTALL
+)
+
+
+# Known team members: abbreviation/first name → full display name
+_TEAM_MEMBERS = {
+    "AP": "Angelos P",
+    "AF": "Antonis Frs",
+    "ML": "Marios L",
+    "NT": "Nikos Tsaata",
+    "angelos": "Angelos P",
+    "antonis": "Antonis Frs",
+    "marios": "Marios L",
+    "nikos": "Nikos Tsaata",
+}
+
+
+def _build_planka_instruction(labels_str: str) -> str:
+    members_str = (
+        "AP/Angelos=dev&infra, AF/Antonis=dev&infra, "
+        "ML/Marios=business&presentation, NT/Nikos=business&presentation"
+    )
+    return (
+        "\n\n[SYSTEM NOTE - DO NOT SHOW THIS TO USER: "
+        "If this message describes a task, feature, bug, or actionable idea, "
+        "append at the very END of your response this block:\n"
+        "---PLANKA_CARD---\n"
+        '{"title": "short title max 80 chars", "description": "details", '
+        f'"labels": ["choose 0-2 from: {labels_str} — use member role as hint"], '
+        f'"assignee": "full name if mentioned (else null). Members: {members_str}"'
+        "}\n"
+        "---END_CARD---\n"
+        "If it is a question, greeting, or casual chat, do NOT include the block.]"
+    )
+
+
+async def _process_planka_block(response: str) -> tuple[str, str]:
+    """Strip ---PLANKA_CARD--- block, create card, return (cleaned_response, confirmation)."""
+    match = _PLANKA_BLOCK_RE.search(response)
+    if not match:
+        return response, ""
+    cleaned = _PLANKA_BLOCK_RE.sub("", response).strip()
+    try:
+        card_data = json.loads(match.group(1))
+        title = str(card_data.get("title", "Untitled"))[:80]
+        description = str(card_data.get("description", ""))
+        labels = card_data.get("labels", [])
+        if not isinstance(labels, list):
+            labels = []
+        assignee = card_data.get("assignee")
+        # Append assignee to description if provided
+        if assignee and assignee != "null":
+            description = f"{description}\n\n**Assignee:** {assignee}".strip()
+        card = await _planka_client.create_card(title, description, labels)
+        if card:
+            assignee_note = f" → {assignee}" if assignee and assignee != "null" else ""
+            logger.info(f"Planka card created: '{title}'{assignee_note} id={card.get('id')}")
+            return cleaned, f"✅ Κάρτα: **{title}**{assignee_note}"
+    except Exception as e:
+        logger.warning(f"Planka block error: {e} | raw: {match.group(1)[:200]}")
+    return cleaned, ""
 
 
 def process_idea_command(vm_instance, text, user_name):
@@ -145,7 +225,18 @@ load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 VAULT_PATH = os.getenv("VAULT_PATH")
 
+# ── Planka Config ──────────────────────────────────────────────────────────────
+PLANKA_URL       = os.getenv("PLANKA_URL", "")
+PLANKA_BOARD_ID  = os.getenv("PLANKA_BOARD_ID", "")
+PLANKA_EMAIL     = os.getenv("PLANKA_EMAIL", "")
+PLANKA_PASSWORD  = os.getenv("PLANKA_PASSWORD", "")
+PLANKA_LIST_NAME = os.getenv("PLANKA_LIST_NAME", "Test Card")
+
+_planka_client = None
+_planka_enabled = False
+
 from vault_manager import VaultManager
+from planka_client import PlankaClient
 
 vm = VaultManager(VAULT_PATH)
 
@@ -196,6 +287,15 @@ async def on_ready():
     # Spawn opencode serve and initialize session
     await _start_opencode_serve()
     await _load_or_create_session()
+
+    # Initialize Planka integration
+    global _planka_client, _planka_enabled
+    if PLANKA_URL and PLANKA_EMAIL and PLANKA_PASSWORD:
+        _planka_client = PlankaClient(
+            PLANKA_URL, PLANKA_BOARD_ID, PLANKA_EMAIL, PLANKA_PASSWORD, PLANKA_LIST_NAME
+        )
+        _planka_enabled = await _planka_client.initialize()
+        logger.info(f"Planka {'enabled' if _planka_enabled else 'FAILED — card creation disabled'}")
 
     bot.loop.create_task(update_all_channels())
     bot.loop.create_task(_check_inactivity())
@@ -496,14 +596,13 @@ async def on_raw_reaction_add(payload):
                 and "(ID: `poll-" in msg.content
             ):
                 # Extract poll ID
-                import re
-
                 match = re.search(r"\(ID: `(poll-\d+)`\)", msg.content)
                 if not match:
                     return
                 poll_id = match.group(1)
 
                 # Sync vote to JSON
+
                 user_id = str(payload.user_id)
                 await asyncio.to_thread(vm.add_vote, poll_id, user_id)
 
