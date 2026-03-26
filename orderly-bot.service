@@ -7,6 +7,7 @@ Type=simple
 User=harold
 WorkingDirectory=/home/harold/.openclaw/workspace/projects/orderly_docs
 Environment="PYTHONPATH=/home/harold/.openclaw/workspace/projects/orderly_docs/src"
+Environment="PATH=/home/harold/.opencode/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/bin:/bin"
 ExecStart=/home/harold/.openclaw/workspace/projects/orderly_docs/venv/bin/python /home/harold/.openclaw/workspace/projects/orderly_docs/src/bot.py
 Restart=always
 RestartSec=10
