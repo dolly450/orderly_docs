@@ -20,7 +20,7 @@ logger = logging.getLogger("OrderlyBot")
 # ── Opencode Serve Config ─────────────────────────────────────────────────────
 OPENCODE_BIN  = "/home/harold/.opencode/bin/opencode"
 OPENCODE_PORT = int(os.getenv("OPENCODE_PORT", 4096))
-OPENCODE_URL  = f"http://127.0.0.1:{OPENCODE_PORT}"
+OPENCODE_URL  = f"http://192.168.0.204:{OPENCODE_PORT}"
 SESSION_FILE  = os.path.join(os.path.dirname(__file__), "..", "opencode_session.json")
 INACTIVITY_MINUTES = 10
 DELETE_AFTER_MINUTES = 30
@@ -38,7 +38,7 @@ async def _start_opencode_serve():
     """Spawn opencode serve in background and wait until ready."""
     global _opencode_proc
     _opencode_proc = await asyncio.create_subprocess_exec(
-        OPENCODE_BIN, "serve", "--port", str(OPENCODE_PORT),
+        OPENCODE_BIN, "serve", "--hostname", "0.0.0.0", "--port", str(OPENCODE_PORT),
         stdout=asyncio.subprocess.DEVNULL,
         stderr=asyncio.subprocess.DEVNULL,
     )
@@ -105,19 +105,25 @@ async def _send_chat(user_name: str, text: str) -> str:
             if r.status != 200:
                 return f"⚠️ Opencode error {r.status}"
             data = await r.json()
-    # Response: list of messages, last one is the assistant reply
+    # Response: object with "parts" array
     try:
-        messages = data if isinstance(data, list) else data.get("messages", [])
-        # Find last message with role=assistant
-        for msg in reversed(messages):
-            if msg.get("role") == "assistant":
-                parts = msg.get("parts", [])
-                for part in reversed(parts):
-                    if part.get("type") == "text" and part.get("text"):
-                        return part["text"].strip()
-        return str(data)
+        parts = data.get("parts", [])
+        # Extract only "text" parts (skip reasoning, step markers)
+        text_parts = [p["text"] for p in parts if p.get("type") == "text" and p.get("text")]
+        response = "\n".join(text_parts).strip()
+        
+        if not response:
+            # Fallback to any text found in parts if no explicit "text" type
+            response = "\n".join([str(p.get("text", "")) for p in parts if p.get("text")]).strip()
+
+        # Truncate to avoid Discord 400 error (2k limit)
+        if len(response) > 1900:
+            response = response[:1900] + "... (truncated)"
+            
+        return response if response else "⚠️ Opencode returned an empty response."
     except Exception as e:
-        return f"⚠️ Parse error: {e}"
+        logger.error(f"Parse error: {e} | Data: {str(data)[:200]}")
+        return f"⚠️ Parse error: {str(e)[:100]}"
 
 
 def process_idea_command(vm_instance, text, user_name):
