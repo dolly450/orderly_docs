@@ -24,13 +24,13 @@ OPENCODE_PORT = int(os.getenv("OPENCODE_PORT", 4096))
 OPENCODE_URL  = f"http://192.168.0.204:{OPENCODE_PORT}"
 SESSION_FILE  = os.path.join(os.path.dirname(__file__), "..", "opencode_session.json")
 INACTIVITY_MINUTES = 60
-DELETE_AFTER_MINUTES = 30
+
 
 # Shared mutable state
 _opencode_proc  = None   # the subprocess handle
 _session_id     = None   # current opencode session ID
 _last_activity  = datetime.utcnow()
-_pending_deletes = []    # list of (discord.Message, datetime)
+
 
 
 # ── Opencode Serve helpers ────────────────────────────────────────────────────
@@ -302,7 +302,7 @@ async def on_ready():
 
     bot.loop.create_task(update_all_channels())
     bot.loop.create_task(_check_inactivity())
-    bot.loop.create_task(_delete_old_messages())
+
     bot.synced = True
 
 
@@ -322,23 +322,7 @@ async def _check_inactivity():
                     await ch.send("🔄 *Context cleared due to inactivity — new session started.*")
 
 
-async def _delete_old_messages():
-    """Every 10 s: delete bot messages that have passed DELETE_AFTER_MINUTES."""
-    global _pending_deletes
-    while True:
-        await asyncio.sleep(10)
-        now = datetime.utcnow()
-        remaining = []
-        for msg, delete_at in _pending_deletes:
-            if now >= delete_at:
-                try:
-                    await msg.delete()
-                    logger.info("Auto-deleted bot message")
-                except Exception:
-                    pass
-            else:
-                remaining.append((msg, delete_at))
-        _pending_deletes = remaining
+
 
 
 
@@ -486,8 +470,7 @@ async def on_message(message):
             try:
                 response = await _send_chat(message.author.global_name or message.author.name, message.content)
                 bot_msg = await message.reply(response)
-                # Schedule auto-delete
-                _pending_deletes.append((bot_msg, datetime.utcnow() + timedelta(minutes=DELETE_AFTER_MINUTES)))
+
             except Exception as e:
                 logger.error(f"Chat error: {e}")
                 await message.reply(f"⚠️ Σφάλμα: {str(e)[:200]}")
