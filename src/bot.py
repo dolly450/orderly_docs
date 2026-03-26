@@ -22,7 +22,7 @@ OPENCODE_BIN  = "/home/harold/.opencode/bin/opencode"
 OPENCODE_PORT = int(os.getenv("OPENCODE_PORT", 4096))
 OPENCODE_URL  = f"http://192.168.0.204:{OPENCODE_PORT}"
 SESSION_FILE  = os.path.join(os.path.dirname(__file__), "..", "opencode_session.json")
-INACTIVITY_MINUTES = 10
+INACTIVITY_MINUTES = 60
 DELETE_AFTER_MINUTES = 30
 
 # Shared mutable state
@@ -150,14 +150,15 @@ from vault_manager import VaultManager
 vm = VaultManager(VAULT_PATH)
 
 CHANNELS_MAP = {
-    "architecture": "architecture/overview",
-    "design": "design/overview",
-    "ordering-flow": "architecture/ordering-flow",
     "ideas": "meta/idea-dump",
     "decisions": "meta/decisions",
     "polls": "meta/polls",
     "questions": "meta/open-questions",
 }
+
+GITHUB_BASE = "https://github.com/dolly450/orderly_docs/blob/master"
+FILES_FOLDERS = ["architecture", "design", "meta", "business", "pitch"]
+OPENCODE_WEB_URL = "https://chat.haroldpoi.click/L2hvbWUvaGFyb2xkLy5vcGVuY2xhdy93b3Jrc3BhY2UvcHJvamVjdHMvb3JkZXJseV9kb2Nz"
 
 
 class OrderlyBot(discord.Client):
@@ -204,12 +205,14 @@ async def on_ready():
 
 async def _check_inactivity():
     """Every 30 s: reset session if chat has been idle for INACTIVITY_MINUTES."""
+    global _last_activity
     while True:
         await asyncio.sleep(30)
         idle = datetime.utcnow() - _last_activity
         if idle > timedelta(minutes=INACTIVITY_MINUTES):
             logger.info(f"Inactivity ({int(idle.total_seconds()//60)} min) → creating new session")
             await _create_new_session()
+            _last_activity = datetime.utcnow()
             for guild in bot.guilds:
                 ch = discord.utils.get(guild.text_channels, name="chat")
                 if ch:
@@ -236,6 +239,69 @@ async def _delete_old_messages():
 
 
 
+async def update_files_channel():
+    """Scan project folders and update the #files pinned message with categorized links."""
+    for guild in bot.guilds:
+        channel = discord.utils.get(guild.text_channels, name="files")
+        if not channel:
+            continue
+        try:
+            lines = ["📁 **Orderly Project Files**\n"]
+            for folder in FILES_FOLDERS:
+                folder_path = os.path.join(VAULT_PATH, folder)
+                if not os.path.isdir(folder_path):
+                    continue
+                md_files = sorted(
+                    f for f in os.listdir(folder_path) if f.endswith(".md")
+                )
+                if not md_files:
+                    continue
+                lines.append(f"\n**{folder}/**")
+                for filename in md_files:
+                    url = f"{GITHUB_BASE}/{folder}/{filename}"
+                    lines.append(f"• [{filename}]({url})")
+            lines.append(f"\n*Last Scan: {discord.utils.utcnow().strftime('%H:%M:%S UTC')}*")
+            msg_text = "\n".join(lines)
+
+            pins = await channel.pins()
+            existing_pin = next((p for p in pins if p.author == bot.user), None)
+            if existing_pin:
+                await existing_pin.edit(content=msg_text)
+            else:
+                new_msg = await channel.send(msg_text)
+                await new_msg.pin()
+            logger.info("Updated #files channel pin")
+        except Exception as e:
+            logger.error(f"Error updating #files: {e}")
+
+
+async def update_chat_info_pin():
+    """Pin the OpenCode direct link in #chat."""
+    for guild in bot.guilds:
+        channel = discord.utils.get(guild.text_channels, name="chat")
+        if not channel:
+            continue
+        try:
+            msg_text = (
+                "💬 **Orderly Chat**\n\n"
+                "Μπορείτε επίσης να μιλήσετε απευθείας με το OpenCode από το παρακάτω link:\n"
+                f"🔗 {OPENCODE_WEB_URL}"
+            )
+            pins = await channel.pins()
+            existing_pin = next(
+                (p for p in pins if p.author == bot.user and OPENCODE_WEB_URL in p.content),
+                None
+            )
+            if existing_pin:
+                await existing_pin.edit(content=msg_text)
+            else:
+                new_msg = await channel.send(msg_text)
+                await new_msg.pin()
+            logger.info("Updated #chat info pin")
+        except Exception as e:
+            logger.error(f"Error updating #chat pin: {e}")
+
+
 async def update_all_channels():
     logger.info("Starting background vault sync...")
     for guild in bot.guilds:
@@ -244,6 +310,8 @@ async def update_all_channels():
             if channel:
                 await silent_update_channel(channel, vault_topic, channel_name.title())
                 await asyncio.sleep(2)
+    await update_files_channel()
+    await update_chat_info_pin()
     logger.info("Background vault sync finished.")
 
 
