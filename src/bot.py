@@ -19,6 +19,36 @@ logging.basicConfig(
 )
 logger = logging.getLogger('OrderlyBot')
 
+async def get_ai_response(vm_instance, user_name, user_question):
+    OPENCLAW_CMD = os.getenv('OPENCLAW_PATH', '/home/harold/.bun/bin/openclaw')
+    ideas = await asyncio.to_thread(vm_instance.read_from_vault, 'meta/idea-dump')
+    questions = await asyncio.to_thread(vm_instance.read_from_vault, 'meta/open-questions')
+    arch = await asyncio.to_thread(vm_instance.read_from_vault, 'architecture/overview')
+    context = f"Ideas: {ideas[:200]}\nQuestions: {questions[:200]}\nArchitecture: {arch[:200]}"
+    full_prompt = f"Vault Context: {context}\n\nUser (@{user_name}) asks: {user_question}\n\nAnswer briefly."
+    process = await asyncio.create_subprocess_exec(
+        OPENCLAW_CMD, 'ask', full_prompt,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE
+    )
+    stdout, stderr = await process.communicate()
+    if process.returncode == 0:
+        return stdout.decode().strip()
+    else:
+        raise Exception(stderr.decode())
+
+def process_idea_command(vm_instance, text, user_name):
+    vm_instance.write_to_vault("meta/idea-dump", text, user_name)
+    return "💡 Idea added!"
+
+def process_question_command(vm_instance, text, user_name):
+    vm_instance.write_to_vault("meta/open-questions", text, user_name)
+    return "❓ Question added!"
+
+def process_poll_command(vm_instance, text, user_name):
+    vm_instance.write_to_vault("meta/polls", text, user_name)
+    return f"📊 Poll added!"
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 VAULT_PATH = os.getenv('VAULT_PATH')
@@ -74,7 +104,7 @@ async def update_all_channels():
 
 async def silent_update_channel(channel, vault_topic, title):
     try:
-        content = vm.read_from_vault(vault_topic)
+        content = await asyncio.to_thread(vm.read_from_vault, vault_topic)
         github_link = f"https://github.com/dolly450/orderly_docs/blob/master/{vault_topic}.md"
         
         if len(content) > 1800:
@@ -108,19 +138,8 @@ async def on_message(message):
     if message.channel.name == 'chat':
         async with message.channel.typing():
             try:
-                context = f"Vault Context: {vm.read_from_vault('meta/idea-dump')[:300]}"
-                full_prompt = f"{context}\n\nUser (@{message.author.name}) asks: {message.content}\n\nAnswer briefly."
-                process = await asyncio.create_subprocess_exec(
-                    'openclaw', 'ask', full_prompt,
-                    stdout=asyncio.subprocess.PIPE,
-                    stderr=asyncio.subprocess.PIPE
-                )
-                stdout, stderr = await process.communicate()
-                if process.returncode == 0:
-                    response = stdout.decode().strip()
-                    if response: await message.reply(response[:1900])
-                else:
-                    logger.error(f"AI Error: {stderr.decode()}")
+                response = await get_ai_response(vm, message.author.name, message.content)
+                if response: await message.reply(response[:1900])
             except Exception as e:
                 logger.error(f"Chat error: {e}")
 
@@ -128,9 +147,75 @@ async def on_message(message):
 async def idea(interaction: discord.Interaction, text: str):
     await interaction.response.defer()
     user_name = interaction.user.global_name or interaction.user.name
-    vm.write_to_vault("meta/idea-dump", text, user_name)
-    await interaction.followup.send(f"💡 Idea added!")
-    bot.loop.create_task(silent_update_channel(interaction.channel, "meta/idea-dump", "Idea Dump"))
+    try:
+        result_msg = await asyncio.to_thread(process_idea_command, vm, text, user_name)
+        await interaction.followup.send(result_msg)
+        bot.loop.create_task(silent_update_channel(interaction.channel, "meta/idea-dump", "Idea Dump"))
+    except Exception as e:
+        logger.error(f"Idea command error: {e}")
+        await interaction.followup.send("Failed to log idea due to an internal error.")
+
+@bot.tree.command(name="question", description="Καταγραφή ερώτησης")
+async def question(interaction: discord.Interaction, text: str):
+    await interaction.response.defer()
+    user_name = interaction.user.global_name or interaction.user.name
+    try:
+        result_msg = await asyncio.to_thread(process_question_command, vm, text, user_name)
+        await interaction.followup.send(result_msg)
+        bot.loop.create_task(silent_update_channel(interaction.channel, "meta/open-questions", "Questions"))
+    except Exception as e:
+        logger.error(f"Question command error: {e}")
+        await interaction.followup.send("Failed to log question due to an internal error.")
+
+@bot.tree.command(name="poll", description="Καταγραφή ψηφοφορίας")
+async def poll(interaction: discord.Interaction, text: str):
+    await interaction.response.defer()
+    user_name = interaction.user.global_name or interaction.user.name
+    try:
+        result_msg = await asyncio.to_thread(process_poll_command, vm, text, user_name)
+        poll_msg = await interaction.followup.send(f"📊 **Poll by {user_name}**: {text}\nReact with ✅ to approve.")
+        bot.loop.create_task(silent_update_channel(interaction.channel, "meta/polls", "Polls"))
+        
+        # We need the actual discord.Message to add reaction. followup.send returns a WebhookMessage
+        # which can have reactions in dpy 2.x
+        await poll_msg.add_reaction('✅')
+    except Exception as e:
+        logger.error(f"Poll command error: {e}")
+        await interaction.followup.send("Failed to log poll due to an internal error.")
+
+@bot.event
+async def on_raw_reaction_add(payload):
+    if payload.user_id == bot.user.id:
+        return
+    if payload.emoji.name == '✅':
+        channel = bot.get_channel(payload.channel_id)
+        if channel and channel.name == 'polls':
+            try:
+                msg = await channel.fetch_message(payload.message_id)
+                if msg.author == bot.user and "📊 **Poll by" in msg.content:
+                    for reaction in msg.reactions:
+                        if str(reaction.emoji) == '✅' and reaction.count >= 4:
+                            # Extract user and text
+                            lines = msg.content.split('\n')
+                            if lines:
+                                prefix = "📊 **Poll by "
+                                first_line = lines[0]
+                                if first_line.startswith(prefix):
+                                    rest = first_line[len(prefix):]
+                                    if "**: " in rest:
+                                        user_name, text = rest.split("**: ", 1)
+                                        
+                                        decision_text = f"Approved Poll: {text}"
+                                        await asyncio.to_thread(vm.write_to_vault, "meta/decisions", decision_text, user_name)
+                                        
+                                        # Delete the discord poll message
+                                        await msg.delete()
+                                        
+                                        decisions_channel = discord.utils.get(channel.guild.text_channels, name='decisions')
+                                        if decisions_channel:
+                                            bot.loop.create_task(silent_update_channel(decisions_channel, "meta/decisions", "Decisions"))
+            except Exception as e:
+                logger.error(f"Reaction handler error: {e}")
 
 if __name__ == "__main__":
     if not TOKEN:
