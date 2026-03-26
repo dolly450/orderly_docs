@@ -8,7 +8,7 @@
 |------|------------|-----------------------|
 | **Free (Starter)** | €0 | Digital Menu, έως 5 τραπέζια, Orderly branding. |
 | **Basic** | €19 | Παραγγελιοληψία, έως 20 τραπέζια, Πολυγλωσσικό menu. |
-| **Pro** | €99 | POS Integration, Απεριόριστα τραπέζια, Analytics, Upselling. |
+| **Pro** | €39 | POS Integration, Απεριόριστα τραπέζια, Analytics, Upselling. |
 | **Enterprise** | €69+ | Multi-location, API access, Dedicated support. |
 
 ## 2. Εποχιακή Στρατηγική (Seasonality)
