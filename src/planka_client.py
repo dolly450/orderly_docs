@@ -23,21 +23,24 @@ class PlankaClient:
         self._token: str | None = None
         self._list_id: str | None = None
         self._labels: dict[str, str] = {}  # {name_lower: label_id}
+        self._members: dict[str, str] = {}  # {display_name_lower: userId}
         self._session: aiohttp.ClientSession | None = None
         self._auth_lock = asyncio.Lock()
 
     # ── Public API ────────────────────────────────────────────────────────────
 
     async def initialize(self) -> bool:
-        """Authenticate and cache board info. Returns True on success."""
+        """Authenticate and cache board info (lists, labels, members). Returns True on success."""
         try:
             if not await self._authenticate():
                 return False
             if not await self._fetch_board_info():
                 return False
+            await self._fetch_members()
             logger.info(
                 f"Planka ready. List='{self._list_name}' ({self._list_id}), "
-                f"Labels={list(self._labels.keys())}"
+                f"Labels={list(self._labels.keys())}, "
+                f"Members={list(self._members.keys())}"
             )
             return True
         except Exception as e:
@@ -45,9 +48,13 @@ class PlankaClient:
             return False
 
     async def create_card(
-        self, title: str, description: str, label_names: list[str]
+        self,
+        title: str,
+        description: str,
+        label_names: list[str],
+        assignee_name: str | None = None,
     ) -> dict | None:
-        """Create a card in the target list and attach labels. Returns card dict or None."""
+        """Create a card in the target list, attach labels and assign member. Returns card dict or None."""
         if not self._list_id:
             logger.warning("Planka: list_id not set, skipping card creation")
             return None
@@ -66,6 +73,7 @@ class PlankaClient:
             return None
 
         card_id = card.get("id")
+
         for name in label_names:
             label_id = self._labels.get(name.lower())
             if label_id and card_id:
@@ -75,11 +83,55 @@ class PlankaClient:
                     json={"labelId": label_id},
                 )
 
+        if assignee_name and card_id:
+            await self.assign_card(card_id, assignee_name)
+
         return card
+
+    async def assign_card(self, card_id: str, display_name: str) -> bool:
+        """Assign a Planka user to a card by display name. Returns True on success."""
+        user_id = self._resolve_member(display_name)
+        if not user_id:
+            logger.warning(
+                f"Planka: member '{display_name}' not found. "
+                f"Known members: {list(self._members.keys())}"
+            )
+            return False
+        result = await self._request(
+            "POST",
+            f"/api/cards/{card_id}/memberships",
+            json={"userId": user_id, "role": "editor"},
+        )
+        if result is not None:
+            logger.info(f"Planka: assigned user '{display_name}' (id={user_id}) to card {card_id}")
+            return True
+        return False
+
+    def _resolve_member(self, display_name: str) -> str | None:
+        """Return userId for a display name using case-insensitive prefix/substring matching."""
+        if not display_name or display_name == "null":
+            return None
+        key = display_name.strip().lower()
+        # Exact match first
+        if key in self._members:
+            return self._members[key]
+        # Prefix match
+        for member_key, uid in self._members.items():
+            if member_key.startswith(key) or key.startswith(member_key):
+                return uid
+        # Substring match (first name only, e.g. "angelos" matches "angelos p")
+        for member_key, uid in self._members.items():
+            if key in member_key or member_key.split()[0] == key.split()[0]:
+                return uid
+        return None
 
     def get_label_names(self) -> list[str]:
         """Return sorted list of available label names."""
         return sorted(self._labels.keys())
+
+    def get_member_names(self) -> list[str]:
+        """Return sorted list of known member display names."""
+        return sorted(self._members.keys())
 
     async def close(self):
         if self._session and not self._session.closed:
@@ -113,6 +165,25 @@ class PlankaClient:
         except Exception as e:
             logger.error(f"Planka auth exception: {e}")
             return False
+
+    async def _fetch_members(self) -> None:
+        """Fetch board memberships and cache {display_name_lower: userId}."""
+        data = await self._request("GET", f"/api/boards/{self._board_id}/memberships")
+        if not data:
+            logger.warning("Planka: could not fetch board memberships")
+            return
+        items = data.get("items", [])
+        included_users = {u["id"]: u for u in data.get("included", {}).get("users", [])}
+        for membership in items:
+            user_id = membership.get("userId")
+            user = included_users.get(user_id, {})
+            name = (
+                f"{user.get('firstName', '')} {user.get('lastName', '')}".strip()
+                or user.get("username", "")
+            )
+            if name and user_id:
+                self._members[name.lower()] = user_id
+        logger.info(f"Planka: cached {len(self._members)} board members")
 
     async def _fetch_board_info(self) -> bool:
         data = await self._request("GET", f"/api/boards/{self._board_id}")

@@ -166,16 +166,16 @@ def _build_planka_instruction(labels_str: str) -> str:
         "ML/Marios=business&presentation, NT/Nikos=business&presentation"
     )
     return (
-        "\n\n[SYSTEM NOTE - DO NOT SHOW THIS TO USER: "
-        "If this message describes a task, feature, bug, or actionable idea, "
-        "append at the very END of your response this block:\n"
+        "\n\n[ΟΔΗΓΙΑ ΣΥΣΤΗΜΑΤΟΣ - ΜΗΝ ΤΗΝ ΕΜΦΑΝΙΣΕΙΣ ΣΤΟΝ ΧΡΗΣΤΗ: "
+        "Αν το μήνυμα περιγράφει task, feature, bug ή actionable ιδέα, "
+        "πρόσθεσε στο ΤΕΛΟΣ της απάντησής σου αυτό το block:\n"
         "---PLANKA_CARD---\n"
-        '{"title": "short title max 80 chars", "description": "details", '
-        f'"labels": ["choose 0-2 from: {labels_str} — use member role as hint"], '
-        f'"assignee": "full name if mentioned (else null). Members: {members_str}"'
+        '{"title": "σύντιτλος max 80 χαρακτήρες", "description": "λεπτομέρειες", '
+        f'"labels": ["επέλεξε 0-2 από: {labels_str} — χρησιμοποίησε τον ρόλο του μέλους ως hint"], '
+        f'"assignee": "πλήρες όνομα αν αναφέρεται (αλλιώς null). Members: {members_str}"'
         "}\n"
         "---END_CARD---\n"
-        "If it is a question, greeting, or casual chat, do NOT include the block.]"
+        "Αν είναι ερώτηση, χαιρετισμός ή casual συνομιλία, ΜΗΝ συμπεριλάβεις το block.]"
     )
 
 
@@ -192,13 +192,16 @@ async def _process_planka_block(response: str) -> tuple[str, str]:
         labels = card_data.get("labels", [])
         if not isinstance(labels, list):
             labels = []
-        assignee = card_data.get("assignee")
-        # Append assignee to description if provided
-        if assignee and assignee != "null":
-            description = f"{description}\n\n**Assignee:** {assignee}".strip()
-        card = await _planka_client.create_card(title, description, labels)
+        assignee_raw = card_data.get("assignee")
+        # Normalize: treat the string "null" (AI output) as no assignee
+        assignee = None
+        if assignee_raw and str(assignee_raw).strip().lower() not in ("null", "none", ""):
+            assignee = str(assignee_raw).strip()
+            # Resolve abbreviation/first-name via _TEAM_MEMBERS mapping
+            assignee = _TEAM_MEMBERS.get(assignee, _TEAM_MEMBERS.get(assignee.lower(), assignee))
+        card = await _planka_client.create_card(title, description, labels, assignee_name=assignee)
         if card:
-            assignee_note = f" → {assignee}" if assignee and assignee != "null" else ""
+            assignee_note = f" → {assignee}" if assignee else ""
             logger.info(f"Planka card created: '{title}'{assignee_note} id={card.get('id')}")
             return cleaned, f"✅ Κάρτα: **{title}**{assignee_note}"
     except Exception as e:
