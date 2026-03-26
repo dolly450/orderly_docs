@@ -28,15 +28,11 @@ bot = OrderlyBot()
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}')
-    
-    # Ψάχνουμε το κανάλι "ιδέες" για να στείλουμε το Link
     for guild in bot.guilds:
         channel = discord.utils.get(guild.text_channels, name='ideas')
         if channel:
-            # Στέλνουμε το Pinned Link αν δεν υπάρχει ήδη
             content = vm.read_from_vault("meta/idea-dump")
-            msg = f"🚀 **Orderly Vault: Idea Dump**\n\nΜπορείτε να δείτε όλες τις ιδέες μας εδώ: https://github.com/dolly450/orderly_docs/blob/master/meta/idea-dump.md\n\n**Τρέχουσες Ιδέες:**\n```markdown\n{content}\n```"
-            # Στέλνουμε και κάνουμε pin
+            msg = f"🚀 **Orderly Vault: Idea Dump**\n\nLink: https://github.com/dolly450/orderly_docs/blob/master/meta/idea-dump.md\n\n**Ιδέες (Ιστορικό):**\n```markdown\n{content}\n```"
             sent_msg = await channel.send(msg)
             await sent_msg.pin()
             print(f"Pinned message to #{channel.name}")
@@ -44,12 +40,17 @@ async def on_ready():
 @bot.tree.command(name="idea", description="Καταγραφή ιδέας στο Idea Dump")
 async def idea(interaction: discord.Interaction, text: str):
     await interaction.response.defer()
-    msg = vm.write_to_vault("meta/idea-dump", f"- {text}")
     
-    # Ενημέρωση του καναλιού "ideas" αμέσως
+    # Παίρνουμε το όνομα του χρήστη (global name ή username)
+    user_name = interaction.user.global_name or interaction.user.name
+    
+    # Ενημέρωση του Vault με το όνομα του χρήστη
+    msg = vm.write_to_vault("meta/idea-dump", text, user_name)
+    
+    # Ενημέρωση του καναλιού #ideas αμέσως
     channel = discord.utils.get(interaction.guild.text_channels, name='ideas')
     if channel:
-        await channel.send(f"💡 **Νέα Ιδέα:** {text}")
+        await channel.send(f"💡 **Νέα Ιδέα από @{user_name}:** {text}")
         
     await interaction.followup.send(msg)
 
