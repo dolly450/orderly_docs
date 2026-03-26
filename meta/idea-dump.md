@@ -3,3 +3,4 @@
 - να πληρώνουν με κάρτα
 - [Ethniki Fasoladoula] νεα ιδέα
 - [Ethniki Fasoladoula] άλλη ιδέα
+- [Ethniki Fasoladoula] nea idea
