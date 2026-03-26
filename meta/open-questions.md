@@ -1,0 +1,1 @@
+- [Ethniki Fasoladoula] Τι χρώμα να είναι το logo;

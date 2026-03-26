@@ -76,11 +76,8 @@ class OrderlyBot(discord.Client):
         self.synced = False
 
     async def setup_hook(self):
-        try:
-            await self.tree.sync()
-            logger.info("Slash Commands Synced!")
-        except Exception as e:
-            logger.error(f"Error syncing commands: {e}")
+        # Global sync can be slow, we'll use guild-level sync for instant updates in on_ready
+        pass
 
 bot = OrderlyBot()
 
@@ -89,6 +86,16 @@ async def on_ready():
     if bot.synced:
         return
     logger.info(f'SUCCESS: Logged in as {bot.user} (ID: {bot.user.id})')
+    
+    # Instant Sync for all guilds
+    for guild in bot.guilds:
+        try:
+            bot.tree.copy_global_to(guild=guild)
+            await bot.tree.sync(guild=guild)
+            logger.info(f"Synced commands to Guild: {guild.name} ({guild.id})")
+        except Exception as e:
+            logger.error(f"Failed to sync to guild {guild.id}: {e}")
+            
     bot.loop.create_task(update_all_channels())
     bot.synced = True
 

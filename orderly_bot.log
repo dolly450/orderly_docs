@@ -37,3 +37,37 @@
 2026-03-26 17:05:57,194 - OrderlyBot - INFO - Updated pin in #polls
 2026-03-26 17:05:59,734 - OrderlyBot - INFO - Updated pin in #questions
 2026-03-26 17:06:01,736 - OrderlyBot - INFO - Background vault sync finished.
+2026-03-26 17:06:23,000 - VaultManager - INFO - Git push successful: Update meta/idea-dump by Ethniki Fasoladoula: new...
+2026-03-26 17:06:23,954 - OrderlyBot - INFO - Updated pin in #ideas
+2026-03-26 17:11:23,414 - OrderlyBot - ERROR - Chat error: /usr/bin/env: ‘node’: No such file or directory
+
+2026-03-26 17:14:41,731 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-03-26 17:14:41,733 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-03-26 17:14:41,739 - discord.client - INFO - logging in using static token
+2026-03-26 17:14:42,927 - OrderlyBot - INFO - Slash Commands Synced!
+2026-03-26 17:14:43,627 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 81477fa065d3a3d4eabbb760751259d9).
+2026-03-26 17:14:45,636 - OrderlyBot - INFO - SUCCESS: Logged in as orderly#9717 (ID: 1486743242778214594)
+2026-03-26 17:14:45,639 - OrderlyBot - INFO - Starting background vault sync...
+2026-03-26 17:14:46,253 - OrderlyBot - INFO - Updated pin in #architecture
+2026-03-26 17:14:48,798 - OrderlyBot - INFO - Updated pin in #design
+2026-03-26 17:14:51,628 - OrderlyBot - INFO - Updated pin in #ordering-flow
+2026-03-26 17:14:54,210 - OrderlyBot - INFO - Updated pin in #ideas
+2026-03-26 17:14:56,803 - OrderlyBot - INFO - Updated pin in #decisions
+2026-03-26 17:14:59,423 - OrderlyBot - INFO - Updated pin in #polls
+2026-03-26 17:15:02,031 - OrderlyBot - INFO - Updated pin in #questions
+2026-03-26 17:15:04,035 - OrderlyBot - INFO - Background vault sync finished.
+2026-03-26 17:17:23,467 - discord.client - WARNING - PyNaCl is not installed, voice will NOT be supported
+2026-03-26 17:17:23,469 - discord.client - WARNING - davey is not installed, voice will NOT be supported
+2026-03-26 17:17:23,473 - discord.client - INFO - logging in using static token
+2026-03-26 17:17:24,783 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 5e86638df39925241df7d5c10305dfd3).
+2026-03-26 17:17:26,799 - OrderlyBot - INFO - SUCCESS: Logged in as orderly#9717 (ID: 1486743242778214594)
+2026-03-26 17:17:27,059 - OrderlyBot - INFO - Synced commands to Guild: Orderly (1486725744070758532)
+2026-03-26 17:17:27,060 - OrderlyBot - INFO - Starting background vault sync...
+2026-03-26 17:17:27,672 - OrderlyBot - INFO - Updated pin in #architecture
+2026-03-26 17:17:30,369 - OrderlyBot - INFO - Updated pin in #design
+2026-03-26 17:17:33,018 - OrderlyBot - INFO - Updated pin in #ordering-flow
+2026-03-26 17:17:35,638 - OrderlyBot - INFO - Updated pin in #ideas
+2026-03-26 17:17:38,164 - OrderlyBot - INFO - Updated pin in #decisions
+2026-03-26 17:17:40,770 - OrderlyBot - INFO - Updated pin in #polls
+2026-03-26 17:17:43,339 - OrderlyBot - INFO - Updated pin in #questions
+2026-03-26 17:17:45,345 - OrderlyBot - INFO - Background vault sync finished.
