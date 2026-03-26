@@ -6,8 +6,7 @@ from discord import app_commands
 from dotenv import load_dotenv
 import asyncio
 import logging
-import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # Ρύθμιση Logging σε ΑΡΧΕΙΟ
 log_file = "/home/harold/.openclaw/workspace/projects/orderly_docs/orderly_bot.log"
@@ -18,23 +17,107 @@ logging.basicConfig(
 )
 logger = logging.getLogger("OrderlyBot")
 
+# ── Opencode Serve Config ─────────────────────────────────────────────────────
+OPENCODE_BIN  = "/home/harold/.opencode/bin/opencode"
+OPENCODE_PORT = int(os.getenv("OPENCODE_PORT", 4096))
+OPENCODE_URL  = f"http://127.0.0.1:{OPENCODE_PORT}"
+SESSION_FILE  = os.path.join(os.path.dirname(__file__), "..", "opencode_session.json")
+INACTIVITY_MINUTES = 10
+DELETE_AFTER_MINUTES = 30
 
-async def get_ai_response(vm_instance, user_name, user_question):
-    from agent import load_instructions, call_llm
+# Shared mutable state
+_opencode_proc  = None   # the subprocess handle
+_session_id     = None   # current opencode session ID
+_last_activity  = datetime.utcnow()
+_pending_deletes = []    # list of (discord.Message, datetime)
 
-    ideas = await asyncio.to_thread(vm_instance.read_from_vault, "meta/idea-dump")
-    questions = await asyncio.to_thread(
-        vm_instance.read_from_vault, "meta/open-questions"
+
+# ── Opencode Serve helpers ────────────────────────────────────────────────────
+
+async def _start_opencode_serve():
+    """Spawn opencode serve in background and wait until ready."""
+    global _opencode_proc
+    _opencode_proc = await asyncio.create_subprocess_exec(
+        OPENCODE_BIN, "serve", "--port", str(OPENCODE_PORT),
+        stdout=asyncio.subprocess.DEVNULL,
+        stderr=asyncio.subprocess.DEVNULL,
     )
-    arch = await asyncio.to_thread(vm_instance.read_from_vault, "architecture/overview")
-    context = f"Ideas: {ideas[:200]}\nQuestions: {questions[:200]}\nArchitecture: {arch[:200]}"
+    logger.info(f"Spawned opencode serve PID={_opencode_proc.pid} on port {OPENCODE_PORT}")
+    # Poll until server responds
+    for _ in range(20):
+        await asyncio.sleep(0.5)
+        try:
+            async with aiohttp.ClientSession() as s:
+                async with s.get(f"{OPENCODE_URL}/session", timeout=aiohttp.ClientTimeout(total=2)) as r:
+                    if r.status < 500:
+                        logger.info("Opencode serve is ready")
+                        return
+        except Exception:
+            pass
+    logger.warning("Opencode serve may not be ready yet; continuing anyway")
 
-    system_prompt = load_instructions()
-    full_prompt = (
-        f"Vault Context: {context}\n\nUser (@{user_name}) asks: {user_question}"
-    )
 
-    return await asyncio.to_thread(call_llm, full_prompt, system_prompt)
+async def _load_or_create_session() -> str:
+    """Load existing session ID from disk or create a new one."""
+    global _session_id
+    path = SESSION_FILE
+    if os.path.exists(path):
+        with open(path) as f:
+            data = json.load(f)
+            _session_id = data.get("session_id")
+            if _session_id:
+                logger.info(f"Loaded existing session: {_session_id}")
+                return _session_id
+    return await _create_new_session()
+
+
+async def _create_new_session() -> str:
+    """Create a fresh opencode session and persist its ID."""
+    global _session_id
+    async with aiohttp.ClientSession() as s:
+        async with s.post(
+            f"{OPENCODE_URL}/session",
+            json={"title": "Discord Chat"},
+            timeout=aiohttp.ClientTimeout(total=10),
+        ) as r:
+            data = await r.json()
+            _session_id = data["id"]
+    with open(SESSION_FILE, "w") as f:
+        json.dump({"session_id": _session_id}, f)
+    logger.info(f"Created new session: {_session_id}")
+    return _session_id
+
+
+async def _send_chat(user_name: str, text: str) -> str:
+    """Send a message to the current opencode session and return the assistant reply."""
+    global _last_activity
+    _last_activity = datetime.utcnow()
+    payload = {
+        "parts": [{"type": "text", "text": f"{user_name}: {text}"}],
+        "agent": "build",
+    }
+    async with aiohttp.ClientSession() as s:
+        async with s.post(
+            f"{OPENCODE_URL}/session/{_session_id}/message",
+            json=payload,
+            timeout=aiohttp.ClientTimeout(total=60),
+        ) as r:
+            if r.status != 200:
+                return f"⚠️ Opencode error {r.status}"
+            data = await r.json()
+    # Response: list of messages, last one is the assistant reply
+    try:
+        messages = data if isinstance(data, list) else data.get("messages", [])
+        # Find last message with role=assistant
+        for msg in reversed(messages):
+            if msg.get("role") == "assistant":
+                parts = msg.get("parts", [])
+                for part in reversed(parts):
+                    if part.get("type") == "text" and part.get("text"):
+                        return part["text"].strip()
+        return str(data)
+    except Exception as e:
+        return f"⚠️ Parse error: {e}"
 
 
 def process_idea_command(vm_instance, text, user_name):
@@ -103,8 +186,48 @@ async def on_ready():
         except Exception as e:
             logger.error(f"Failed to sync to guild {guild.id}: {e}")
 
+    # Spawn opencode serve and initialize session
+    await _start_opencode_serve()
+    await _load_or_create_session()
+
     bot.loop.create_task(update_all_channels())
+    bot.loop.create_task(_check_inactivity())
+    bot.loop.create_task(_delete_old_messages())
     bot.synced = True
+
+
+async def _check_inactivity():
+    """Every 30 s: reset session if chat has been idle for INACTIVITY_MINUTES."""
+    while True:
+        await asyncio.sleep(30)
+        idle = datetime.utcnow() - _last_activity
+        if idle > timedelta(minutes=INACTIVITY_MINUTES):
+            logger.info(f"Inactivity ({int(idle.total_seconds()//60)} min) → creating new session")
+            await _create_new_session()
+            for guild in bot.guilds:
+                ch = discord.utils.get(guild.text_channels, name="chat")
+                if ch:
+                    await ch.send("🔄 *Context cleared due to inactivity — new session started.*")
+
+
+async def _delete_old_messages():
+    """Every 10 s: delete bot messages that have passed DELETE_AFTER_MINUTES."""
+    global _pending_deletes
+    while True:
+        await asyncio.sleep(10)
+        now = datetime.utcnow()
+        remaining = []
+        for msg, delete_at in _pending_deletes:
+            if now >= delete_at:
+                try:
+                    await msg.delete()
+                    logger.info("Auto-deleted bot message")
+                except Exception:
+                    pass
+            else:
+                remaining.append((msg, delete_at))
+        _pending_deletes = remaining
+
 
 
 async def update_all_channels():
@@ -180,14 +303,17 @@ async def on_message(message):
     if message.author == bot.user:
         return
     if message.channel.name == "chat":
+        global _last_activity
+        _last_activity = datetime.utcnow()
         async with message.channel.typing():
             try:
-                # Use the local get_ai_response which interfaces with opencode CLI
-                response = await get_ai_response(vm, message.author.name, message.content)
-                await message.reply(response)
+                response = await _send_chat(message.author.global_name or message.author.name, message.content)
+                bot_msg = await message.reply(response)
+                # Schedule auto-delete
+                _pending_deletes.append((bot_msg, datetime.utcnow() + timedelta(minutes=DELETE_AFTER_MINUTES)))
             except Exception as e:
                 logger.error(f"Chat error: {e}")
-                await message.reply(f"⚠️ Σφάλμα: {str(e)[:100]}")
+                await message.reply(f"⚠️ Σφάλμα: {str(e)[:200]}")
 
 
 @bot.tree.command(name="idea", description="Καταγραφή ιδέας")
