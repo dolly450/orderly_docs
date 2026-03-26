@@ -8,6 +8,9 @@
 - Οι χρήστες του Discord μπορούν να ρωτήσουν ερωτήσεις στο #chat
 - Τα μηνύματα αποθηκεύονται στο `webhook_pending.json` - ΠΡΕΠΕΙ να ελέγχεις αυτό το αρχείο!
 
+## Important Notes
+- Μετά από κάθε αλλαγή, ΚΑΝΕ ΠΑΝΤΑ commit και push αυτόματα
+
 ## CHECK FOR PENDING MESSAGES
 ΚΑΘΕ ΦΟΡΑ που σε καλούν, ΠΡΩΤΑ ελέγξτε το `webhook_pending.json`:
 ```
