@@ -88,8 +88,8 @@ class TestAssignCard:
         assert result is True
         c._request.assert_called_once_with(
             "POST",
-            "/api/cards/CARD1/memberships",
-            json={"userId": "UID_AP", "role": "editor"},
+            "/api/cards/CARD1/card-memberships",
+            json={"userId": "UID_AP"},
         )
 
     def test_returns_false_on_unknown_member(self):
@@ -173,53 +173,58 @@ class TestCreateCard:
 
 
 # ---------------------------------------------------------------------------
-# 4. _fetch_members — parses API response correctly
+# 4. _fetch_board_info — parses lists, labels, and members from included.users
 # ---------------------------------------------------------------------------
 
-class TestFetchMembers:
-    def test_populates_members_dict(self):
-        c = make_client(members={})
-        api_response = {
-            "items": [
-                {"userId": "UID1", "role": "editor"},
-                {"userId": "UID2", "role": "viewer"},
-            ],
+class TestFetchBoardInfo:
+    def _board_response(self, users=None):
+        return {
+            "item": {"id": "BOARD1", "name": "Orderly"},
             "included": {
-                "users": [
-                    {"id": "UID1", "firstName": "Angelos", "lastName": "P", "username": "ap"},
-                    {"id": "UID2", "firstName": "Marios", "lastName": "L", "username": "ml"},
-                ]
+                "lists": [
+                    {"id": "LIST1", "name": "Backlog"},
+                    {"id": "LIST2", "name": "Test Card"},
+                ],
+                "labels": [
+                    {"id": "LBL1", "name": "Feature"},
+                    {"id": "LBL2", "name": "Bug"},
+                ],
+                "users": users or [
+                    {"id": "UID1", "name": "Angelos P", "username": None},
+                    {"id": "UID2", "name": "Marios L", "username": None},
+                ],
             },
         }
-        c._request = AsyncMock(return_value=api_response)
 
-        asyncio.run(c._fetch_members())
+    def test_populates_members_from_included_users(self):
+        c = make_client(members={})
+        c._request = AsyncMock(return_value=self._board_response())
+
+        asyncio.run(c._fetch_board_info())
 
         assert c._members == {"angelos p": "UID1", "marios l": "UID2"}
 
     def test_falls_back_to_username_when_no_name(self):
         c = make_client(members={})
-        api_response = {
-            "items": [{"userId": "UID3", "role": "editor"}],
-            "included": {
-                "users": [
-                    {"id": "UID3", "firstName": "", "lastName": "", "username": "ntsaata"}
-                ]
-            },
-        }
-        c._request = AsyncMock(return_value=api_response)
+        users = [{"id": "UID3", "name": "", "username": "veloxvelo"}]
+        c._request = AsyncMock(return_value=self._board_response(users=users))
 
-        asyncio.run(c._fetch_members())
+        asyncio.run(c._fetch_board_info())
 
-        assert "ntsaata" in c._members
+        assert "veloxvelo" in c._members
 
-    def test_handles_empty_response_gracefully(self):
+    def test_finds_list_and_caches_labels(self):
         c = make_client(members={})
-        c._request = AsyncMock(return_value=None)
+        c._list_id = None
+        c._labels = {}
+        c._request = AsyncMock(return_value=self._board_response())
 
-        asyncio.run(c._fetch_members())  # should not raise
+        result = asyncio.run(c._fetch_board_info())
 
-        assert c._members == {}
+        assert result is True
+        assert c._list_id == "LIST2"
+        assert "feature" in c._labels
+        assert "bug" in c._labels
 
 
 # ---------------------------------------------------------------------------

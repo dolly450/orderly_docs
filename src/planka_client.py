@@ -36,7 +36,6 @@ class PlankaClient:
                 return False
             if not await self._fetch_board_info():
                 return False
-            await self._fetch_members()
             logger.info(
                 f"Planka ready. List='{self._list_name}' ({self._list_id}), "
                 f"Labels={list(self._labels.keys())}, "
@@ -99,8 +98,8 @@ class PlankaClient:
             return False
         result = await self._request(
             "POST",
-            f"/api/cards/{card_id}/memberships",
-            json={"userId": user_id, "role": "editor"},
+            f"/api/cards/{card_id}/card-memberships",
+            json={"userId": user_id},
         )
         if result is not None:
             logger.info(f"Planka: assigned user '{display_name}' (id={user_id}) to card {card_id}")
@@ -166,26 +165,8 @@ class PlankaClient:
             logger.error(f"Planka auth exception: {e}")
             return False
 
-    async def _fetch_members(self) -> None:
-        """Fetch board memberships and cache {display_name_lower: userId}."""
-        data = await self._request("GET", f"/api/boards/{self._board_id}/memberships")
-        if not data:
-            logger.warning("Planka: could not fetch board memberships")
-            return
-        items = data.get("items", [])
-        included_users = {u["id"]: u for u in data.get("included", {}).get("users", [])}
-        for membership in items:
-            user_id = membership.get("userId")
-            user = included_users.get(user_id, {})
-            name = (
-                f"{user.get('firstName', '')} {user.get('lastName', '')}".strip()
-                or user.get("username", "")
-            )
-            if name and user_id:
-                self._members[name.lower()] = user_id
-        logger.info(f"Planka: cached {len(self._members)} board members")
-
     async def _fetch_board_info(self) -> bool:
+        """Fetch board data — lists, labels, and members from included.users."""
         data = await self._request("GET", f"/api/boards/{self._board_id}")
         if not data:
             return False
@@ -210,6 +191,17 @@ class PlankaClient:
             name = label.get("name", "").strip()
             if name:
                 self._labels[name.lower()] = label["id"]
+
+        # Cache members from included.users (board returns all members here)
+        for user in included.get("users", []):
+            user_id = user.get("id")
+            name = (
+                f"{user.get('name', '')}".strip()
+                or user.get("username", "")
+            )
+            if name and user_id:
+                self._members[name.lower()] = user_id
+        logger.info(f"Planka: cached {len(self._members)} board members: {list(self._members.keys())}")
 
         return True
 
