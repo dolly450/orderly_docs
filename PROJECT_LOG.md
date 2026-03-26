@@ -7,6 +7,7 @@
 - [2026-03-26] **Git Sync:** Automatic commits and pushes on every `/idea`.
 - [2026-03-26] **User Tracking:** Ideas now include the author (e.g., `[Aggelos]`).
 - [2026-03-26] **Testing Suite:** Added `pytest` for `VaultManager` reliability.
+- [2026-03-26] **Refined System Design:** Integrated comprehensive Mermaid diagrams for User Flow, Architecture, State Machine, Batch Prep, Market Analysis, Roadmap, and ERD.
 
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).
