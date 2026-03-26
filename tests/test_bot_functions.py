@@ -10,26 +10,35 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 import bot
 
 def test_generate_ai_response():
-    # Mock vault manager
-    mock_vm = Mock()
-    mock_vm.read_from_vault.return_value = "Mocked Vault Content"
+    """Test that _send_chat calls the opencode HTTP API correctly."""
+    import aiohttp
     
-    # Mock subprocess
-    mock_process = AsyncMock()
-    mock_process.communicate.return_value = (b"This is the AI response.", b"")
-    mock_process.returncode = 0
+    mock_response_data = [
+        {"role": "assistant", "parts": [{"type": "text", "text": "This is the AI response."}]}
+    ]
     
-    with patch('asyncio.create_subprocess_exec', return_value=mock_process) as mock_exec:
-        OPENCLAW_CMD = os.getenv('OPENCLAW_PATH', '/home/harold/.bun/bin/openclaw')
-        
-        response = asyncio.run(bot.get_ai_response(mock_vm, "testuser", "What is our plan?"))
-        
-        assert response == "This is the AI response."
-        mock_exec.assert_called_once()
-        args = mock_exec.call_args[0]
-        assert args[0] == OPENCLAW_CMD
-        assert args[1] == 'ask'
-        assert "User (@testuser) asks: What is our plan?" in args[2]
+    # Mock aiohttp.ClientSession
+    mock_resp = AsyncMock()
+    mock_resp.status = 200
+    mock_resp.json = AsyncMock(return_value=mock_response_data)
+    mock_resp.__aenter__ = AsyncMock(return_value=mock_resp)
+    mock_resp.__aexit__ = AsyncMock(return_value=False)
+    
+    mock_post = AsyncMock()
+    mock_post.__aenter__ = AsyncMock(return_value=mock_resp)
+    mock_post.__aexit__ = AsyncMock(return_value=False)
+    
+    mock_session = AsyncMock()
+    mock_session.__aenter__ = AsyncMock(return_value=mock_session)
+    mock_session.__aexit__ = AsyncMock(return_value=False)
+    mock_session.post = Mock(return_value=mock_post)
+    
+    with patch('aiohttp.ClientSession', return_value=mock_session):
+        # Set a session ID for the test
+        bot._session_id = "test-session-123"
+        response = asyncio.run(bot._send_chat("testuser", "What is our plan?"))
+
+    assert response == "This is the AI response."
 
 def test_idea_command_logic():
     mock_vm = Mock()

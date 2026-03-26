@@ -29,8 +29,11 @@ async def test_idea_command_updates_dedicated_channel():
 
     with patch('bot.process_idea_command', return_value="💡 Idea added!") as mock_process, \
          patch('bot.silent_update_channel', new_callable=AsyncMock) as mock_silent_update, \
-         patch('discord.utils.get', return_value=mock_ideas_channel):
+         patch('discord.utils.get', return_value=mock_ideas_channel), \
+         patch('bot.bot') as mock_bot_instance:
         
+        mock_bot_instance.loop = MagicMock()
+        mock_interaction.response = AsyncMock()
         # Call the underlying callback
         await bot.idea.callback(mock_interaction, "Great idea!")
         
@@ -62,8 +65,11 @@ async def test_question_command_updates_dedicated_channel():
 
     with patch('bot.process_question_command', return_value="❓ Question added!") as mock_process, \
          patch('bot.silent_update_channel', new_callable=AsyncMock) as mock_silent_update, \
-         patch('discord.utils.get', return_value=mock_questions_channel):
+         patch('discord.utils.get', return_value=mock_questions_channel), \
+         patch('bot.bot') as mock_bot_instance:
         
+        mock_bot_instance.loop = MagicMock()
+        mock_interaction.response = AsyncMock()
         await bot.question.callback(mock_interaction, "How to fix this?")
         
         mock_interaction.followup.send.assert_called_once_with("❓ Question added!")
