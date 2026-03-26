@@ -2,3 +2,4 @@
 - θα προσθέσουμε qr codes στα τραπέζια
 - να πληρώνουν με κάρτα
 - [Ethniki Fasoladoula] na valoume affiliate links
+- [Ethniki Fasoladoula] αλλαζουμε ονομα;
