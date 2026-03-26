@@ -1,6 +1,8 @@
 import os
+import json
 from git import Repo
 import logging
+import datetime
 
 logger = logging.getLogger('VaultManager')
 
@@ -38,6 +40,73 @@ class VaultManager:
             
         with open(file_path, 'r') as f:
             return f.read()
+
+    def write_poll(self, poll_id, text, user_name):
+        file_path = os.path.join(self.vault_path, "meta/polls.json")
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        
+        data = {}
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as f:
+                try:
+                    data = json.load(f)
+                except json.JSONDecodeError:
+                    data = {}
+        
+        data[poll_id] = {
+            "text": text,
+            "author": user_name,
+            "votes": [],
+            "created_at": datetime.datetime.now().isoformat()
+        }
+        
+        with open(file_path, 'w') as f:
+            json.dump(data, f, indent=4)
+            
+        self._commit_and_push(f"Add poll {poll_id} by {user_name}")
+        return f"Poll {poll_id} added to vault."
+
+    def add_vote(self, poll_id, user_id):
+        file_path = os.path.join(self.vault_path, "meta/polls.json")
+        if not os.path.exists(file_path):
+            return False
+            
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            
+        if poll_id not in data:
+            return False
+            
+        if user_id not in data[poll_id]["votes"]:
+            data[poll_id]["votes"].append(user_id)
+            with open(file_path, 'w') as f:
+                json.dump(data, f, indent=4)
+            self._commit_and_push(f"Vote on poll {poll_id} by {user_id}")
+            return True
+        return False
+
+    def archive_poll(self, poll_id):
+        file_path = os.path.join(self.vault_path, "meta/polls.json")
+        if not os.path.exists(file_path):
+            return False
+            
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            
+        if poll_id not in data:
+            return False
+            
+        poll = data.pop(poll_id)
+        
+        # Write back remaining polls
+        with open(file_path, 'w') as f:
+            json.dump(data, f, indent=4)
+            
+        # Add to decisions.md
+        self.write_to_vault("meta/decisions", f"Approved Poll: {poll['text']}", poll['author'])
+        
+        self._commit_and_push(f"Archive poll {poll_id}")
+        return True
 
     def _commit_and_push(self, message):
         try:

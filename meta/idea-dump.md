@@ -4,3 +4,4 @@
 - [Ethniki Fasoladoula] νεα ιδέα
 - [Ethniki Fasoladoula] άλλη ιδέα
 - [Ethniki Fasoladoula] nea idea
+- [Ethniki Fasoladoula] new

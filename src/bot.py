@@ -104,8 +104,31 @@ async def update_all_channels():
 
 async def silent_update_channel(channel, vault_topic, title):
     try:
-        content = await asyncio.to_thread(vm.read_from_vault, vault_topic)
+        content = ""
+        if vault_topic == "meta/polls":
+            # Handle JSON polls
+            file_path = os.path.join(VAULT_PATH, "meta/polls.json")
+            if os.path.exists(file_path):
+                with open(file_path, 'r') as f:
+                    try:
+                        polls_data = json.load(f)
+                        if not polls_data:
+                            content = "No active polls."
+                        else:
+                            for p_id, p_info in polls_data.items():
+                                votes_count = len(p_info.get("votes", []))
+                                content += f"- {p_info['text']} (by {p_info['author']}) - 📈 {votes_count}/4 votes\n"
+                    except:
+                        content = "Error reading polls JSON."
+            else:
+                content = "No active polls."
+        else:
+            # Handle standard markdown
+            content = await asyncio.to_thread(vm.read_from_vault, vault_topic)
+        
         github_link = f"https://github.com/dolly450/orderly_docs/blob/master/{vault_topic}.md"
+        if vault_topic == "meta/polls":
+             github_link = f"https://github.com/dolly450/orderly_docs/blob/master/meta/polls.json"
         
         if len(content) > 1800:
             content = content[:1800] + "... (truncated)"
@@ -150,7 +173,14 @@ async def idea(interaction: discord.Interaction, text: str):
     try:
         result_msg = await asyncio.to_thread(process_idea_command, vm, text, user_name)
         await interaction.followup.send(result_msg)
-        bot.loop.create_task(silent_update_channel(interaction.channel, "meta/idea-dump", "Idea Dump"))
+        
+        # Update ONLY the dedicated #ideas channel
+        dedicated_channel = discord.utils.get(interaction.guild.text_channels, name="ideas")
+        if dedicated_channel:
+            bot.loop.create_task(silent_update_channel(dedicated_channel, "meta/idea-dump", "Idea Dump"))
+        else:
+            logger.warning("Dedicated #ideas channel not found for pinning.")
+            
     except Exception as e:
         logger.error(f"Idea command error: {e}")
         await interaction.followup.send("Failed to log idea due to an internal error.")
@@ -162,7 +192,14 @@ async def question(interaction: discord.Interaction, text: str):
     try:
         result_msg = await asyncio.to_thread(process_question_command, vm, text, user_name)
         await interaction.followup.send(result_msg)
-        bot.loop.create_task(silent_update_channel(interaction.channel, "meta/open-questions", "Questions"))
+        
+        # Update ONLY the dedicated #questions channel
+        dedicated_channel = discord.utils.get(interaction.guild.text_channels, name="questions")
+        if dedicated_channel:
+            bot.loop.create_task(silent_update_channel(dedicated_channel, "meta/open-questions", "Questions"))
+        else:
+            logger.warning("Dedicated #questions channel not found for pinning.")
+            
     except Exception as e:
         logger.error(f"Question command error: {e}")
         await interaction.followup.send("Failed to log question due to an internal error.")
@@ -172,12 +209,25 @@ async def poll(interaction: discord.Interaction, text: str):
     await interaction.response.defer()
     user_name = interaction.user.global_name or interaction.user.name
     try:
-        result_msg = await asyncio.to_thread(process_poll_command, vm, text, user_name)
-        poll_msg = await interaction.followup.send(f"📊 **Poll by {user_name}**: {text}\nReact with ✅ to approve.")
-        bot.loop.create_task(silent_update_channel(interaction.channel, "meta/polls", "Polls"))
+        # We'll use the interaction ID as a base for poll ID
+        poll_id = f"poll-{interaction.id}"
         
-        # We need the actual discord.Message to add reaction. followup.send returns a WebhookMessage
-        # which can have reactions in dpy 2.x
+        # Write to JSON vault
+        await asyncio.to_thread(vm.write_poll, poll_id, text, user_name)
+        
+        poll_msg = await interaction.followup.send(
+            f"📊 **Poll by {user_name}**: {text}\n"
+            f"React with ✅ to approve. (ID: `{poll_id}`)"
+        )
+        
+        # Update ONLY the dedicated #polls channel pin
+        dedicated_channel = discord.utils.get(interaction.guild.text_channels, name="polls")
+        if dedicated_channel:
+            bot.loop.create_task(silent_update_channel(dedicated_channel, "meta/polls", "Polls"))
+        else:
+            logger.warning("Dedicated #polls channel not found for pinning.")
+        
+        # Add initial reaction
         await poll_msg.add_reaction('✅')
     except Exception as e:
         logger.error(f"Poll command error: {e}")
@@ -187,35 +237,50 @@ async def poll(interaction: discord.Interaction, text: str):
 async def on_raw_reaction_add(payload):
     if payload.user_id == bot.user.id:
         return
+        
     if payload.emoji.name == '✅':
         channel = bot.get_channel(payload.channel_id)
-        if channel and channel.name == 'polls':
-            try:
-                msg = await channel.fetch_message(payload.message_id)
-                if msg.author == bot.user and "📊 **Poll by" in msg.content:
-                    for reaction in msg.reactions:
-                        if str(reaction.emoji) == '✅' and reaction.count >= 4:
-                            # Extract user and text
-                            lines = msg.content.split('\n')
-                            if lines:
-                                prefix = "📊 **Poll by "
-                                first_line = lines[0]
-                                if first_line.startswith(prefix):
-                                    rest = first_line[len(prefix):]
-                                    if "**: " in rest:
-                                        user_name, text = rest.split("**: ", 1)
-                                        
-                                        decision_text = f"Approved Poll: {text}"
-                                        await asyncio.to_thread(vm.write_to_vault, "meta/decisions", decision_text, user_name)
-                                        
-                                        # Delete the discord poll message
-                                        await msg.delete()
-                                        
-                                        decisions_channel = discord.utils.get(channel.guild.text_channels, name='decisions')
-                                        if decisions_channel:
-                                            bot.loop.create_task(silent_update_channel(decisions_channel, "meta/decisions", "Decisions"))
-            except Exception as e:
-                logger.error(f"Reaction handler error: {e}")
+        if not channel: return
+        
+        try:
+            msg = await channel.fetch_message(payload.message_id)
+            if msg.author == bot.user and "📊 **Poll by" in msg.content and "(ID: `poll-" in msg.content:
+                # Extract poll ID
+                import re
+                match = re.search(r"\(ID: `(poll-\d+)`\)", msg.content)
+                if not match: return
+                poll_id = match.group(1)
+                
+                # Sync vote to JSON
+                user_id = str(payload.user_id)
+                await asyncio.to_thread(vm.add_vote, poll_id, user_id)
+                
+                # Check threshold (using reaction count is safer as it represents current state)
+                for reaction in msg.reactions:
+                    if str(reaction.emoji) == '✅' and reaction.count >= 4:
+                        # Threshold reached! Archive it
+                        await asyncio.to_thread(vm.archive_poll, poll_id)
+                        
+                        # Delete the discord poll message
+                        await msg.delete()
+                        
+                        # Update pins for both polls and decisions
+                        polls_channel = discord.utils.get(channel.guild.text_channels, name='polls')
+                        if polls_channel:
+                            bot.loop.create_task(silent_update_channel(polls_channel, "meta/polls", "Polls"))
+                            
+                        decisions_channel = discord.utils.get(channel.guild.text_channels, name='decisions')
+                        if decisions_channel:
+                            bot.loop.create_task(silent_update_channel(decisions_channel, "meta/decisions", "Decisions"))
+                        break
+                else:
+                    # Just update the polls pin to show new vote count
+                    polls_channel = discord.utils.get(channel.guild.text_channels, name='polls')
+                    if polls_channel:
+                        bot.loop.create_task(silent_update_channel(polls_channel, "meta/polls", "Polls"))
+                        
+        except Exception as e:
+            logger.error(f"Reaction handler error: {e}")
 
 if __name__ == "__main__":
     if not TOKEN:
