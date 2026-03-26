@@ -3,13 +3,11 @@ import discord
 from discord import app_commands
 from dotenv import load_dotenv
 import requests
-import sys
 
 # Φόρτωση ρυθμίσεων
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 VAULT_PATH = os.getenv('VAULT_PATH')
-OPENCLAW_API = "http://localhost:11411/api/v1" # Το gateway URL του OpenClaw
 
 # Εισαγωγή Vault Manager
 from vault_manager import VaultManager
@@ -29,13 +27,30 @@ bot = OrderlyBot()
 
 @bot.event
 async def on_ready():
-    print(f'Logged in as {bot.user} (ID: {bot.user.id})')
-    print('------')
+    print(f'Logged in as {bot.user}')
+    
+    # Ψάχνουμε το κανάλι "ιδέες" για να στείλουμε το Link
+    for guild in bot.guilds:
+        channel = discord.utils.get(guild.text_channels, name='ideas')
+        if channel:
+            # Στέλνουμε το Pinned Link αν δεν υπάρχει ήδη
+            content = vm.read_from_vault("meta/idea-dump")
+            msg = f"🚀 **Orderly Vault: Idea Dump**\n\nΜπορείτε να δείτε όλες τις ιδέες μας εδώ: https://github.com/dolly450/orderly_docs/blob/master/meta/idea-dump.md\n\n**Τρέχουσες Ιδέες:**\n```markdown\n{content}\n```"
+            # Στέλνουμε και κάνουμε pin
+            sent_msg = await channel.send(msg)
+            await sent_msg.pin()
+            print(f"Pinned message to #{channel.name}")
 
 @bot.tree.command(name="idea", description="Καταγραφή ιδέας στο Idea Dump")
 async def idea(interaction: discord.Interaction, text: str):
     await interaction.response.defer()
     msg = vm.write_to_vault("meta/idea-dump", f"- {text}")
+    
+    # Ενημέρωση του καναλιού "ideas" αμέσως
+    channel = discord.utils.get(interaction.guild.text_channels, name='ideas')
+    if channel:
+        await channel.send(f"💡 **Νέα Ιδέα:** {text}")
+        
     await interaction.followup.send(msg)
 
 @bot.tree.command(name="show", description="Εμφάνιση περιεχομένου από το Vault")
@@ -44,21 +59,6 @@ async def show(interaction: discord.Interaction, topic: str):
     if len(content) > 1900:
         content = content[:1900] + "... (truncated)"
     await interaction.response.send_message(f"### Content for {topic}:\n```markdown\n{content}\n```")
-
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-    # Αν το μήνυμα είναι σε DM ή το bot γίνει mention, μιλάμε στο OpenClaw
-    if isinstance(message.channel, discord.DMChannel) or bot.user.mentioned_in(message):
-        async with message.channel.typing():
-            # Καλούμε το OpenClaw (μέσω του Gateway)
-            # ΣΗΜΕΙΩΣΗ: Εδώ θα μπορούσαμε να στείλουμε το μήνυμα στο sessions_send 
-            # για να απαντήσω εγώ απευθείας.
-            # Για το MVP, θα στείλουμε ένα placeholder και θα το συνδέσουμε στο Phase 2.
-            response = f"Είμαι ο Orderly Bot! Δουλεύω με το OpenClaw για να βοηθήσω την ομάδα. (Phase 2 Integration incoming)"
-            await message.reply(response)
 
 if __name__ == "__main__":
     bot.run(TOKEN)
