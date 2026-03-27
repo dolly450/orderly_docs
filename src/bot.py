@@ -250,25 +250,8 @@ async def on_ready():
         logger.info(f"Planka {'enabled' if _planka_enabled else 'FAILED — card creation disabled'}")
 
     bot.loop.create_task(update_all_channels())
-    bot.loop.create_task(_check_inactivity())
 
     bot.synced = True
-
-
-async def _check_inactivity():
-    """Every 30 s: reset session if chat has been idle for INACTIVITY_MINUTES."""
-    global _last_activity
-    while True:
-        await asyncio.sleep(30)
-        idle = datetime.utcnow() - _last_activity
-        if idle > timedelta(minutes=INACTIVITY_MINUTES):
-            logger.info(f"Inactivity ({int(idle.total_seconds()//60)} min) → creating new session")
-            await _create_new_session()
-            _last_activity = datetime.utcnow()
-            for guild in bot.guilds:
-                ch = discord.utils.get(guild.text_channels, name="chat")
-                if ch:
-                    await ch.send("🔄 *Context cleared due to inactivity — new session started.*")
 
 
 
@@ -414,9 +397,15 @@ async def on_message(message):
         return
     if message.channel.name == "chat":
         global _last_activity
-        _last_activity = datetime.utcnow()
+        now = datetime.utcnow()
+        idle = now - _last_activity
+        _last_activity = now
         async with message.channel.typing():
             try:
+                if idle > timedelta(minutes=INACTIVITY_MINUTES):
+                    logger.info(f"Inactivity ({int(idle.total_seconds()//60)} min) → creating new session")
+                    await _create_new_session()
+                    await message.channel.send("🔄 *Context cleared due to inactivity — new session started.*")
                 response = await _send_chat(message.author.global_name or message.author.name, message.content)
                 bot_msg = await message.reply(response)
 
