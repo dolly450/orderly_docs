@@ -1,2 +1,3 @@
 - [Ethniki Fasoladoula] Τι χρώμα να είναι το logo;
 - [Ethniki Fasoladoula] ποσο καλυτεροι ειμαστε απο το brinfood
+- [Ethniki Fasoladoula] θα αντικαταστήσουμε το pda ή θα ενσωματωθουμε στα υπαρχον pda;
