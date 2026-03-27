@@ -124,12 +124,6 @@ async def _send_chat(user_name: str, text: str) -> str:
             # Fallback to any text found in parts if no explicit "text" type
             response = "\n".join([str(p.get("text", "")) for p in parts if p.get("text")]).strip()
 
-        # Process Planka card block if present
-        if _planka_enabled and _planka_client:
-            response, card_msg = await _process_planka_block(response)
-            if card_msg:
-                response = response + f"\n{card_msg}"
-
         # Truncate to avoid Discord 400 error (2k limit)
         if len(response) > 1900:
             response = response[:1900] + "... (truncated)"
@@ -142,71 +136,26 @@ async def _send_chat(user_name: str, text: str) -> str:
 
 # ── Planka helpers ────────────────────────────────────────────────────────────
 
-_PLANKA_BLOCK_RE = re.compile(
-    r"---PLANKA_CARD---\s*(\{.*?\})\s*---END_CARD---", re.DOTALL
-)
-
-
-# Known team members: abbreviation/first name → full display name
-_TEAM_MEMBERS = {
-    "AP": "Angelos P",
-    "AF": "Antonis Frs",
-    "ML": "Marios L",
-    "NT": "Nikos Tsaata",
-    "angelos": "Angelos P",
-    "antonis": "Antonis Frs",
-    "marios": "Marios L",
-    "nikos": "Nikos Tsaata",
-}
-
-
 def _build_planka_instruction(labels_str: str) -> str:
+    vault = os.getenv("VAULT_PATH", "/home/harold/.openclaw/workspace/projects/orderly_docs")
     members_str = (
-        "AP/Angelos=dev&infra, AF/Antonis=dev&infra, "
-        "ML/Marios=business&presentation, NT/Nikos=business&presentation"
+        "AP/Angelos P (dev&infra), AF/Antonis Frs (dev&infra), "
+        "ML/Marios L (business), NT/Nikos Tsaata (business)"
     )
     return (
-        "\n\n[ΟΔΗΓΙΑ ΣΥΣΤΗΜΑΤΟΣ - ΜΗΝ ΤΗΝ ΕΜΦΑΝΙΣΕΙΣ ΣΤΟΝ ΧΡΗΣΤΗ: "
-        "Αν το μήνυμα περιγράφει task, feature, bug ή actionable ιδέα, "
-        "πρόσθεσε στο ΤΕΛΟΣ της απάντησής σου αυτό το block:\n"
-        "---PLANKA_CARD---\n"
-        '{"title": "σύντιτλος max 80 χαρακτήρες", "description": "λεπτομέρειες", '
-        f'"labels": ["επέλεξε 0-2 από: {labels_str} — χρησιμοποίησε τον ρόλο του μέλους ως hint"], '
-        f'"assignee": "πλήρες όνομα αν αναφέρεται (αλλιώς null). Members: {members_str}"'
-        "}\n"
-        "---END_CARD---\n"
-        "Αν είναι ερώτηση, χαιρετισμός ή casual συνομιλία, ΜΗΝ συμπεριλάβεις το block.]"
+        f"\n\n[ΟΔΗΓΙΑ ΣΥΣΤΗΜΑΤΟΣ - ΜΗΝ ΤΗΝ ΕΜΦΑΝΙΣΕΙΣ ΣΤΟΝ ΧΡΗΣΤΗ: "
+        f"Αν το μήνυμα περιγράφει task, feature, bug ή actionable ιδέα, "
+        f"τρέξε ΑΜΕΣΩΣ την παρακάτω εντολή (μία κάρτα μόνο):\n"
+        f"  cd {vault} && python src/planka_create.py "
+        f'--title "σύντιτλος max 80 χαρ" '
+        f'--description "λεπτομέρειες" '
+        f'--labels "label1,label2" '
+        f'--assignee "συντομογραφία ή όνομα"\n'
+        f"Διαθέσιμα labels: {labels_str}\n"
+        f"Members: {members_str}\n"
+        f"Αν είναι ερώτηση ή casual chat, ΜΗΝ τρέξεις την εντολή.\n"
+        f"ΠΑΝΤΑ απάντα στα ΕΛΛΗΝΙΚΆ, ακόμα και αν το μήνυμα είναι στα αγγλικά.]"
     )
-
-
-async def _process_planka_block(response: str) -> tuple[str, str]:
-    """Strip ---PLANKA_CARD--- block, create card, return (cleaned_response, confirmation)."""
-    match = _PLANKA_BLOCK_RE.search(response)
-    if not match:
-        return response, ""
-    cleaned = _PLANKA_BLOCK_RE.sub("", response).strip()
-    try:
-        card_data = json.loads(match.group(1))
-        title = str(card_data.get("title", "Untitled"))[:80]
-        description = str(card_data.get("description", ""))
-        labels = card_data.get("labels", [])
-        if not isinstance(labels, list):
-            labels = []
-        assignee_raw = card_data.get("assignee")
-        # Normalize: treat the string "null" (AI output) as no assignee
-        assignee = None
-        if assignee_raw and str(assignee_raw).strip().lower() not in ("null", "none", ""):
-            assignee = str(assignee_raw).strip()
-            # Resolve abbreviation/first-name via _TEAM_MEMBERS mapping
-            assignee = _TEAM_MEMBERS.get(assignee, _TEAM_MEMBERS.get(assignee.lower(), assignee))
-        card = await _planka_client.create_card(title, description, labels, assignee_name=assignee)
-        if card:
-            assignee_note = f" → {assignee}" if assignee else ""
-            logger.info(f"Planka card created: '{title}'{assignee_note} id={card.get('id')}")
-            return cleaned, f"✅ Κάρτα: **{title}**{assignee_note}"
-    except Exception as e:
-        logger.warning(f"Planka block error: {e} | raw: {match.group(1)[:200]}")
-    return cleaned, ""
 
 
 def process_idea_command(vm_instance, text, user_name):

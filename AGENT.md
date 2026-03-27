@@ -56,6 +56,27 @@ cat webhook_pending.json
 - `business/`: Business model canvas
 - `pitch/`: Pitch deck
 
+## Planka Integration
+
+Για να δεις διαθέσιμα labels:
+```bash
+cd $VAULT_PATH && python src/planka_create.py --list-labels
+```
+
+Για να δημιουργήσεις κάρτα στο Planka (πάντα στη λίστα "Test Card"):
+```bash
+cd $VAULT_PATH && python src/planka_create.py \
+  --title "Τίτλος" \
+  --description "Λεπτομέρειες" \
+  --labels "label1,label2" \
+  --assignee "AP"
+```
+
+Members: AP=Angelos P (dev&infra), AF=Antonis Frs (dev&infra), ML=Marios L (business), NT=Nikos Tsaata (business)
+
+Αν ένα μήνυμα περιγράφει task/idea/bug, τρέξε αυτόματα το script. Αν είναι ερώτηση ή casual chat, μην το τρέξεις.
+ΠΑΝΤΑ απάντα στα ΕΛΛΗΝΙΚΆ.
+
 ## Σημαντικές Αλλαγές (changelog)
 
 ### 2026-03-26

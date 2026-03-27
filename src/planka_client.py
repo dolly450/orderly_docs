@@ -61,7 +61,7 @@ class PlankaClient:
         data = await self._request(
             "POST",
             f"/api/lists/{self._list_id}/cards",
-            json={"name": title[:255], "position": 65535, "description": description},
+            json={k: v for k, v in {"name": title[:255], "position": 65535, "description": description or None, "type": "project"}.items() if v is not None},
         )
         if not data:
             return None
@@ -78,7 +78,7 @@ class PlankaClient:
             if label_id and card_id:
                 await self._request(
                     "POST",
-                    f"/api/cards/{card_id}/labels",
+                    f"/api/cards/{card_id}/card-labels",
                     json={"labelId": label_id},
                 )
 
