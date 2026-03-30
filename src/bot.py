@@ -2,12 +2,23 @@ import os
 import re
 import json
 import subprocess
+import fcntl
+import sys
 import discord
 from discord import app_commands
 from dotenv import load_dotenv
 import asyncio
 import logging
 from datetime import datetime, timedelta
+
+# ── Single-instance lock ──────────────────────────────────────────────────────
+_LOCK_FILE = "/tmp/orderly-bot.lock"
+_lock_fd = open(_LOCK_FILE, "w")
+try:
+    fcntl.flock(_lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+except IOError:
+    print("orderly-bot already running — exiting duplicate instance", flush=True)
+    sys.exit(0)
 
 # Ρύθμιση Logging σε ΑΡΧΕΙΟ
 log_file = "/home/harold/.openclaw/workspace/projects/orderly_docs/orderly_bot.log"
@@ -114,7 +125,7 @@ async def _send_chat(user_name: str, text: str) -> str:
 
     full_msg = f"{user_name}: {text}{planka_suffix}"
 
-    cmd = [CLAUDE_BIN, "--print", "--output-format", "json", "--model", model]
+    cmd = [CLAUDE_BIN, "--print", "--dangerously-skip-permissions", "--output-format", "json", "--model", model]
     if session_valid:
         cmd += ["--resume", _session_id]
     cmd.append(full_msg)
