@@ -4,3 +4,4 @@ __pycache__/
 *.log
 opencode_session.json
 orderly_bot.log
+claude_session.json
