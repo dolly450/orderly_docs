@@ -4,7 +4,6 @@ After=network.target
 
 [Service]
 Type=simple
-User=harold
 WorkingDirectory=/home/harold/.openclaw/workspace/projects/orderly_docs
 Environment="PYTHONPATH=/home/harold/.openclaw/workspace/projects/orderly_docs/src"
 Environment="PATH=/home/harold/.local/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:/usr/bin:/bin"

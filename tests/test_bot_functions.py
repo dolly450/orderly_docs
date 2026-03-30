@@ -27,7 +27,8 @@ def test_generate_ai_response():
 
     with patch("asyncio.create_subprocess_exec", return_value=mock_proc), \
          patch("subprocess.run") as mock_run, \
-         patch("asyncio.to_thread", return_value=""):  # no git diff
+         patch("asyncio.to_thread", return_value=""), \
+         patch("bot._save_session"):  # don't write to claude_session.json
         mock_run.return_value.stdout = "abc123\n"
         bot._session_id = "test-session-123"
         bot._session_start = None  # force new session
