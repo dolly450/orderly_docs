@@ -44,7 +44,7 @@ def test_generate_ai_response_cli_error():
 
     with patch("asyncio.create_subprocess_exec", return_value=mock_proc), \
          patch("subprocess.run") as mock_run, \
-         patch("asyncio.to_thread", return_value=""), \
+         patch("bot._get_git_diff", return_value=""), \
          patch("bot.get_quota_string", return_value="\n\n=== Claude API Quota Usage ==="), \
          patch("bot._save_session"):
         mock_run.return_value.stdout = "abc123\n"
