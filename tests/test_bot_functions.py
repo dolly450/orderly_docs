@@ -36,6 +36,25 @@ def test_generate_ai_response():
 
     assert response == "This is the AI response."
 
+def test_generate_ai_response_cli_error():
+    """Test that _send_chat handles Claude CLI errors and returns the quota limit message."""
+    mock_proc = AsyncMock()
+    mock_proc.returncode = 1
+    mock_proc.communicate = AsyncMock(return_value=(b"", b"Error: ratelimit"))
+
+    with patch("asyncio.create_subprocess_exec", return_value=mock_proc), \
+         patch("subprocess.run") as mock_run, \
+         patch("asyncio.to_thread", return_value=""), \
+         patch("bot.get_quota_string", return_value="\n\n=== Claude API Quota Usage ==="), \
+         patch("bot._save_session"):
+        mock_run.return_value.stdout = "abc123\n"
+        bot._session_id = "test-session-123"
+        bot._session_start = None
+        response = asyncio.run(bot._send_chat("testuser", "Trigger error"))
+
+    assert "⚠️ Claude CLI error" in response
+    assert "=== Claude API Quota Usage ===" in response
+
 def test_idea_command_logic():
     mock_vm = Mock()
     user_name = "testuser"

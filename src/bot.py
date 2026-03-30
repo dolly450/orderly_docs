@@ -10,15 +10,53 @@ from dotenv import load_dotenv
 import asyncio
 import logging
 from datetime import datetime, timedelta
-
+from check_claude_quota import get_quota_string
 # ── Single-instance lock ──────────────────────────────────────────────────────
 _LOCK_FILE = "/tmp/orderly-bot.lock"
-_lock_fd = open(_LOCK_FILE, "w")
-try:
-    fcntl.flock(_lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-except IOError:
-    print("orderly-bot already running — exiting duplicate instance", flush=True)
-    sys.exit(0)
+_lock_fd = None
+
+def _enforce_singleton():
+    import signal, time
+    old_pid = None
+    if os.path.exists(_LOCK_FILE):
+        try:
+            with open(_LOCK_FILE, "r") as f:
+                old_pid = int(f.read().strip())
+        except Exception:
+            pass
+
+    fd = open(_LOCK_FILE, "w")
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except IOError:
+        if old_pid:
+            print(f"orderly-bot already running (PID {old_pid}). Killing it to take over...", flush=True)
+            try:
+                os.kill(old_pid, signal.SIGTERM)
+                time.sleep(1)  # Give it time to exit
+            except Exception:
+                pass
+            
+            # Try to grab the lock again
+            try:
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except IOError:
+                print("Failed to acquire lock after killing old PID. Exiting with error.", flush=True)
+                sys.exit(1)
+        else:
+            print("orderly-bot already running but couldn't find PID. Exiting with error.", flush=True)
+            sys.exit(1)
+            
+    fd.seek(0)
+    fd.truncate()
+    fd.write(str(os.getpid()))
+    fd.flush()
+    return fd
+
+if "pytest" not in sys.modules:
+    _lock_fd = _enforce_singleton()
+else:
+    _lock_fd = None
 
 # Ρύθμιση Logging σε ΑΡΧΕΙΟ
 log_file = "/home/harold/.openclaw/workspace/projects/orderly_docs/orderly_bot.log"
@@ -147,8 +185,8 @@ async def _send_chat(user_name: str, text: str) -> str:
 
     if proc.returncode != 0:
         logger.error(f"claude exited {proc.returncode}: {stderr_b.decode()[:300]}")
-        return "⚠️ Claude CLI error — check logs."
-
+        quota_msg = await asyncio.to_thread(get_quota_string)
+        return f"⚠️ Claude CLI error — likely hit Claude API quota limit. Check logs.\n\n```text\n{quota_msg}\n```"
     try:
         data = json.loads(stdout_b.decode())
     except Exception as e:
@@ -156,7 +194,8 @@ async def _send_chat(user_name: str, text: str) -> str:
         return "⚠️ Claude returned unexpected output."
 
     if data.get("is_error"):
-        return f"⚠️ {data.get('result', 'unknown error')[:200]}"
+        quota_msg = await asyncio.to_thread(get_quota_string)
+        return f"⚠️ {data.get('result', 'unknown error')[:200]}\n\n```text\n{quota_msg}\n```"
 
     # Update session state
     new_id = data.get("session_id")
