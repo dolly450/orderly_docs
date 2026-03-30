@@ -27,7 +27,7 @@ cat webhook_pending.json
 {
   "message_id": "msg-123456",
   "response": "Η απάντησή σου εδώ",
-  "source": "opencode"
+  "source": "claude"
 }
 ```
 
@@ -79,9 +79,14 @@ Members: AP=Angelos P (dev&infra), AF=Antonis Frs (dev&infra), ML=Marios L (busi
 
 ## Σημαντικές Αλλαγές (changelog)
 
+### 2026-03-30
+- **Claude CLI headless mode**: Αντικατάσταση OpenCode HTTP API με `claude --print`. Smart session TTL 60 λεπτά (time-based), auto model switching Haiku/Sonnet, git diff output στο Discord όταν αλλάζουν αρχεία.
+- **CLAUDE.md**: Νέο αρχείο με consolidated context για τον agent (auto-loaded από Claude Code).
+- **source field**: Αλλαγή σε `"source": "claude"` στο webhook_responses.json.
+
 ### 2026-03-26
 - **#files channel**: Νέο channel που σκανάρει αυτόματα τους φακέλους `architecture/`, `design/`, `meta/`, `business/`, `pitch/` και εμφανίζει categorized GitHub links ως pinned μήνυμα. Ενημερώνεται κάθε φορά που κάνει restart το bot.
 - **Inactivity timeout**: Αυξήθηκε από 10 → 60 λεπτά. Μετά από 60 λεπτά αδράνειας στο #chat, το session καθαρίζεται και αποστέλλεται ένα μήνυμα ειδοποίησης (μόνο μία φορά).
-- **#chat info pin**: Pinned μήνυμα στο #chat με το link για απευθείας πρόσβαση στο OpenCode web UI.
+- **#chat info pin**: Pinned μήνυμα στο #chat με οδηγίες χρήσης Claude agent (Haiku/Sonnet, session TTL).
 - **Bug fix**: Διορθώθηκε το πρόβλημα όπου το bot έστελνε πολλαπλά "Context cleared" μηνύματα ταυτόχρονα (γινόταν κάθε 30 δευτερόλεπτα αντί για μία φορά).
 - **Αφαιρέθηκαν channels**: Τα `#architecture`, `#design`, `#ordering-flow` δεν ενημερώνονται πλέον αυτόματα από το bot.

@@ -1,7 +1,7 @@
 import os
 import re
 import json
-import aiohttp
+import subprocess
 import discord
 from discord import app_commands
 from dotenv import load_dotenv
@@ -18,120 +18,156 @@ logging.basicConfig(
 )
 logger = logging.getLogger("OrderlyBot")
 
-# ── Opencode Serve Config ─────────────────────────────────────────────────────
-OPENCODE_BIN  = "/home/harold/.opencode/bin/opencode"
-OPENCODE_PORT = int(os.getenv("OPENCODE_PORT", 4096))
-OPENCODE_URL  = f"http://192.168.0.204:{OPENCODE_PORT}"
-SESSION_FILE  = os.path.join(os.path.dirname(__file__), "..", "opencode_session.json")
-INACTIVITY_MINUTES = 60
-
+# ── Claude CLI Config ─────────────────────────────────────────────────────────
+CLAUDE_BIN       = "/home/harold/.local/bin/claude"
+SESSION_FILE     = os.path.join(os.path.dirname(__file__), "..", "claude_session.json")
+SESSION_TTL_MIN  = 60
+PROJECT_DIR      = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_HAIKU      = "claude-haiku-4-5-20251001"
+MODEL_SONNET     = "claude-sonnet-4-6"
+COMPLEX_KEYWORDS = {
+    "implement", "build", "analyze", "plan", "debug", "fix", "create", "refactor",
+    "design", "architect", "εφαρμογή", "ανάλυση", "υλοποίηση", "δημιουργία", "σχεδίαση",
+}
 
 # Shared mutable state
-_opencode_proc  = None   # the subprocess handle
-_session_id     = None   # current opencode session ID
-_last_activity  = datetime.utcnow()
+_session_id    = None   # str | None
+_session_start = None   # datetime | None
 
 
+# ── Claude CLI helpers ────────────────────────────────────────────────────────
 
-# ── Opencode Serve helpers ────────────────────────────────────────────────────
+def _select_model(text: str) -> str:
+    """Choose Haiku for short/simple messages, Sonnet for complex ones."""
+    if len(text) < 150 and not any(kw in text.lower() for kw in COMPLEX_KEYWORDS):
+        return MODEL_HAIKU
+    return MODEL_SONNET
 
-async def _start_opencode_serve():
-    """Spawn opencode serve in background and wait until ready."""
-    global _opencode_proc
-    _opencode_proc = await asyncio.create_subprocess_exec(
-        OPENCODE_BIN, "serve", "--hostname", "0.0.0.0", "--port", str(OPENCODE_PORT),
-        stdout=asyncio.subprocess.DEVNULL,
-        stderr=asyncio.subprocess.DEVNULL,
-    )
-    logger.info(f"Spawned opencode serve PID={_opencode_proc.pid} on port {OPENCODE_PORT}")
-    # Poll until server responds
-    for _ in range(20):
-        await asyncio.sleep(0.5)
+
+def _load_session() -> tuple:
+    """Load session state from disk. Returns (session_id, session_start) or (None, None)."""
+    if os.path.exists(SESSION_FILE):
         try:
-            async with aiohttp.ClientSession() as s:
-                async with s.get(f"{OPENCODE_URL}/session", timeout=aiohttp.ClientTimeout(total=2)) as r:
-                    if r.status < 500:
-                        logger.info("Opencode serve is ready")
-                        return
+            with open(SESSION_FILE) as f:
+                data = json.load(f)
+            return data["session_id"], datetime.fromisoformat(data["session_start"])
         except Exception:
             pass
-    logger.warning("Opencode serve may not be ready yet; continuing anyway")
+    return None, None
 
 
-async def _load_or_create_session() -> str:
-    """Load existing session ID from disk or create a new one."""
-    global _session_id
-    path = SESSION_FILE
-    if os.path.exists(path):
-        with open(path) as f:
-            data = json.load(f)
-            _session_id = data.get("session_id")
-            if _session_id:
-                logger.info(f"Loaded existing session: {_session_id}")
-                return _session_id
-    return await _create_new_session()
-
-
-async def _create_new_session() -> str:
-    """Create a fresh opencode session and persist its ID."""
-    global _session_id
-    async with aiohttp.ClientSession() as s:
-        async with s.post(
-            f"{OPENCODE_URL}/session",
-            json={"title": "Discord Chat"},
-            timeout=aiohttp.ClientTimeout(total=10),
-        ) as r:
-            data = await r.json()
-            _session_id = data["id"]
+def _save_session(session_id: str, session_start: datetime) -> None:
     with open(SESSION_FILE, "w") as f:
-        json.dump({"session_id": _session_id}, f)
-    logger.info(f"Created new session: {_session_id}")
-    return _session_id
+        json.dump({"session_id": session_id, "session_start": session_start.isoformat()}, f)
+
+
+def _get_git_diff(pre_hash: str) -> str:
+    """Return git diff since pre_hash, truncated to 800 chars."""
+    try:
+        post = subprocess.run(
+            ["git", "rev-parse", "HEAD"], cwd=PROJECT_DIR, capture_output=True, text=True
+        ).stdout.strip()
+        if post and post != pre_hash:
+            diff_cmd = ["git", "diff", f"{pre_hash}..HEAD"]
+        else:
+            diff_cmd = ["git", "diff", "HEAD"]
+        result = subprocess.run(diff_cmd, cwd=PROJECT_DIR, capture_output=True, text=True)
+        diff = result.stdout.strip()
+        if len(diff) > 800:
+            diff = diff[:780] + "\n... (truncated)"
+        return diff
+    except Exception:
+        return ""
+
+
+def _format_diff_block(diff: str, budget: int) -> str:
+    header = "\n📝 **Αλλαγές:**\n```diff\n"
+    footer = "\n```"
+    available = budget - len(header) - len(footer)
+    if available <= 50:
+        return ""
+    if len(diff) > available:
+        diff = diff[:available - 20] + "\n... (truncated)"
+    return header + diff + footer
 
 
 async def _send_chat(user_name: str, text: str) -> str:
-    """Send a message to the current opencode session and return the assistant reply."""
-    global _last_activity
-    _last_activity = datetime.utcnow()
+    """Run claude CLI headlessly and return the response, with optional git diff block."""
+    global _session_id, _session_start
 
-    # Append Planka card-detection instruction if enabled
+    model = _select_model(text)
+    now = datetime.utcnow()
+
+    session_valid = (
+        _session_id is not None
+        and _session_start is not None
+        and (now - _session_start) < timedelta(minutes=SESSION_TTL_MIN)
+    )
+    if not session_valid and _session_id is not None:
+        age_min = int((now - _session_start).total_seconds() // 60) if _session_start else "?"
+        logger.info(f"Session {_session_id} expired after {age_min} min — starting fresh")
+
     planka_suffix = ""
     if _planka_enabled and _planka_client:
         labels_str = ", ".join(f'"{n}"' for n in _planka_client.get_label_names())
         planka_suffix = _build_planka_instruction(labels_str)
 
-    payload = {
-        "parts": [{"type": "text", "text": f"{user_name}: {text}{planka_suffix}"}],
-        "agent": "build",
-    }
-    async with aiohttp.ClientSession() as s:
-        async with s.post(
-            f"{OPENCODE_URL}/session/{_session_id}/message",
-            json=payload,
-            timeout=aiohttp.ClientTimeout(total=60),
-        ) as r:
-            if r.status != 200:
-                return f"⚠️ Opencode error {r.status}"
-            data = await r.json()
-    # Response: object with "parts" array
+    full_msg = f"{user_name}: {text}{planka_suffix}"
+
+    cmd = [CLAUDE_BIN, "--print", "--output-format", "json", "--model", model]
+    if session_valid:
+        cmd += ["--resume", _session_id]
+    cmd.append(full_msg)
+
+    pre_hash = subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=PROJECT_DIR, capture_output=True, text=True
+    ).stdout.strip()
+
     try:
-        parts = data.get("parts", [])
-        # Extract only "text" parts (skip reasoning, step markers)
-        text_parts = [p["text"] for p in parts if p.get("type") == "text" and p.get("text")]
-        response = "\n".join(text_parts).strip()
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            cwd=PROJECT_DIR,
+        )
+        stdout_b, stderr_b = await asyncio.wait_for(proc.communicate(), timeout=120)
+    except asyncio.TimeoutError:
+        return "⚠️ Claude CLI timeout — check logs."
 
-        if not response:
-            # Fallback to any text found in parts if no explicit "text" type
-            response = "\n".join([str(p.get("text", "")) for p in parts if p.get("text")]).strip()
+    if proc.returncode != 0:
+        logger.error(f"claude exited {proc.returncode}: {stderr_b.decode()[:300]}")
+        return "⚠️ Claude CLI error — check logs."
 
-        # Truncate to avoid Discord 400 error (2k limit)
-        if len(response) > 1900:
-            response = response[:1900] + "... (truncated)"
-
-        return response if response else "⚠️ Opencode returned an empty response."
+    try:
+        data = json.loads(stdout_b.decode())
     except Exception as e:
-        logger.error(f"Parse error: {e} | Data: {str(data)[:200]}")
-        return f"⚠️ Parse error: {str(e)[:100]}"
+        logger.error(f"Claude JSON parse error: {e} | raw: {stdout_b[:200]}")
+        return "⚠️ Claude returned unexpected output."
+
+    if data.get("is_error"):
+        return f"⚠️ {data.get('result', 'unknown error')[:200]}"
+
+    # Update session state
+    new_id = data.get("session_id")
+    if new_id:
+        _session_id = new_id
+        if not session_valid:
+            _session_start = now
+        _save_session(_session_id, _session_start)
+        logger.info(f"Claude session: {_session_id} (model: {model})")
+
+    response = data.get("result", "").strip()
+
+    # Append git diff if files changed
+    diff_str = await asyncio.to_thread(_get_git_diff, pre_hash)
+    if diff_str:
+        diff_block = _format_diff_block(diff_str, 1900 - len(response))
+        response = response + diff_block
+
+    if len(response) > 1900:
+        response = response[:1900] + "... (truncated)"
+
+    return response or "⚠️ Claude returned an empty response."
 
 
 # ── Planka helpers ────────────────────────────────────────────────────────────
@@ -201,7 +237,6 @@ CHANNELS_MAP = {
 
 GITHUB_BASE = "https://github.com/dolly450/orderly_docs/blob/master"
 FILES_FOLDERS = ["architecture", "design", "meta", "business", "pitch"]
-OPENCODE_WEB_URL = "https://chat.haroldpoi.click/L2hvbWUvaGFyb2xkLy5vcGVuY2xhdy93b3Jrc3BhY2UvcHJvamVjdHMvb3JkZXJseV9kb2Nz"
 
 
 class OrderlyBot(discord.Client):
@@ -236,9 +271,13 @@ async def on_ready():
         except Exception as e:
             logger.error(f"Failed to sync to guild {guild.id}: {e}")
 
-    # Spawn opencode serve and initialize session
-    await _start_opencode_serve()
-    await _load_or_create_session()
+    # Load existing Claude session if available
+    global _session_id, _session_start
+    _session_id, _session_start = _load_session()
+    if _session_id:
+        logger.info(f"Loaded existing Claude session: {_session_id}")
+    else:
+        logger.info("No existing Claude session — will create on first message")
 
     # Initialize Planka integration
     global _planka_client, _planka_enabled
@@ -295,7 +334,7 @@ async def update_files_channel():
 
 
 async def update_chat_info_pin():
-    """Pin the OpenCode direct link in #chat."""
+    """Pin usage info in #chat."""
     for guild in bot.guilds:
         channel = discord.utils.get(guild.text_channels, name="chat")
         if not channel:
@@ -303,13 +342,14 @@ async def update_chat_info_pin():
         try:
             msg_text = (
                 "💬 **Orderly Chat**\n\n"
-                "Μπορείτε επίσης να μιλήσετε απευθείας με το OpenCode από το παρακάτω link:\n"
-                f"🔗 {OPENCODE_WEB_URL}"
+                "Μιλήστε με τον Claude agent εδώ.\n"
+                "Haiku → σύντομα ερωτήματα | Sonnet → σύνθετα/τεχνικά\n"
+                "Session καθαρίζεται μετά από 60 λεπτά."
             )
             pins = await channel.pins()
             existing_pin = next(
-                (p for p in pins if p.author == bot.user and OPENCODE_WEB_URL in p.content),
-                None
+                (p for p in pins if p.author == bot.user and "Orderly Chat" in p.content),
+                None,
             )
             if existing_pin:
                 await existing_pin.edit(content=msg_text)
@@ -396,19 +436,13 @@ async def on_message(message):
     if message.author == bot.user:
         return
     if message.channel.name == "chat":
-        global _last_activity
-        now = datetime.utcnow()
-        idle = now - _last_activity
-        _last_activity = now
         async with message.channel.typing():
             try:
-                if idle > timedelta(minutes=INACTIVITY_MINUTES):
-                    logger.info(f"Inactivity ({int(idle.total_seconds()//60)} min) → creating new session")
-                    await _create_new_session()
-                    await message.channel.send("🔄 *Context cleared due to inactivity — new session started.*")
-                response = await _send_chat(message.author.global_name or message.author.name, message.content)
-                bot_msg = await message.reply(response)
-
+                response = await _send_chat(
+                    message.author.global_name or message.author.name,
+                    message.content,
+                )
+                await message.reply(response)
             except Exception as e:
                 logger.error(f"Chat error: {e}")
                 await message.reply(f"⚠️ Σφάλμα: {str(e)[:200]}")
