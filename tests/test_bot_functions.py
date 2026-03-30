@@ -10,32 +10,27 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 import bot
 
 def test_generate_ai_response():
-    """Test that _send_chat calls the opencode HTTP API correctly."""
-    import aiohttp
-    
-    mock_response_data = [
-        {"role": "assistant", "parts": [{"type": "text", "text": "This is the AI response."}]}
-    ]
-    
-    # Mock aiohttp.ClientSession
-    mock_resp = AsyncMock()
-    mock_resp.status = 200
-    mock_resp.json = AsyncMock(return_value=mock_response_data)
-    mock_resp.__aenter__ = AsyncMock(return_value=mock_resp)
-    mock_resp.__aexit__ = AsyncMock(return_value=False)
-    
-    mock_post = AsyncMock()
-    mock_post.__aenter__ = AsyncMock(return_value=mock_resp)
-    mock_post.__aexit__ = AsyncMock(return_value=False)
-    
-    mock_session = AsyncMock()
-    mock_session.__aenter__ = AsyncMock(return_value=mock_session)
-    mock_session.__aexit__ = AsyncMock(return_value=False)
-    mock_session.post = Mock(return_value=mock_post)
-    
-    with patch('aiohttp.ClientSession', return_value=mock_session):
-        # Set a session ID for the test
+    """Test that _send_chat calls the Claude CLI correctly and returns the result."""
+    import json
+
+    fake_output = json.dumps({
+        "type": "result",
+        "subtype": "success",
+        "result": "This is the AI response.",
+        "session_id": "new-session-456",
+        "is_error": False,
+    }).encode()
+
+    mock_proc = AsyncMock()
+    mock_proc.returncode = 0
+    mock_proc.communicate = AsyncMock(return_value=(fake_output, b""))
+
+    with patch("asyncio.create_subprocess_exec", return_value=mock_proc), \
+         patch("subprocess.run") as mock_run, \
+         patch("asyncio.to_thread", return_value=""):  # no git diff
+        mock_run.return_value.stdout = "abc123\n"
         bot._session_id = "test-session-123"
+        bot._session_start = None  # force new session
         response = asyncio.run(bot._send_chat("testuser", "What is our plan?"))
 
     assert response == "This is the AI response."
