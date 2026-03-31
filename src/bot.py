@@ -26,7 +26,7 @@ def _enforce_singleton():
         except Exception:
             pass
 
-    fd = open(_LOCK_FILE, "w")
+    fd = open(_LOCK_FILE, "a")
     try:
         fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except IOError:
@@ -34,11 +34,10 @@ def _enforce_singleton():
             print(f"orderly-bot already running (PID {old_pid}). Killing it to take over...", flush=True)
             try:
                 os.kill(old_pid, signal.SIGTERM)
-                time.sleep(1)  # Give it time to exit
+                time.sleep(1)
             except Exception:
                 pass
             
-            # Try to grab the lock again
             try:
                 fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
             except IOError:
@@ -48,8 +47,11 @@ def _enforce_singleton():
             print("orderly-bot already running but couldn't find PID. Exiting with error.", flush=True)
             sys.exit(1)
             
-    fd.seek(0)
-    fd.truncate()
+    # Now we own the lock, overwrite it with our PID.
+    fd.close()
+    
+    fd = open(_LOCK_FILE, "w")
+    fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
     fd.write(str(os.getpid()))
     fd.flush()
     return fd
@@ -220,7 +222,7 @@ async def _send_claude_chat(user_name: str, text: str) -> str:
 
     if data.get("is_error"):
         quota_msg = await asyncio.to_thread(get_quota_string)
-        return f"⚠️ {data.get('result', 'unknown error')[:200]}\n\n```text\n{quota_msg}\n```"
+        return f"⚠️ Claude CLI error: {data.get('result', 'unknown error')[:200]} — likely hit Claude API quota limit. Check logs.\n\n```text\n{quota_msg}\n```"
 
     # Update session state
     new_id = data.get("session_id")
@@ -263,10 +265,9 @@ async def _send_gemini_chat(user_name: str, text: str) -> str:
 
     full_msg = f"{user_name}: {text}{planka_suffix}"
 
-    cmd = [GEMINI_BIN, "--print", "--output-format", "json"]
+    cmd = [GEMINI_BIN, "-p", full_msg, "--output-format", "json"]
     if session_valid:
         cmd += ["--resume", _gemini_session_id]
-    cmd.append(full_msg)
 
     pre_hash = subprocess.run(
         ["git", "rev-parse", "HEAD"], cwd=PROJECT_DIR, capture_output=True, text=True
