@@ -49,11 +49,12 @@ cd $VAULT_PATH && python src/planka_create.py \
 ## Auto-Commit Rule
 Μετά από **κάθε αλλαγή αρχείου**:
 ```bash
-git add -A && git commit -m "<type>: <σύντομη περιγραφή>"
+git add -A && git commit -m "<type>: <σύντομη περιγραφή>" && git push
 ```
 - Commit message σε **Ελληνικά** αν η αλλαγή είναι περιεχόμενο vault (meta/, ideas, κλπ.)
 - Commit message σε **Αγγλικά** αν είναι κώδικας (src/, tests/)
 - Types: `feat`, `fix`, `docs`, `refactor`
+- **Πάντα push μετά το commit**
 
 ## Session & Model Behavior
 - **Session TTL**: 60 λεπτά από τη δημιουργία — μετά ξεκινά νέο session αυτόματα
