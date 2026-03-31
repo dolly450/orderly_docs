@@ -41,6 +41,33 @@ def get_claude_token() -> str:
                 pass
     return os.environ.get("CLAUDE_ACCESS_TOKEN", "")
 
+def get_quota_reset_datetime() -> datetime | None:
+    """Return the UTC datetime when the quota resets, or None if unknown."""
+    token = get_claude_token()
+    if not token:
+        return None
+
+    url = "https://api.anthropic.com/api/oauth/usage"
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {token}",
+        "anthropic-beta": "oauth-2025-04-20"
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            reset_str = None
+            if "five_hour" in data and data["five_hour"] and data["five_hour"].get("utilization", 0) >= 99:
+                reset_str = data["five_hour"].get("resets_at")
+            if not reset_str and "seven_day" in data and data["seven_day"] and data["seven_day"].get("utilization", 0) >= 99:
+                reset_str = data["seven_day"].get("resets_at")
+            if reset_str:
+                dt = datetime.fromisoformat(reset_str.replace('Z', '+00:00'))
+                return dt.replace(tzinfo=None)  # Convert to naive UTC to match datetime.utcnow()
+    except Exception:
+        pass
+    # If API fails or we can't parse, fallback to None
+    return None
+
 def get_quota_string() -> str:
     token = get_claude_token()
     if not token:

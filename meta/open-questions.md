@@ -1,3 +1,7 @@
 - [Ethniki Fasoladoula] Τι χρώμα να είναι το logo;
 - [Ethniki Fasoladoula] ποσο καλυτεροι ειμαστε απο το brinfood
 - [Ethniki Fasoladoula] θα αντικαταστήσουμε το pda ή θα ενσωματωθουμε στα υπαρχον pda;
+- [Ethniki Fasoladoula] Ποιο είναι το πραγματικό "pain point" του μαγαζιού — κόστος λογισμικού, δισταγμός manager, ή κάτι άλλο;
+- [Ethniki Fasoladoula] Ποιος είναι ο ανταγωνισμός που δεν έχουμε ακόμα χαρτογραφήσει; Υπάρχουν λύσεις που δεν ξέρουμε;
+- [Ethniki Fasoladoula] Πόσο θα κοστίσει το MVP (ανάπτυξη + λειτουργία) και σε πόσο χρόνο γίνεται;
+- [Ethniki Fasoladoula] Startup/VC funding (10-20% equity) ή Indie SaaS/Bootstrapping — ποιο μοντέλο χρηματοδότησης υιοθετούμε;

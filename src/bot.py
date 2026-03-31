@@ -10,7 +10,8 @@ from dotenv import load_dotenv
 import asyncio
 import logging
 from datetime import datetime, timedelta
-from check_claude_quota import get_quota_string
+import collections
+from check_claude_quota import get_quota_string, get_quota_reset_datetime
 # ── Single-instance lock ──────────────────────────────────────────────────────
 _LOCK_FILE = "/tmp/orderly-bot.lock"
 _lock_fd = None
@@ -79,9 +80,19 @@ COMPLEX_KEYWORDS = {
     "design", "architect", "εφαρμογή", "ανάλυση", "υλοποίηση", "δημιουργία", "σχεδίαση",
 }
 
+# ── Gemini CLI Config ─────────────────────────────────────────────────────────
+GEMINI_BIN       = "gemini"
+GEMINI_SESSION_FILE = os.path.join(os.path.dirname(__file__), "..", "gemini_session.json")
+
 # Shared mutable state
 _session_id    = None   # str | None
 _session_start = None   # datetime | None
+_gemini_session_id = None
+_gemini_session_start = None
+
+_fallback_until_dt = None
+_active_provider = "claude"
+_chat_history_buffer = collections.deque(maxlen=6)
 
 
 # ── Claude CLI helpers ────────────────────────────────────────────────────────
@@ -107,6 +118,20 @@ def _load_session() -> tuple:
 
 def _save_session(session_id: str, session_start: datetime) -> None:
     with open(SESSION_FILE, "w") as f:
+        json.dump({"session_id": session_id, "session_start": session_start.isoformat()}, f)
+
+def _load_gemini_session() -> tuple:
+    if os.path.exists(GEMINI_SESSION_FILE):
+        try:
+            with open(GEMINI_SESSION_FILE) as f:
+                data = json.load(f)
+            return data["session_id"], datetime.fromisoformat(data["session_start"])
+        except Exception:
+            pass
+    return None, None
+
+def _save_gemini_session(session_id: str, session_start: datetime) -> None:
+    with open(GEMINI_SESSION_FILE, "w") as f:
         json.dump({"session_id": session_id, "session_start": session_start.isoformat()}, f)
 
 
@@ -140,7 +165,7 @@ def _format_diff_block(diff: str, budget: int) -> str:
     return header + diff + footer
 
 
-async def _send_chat(user_name: str, text: str) -> str:
+async def _send_claude_chat(user_name: str, text: str) -> str:
     """Run claude CLI headlessly and return the response, with optional git diff block."""
     global _session_id, _session_start
 
@@ -218,6 +243,131 @@ async def _send_chat(user_name: str, text: str) -> str:
         response = response[:1900] + "... (truncated)"
 
     return response or "⚠️ Claude returned an empty response."
+
+
+async def _send_gemini_chat(user_name: str, text: str) -> str:
+    """Run gemini CLI headlessly and return the response."""
+    global _gemini_session_id, _gemini_session_start
+
+    now = datetime.utcnow()
+    session_valid = (
+        _gemini_session_id is not None
+        and _gemini_session_start is not None
+        and (now - _gemini_session_start) < timedelta(minutes=SESSION_TTL_MIN)
+    )
+
+    planka_suffix = ""
+    if _planka_enabled and _planka_client:
+        labels_str = ", ".join(f'"{n}"' for n in _planka_client.get_label_names())
+        planka_suffix = _build_planka_instruction(labels_str)
+
+    full_msg = f"{user_name}: {text}{planka_suffix}"
+
+    cmd = [GEMINI_BIN, "--print", "--output-format", "json"]
+    if session_valid:
+        cmd += ["--resume", _gemini_session_id]
+    cmd.append(full_msg)
+
+    pre_hash = subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=PROJECT_DIR, capture_output=True, text=True
+    ).stdout.strip()
+
+    try:
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            cwd=PROJECT_DIR,
+        )
+        stdout_b, stderr_b = await asyncio.wait_for(proc.communicate(), timeout=120)
+    except asyncio.TimeoutError:
+        return "⚠️ Gemini CLI timeout — check logs."
+
+    if proc.returncode != 0:
+        logger.error(f"gemini exited {proc.returncode}: {stderr_b.decode()[:300]}")
+        return f"⚠️ Gemini CLI error. Check logs.\n\n```text\n{stderr_b.decode()[:300]}\n```"
+    try:
+        data = json.loads(stdout_b.decode())
+    except Exception as e:
+        logger.error(f"Gemini JSON parse error: {e} | raw: {stdout_b[:200]}")
+        return "⚠️ Gemini returned unexpected output."
+
+    new_id = data.get("session_id")
+    if new_id:
+        _gemini_session_id = new_id
+        if not session_valid:
+            _gemini_session_start = now
+        _save_gemini_session(_gemini_session_id, _gemini_session_start)
+        logger.info(f"Gemini session: {_gemini_session_id}")
+
+    response = data.get("result", "").strip()
+
+    diff_str = await asyncio.to_thread(_get_git_diff, pre_hash)
+    if diff_str:
+        diff_block = _format_diff_block(diff_str, 1900 - len(response))
+        response = response + diff_block
+
+    if len(response) > 1900:
+        response = response[:1900] + "... (truncated)"
+
+    return response or "⚠️ Gemini returned an empty response."
+
+
+async def _send_chat(user_name: str, text: str) -> str:
+    global _fallback_until_dt, _active_provider, _chat_history_buffer
+    now = datetime.utcnow()
+
+    # Check if fallback expired
+    if _fallback_until_dt and now > _fallback_until_dt:
+        logger.info("Fallback timer expired. Returning to Claude.")
+        _fallback_until_dt = None
+
+    target_provider = "gemini" if _fallback_until_dt else "claude"
+    
+    # Context handoff injection
+    handoff_text = text
+    if target_provider != _active_provider and len(_chat_history_buffer) > 0:
+        history_str = "\n".join(f"{u}: {m}" for u, m in _chat_history_buffer)
+        handoff_text = f"<context_handoff>\n{history_str}\n</context_handoff>\n\nUser: {text}"
+        _active_provider = target_provider
+
+    if target_provider == "claude":
+        response = await _send_claude_chat(user_name, handoff_text)
+        
+        # Detect Claude quota hit
+        if "hit Claude API quota limit" in response or "rate_limit_error" in response:
+            reset_dt = await asyncio.to_thread(get_quota_reset_datetime)
+            if reset_dt and reset_dt > now:
+                _fallback_until_dt = reset_dt
+            else:
+                _fallback_until_dt = now + timedelta(hours=1)
+                
+            logger.warning(f"Claude quota hit. Falling back to Gemini until {_fallback_until_dt}")
+            
+            target_provider = "gemini"
+            _active_provider = "gemini"
+            
+            if len(_chat_history_buffer) > 0:
+                history_str = "\n".join(f"{u}: {m}" for u, m in _chat_history_buffer)
+                handoff_text = f"<context_handoff>\n{history_str}\n</context_handoff>\n\nUser: {text}"
+            else:
+                handoff_text = text
+                
+            gemini_response = await _send_gemini_chat(user_name, handoff_text)
+            
+            _chat_history_buffer.append((user_name, text))
+            _chat_history_buffer.append(("AI", gemini_response))
+            return gemini_response
+
+        _chat_history_buffer.append((user_name, text))
+        _chat_history_buffer.append(("AI", response))
+        return response
+    
+    else:
+        response = await _send_gemini_chat(user_name, handoff_text)
+        _chat_history_buffer.append((user_name, text))
+        _chat_history_buffer.append(("AI", response))
+        return response
 
 
 # ── Planka helpers ────────────────────────────────────────────────────────────
@@ -328,6 +478,11 @@ async def on_ready():
         logger.info(f"Loaded existing Claude session: {_session_id}")
     else:
         logger.info("No existing Claude session — will create on first message")
+
+    global _gemini_session_id, _gemini_session_start
+    _gemini_session_id, _gemini_session_start = _load_gemini_session()
+    if _gemini_session_id:
+        logger.info(f"Loaded existing Gemini session: {_gemini_session_id}")
 
     # Initialize Planka integration
     global _planka_client, _planka_enabled
