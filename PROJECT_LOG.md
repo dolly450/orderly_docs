@@ -9,6 +9,9 @@
 - [2026-03-26] **Testing Suite:** Added `pytest` for `VaultManager` reliability.
 - [2026-03-26] **Refined System Design:** Integrated comprehensive Mermaid diagrams for User Flow, Architecture, State Machine, Batch Prep, Market Analysis, Roadmap, and ERD.
 - [2026-03-26] **Strategic Research Integration:** Fully translated and distributed the strategic market research report into the vault, including competitive analysis, technical architecture, and operational strategy.
+- [2026-03-31] **Gemini CLI Fallback:** Implemented automated fallback to Gemini CLI when Claude API quota limits are reached.
+- [2026-03-31] **Push Rule Enforcement:** Added enforcement of pushing after every commit to ensure vault sync.
+- [2026-03-31] **Cleanup & Insights:** Cleaned up questions and ideas; added insights and commission model from Fasoladoula discussion.
 
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).
