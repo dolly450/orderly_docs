@@ -613,10 +613,27 @@ async def on_message(message):
     if message.channel.name == "chat":
         async with message.channel.typing():
             try:
-                response = await _send_chat(
-                    message.author.global_name or message.author.name,
-                    message.content,
-                )
+                user_name = message.author.global_name or message.author.name
+                response = await _send_chat(user_name, message.content)
+
+                # Handle [CREATE_POLL: text] marker injected by agent
+                poll_match = re.search(r'\[CREATE_POLL:\s*(.+?)\]', response, re.DOTALL)
+                if poll_match:
+                    idea_text = poll_match.group(1).strip()
+                    idea_id = f"idea-{message.id}"
+                    await asyncio.to_thread(vm.write_idea_poll, idea_id, idea_text, user_name)
+                    ideas_channel = discord.utils.get(message.guild.text_channels, name="ideas")
+                    if ideas_channel:
+                        poll_msg = await ideas_channel.send(
+                            f"💡 **Idea by {user_name}**: {idea_text}\n"
+                            f"React with ✅ to approve. (ID: `{idea_id}`)"
+                        )
+                        await poll_msg.add_reaction("✅")
+                        bot.loop.create_task(
+                            silent_update_channel(ideas_channel, "meta/ideas", "Ideas")
+                        )
+                    response = re.sub(r'\s*\[CREATE_POLL:\s*.+?\]', '', response, flags=re.DOTALL).strip()
+
                 await message.reply(response)
             except Exception as e:
                 logger.error(f"Chat error: {e}")

@@ -44,10 +44,21 @@ cat webhook_pending.json
 ## Discord Channels
 - `#chat` — Συνομιλία με τον agent. Session καθαρίζεται μετά από 60 λεπτά αδράνειας.
 - `#files` — Αυτόματα ενημερωμένο pinned μήνυμα με links σε όλα τα αρχεία του project (ανά φάκελο).
-- `#ideas` — Καταγεγραμμένες ιδέες (slash command `/idea`)
+- `#ideas` — Ιδέες-polls (slash command `/idea` — κάθε ιδέα γίνεται αυτόματα poll με ✅)
 - `#questions` — Ανοιχτές ερωτήσεις (slash command `/question`)
-- `#polls` — Ενεργές ψηφοφορίες (slash command `/poll`)
-- `#decisions` — Εγκεκριμένες αποφάσεις (από polls με 4+ votes)
+- `#decisions` — Εγκεκριμένες αποφάσεις (από ιδέες με 4+ votes)
+
+## Αναγνώριση Ιδεών → Poll
+
+Κατά τη συνομιλία στο `#chat`, αν αντιληφθείς ιδέα ή πρόταση που χρειάζεται ομαδική έγκριση:
+
+**Βήμα 1** — Ρώτα: "Θέλεις να γίνει poll για αυτό: [ιδέα];"
+
+**Βήμα 2** — Αν επιβεβαιωθεί, βάλε στην απάντηση:
+```
+[CREATE_POLL: ακριβές κείμενο ιδέας]
+```
+Το bot δημιουργεί αυτόματα το poll στο `#ideas`.
 
 ## Vault Topics (για context)
 - `architecture/`: Αρχιτεκτονική του project (overview, ordering-flow)
