@@ -11,10 +11,9 @@
 
 ## Go-to-Market Στρατηγική
 
-- **Γρήγορη είσοδος για market capture** (λογική eFood): μπες γρήγορα πριν γεμίσει η αγορά.
-- **Ανταγωνιστικό πλεονέκτημα:** AI features — πρόβλεψη παραγγελιών, dynamic menus, upselling.
-- **Validation πριν την κλίμακα:** Πιλοτικό σε 5 καταστήματα → metrics → proof of concept → selling point.
-- **Άμεση έρευνα αγοράς:** Συνομιλία με 10 μαγαζιά για feedback πριν οριστικοποιηθεί οτιδήποτε.
+- **==Γρήγορη είσοδος για market capture==** (λογική eFood): μπες γρήγορα πριν γεμίσει η αγορά.
+- **==Validation πριν την κλίμακα==:** Πιλοτικό σε 5 καταστήματα/ venues/ ερωτηματολόγια → metrics → proof of concept → selling point. --> Traction [[deck#6. Traction]]. 
+- **==Άμεση έρευνα αγοράς==:** Συνομιλία με 10 μαγαζιά για feedback πριν οριστικοποιηθεί οτιδήποτε. 
 
 ```mermaid
 mindmap
@@ -37,3 +36,6 @@ mindmap
       Internet Reliability
       Staff Training
 ```
+
+Tasks: 
+- Μιλάμε σε μαγαζιά, φίλους, γενικά για την ιδέα, να δούμε τι παίζει (π.χ. μπαρ στην Κύπρο που κάνει κάτι αρκετά παρόμοιο + Mcdonalds). 

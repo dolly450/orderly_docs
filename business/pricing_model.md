@@ -23,20 +23,24 @@
 
 ## 4. Δίλημμα Χρηματοδότησης
 
-| Μοντέλο | Πλεονεκτήματα | Μειονεκτήματα |
-|---------|--------------|---------------|
-| **Startup/VC** (πρόταση Μάριου) | Γρήγορη κλίμακα, δίκτυο, 10-20% equity | Πίεση για growth, απώλεια ελέγχου |
-| **Indie SaaS/Bootstrapping** | Πλήρης έλεγχος, βιώσιμο tempo | Αργή ανάπτυξη, περιορισμένοι πόροι |
+| Μοντέλο                         | Πλεονεκτήματα                          | Μειονεκτήματα                      |
+| ------------------------------- | -------------------------------------- | ---------------------------------- |
+| **Startup/VC** (πρόταση Μάριου) | Γρήγορη κλίμακα, δίκτυο, 10-20% equity | Πίεση για growth, απώλεια ελέγχου  |
+| **Indie SaaS/Bootstrapping**    | Πλήρης έλεγχος, βιώσιμο tempo          | Αργή ανάπτυξη, περιορισμένοι πόροι |
 
 ## 5. Μέγεθος Αγοράς (Market Size)
 *   **73.000 - 75.000** επιχειρήσεις εστίασης στην Ελλάδα.
 *   **10,73 δις €** κύκλος εργασιών το 2025.
 *   **Στόχος (3-ετία):** 800+ πελάτες (Base Case) έως 2.000 (Optimistic Case).
 
-```mermaid
+
+``` mermaid
 graph LR
-    A[SaaS Subscription] --> Revenue
-    B[Transaction Fees (Phase 2)] --> Revenue
-    C[Hardware Sales (Srv/Tablets)] --> Revenue
-    Revenue --> Growth[Επένδυση σε Marketing & Sales]
+    A[SaaS Subscription] --> R[Revenue]
+    B[Transaction Fees - Phase 2] --> R
+    C[Hardware Sales Srv/Tablets] --> R
+    R --> G[Επένδυση σε Marketing & Sales]
 ```
+
+Tasks: 
+1. Έρευνα για fundings και μελλοντικά expenses που θα έχουμε (πόσα λεφτά και πού θα τα φάμε) 
