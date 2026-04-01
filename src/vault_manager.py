@@ -41,72 +41,140 @@ class VaultManager:
         with open(file_path, 'r') as f:
             return f.read()
 
-    def write_poll(self, poll_id, text, user_name):
-        file_path = os.path.join(self.vault_path, "meta/polls.json")
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    def write_idea_poll(self, idea_id, text, user_name):
+        ideas_dir = os.path.join(self.vault_path, "meta/ideas")
+        os.makedirs(ideas_dir, exist_ok=True)
         
-        data = {}
-        if os.path.exists(file_path):
-            with open(file_path, 'r') as f:
-                try:
-                    data = json.load(f)
-                except json.JSONDecodeError:
-                    data = {}
+        file_path = os.path.join(ideas_dir, f"{idea_id}.md")
         
-        data[poll_id] = {
-            "text": text,
+        import yaml
+        
+        data = {
+            "id": idea_id,
             "author": user_name,
-            "votes": [],
-            "created_at": datetime.datetime.now().isoformat()
+            "votes": 0,
+            "voters": [],
+            "created_at": datetime.datetime.now().isoformat(),
+            "status": "active"
         }
         
+        content = f"---\n{yaml.dump(data, default_flow_style=False, sort_keys=False)}---\n# Idea\n{text}\n"
+        
         with open(file_path, 'w') as f:
-            json.dump(data, f, indent=4)
+            f.write(content)
             
-        self._commit_and_push(f"Add poll {poll_id} by {user_name}")
-        return f"Poll {poll_id} added to vault."
+        self._commit_and_push(f"Add idea {idea_id} by {user_name}")
+        return f"Idea {idea_id} added to vault."
 
-    def add_vote(self, poll_id, user_id):
-        file_path = os.path.join(self.vault_path, "meta/polls.json")
+    def add_idea_vote(self, idea_id, user_id):
+        file_path = os.path.join(self.vault_path, "meta/ideas", f"{idea_id}.md")
         if not os.path.exists(file_path):
             return False
             
+        import yaml
+        
         with open(file_path, 'r') as f:
-            data = json.load(f)
+            content = f.read()
             
-        if poll_id not in data:
+        if not content.startswith("---"): return False
+        
+        parts = content.split("---", 2)
+        if len(parts) < 3: return False
+        
+        frontmatter = parts[1]
+        md_content = parts[2]
+        
+        try:
+            data = yaml.safe_load(frontmatter)
+        except:
             return False
             
-        if user_id not in data[poll_id]["votes"]:
-            data[poll_id]["votes"].append(user_id)
+        if user_id not in data.get("voters", []):
+            if "voters" not in data:
+                data["voters"] = []
+            data["voters"].append(user_id)
+            data["votes"] = len(data["voters"])
+            
+            new_frontmatter = yaml.dump(data, default_flow_style=False, sort_keys=False)
+            new_content = f"---\n{new_frontmatter}---{md_content}"
+            
             with open(file_path, 'w') as f:
-                json.dump(data, f, indent=4)
-            self._commit_and_push(f"Vote on poll {poll_id} by {user_id}")
+                f.write(new_content)
+                
+            self._commit_and_push(f"Vote on idea {idea_id} by {user_id}")
             return True
         return False
 
-    def archive_poll(self, poll_id):
-        file_path = os.path.join(self.vault_path, "meta/polls.json")
+    def archive_idea_poll(self, idea_id):
+        file_path = os.path.join(self.vault_path, "meta/ideas", f"{idea_id}.md")
         if not os.path.exists(file_path):
             return False
             
-        with open(file_path, 'r') as f:
-            data = json.load(f)
-            
-        if poll_id not in data:
-            return False
-            
-        poll = data.pop(poll_id)
+        import yaml
         
-        # Write back remaining polls
+        with open(file_path, 'r') as f:
+            content = f.read()
+            
+        if not content.startswith("---"): return False
+        
+        parts = content.split("---", 2)
+        if len(parts) < 3: return False
+        
+        frontmatter = parts[1]
+        md_content = parts[2]
+        
+        data = yaml.safe_load(frontmatter)
+        
+        # Mark as approved
+        data["status"] = "approved"
+        new_frontmatter = yaml.dump(data, default_flow_style=False, sort_keys=False)
+        new_content = f"---\n{new_frontmatter}---{md_content}"
+        
         with open(file_path, 'w') as f:
-            json.dump(data, f, indent=4)
+            f.write(new_content)
             
         # Add to decisions.md
-        self.write_to_vault("meta/decisions", f"Approved Poll: {poll['text']}", poll['author'])
+        idea_text = md_content.replace("# Idea", "").strip()
+        self.write_to_vault("meta/decisions", f"Approved Idea: {idea_text}", data.get('author', 'Unknown'))
         
-        self._commit_and_push(f"Archive poll {poll_id}")
+        self._commit_and_push(f"Archive approved idea {idea_id}")
         return True
+
+    def get_active_ideas(self):
+        ideas_dir = os.path.join(self.vault_path, "meta/ideas")
+        if not os.path.exists(ideas_dir):
+            return "No active ideas."
+            
+        import yaml
+        
+        active_ideas = []
+        for filename in os.listdir(ideas_dir):
+            if filename.endswith(".md"):
+                file_path = os.path.join(ideas_dir, filename)
+                with open(file_path, 'r') as f:
+                    content = f.read()
+                
+                if content.startswith("---"):
+                    parts = content.split("---", 2)
+                    if len(parts) >= 3:
+                        try:
+                            data = yaml.safe_load(parts[1])
+                            idea_text = parts[2].replace("# Idea", "").strip()
+                            if data.get("status") == "active":
+                                votes = data.get("votes", 0)
+                                author = data.get("author", "Unknown")
+                                active_ideas.append((data["id"], author, idea_text, votes))
+                        except:
+                            pass
+                            
+        if not active_ideas:
+            return "No active ideas."
+            
+        content_lines = []
+        for i_id, i_author, i_text, i_votes in active_ideas:
+            content_lines.append(f"- {i_text} (by {i_author}) - 📈 {i_votes}/4 votes")
+            
+        return "\n".join(content_lines)
 
     def _commit_and_push(self, message):
         try:
