@@ -25,7 +25,7 @@ Subscription based model, plus extensions.
 
 
 *Applies also as to approach the market
-Free "demo" or product could be  -> Hosting only the menu -> or hosting only menu for limited time
+Free "demo" or product could be  -> Hosting only the menu for "a freebie" or a get-to-know basis -> or hosting only menu for limited time
 Hosting menu plus some extra PDA features for limited time as demo
 ## 5. Competition
 <!-- Ποιοι είναι οι ανταγωνιστές; -->
