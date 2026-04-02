@@ -12,7 +12,7 @@
 <!-- Πώς το λύνεις; -->
 Fully customisable per client app (Could be only helper -> Menu only, Full PDA/Ordering self-service app and so on)
 Browser app, works from every single endpoint that has internet
-Fully on cloud, customer only needs Internet connection.
+Fully on cloud, customer only needs Internet connection. -> if no internet connection due to islands and poor connectivity -> Fallback on prem. -> *sell* that we are taking care of the hosting and all the hustle
 
 On Cloud hosted by orderly.
 *Bigger "companies" could have a "standalone" selfhosted option  with different prices (to be reviewed)*
