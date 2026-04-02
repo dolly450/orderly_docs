@@ -178,11 +178,22 @@ class VaultManager:
 
     def _commit_and_push(self, message):
         try:
+            # Πρώτα τραβάμε αλλαγές για να είμαστε σίγουροι
+            self.sync_repo()
+            
             self.repo.git.add(A=True)
             self.repo.index.commit(message)
             origin = self.repo.remote(name='origin')
-            # Χρησιμοποιούμε force-push αν χρειαστεί, αλλά για τώρα κανονικό push
             origin.push()
             logger.info(f"Git push successful: {message}")
         except Exception as e:
             logger.error(f"Git error: {e}")
+
+    def sync_repo(self):
+        """Εκτελεί git pull --rebase για να κρατάει το repo ενημερωμένο."""
+        try:
+            origin = self.repo.remote(name='origin')
+            origin.pull(rebase=True)
+            logger.info("Git sync (pull --rebase) successful.")
+        except Exception as e:
+            logger.error(f"Git sync error: {e}")

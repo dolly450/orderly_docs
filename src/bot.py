@@ -6,6 +6,7 @@ import fcntl
 import sys
 import discord
 from discord import app_commands
+from discord.ext import tasks
 from dotenv import load_dotenv
 import asyncio
 import logging
@@ -485,6 +486,7 @@ async def on_ready():
         logger.info(f"Planka {'enabled' if _planka_enabled else 'FAILED — card creation disabled'}")
 
     bot.loop.create_task(update_all_channels())
+    git_sync_task.start()
 
     bot.synced = True
 
@@ -768,6 +770,16 @@ async def on_raw_reaction_add(payload):
 
         except Exception as e:
             logger.error(f"Reaction handler error: {e}")
+
+
+@tasks.loop(minutes=10)
+async def git_sync_task():
+    """Περιοδικός συγχρονισμός του repository."""
+    logger.info("Running scheduled Git sync...")
+    try:
+        await asyncio.to_thread(vm.sync_repo)
+    except Exception as e:
+        logger.error(f"Error in git_sync_task: {e}")
 
 
 if __name__ == "__main__":
