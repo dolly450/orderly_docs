@@ -13,6 +13,12 @@
 - [2026-03-31] **Push Rule Enforcement:** Added enforcement of pushing after every commit to ensure vault sync.
 - [2026-03-31] **Cleanup & Insights:** Cleaned up questions and ideas; added insights and commission model from Fasoladoula discussion.
 
+## 🧠 Daily Knowledge Operations (Today)
+- [2026-04-03] **Vault Synchronization:** Renamed `meta/open-questions.md` to `meta/questions.md` and added top 10 strategy/product questions.
+- [2026-04-03] **Backlink Generation:** Added missing backlinks to `business/model.md`, `architecture/overview.md`, and `design/v1_scope.md` along with clear validation experiments and success metrics.
+- [2026-04-03] **Canvas Creation:** Generated structured JSON for `meta/user-needs.canvas` and `meta/business-model.canvas` mapping out MVP features, personas, and the core business model.
+- [2026-04-03] **Health Check:** Initiated `meta/knowledge-health.md` to track KB health, backlinks, stale notes, and orphan notes.
+
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).
 - QR Codes on tables for ordering.

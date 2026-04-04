@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "persona1",
+      "type": "text",
+      "text": "## Persona 1: Τουρίστας σε Beach Bar\n- **Προφίλ:** Βιάζεται, δεν μιλάει καλά αγγλικά/ελληνικά, διψάει.\n- **Ανάγκες:**\n  1. Θέλει να δει το μενού στη γλώσσα του.\n  2. Δεν θέλει να περιμένει 15 λεπτά για να παραγγείλει.\n  3. Θέλει να πληρώσει άμεσα με Apple/Google Pay.",
+      "x": 0,
+      "y": 0,
+      "width": 350,
+      "height": 200
+    },
+    {
+      "id": "persona2",
+      "type": "text",
+      "text": "## Persona 2: Ιδιοκτήτης / Manager\n- **Προφίλ:** Έχει πρόβλημα με προσωπικό (έλλειψη, αργοπορία), θέλει περισσότερο τζίρο.\n- **Ανάγκες:**\n  1. Να αυξήσει την ταχύτητα παραγγελιών (throughput).\n  2. Να αποφύγει τα λάθη στην παραγγελιοληψία.\n  3. Το σύστημα να μην \"πέφτει\" αν πέσει το ίντερνετ (Offline need).",
+      "x": 450,
+      "y": 0,
+      "width": 350,
+      "height": 200
+    },
+    {
+      "id": "solutions",
+      "type": "text",
+      "text": "## Υποψήφιες Λύσεις\n- Πολυγλωσσικό ψηφιακό μενού μέσω QR.\n- Direct payment checkout (Stripe/Apple Pay).\n- Τοπικό gateway για offline παραγγελιοληψία.\n- KDS dashboard για την κουζίνα/bar.",
+      "x": 225,
+      "y": 250,
+      "width": 350,
+      "height": 180
+    },
+    {
+      "id": "mvp_matrix",
+      "type": "text",
+      "text": "## Feature Matrix (MVP ή Όχι)\n| Feature | MVP | Metric Επιτυχίας |\n| :--- | :---: | :--- |\n| Πολυγλωσσικό Menu | ✅ | >80% χρηστών βρίσκουν τη γλώσσα τους |\n| Direct Checkout (Card) | ✅ | >50% ολοκλήρωση πληρωμής online |\n| Offline Sync (Local) | ❌ (V2) | N/A |\n| Κλήση Σερβιτόρου | ✅ | Χρόνος απόκρισης < 3 λεπτά |\n| SMS Validation | ❌ (V2) | N/A |\n\n*Δες και:* [[design/v1_scope.md]], [[design/features.md]]",
+      "x": 225,
+      "y": 480,
+      "width": 350,
+      "height": 250
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "--- \n**Last Updated:** 2026-04-03\n**Key Changes Today:**\n- Δημιουργία αρχικού χάρτη αναγκών και MVP matrix.\n- Σύνδεση αναγκών τουρίστα / manager με features.\n- [[meta/questions.md]]: Δες τις κρίσιμες ερωτήσεις για offline.",
+      "x": 225,
+      "y": 780,
+      "width": 350,
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge1",
+      "fromNode": "persona1",
+      "fromSide": "bottom",
+      "toNode": "solutions",
+      "toSide": "top"
+    },
+    {
+      "id": "edge2",
+      "fromNode": "persona2",
+      "fromSide": "bottom",
+      "toNode": "solutions",
+      "toSide": "top"
+    },
+    {
+      "id": "edge3",
+      "fromNode": "solutions",
+      "fromSide": "bottom",
+      "toNode": "mvp_matrix",
+      "toSide": "top"
+    }
+  ]
+}
