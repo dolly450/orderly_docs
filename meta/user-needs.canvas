@@ -1,0 +1,166 @@
+{
+  "nodes": [
+    {
+      "id": "persona_manager",
+      "type": "text",
+      "text": "# Persona: Manager / Ιδιοκτήτης\nΟ άνθρωπος που παίρνει την απόφαση αγοράς.\n\n[[business/market_strategy.md]]",
+      "x": -600,
+      "y": -200,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "need_manager_1",
+      "type": "text",
+      "text": "**Ανάγκη 1:** Μείωση κόστους προσωπικού\n(throughput vs staff)",
+      "x": -250,
+      "y": -300,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "need_manager_2",
+      "type": "text",
+      "text": "**Ανάγκη 2:** Γρήγορη απόδοση χωρίς upfront κόστος",
+      "x": -250,
+      "y": -150,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "need_manager_3",
+      "type": "text",
+      "text": "**Ανάγκη 3:** Πλήρης φορολογική συμμόρφωση (ΑΑΔΕ/myDATA)\n[[architecture/pos_compliance.md]]",
+      "x": -250,
+      "y": 0,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "persona_customer",
+      "type": "text",
+      "text": "# Persona: Πελάτης\nΟ τελικός χρήστης σε Beach bar / Φεστιβάλ.\n\n[[design/user_flow.md]]",
+      "x": -600,
+      "y": 250,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "need_customer_1",
+      "type": "text",
+      "text": "**Ανάγκη 1:** Παραγγελία χωρίς αναμονή σε ουρά",
+      "x": -250,
+      "y": 150,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "need_customer_2",
+      "type": "text",
+      "text": "**Ανάγκη 2:** Γρήγορη πληρωμή (Apple Pay / Google Pay)",
+      "x": -250,
+      "y": 300,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "need_customer_3",
+      "type": "text",
+      "text": "**Ανάγκη 3:** Λειτουργία χωρίς να κατεβάσουν εφαρμογή (App-less) και με κακό ίντερνετ.",
+      "x": -250,
+      "y": 450,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "solution_manager_1",
+      "type": "text",
+      "text": "Self-ordering / QR Menu για αποσυμφόρηση.",
+      "x": 100,
+      "y": -300,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "solution_manager_2",
+      "type": "text",
+      "text": "Commission-based model (pay as you earn).",
+      "x": 100,
+      "y": -150,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "solution_manager_3",
+      "type": "text",
+      "text": "Ενοποίηση με υπάρχοντα POS ή myDATA API.",
+      "x": 100,
+      "y": 0,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "solution_customer_1",
+      "type": "text",
+      "text": "QR scan από τραπέζι ή stand.",
+      "x": 100,
+      "y": 150,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "solution_customer_2",
+      "type": "text",
+      "text": "Stripe / Viva Wallet integration στο web.",
+      "x": 100,
+      "y": 300,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "solution_customer_3",
+      "type": "text",
+      "text": "Web app (PWA) + Offline Local Router fallback.",
+      "x": 100,
+      "y": 450,
+      "width": 250,
+      "height": 100
+    },
+    {
+      "id": "mvp_table",
+      "type": "text",
+      "text": "# Πίνακας MVP & Metrics\n\n| Λύση | Σε MVP; | Μετρήσιμο Κριτήριο (Metric) |\n|---|---|---|\n| QR Menu & Ordering | **Ναι** | 50+ παραγγελίες/μέρα/μαγαζί |\n| Commission Pricing | **Ναι** | 5 πρόθυμοι testers σε 1 μήνα |\n| myDATA Integration | Όχι | 0% compliance alerts (V2) |\n| Stripe Web Payment | **Ναι** | 70% ολοκλήρωση πληρωμών |\n| Offline Local Sync | Όχι (V2) | N/A |\n\n[[design/v1_scope.md]]",
+      "x": 450,
+      "y": 50,
+      "width": 400,
+      "height": 300
+    },
+    {
+      "id": "last_updated",
+      "type": "text",
+      "text": "**Last Updated:** 2024-05-24\n**Key Changes Today:**\n- Δημιουργία χάρτη Personas -> Ανάγκες -> Λύσεις.\n- Καθορισμός MVP scope με μετρήσιμα κριτήρια.\n- Ενσωμάτωση backlinks στο Vault.",
+      "x": -600,
+      "y": 650,
+      "width": 400,
+      "height": 150
+    }
+  ],
+  "edges": [
+    { "id": "e_pm_1", "fromNode": "persona_manager", "fromSide": "right", "toNode": "need_manager_1", "toSide": "left" },
+    { "id": "e_pm_2", "fromNode": "persona_manager", "fromSide": "right", "toNode": "need_manager_2", "toSide": "left" },
+    { "id": "e_pm_3", "fromNode": "persona_manager", "fromSide": "right", "toNode": "need_manager_3", "toSide": "left" },
+    { "id": "e_nm_1", "fromNode": "need_manager_1", "fromSide": "right", "toNode": "solution_manager_1", "toSide": "left" },
+    { "id": "e_nm_2", "fromNode": "need_manager_2", "fromSide": "right", "toNode": "solution_manager_2", "toSide": "left" },
+    { "id": "e_nm_3", "fromNode": "need_manager_3", "fromSide": "right", "toNode": "solution_manager_3", "toSide": "left" },
+
+    { "id": "e_pc_1", "fromNode": "persona_customer", "fromSide": "right", "toNode": "need_customer_1", "toSide": "left" },
+    { "id": "e_pc_2", "fromNode": "persona_customer", "fromSide": "right", "toNode": "need_customer_2", "toSide": "left" },
+    { "id": "e_pc_3", "fromNode": "persona_customer", "fromSide": "right", "toNode": "need_customer_3", "toSide": "left" },
+    { "id": "e_nc_1", "fromNode": "need_customer_1", "fromSide": "right", "toNode": "solution_customer_1", "toSide": "left" },
+    { "id": "e_nc_2", "fromNode": "need_customer_2", "fromSide": "right", "toNode": "solution_customer_2", "toSide": "left" },
+    { "id": "e_nc_3", "fromNode": "need_customer_3", "fromSide": "right", "toNode": "solution_customer_3", "toSide": "left" },
+
+    { "id": "e_s_mvp1", "fromNode": "solution_manager_1", "fromSide": "right", "toNode": "mvp_table", "toSide": "left" },
+    { "id": "e_s_mvp2", "fromNode": "solution_customer_1", "fromSide": "right", "toNode": "mvp_table", "toSide": "left" }
+  ]
+}

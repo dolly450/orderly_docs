@@ -41,3 +41,9 @@ MVP
 
 ## 8. Ask
 <!-- Τι ζητάς; -->
+
+---
+
+## Σχετικές Σημειώσεις
+- [[business/model.md]]: Business Model Canvas
+- [[design/v1_scope.md]]: Scope for V1/MVP

@@ -50,3 +50,14 @@ Operational efficiency:
 - περισσότερες πωλήσεις
 - πιο αποσυμφωρημένο προσωπικό
 - άμεσα προσβάσιμες επιλογές στον πελάτη **διεθνώς**
+
+---
+
+## Σχετικές Σημειώσεις
+- [[pitch/deck.md]]: Pitch Deck (ενότητα Competition)
+- [[business/market_strategy.md]]: Market Analysis & Strategy
+
+## Validation Experiments (Ανεκπλήρωτες Υποθέσεις)
+- **Υπόθεση:** Το Commission pricing και το AI feature παρέχουν ξεκάθαρη αξία και ξεχωρίζουν έναντι του BringFood.
+  - **Πείραμα:** Landing page test (Fake door experiment) που θα διαφημίζει τα features μας με ένα κουμπί "Get Early Access".
+  - **Μετρήσιμο Κριτήριο Επιτυχίας:** >5% Conversion rate από ιδιοκτήτες εστίασης που θα αφήσουν το email τους.

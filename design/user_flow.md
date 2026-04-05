@@ -29,3 +29,8 @@ graph TD
     
     M --> N[Ολοκλήρωση παραγγελίας]
 ```
+
+---
+
+## Σχετικές Σημειώσεις
+- [[architecture/ordering-flow.md]]: Technical Architecture of the Ordering Flow

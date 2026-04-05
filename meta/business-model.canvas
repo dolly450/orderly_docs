@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "key_partners",
+      "type": "text",
+      "text": "## Key Partners\n- Πάροχοι πληρωμών (Stripe, Viva Wallet)\n- Προμηθευτές Hardware (Local Routers, Tablets)\n- Εταιρείες POS για API integration (π.χ. BringFood)\n- Λογιστές για myDATA specs",
+      "x": -600,
+      "y": -300,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "key_activities",
+      "type": "text",
+      "text": "## Key Activities\n- Platform Development & Maintenance\n- B2B Sales & Marketing\n- Customer Support & Onboarding\n- API Integrations",
+      "x": -250,
+      "y": -300,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "key_resources",
+      "type": "text",
+      "text": "## Key Resources\n- Tech Stack (Cloud + Local Fallback)\n- Core Development Team\n- Sales Network\n- IP / Branding",
+      "x": -250,
+      "y": -50,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "value_propositions",
+      "type": "text",
+      "text": "## Value Propositions\n- Λιγότερα λάθη παραγγελιών & γρηγορότερο service.\n- Offline fallback για αξιοπιστία παντού.\n- Commission-based ή χαμηλό SaaS (μειωμένο ρίσκο).\n- App-less εμπειρία για τον πελάτη (Web/PWA).\n[[business/market_strategy.md]]\n[[pitch/deck.md]]",
+      "x": 100,
+      "y": -300,
+      "width": 300,
+      "height": 450
+    },
+    {
+      "id": "customer_relationships",
+      "type": "text",
+      "text": "## Customer Relationships\n- B2B: Self-serve onboarding (για small venues).\n- B2B: Dedicated account manager (Enterprise/Festivals).\n- B2C: Zero interaction, pure utility.",
+      "x": 450,
+      "y": -300,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "channels",
+      "type": "text",
+      "text": "## Channels\n- Direct B2B Sales (Πόρτα-πόρτα αρχικά).\n- Word of Mouth / Παρευρισκόμενοι σε φεστιβάλ.\n- Digital Marketing (B2B SaaS focus).",
+      "x": 450,
+      "y": -50,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "customer_segments",
+      "type": "text",
+      "text": "## Customer Segments\n**B2B:**\n- Beach Bars & Resort Bars\n- Food Festivals & Events\n- Self-service Cafes / Bistros\n**B2C:**\n- Τελικοί καταναλωτές που μισούν τις ουρές.\n[[business/model.md]]",
+      "x": 800,
+      "y": -300,
+      "width": 300,
+      "height": 450
+    },
+    {
+      "id": "cost_structure",
+      "type": "text",
+      "text": "## Cost Structure\n- Cloud Hosting (AWS/GCP)\n- Hardware costs (αν τα παρέχουμε εμείς)\n- R&D / Μισθοδοσία\n- Marketing & Sales commissions\n- Payment Gateway Fees",
+      "x": -600,
+      "y": 200,
+      "width": 650,
+      "height": 200
+    },
+    {
+      "id": "revenue_streams",
+      "type": "text",
+      "text": "## Revenue Streams\n- SaaS Συνδρομές (Tiers: Free/Basic/Pro)\n- Commission model (3-5% επί των παραγγελιών)\n- Setup fees / Hardware Sales (αν εφαρμόζεται)\n[[business/pricing_model.md]]",
+      "x": 100,
+      "y": 200,
+      "width": 1000,
+      "height": 200
+    },
+    {
+      "id": "last_updated",
+      "type": "text",
+      "text": "**Last Updated:** 2024-05-24\n**Key Changes Today:**\n- Ολοκλήρωση των 9 blocks του Business Model Canvas.\n- Σύνδεση με αρχεία pricing και market strategy.\n- Προσθήκη Offline Fallback ως 핵심 Value Proposition.",
+      "x": -600,
+      "y": 450,
+      "width": 600,
+      "height": 150
+    }
+  ],
+  "edges": []
+}
