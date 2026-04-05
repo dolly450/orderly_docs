@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "94a4ad04882f0f6c",
+        "id": "3a661ab11de8184f",
         "type": "tabs",
         "children": [
           {
-            "id": "6db8423701fec68b",
+            "id": "70725cb2aae5091f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "design/v1_scope.md",
-                "mode": "source",
-                "source": false
+                "aFile": "business/pricing_model.md",
+                "bFile": "business/pricing_model.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "v1_scope"
+              "icon": "diff",
+              "title": "Diff: pricing_model  (Working Tree)"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "Automated Poll",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design/v1_scope.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for v1_scope"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design/v1_scope.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from v1_scope"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,13 +154,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design/v1_scope.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of v1_scope"
+              "title": "Outline"
             }
           },
           {
@@ -194,29 +191,30 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6db8423701fec68b",
+  "active": "70725cb2aae5091f",
   "lastOpenFiles": [
+    "PROJECT_LOG.md",
+    "design/user_flow.md",
+    "business/pricing_model.md",
+    "TODO tasks.md",
+    "business/roadmap.md",
+    "design/v1_scope.md",
+    "business/market_strategy.md",
+    "design/features.md",
+    "pitch/deck.md",
     "meta/open-questions.md",
     "meta/business-model.canvas",
     "meta/user-needs.canvas",
-    "PROJECT_LOG.md",
     "meta/knowledge-health.md",
     "meta/questions.md",
     "design/order_lifecycle.md",
-    "design/v1_scope.md",
     "business/competitive_analysis.md",
-    "business/market_strategy.md",
     "meta/idea-dump.md",
     "meta/decisions.md",
-    "design/user_flow.md",
-    "business/roadmap.md",
-    "business/pricing_model.md",
-    "pitch/deck.md",
     "meta/test-topic.md",
     "pitch/pitch_strategy.md",
     "design/staff_workflow.md",
     "business/model.md",
-    "design/features.md",
     "architecture/overview.md",
     "architecture/pos_compliance.md",
     "tests/test_vault_sync.py",

@@ -18,11 +18,6 @@
 - QR Codes on tables for ordering.
 - Waiter notification button.
 
-## 🛠️ Upcoming Features (Phase 2)
-- [ ] AI Integration: Make the bot "talk" and summarize ideas.
-- [ ] Image/Asset Support: Save Discord images to the Vault.
-- [ ] Automated Polls: `/vote` for team decisions.
-
 ## 📌 Links
 - GitHub: https://github.com/dolly450/orderly_docs
 - Discord Server: Orderly Startup Hub
