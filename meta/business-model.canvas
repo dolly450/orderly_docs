@@ -1,95 +1,15 @@
 {
-  "nodes": [
-    {
-      "id": "key_partners",
-      "type": "text",
-      "text": "## Key Partners\n- Πάροχοι POS (π.χ. BringFood)\n- Payment Gateways (Stripe, Viva, Apple Pay)\n- Πάροχοι Hardware/Internet",
-      "x": 0,
-      "y": 0,
-      "width": 250,
-      "height": 200
-    },
-    {
-      "id": "key_activities",
-      "type": "text",
-      "text": "## Key Activities\n- SaaS Development & Maintenance\n- POS/myDATA Integrations\n- B2B Sales & Onboarding",
-      "x": 300,
-      "y": 0,
-      "width": 250,
-      "height": 150
-    },
-    {
-      "id": "key_resources",
-      "type": "text",
-      "text": "## Key Resources\n- Dev Team (Orderly)\n- Cloud Infra (AWS)\n- Local Gateway Tech\n[[architecture/overview.md]]",
-      "x": 300,
-      "y": 180,
-      "width": 250,
-      "height": 150
-    },
-    {
-      "id": "value_prop",
-      "type": "text",
-      "text": "## Value Proposition\n**B2B:** Αυξημένο throughput, μείωση λαθών, 100% offline λειτουργία.\n**B2C:** Γρήγορη παραγγελία/πληρωμή, πολυγλωσσικό menu.\n[[business/market_strategy.md]]",
-      "x": 600,
-      "y": 0,
-      "width": 250,
-      "height": 330
-    },
-    {
-      "id": "customer_relationships",
-      "type": "text",
-      "text": "## Customer Relationships\n- B2B Προσωπικές πωλήσεις\n- Self-serve onboarding\n- Dedicated Enterprise Support",
-      "x": 900,
-      "y": 0,
-      "width": 250,
-      "height": 150
-    },
-    {
-      "id": "channels",
-      "type": "text",
-      "text": "## Channels\n- Direct Sales (Cold Calling)\n- Word of Mouth\n- B2B Marketing / Συνέδρια",
-      "x": 900,
-      "y": 180,
-      "width": 250,
-      "height": 150
-    },
-    {
-      "id": "customer_segments",
-      "type": "text",
-      "text": "## Customer Segments\n- Beach Bars (Εποχιακά)\n- Food Festivals & Στάδια (High Volume)\n- Full/Self Service Cafes\n[[business/model.md]]",
-      "x": 1200,
-      "y": 0,
-      "width": 250,
-      "height": 330
-    },
-    {
-      "id": "cost_structure",
-      "type": "text",
-      "text": "## Cost Structure\n- Server/Cloud Hosting\n- Marketing & Sales\n- SMS/API Fees\n- Customer Support & Hardware",
-      "x": 0,
-      "y": 380,
-      "width": 600,
-      "height": 150
-    },
-    {
-      "id": "revenue_streams",
-      "type": "text",
-      "text": "## Revenue Streams\n- SaaS Συνδρομές (Basic, Pro, Enterprise)\n- Transaction Fees (Commission 3-5%)\n- Hardware Sales\n[[business/pricing_model.md]]",
-      "x": 650,
-      "y": 380,
-      "width": 800,
-      "height": 150
-    },
-    {
-      "id": "footer",
-      "type": "text",
-      "text": "--- \n**Last Updated:** 2026-04-03\n**Key Changes Today:**\n- Δημιουργία Business Model Canvas.\n- Προσθήκη backlinks στα αντίστοιχα docs.\n- Ενσωμάτωση SaaS vs Commission debates.",
-      "x": 0,
-      "y": 550,
-      "width": 1450,
-      "height": 100
-    }
-  ],
-  "edges": []
+	"nodes":[
+		{"id":"key_partners","type":"text","text":"## Key Partners\n- Πάροχοι POS (π.χ. BringFood)\n- Payment Gateways (Stripe, Viva, Apple Pay)\n- Πάροχοι Hardware/Internet","x":0,"y":0,"width":250,"height":229},
+		{"id":"key_resources","type":"text","text":"## Key Resources\n- Dev Team (Orderly)\n- Cloud Infra (AWS)\n- Local Gateway Tech\n[[architecture/overview.md]]","x":300,"y":180,"width":250,"height":179},
+		{"id":"value_prop","type":"text","text":"## Value Proposition\n**B2B:** Αυξημένο throughput, μείωση λαθών, 100% offline λειτουργία.\n**B2C:** Γρήγορη παραγγελία/πληρωμή, πολυγλωσσικό menu.\n[[business/market_strategy.md]]","x":600,"y":0,"width":250,"height":330},
+		{"id":"channels","type":"text","text":"## Channels\n- Direct Sales (Cold Calling)\n- Word of Mouth\n- B2B Marketing / Συνέδρια","x":900,"y":180,"width":250,"height":179},
+		{"id":"customer_segments","type":"text","text":"## Customer Segments\n- Beach Bars (Εποχιακά)\n- Food Festivals & Στάδια (High Volume)\n- Full/Self Service Cafes\n[[business/model.md]]","x":1200,"y":0,"width":250,"height":233},
+		{"id":"cost_structure","type":"text","text":"## Cost Structure\n- Server/Cloud Hosting\n- Marketing & Sales\n- SMS/API Fees\n- Customer Support & Hardware","x":0,"y":380,"width":600,"height":182},
+		{"id":"revenue_streams","type":"text","text":"## Revenue Streams\n- SaaS Συνδρομές (Basic, Pro, Enterprise)\n- Transaction Fees (Commission 3-5%)\n- Hardware Sales\n[[business/pricing_model.md]]","x":650,"y":380,"width":800,"height":179},
+		{"id":"footer","type":"text","text":"--- \n**Last Updated:** 2026-04-03\n**Key Changes Today:**\n- Δημιουργία Business Model Canvas.\n- Προσθήκη backlinks στα αντίστοιχα docs.\n- Ενσωμάτωση SaaS vs Commission debates.","x":0,"y":620,"width":1450,"height":211},
+		{"id":"key_activities","type":"text","text":"## Key Activities\n- SaaS Development & Maintenance\n- POS/myDATA Integrations\n- B2B Sales & Onboarding","x":300,"y":-40,"width":250,"height":205},
+		{"id":"customer_relationships","type":"text","text":"## Customer Relationships\n- B2B Προσωπικές πωλήσεις\n- Self-serve onboarding\n- Dedicated Enterprise Support","x":900,"y":-40,"width":250,"height":233}
+	],
+	"edges":[]
 }
