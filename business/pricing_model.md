@@ -43,4 +43,5 @@ graph LR
 ```
 
 Tasks: 
-1. Έρευνα για fundings και μελλοντικά expenses που θα έχουμε (πόσα λεφτά και πού θα τα φάμε) 
+- [ ] Έρευνα για fundings και μελλοντικά expenses που θα έχουμε (πόσα λεφτά και πού θα τα φάμε) - για τον όποιο investor έχουμε. 
+- [ ] Βασικά κόστη + revenue streams + healthy margins (overheads + cost of production etc). 

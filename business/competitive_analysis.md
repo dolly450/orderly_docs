@@ -50,3 +50,8 @@ Operational efficiency:
 - περισσότερες πωλήσεις
 - πιο αποσυμφωρημένο προσωπικό
 - άμεσα προσβάσιμες επιλογές στον πελάτη **διεθνώς**
+
+
+Tasks: 
+- [ ] Complete the pitch 
+- [ ] Complete the business model canvas - especially the value proposition part 
