@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "key_partners",
+      "type": "text",
+      "text": "## Key Partners\n- Payment Gateways (Viva Wallet, Stripe) (βλ. [[architecture/overview.md]])\n- Υπάρχοντα POS Systems (για integrations)\n- Εταιρείες εκτυπωτών κουζίνας",
+      "x": 0,
+      "y": 0,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "key_activities",
+      "type": "text",
+      "text": "## Key Activities\n- Ανάπτυξη πλατφόρμας (PWA, Admin Panel)\n- Πωλήσεις & Onboarding εστιατορίων\n- Customer Support & Training",
+      "x": 280,
+      "y": 0,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "key_resources",
+      "type": "text",
+      "text": "## Key Resources\n- Software Platform (Κώδικας)\n- Ομάδα Ανάπτυξης & Πωλήσεων\n- Στρατηγικές Συνεργασίες (POS APIs)",
+      "x": 280,
+      "y": 180,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "value_prop",
+      "type": "text",
+      "text": "## Value Propositions\n**Για Εστιατόρια:**\n- Αύξηση Table Turnover\n- Μείωση Λαθών Παραγγελίας\n- Λύση σε έλλειψη προσωπικού\n\n**Για Πελάτες:**\n- Γρήγορη Παραγγελία χωρίς αναμονή\n- Μενού στη γλώσσα τους",
+      "x": 560,
+      "y": 0,
+      "width": 250,
+      "height": 330
+    },
+    {
+      "id": "customer_relationships",
+      "type": "text",
+      "text": "## Customer Relationships\n- B2B: Άμεσες Πωλήσεις (Direct Sales)\n- Dedicated Account Manager για μεγάλα accounts\n- Self-serve onboarding (μελλοντικά)",
+      "x": 840,
+      "y": 0,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "channels",
+      "type": "text",
+      "text": "## Channels\n- B2B Direct Sales (Door-to-door)\n- Συνεργάτες (Τεχνικοί POS τοπικά)\n- Word of mouth (Εστιατόρια)",
+      "x": 840,
+      "y": 180,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "customer_segments",
+      "type": "text",
+      "text": "## Customer Segments\n- High-traffic Εστιατόρια/Beach Bars σε τουριστικές περιοχές\n- Καφετέριες με μεγάλο volume\n- Ξενοδοχεία (Pool bars, room service)",
+      "x": 1120,
+      "y": 0,
+      "width": 250,
+      "height": 330
+    },
+    {
+      "id": "cost_structure",
+      "type": "text",
+      "text": "## Cost Structure\n- Ανάπτυξη Λογισμικού (Μισθοί)\n- Server/Cloud Infrastructure\n- Marketing & Πωλήσεις (Επιτροπές)\n- Νομικά (GDPR, Εταιρεία)",
+      "x": 140,
+      "y": 360,
+      "width": 550,
+      "height": 150
+    },
+    {
+      "id": "revenue_streams",
+      "type": "text",
+      "text": "## Revenue Streams\n- Μηνιαία/Ετήσια Συνδρομή (SaaS) (βλ. [[business/model.md]])\n- Transaction Fee (% επί των παραγγελιών)\n- Setup Fee (Εγκατάσταση & Εκπαίδευση)",
+      "x": 720,
+      "y": 360,
+      "width": 550,
+      "height": 150
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "**Last Updated:** 2026-04-06\n**Key Changes Today:**\n- Δημιουργία πλήρους Business Model Canvas με 9 blocks.\n- Προσθήκη links προς architecture και business files.",
+      "x": 0,
+      "y": 550,
+      "width": 1000,
+      "height": 100
+    }
+  ],
+  "edges": []
+}

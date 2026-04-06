@@ -37,3 +37,7 @@ flowchart TD
 *   **Dynamic QR:** Redirect μέσω short-URLs για εύκολη αλλαγή αν καταστραφεί το αυτοκόλλητο.
 *   **Table Verification:** Επιβεβαίωση αριθμού τραπεζιού στο flow του πελάτη.
 *   **Durability:** Πλαστικοποίηση (lamination) για χρήση σε εξωτερικούς χώρους/παραλίες.
+
+## Σχετικές Σημειώσεις
+* Δείτε το σχετικό [[meta/user-needs.canvas]]
+* Σχετικά ερωτήματα: [[meta/questions.md]]

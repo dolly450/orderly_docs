@@ -21,3 +21,8 @@
 ## 📌 Links
 - GitHub: https://github.com/dolly450/orderly_docs
 - Discord Server: Orderly Startup Hub
+
+## [2026-04-06] Knowledge Base Organization
+- Ενημερώθηκε το `meta/questions.md` με τις 7 κορυφαίες στρατηγικές ερωτήσεις.
+- Δημιουργήθηκαν/Ενημερώθηκαν τα `meta/user-needs.canvas` και `meta/business-model.canvas` με πλήρη δομή, metrics και backlinks.
+- Δημιουργήθηκε το `meta/knowledge-health.md` για παρακολούθηση της υγείας της βάσης γνώσης.

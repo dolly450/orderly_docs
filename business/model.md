@@ -26,3 +26,7 @@
 
 ## Revenue Streams
 - 
+
+## Σχετικές Σημειώσεις
+* Δείτε το σχετικό [[meta/business-model.canvas]]
+* Σχετικό έγγραφο: [[architecture/overview.md]]

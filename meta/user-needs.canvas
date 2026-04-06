@@ -1,0 +1,106 @@
+{
+  "nodes": [
+    {
+      "id": "persona_1",
+      "type": "text",
+      "text": "# Πελάτης (Τουρίστας/Θαμώνας)\n- Θέλει να παραγγείλει γρήγορα.\n- Δεν θέλει να περιμένει το σερβιτόρο.\n- Θέλει να δει το μενού στη γλώσσα του.",
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "needs_1",
+      "type": "text",
+      "text": "## Ανάγκες\n1. Γρήγορη πρόσβαση στο μενού (χωρίς app).\n2. Πολυγλωσσική υποστήριξη.\n3. Πληρωμή από το κινητό.",
+      "x": 350,
+      "y": 0,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "solution_1",
+      "type": "text",
+      "text": "## Υποψήφιες Λύσεις\n1. QR Code στο τραπέζι -> Web App (PWA) (βλ. [[architecture/overview.md]]).\n2. DeepL API για μετάφραση.\n3. Viva Wallet/Apple Pay integration.",
+      "x": 700,
+      "y": 0,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "persona_2",
+      "type": "text",
+      "text": "# Καταστηματάρχης / Manager\n- Θέλει αύξηση τζίρου (table turnover).\n- Θέλει λιγότερα λάθη.\n- Φοβάται το κόστος και την αλλαγή συστημάτων.",
+      "x": 0,
+      "y": 200,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "needs_2",
+      "type": "text",
+      "text": "## Ανάγκες\n1. Μείωση χρόνου παραγγελίας.\n2. Εύκολη διαχείριση μενού.\n3. Χαμηλό αρχικό κόστος επένδυσης.",
+      "x": 350,
+      "y": 200,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "solution_2",
+      "type": "text",
+      "text": "## Υποψήφιες Λύσεις\n1. Απευθείας εκτύπωση στο KDS/Κουζίνα.\n2. Simple Admin Panel.\n3. SaaS pricing model (ή % ανά παραγγελία) (βλ. [[business/model.md]]).",
+      "x": 700,
+      "y": 200,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "mvp_matrix",
+      "type": "text",
+      "text": "# Feature Matrix\n| Feature | MVP | Success Metric |\n| :--- | :---: | :--- |\n| QR Ordering | Ναι | >50% παραγγελιών μέσω QR |\n| Multilingual | Ναι | Χρήση >2 γλωσσών |\n| Online Payments | Ναι | >30% πληρωμών μέσω app |\n| POS Integration | Όχι | N/A (Manual sync MVP) |\n| Waiter Call | Ναι | <2min response time |",
+      "x": 350,
+      "y": 400,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "**Last Updated:** 2026-04-06\n**Key Changes Today:**\n- Προστέθηκε Feature Matrix με MVP & Success Metrics.\n- Ενσωματώθηκαν links προς architecture και business files.\n- Ξεκαθαρίστηκαν οι ανάγκες του καταστηματάρχη.",
+      "x": 0,
+      "y": 680,
+      "width": 600,
+      "height": 120
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "fromNode": "persona_1",
+      "fromSide": "right",
+      "toNode": "needs_1",
+      "toSide": "left"
+    },
+    {
+      "id": "edge_2",
+      "fromNode": "needs_1",
+      "fromSide": "right",
+      "toNode": "solution_1",
+      "toSide": "left"
+    },
+    {
+      "id": "edge_3",
+      "fromNode": "persona_2",
+      "fromSide": "right",
+      "toNode": "needs_2",
+      "toSide": "left"
+    },
+    {
+      "id": "edge_4",
+      "fromNode": "needs_2",
+      "fromSide": "right",
+      "toNode": "solution_2",
+      "toSide": "left"
+    }
+  ]
+}
