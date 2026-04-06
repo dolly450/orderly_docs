@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3a661ab11de8184f",
+        "id": "989d154095f768b1",
         "type": "tabs",
         "children": [
           {
-            "id": "70725cb2aae5091f",
+            "id": "2ead6332ba9b6f80",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": "business/pricing_model.md",
-                "bFile": "business/pricing_model.md",
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: pricing_model  (Working Tree)"
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -191,12 +191,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "70725cb2aae5091f",
+  "active": "78c632a461112570",
   "lastOpenFiles": [
+    "Done tasks.md",
+    "TODO tasks.md",
     "PROJECT_LOG.md",
     "design/user_flow.md",
     "business/pricing_model.md",
-    "TODO tasks.md",
     "business/roadmap.md",
     "design/v1_scope.md",
     "business/market_strategy.md",
@@ -229,7 +230,6 @@
     "src/vault_manager.py",
     "architecture/technical_stack.md",
     "architecture/system_architecture.md",
-    "architecture/ordering-flow.md",
-    "architecture/data_model.md"
+    "architecture/ordering-flow.md"
   ]
 }
