@@ -17,6 +17,7 @@ trial px 15 meres + agorazei subscription apo admin
 -  extra fee gia service / maintenance 
 13) kalo knowledge gia **pos / pda integration**
 14) multilingual
+15) Live diathesimotita/ plirotita magaziou  
    
 
 | επιχείρηση     | menu | servitoros | self co | queues | call button | booking |

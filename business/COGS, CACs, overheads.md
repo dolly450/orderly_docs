@@ -7,20 +7,22 @@ Three important things to consider when deciding product price:
 Premium service, vs value for money competitive service. 
 
 Interesting factors - 
-1. Customer's willingness to pay - "tha to agorazes auto?", + diafora subscription tiers me premium features gia na doume an einai diatethimenoi na ta gorasoun 
+1. Customer's willingness to pay - "tha to agorazes auto?", + diafora subscription tiers me premium features gia na doume an einai diatethimenoi na ta gorasoun --> note - ==pelates mas einai oi katastimatarxes, +++ == 
 2. Business model - scales on customer's no of sales 
 3. Customer acquisition cost - has to do with marketing and diafimiseis 
 4. Stage of business - VERY relevant, if we want to dominate the market early (as it is something that most people will eventually start doing more and more), we may want to start with a bearable healthy pricing margin, so that we can gain traction and lots of the market quickly before competitors, and AFTER we gain most of the market, we can raise the prices 
 
 
 # COGS 
-1. Servers gia platforma / app / cloud - otidipote related pou scalarei oso megalwnei I platforma 
+1. Servers gia platforma / app / cloud - otidipote related pou scalarei oso megalwnei I platforma --> The only cost - 100-200 yearly (enas mpousoulas). 
 2. Database storages if needed 
 3. Bandwith (transferring data between us and users) - CDN (storages of data in different servers of the world) 
 4. Keeping app running (bug fixed etc)/ maintenance 
 5. Live customer support 
 6. Any licenses we may use 
 7. Third-party APIs (stripe px) - gt kanei charge per transaction 
+
+--> For V1, most probably will be almost 0. 
 
 For gross margin 80%: 
 revenue - COGS/ revenue = 0.8 
@@ -39,21 +41,28 @@ monthly fee pou na kamnei match to 80% margin
 
 You're not charging more because it _costs_ you more. You're charging more because it's _worth_ more to them.
 I guess ta smaller tiers tha exoun tipou 60% margin, ke ta higher 100% margin, ke to mid mas 80%. 
-For the e
+
 # CAC 
 1. Fb ad campaigns 
 2. Marketing 
 	1. Affiliates + influencers (fixed or commision) 
 	2. Social media + ads 
 	3. Email newsletters 
+- Hiring a sales rep to cold-call bars/cafes
+- Attending hospitality trade shows or events
+- Paid Instagram/Google ads targeting restaurant owners
+- Free trial or discounted first month to onboard
+[[market_strategy]]
 
 # Overheads 
 1. Salaries of people working for the company (Social media managing etc.)
-2. Subscriptions that are NOT needed for the product (e.g. claude) 
+2. Subscriptions that are NOT needed for the product (e.g. claude email etc.) 
 3. Legal costs (agnwsto mou) 
-4. "About" website maintenance 
-5. Domain cost
-6. Developer that makes it 
+4. Accounting fees 
+5. Business insurance?? 
+6. "About" website maintenance 
+7. Domain cost
+8. Developer that makes it + that improves it 
 
 ROI = net return/ cost of investment x 100. In other words - efficient investment. 
 

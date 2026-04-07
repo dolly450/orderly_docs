@@ -4,3 +4,4 @@
 - [Ethniki Fasoladoula] Πόσο θα κοστίσει το MVP (ανάπτυξη + λειτουργία) και σε πόσο χρόνο γίνεται;
 - [Ethniki Fasoladoula] Startup/VC funding (10-20% equity) ή Indie SaaS/Bootstrapping — ποιο μοντέλο χρηματοδότησης υιοθετούμε;
 - Poies tha einai oi diafores twn tiers metaksi tous sto tiered subscription model? 
+- Tha xrewnoume extra to maintenance se tier models? 
