@@ -193,6 +193,7 @@
   },
   "active": "78c632a461112570",
   "lastOpenFiles": [
+    "business/Total costs + overheads.md",
     "Done tasks.md",
     "TODO tasks.md",
     "PROJECT_LOG.md",
@@ -229,7 +230,6 @@
     "src/planka_client.py",
     "src/vault_manager.py",
     "architecture/technical_stack.md",
-    "architecture/system_architecture.md",
-    "architecture/ordering-flow.md"
+    "architecture/system_architecture.md"
   ]
 }
