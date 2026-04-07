@@ -56,3 +56,13 @@ Na kanoume diaforetika erwtimatologia - analoga tou audience:
 
 Next versions: 
 Poso se ekneurizei to oti den kserei to ti plirotita exei ena magazi prin pas? --> Theleis na deis poso kosmo exei mesa px prin pas. 
+
+
+Κοινό ερωτηματολογίου: 
+1. Οικογένεια φίλοι κλπ 
+2. Φοιτητικά groups πανεπιστημίων (ομαδικές σχολής, ανομολόγητα, ομάδες Erasmus κλπ.) 
+3. Άτομα σε δουλειές 
+4. ++ 
+
+Το ερώτημα δλδ είναι πού θα το στείλουμε, πόσο καιρό θα τρέχει πριν πάμε να το pitcharoume (πόσο θα περιμένουμε δλδ - έστω ότι το MVP είναι έτοιμο). 
+Κάπως να κάνουμε ensure ότι μία φορά μπορεί να το συμπληρώσει ο καθένας. 
