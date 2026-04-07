@@ -196,9 +196,10 @@
   },
   "active": "2ead6332ba9b6f80",
   "lastOpenFiles": [
+    "business/Questionnaire.md",
+    "business/COGS, CACs, overheads.md",
     "meta/open-questions.md",
     "business/pricing_model.md",
-    "business/COGS, CACs, overheads.md",
     "business/Total costs + overheads.md",
     "Done tasks.md",
     "TODO tasks.md",
@@ -232,7 +233,6 @@
     "tests/test_auto_delete.py",
     "tests",
     "src/planka_client.py",
-    "src/vault_manager.py",
-    "architecture/technical_stack.md"
+    "src/vault_manager.py"
   ]
 }
