@@ -1,6 +1,6 @@
 1) menu   + eikones (conf)
 2) kalathi? --> paraggelia
-3) ordering processs - poioi paraggelnoun?  
+3) ordering processs - poioi paraggelnoun? 
 4) info gia katastasi paraggelias + queue (time related)
 5) sindesi me ektipwtes -> xartakia?
 6) info gia wifi kai to magazi

@@ -5,3 +5,5 @@
 - [Ethniki Fasoladoula] Startup/VC funding (10-20% equity) ή Indie SaaS/Bootstrapping — ποιο μοντέλο χρηματοδότησης υιοθετούμε;
 - Poies tha einai oi diafores twn tiers metaksi tous sto tiered subscription model? 
 - Tha xrewnoume extra to maintenance se tier models? 
+- Θα ήταν χρήσιμο το να συνεργαστούμε με εταιρείες τηλεπικοινωνιών, με σκοπό να κάνουεμ optimise το δίκτυο των μαγαζιών με τα οποία θα συνεργαζόμαστε ως μέρος του πακέτου, και .. ++ 
+- Θα ήταν χρήσιμο να υπάρχει η δυνατότητα εντός ενός λεπτού να γίνει αλλαγή της παραγγελίας? 
