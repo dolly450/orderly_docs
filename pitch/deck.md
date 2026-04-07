@@ -41,3 +41,7 @@ MVP
 
 ## 8. Ask
 <!-- Τι ζητάς; -->
+
+## Σχετικές Σημειώσεις
+- [[../business/model.md]]
+- [[../architecture/overview.md]]

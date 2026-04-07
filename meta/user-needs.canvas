@@ -1,0 +1,113 @@
+{
+  "nodes": [
+    {
+      "id": "persona1",
+      "type": "text",
+      "text": "**Persona 1: Ο Διστακτικός Manager**\n- Θέλει να μειώσει τα λάθη.\n- Φοβάται το κόστος και τις αλλαγές στο POS.\n- Θέλει γρήγορη εξυπηρέτηση των πελατών.",
+      "x": -600,
+      "y": -200,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "persona2",
+      "type": "text",
+      "text": "**Persona 2: Ο Πελάτης / Θαμώνας**\n- Σιχαίνεται τις ουρές και την αναμονή.\n- Θέλει να παραγγέλνει και να πληρώνει άμεσα.\n- Θέλει ξεκάθαρο ψηφιακό μενού.",
+      "x": -600,
+      "y": 50,
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "need1",
+      "type": "text",
+      "text": "**Ανάγκες Manager:**\n1. Χαμηλό/Μηδενικό αρχικό κόστος\n2. Εύκολο on-boarding προσωπικού\n3. Ταχύτητα παραγγελιών",
+      "x": -200,
+      "y": -200,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "need2",
+      "type": "text",
+      "text": "**Ανάγκες Πελάτη:**\n1. Παραγγελία από το κινητό (QR code)\n2. Πληρωμή χωρίς να περιμένει το POS\n3. Όχι άλλη εφαρμογή για download",
+      "x": -200,
+      "y": 50,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "solution1",
+      "type": "text",
+      "text": "**Λύσεις (Candidate):**\n- Web App (No install) μέσω QR\n- Freemium μοντέλο (μόνο ψηφιακό μενού) για αρχή\n- Cloud POS integration",
+      "x": 150,
+      "y": -75,
+      "width": 250,
+      "height": 150
+    },
+    {
+      "id": "mvp_table",
+      "type": "text",
+      "text": "**MVP Matrix**\n| Feature | Είναι MVP; | Metric Επιτυχίας |\n|---|---|---|\n| Digital Menu (QR) | Ναι | >500 views/μήνα |\n| Self-Ordering | Ναι | 30% παραγγελιών μέσω app |\n| POS Integration | Όχι (V2) | N/A |\n| Direct Payments | Ναι | 15% πληρωμών μέσω app |",
+      "x": 500,
+      "y": -100,
+      "width": 350,
+      "height": 200
+    },
+    {
+      "id": "backlinks",
+      "type": "text",
+      "text": "**Σχετικά Αρχεία (Backlinks):**\n- [[../design/user_flow.md]]\n- [[../design/v1_scope.md]]\n- [[../pitch/deck.md]]",
+      "x": 150,
+      "y": 150,
+      "width": 250,
+      "height": 120
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "**Last Updated:** 2024-04-07\n**Key Changes Today:**\n- Προστέθηκαν 2 Personas με 3 ανάγκες η καθεμία.\n- Δημιουργήθηκε το MVP Matrix με metrics.\n- Προστέθηκαν Backlinks.",
+      "x": -600,
+      "y": 300,
+      "width": 1450,
+      "height": 100
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge1",
+      "fromNode": "persona1",
+      "fromSide": "right",
+      "toNode": "need1",
+      "toSide": "left"
+    },
+    {
+      "id": "edge2",
+      "fromNode": "persona2",
+      "fromSide": "right",
+      "toNode": "need2",
+      "toSide": "left"
+    },
+    {
+      "id": "edge3",
+      "fromNode": "need1",
+      "fromSide": "right",
+      "toNode": "solution1",
+      "toSide": "left"
+    },
+    {
+      "id": "edge4",
+      "fromNode": "need2",
+      "fromSide": "right",
+      "toNode": "solution1",
+      "toSide": "left"
+    },
+    {
+      "id": "edge5",
+      "fromNode": "solution1",
+      "fromSide": "right",
+      "toNode": "mvp_table",
+      "toSide": "left"
+    }
+  ]
+}

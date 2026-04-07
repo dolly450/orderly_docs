@@ -1,0 +1,103 @@
+{
+  "nodes": [
+    {
+      "id": "key_partners",
+      "type": "text",
+      "text": "**Key Partners**\n- Τεχνικοί POS/Μηχανογράφησης\n- Cloud Providers (AWS/GCP)\n- Payment Gateways (Stripe, Viva)",
+      "x": -600,
+      "y": -300,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "key_activities",
+      "type": "text",
+      "text": "**Key Activities**\n- Ανάπτυξη Web App (QR)\n- Cloud Hosting & Maintenance\n- B2B Πωλήσεις/Onboarding\n- Customer Support",
+      "x": -300,
+      "y": -300,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "value_prop",
+      "type": "text",
+      "text": "**Value Proposition**\n- Εξάλειψη αναμονής για παραγγελία/πληρωμή.\n- Αύξηση τζίρου μέσω γρηγορότερου table turnover.\n- Μηδενικό Hardware Cost (No PDA needed).\n- Cloud-first με offline fallback.",
+      "x": 0,
+      "y": -300,
+      "width": 250,
+      "height": 450
+    },
+    {
+      "id": "customer_relationships",
+      "type": "text",
+      "text": "**Customer Relationships**\n- Self-service onboarding (Freemium)\n- Dedicated Account Manager (Premium)\n- B2B Support 24/7",
+      "x": 300,
+      "y": -300,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "customer_segments",
+      "type": "text",
+      "text": "**Customer Segments**\n- Εστιατόρια & Bistros\n- Beach Bars / Self-Service Bars\n- Events / Festivals",
+      "x": 600,
+      "y": -300,
+      "width": 250,
+      "height": 450
+    },
+    {
+      "id": "key_resources",
+      "type": "text",
+      "text": "**Key Resources**\n- Development Team\n- Cloud Infrastructure\n- Brand / UX Design",
+      "x": -300,
+      "y": -50,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "channels",
+      "type": "text",
+      "text": "**Channels**\n- Direct Sales B2B\n- Affiliate / Local Technicians\n- Digital Marketing (LinkedIn, Meta)",
+      "x": 300,
+      "y": -50,
+      "width": 250,
+      "height": 200
+    },
+    {
+      "id": "cost_structure",
+      "type": "text",
+      "text": "**Cost Structure**\n- Hosting & Server Costs\n- Μισθοδοσία / R&D\n- Marketing & CAC\n- Payment Gateway Fees",
+      "x": -600,
+      "y": 200,
+      "width": 550,
+      "height": 150
+    },
+    {
+      "id": "revenue_streams",
+      "type": "text",
+      "text": "**Revenue Streams**\n- SaaS Subscription (Monthly/Yearly)\n- Transaction fee % (για payments μέσω app)\n- White-label customization fees",
+      "x": 0,
+      "y": 200,
+      "width": 850,
+      "height": 150
+    },
+    {
+      "id": "backlinks",
+      "type": "text",
+      "text": "**Σχετικά Αρχεία (Backlinks):**\n- [[../business/model.md]]\n- [[../business/pricing_model.md]]\n- [[../business/competitive_analysis.md]]",
+      "x": 0,
+      "y": 400,
+      "width": 400,
+      "height": 100
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "**Last Updated:** 2024-04-07\n**Key Changes Today:**\n- Δημιουργία Business Model Canvas (9 blocks).\n- Προσθήκη εξειδικευμένων bullets (Cloud, QR, No PDA).\n- Προσθήκη Backlinks.",
+      "x": -600,
+      "y": 550,
+      "width": 1450,
+      "height": 100
+    }
+  ]
+}

@@ -21,3 +21,11 @@
 ## 📌 Links
 - GitHub: https://github.com/dolly450/orderly_docs
 - Discord Server: Orderly Startup Hub
+
+## [2024-04-07] - Daily Knowledge Organization
+- **Αρχεία που ενημερώθηκαν:** `meta/questions.md`, `business/model.md`, `architecture/overview.md`, `pitch/deck.md`, `meta/user-needs.canvas`, `meta/business-model.canvas`, `meta/knowledge-health.md`.
+- **Τι έγινε:**
+  - Μεταφορά και οργάνωση 10 πιεστικών ερωτήσεων στο `meta/questions.md` (περιλαμβάνονται και brand-naming ερωτήσεις). Το `open-questions.md` διαγράφηκε.
+  - Προσθήκη 6 backlinks μεταξύ των `business/model.md`, `architecture/overview.md`, `pitch/deck.md`.
+  - Δημιουργία/Ενημέρωση των δύο .canvas αρχείων με τα απαραίτητα blocks, backlinks, και metrics (JSON format).
+  - Δημιουργία ημερήσιων metrics υγείας στο `meta/knowledge-health.md`.

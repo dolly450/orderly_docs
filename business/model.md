@@ -26,3 +26,7 @@
 
 ## Revenue Streams
 - 
+
+## Σχετικές Σημειώσεις
+- [[../pitch/deck.md]]
+- [[../architecture/overview.md]]
