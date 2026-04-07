@@ -18,3 +18,6 @@ gantt
     Pilot Test (Small Event)   :crit, a7, 2026-06-15, 7d
     Refining based on feedback :a8, 2026-06-22, 14d
 ```
+Plan: 
+1. First phase - questionnaire, MVP, pitching, pilot servicing and adapting based on customer needs. 
+2. 
