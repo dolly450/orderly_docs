@@ -11,14 +11,14 @@
             "id": "2ead6332ba9b6f80",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "business/COGS, CACs, overheads.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "COGS, CACs, overheads"
             }
           }
         ]
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "business/COGS, CACs, overheads.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for COGS, CACs, overheads"
             }
           },
           {
@@ -112,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "business/COGS, CACs, overheads.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from COGS, CACs, overheads"
             }
           },
           {
@@ -154,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "business/COGS, CACs, overheads.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of COGS, CACs, overheads"
             }
           },
           {
@@ -191,21 +194,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "78c632a461112570",
+  "active": "2ead6332ba9b6f80",
   "lastOpenFiles": [
+    "meta/open-questions.md",
+    "business/pricing_model.md",
     "business/COGS, CACs, overheads.md",
     "business/Total costs + overheads.md",
     "Done tasks.md",
     "TODO tasks.md",
     "PROJECT_LOG.md",
     "design/user_flow.md",
-    "business/pricing_model.md",
     "business/roadmap.md",
     "design/v1_scope.md",
     "business/market_strategy.md",
     "design/features.md",
     "pitch/deck.md",
-    "meta/open-questions.md",
     "meta/business-model.canvas",
     "meta/user-needs.canvas",
     "meta/knowledge-health.md",
