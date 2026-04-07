@@ -46,6 +46,40 @@ Tasks:
 - [ ] Έρευνα για fundings και μελλοντικά expenses που θα έχουμε (πόσα λεφτά και πού θα τα φάμε) - για τον όποιο investor έχουμε. 
 - [ ] Βασικά κόστη + revenue streams + healthy margins (overheads + cost of production etc). 
 
+# Commission based vs Subscription based fees
+[[COGS, CACs, overheads]]
+
+Commission has low barrier to entry - pio eukolo na to pouliseis giati to markettareis ws "oso doulepseis plirwneis", ke scalarei automata. 
+OMWS, auto mas "epivarinei" emas me to an o kathe pelatis doulepsei, prosdidontas aveveotita gia ta mellontika mas kerdi, + oti oi pelates pou vgazoun polla lefta tha protimisoun eventually subscription montello. 
+
+To subscription on the other hand, einai pio diskolo na to pouliseis stin arxi prin na exeis traction, giati zitas "polla" lefta ke eisageis kati kenourgio, alla apo tin alli einai pio "ksekatharo" san methodos/ pio antilipto, + oti mas dinei veveotita gia ta economics mas. 
+
+To idaniko tha itan na ksekinisoume hybrid, kanontas offer ke ta 2, ke eventually na tous kanoume olous switch se tiered subscription based model 
 
 
+# Tiered subscription 
+Poies tha einai oi diafores twn tiers metaksi tous? 
+An ta tiers exoun different running costs, exoume tin apantisi mas. 
 
+### Features That Justify Higher Tiers
+
+**Operational**
+- Number of terminals/devices allowed
+- Multiple locations under one account
+- Staff accounts and permission levels
+
+**Reporting & Insights**
+- Basic sales summary vs. detailed breakdowns (by hour, item, staff)
+- End-of-day reports vs. real-time dashboards
+- Export to accounting software (e.g. QuickBooks)
+
+**Customer-Facing**
+- Built-in loyalty/rewards programme
+- QR code ordering
+- Custom branding on receipts
+
+**Support**
+- Email only vs. live chat vs. dedicated account manager
+- Onboarding assistance for larger clients
+
+==DISCUSS THESE + ADD MORE + REMOVE SOME== 
