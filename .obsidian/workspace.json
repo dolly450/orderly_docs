@@ -196,6 +196,10 @@
   },
   "active": "2ead6332ba9b6f80",
   "lastOpenFiles": [
+    "Images/Pasted image 20260407175230.png",
+    "Images/Pasted image 20260407175225.png",
+    "Images/Pasted image 20260407172306.png",
+    "Images",
     "business/Questionnaire.md",
     "business/COGS, CACs, overheads.md",
     "meta/open-questions.md",
@@ -223,7 +227,6 @@
     "design/staff_workflow.md",
     "business/model.md",
     "architecture/overview.md",
-    "architecture/pos_compliance.md",
     "tests/test_vault_sync.py",
     "tests/test_vault_json.py",
     "tests/test_vault.py",
@@ -232,7 +235,6 @@
     "tests/test_bot_functions.py",
     "tests/test_auto_delete.py",
     "tests",
-    "src/planka_client.py",
-    "src/vault_manager.py"
+    "src/planka_client.py"
   ]
 }
