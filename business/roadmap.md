@@ -19,5 +19,5 @@ gantt
     Refining based on feedback :a8, 2026-06-22, 14d
 ```
 Plan: 
-1. First phase - questionnaire, MVP, pitching, pilot servicing and adapting based on customer needs. 
-2. 
+1. First phase - questionnaire, MVP, pitching, basic marketing, reviewing and adapting changes based on customer needs. 
+2. Rapid expansion via low margins, low CAC - extremely fast customer acquisition. 

@@ -3,8 +3,10 @@
 - [Ethniki Fasoladoula] Ποιος είναι ο ανταγωνισμός που δεν έχουμε ακόμα χαρτογραφήσει και πόσο καλύτεροι είμαστε από το BringFood και τους βασικούς παίκτες;
 - [Ethniki Fasoladoula] Πόσο θα κοστίσει το MVP (ανάπτυξη + λειτουργία) και σε πόσο χρόνο γίνεται;
 - [Ethniki Fasoladoula] Startup/VC funding (10-20% equity) ή Indie SaaS/Bootstrapping — ποιο μοντέλο χρηματοδότησης υιοθετούμε;
-- Poies tha einai oi diafores twn tiers metaksi tous sto tiered subscription model? 
+- Poies tha einai oi diafores twn tiers metaksi tous sto ==tiered subscription model==? 
 - Tha xrewnoume extra to maintenance se tier models? 
 - Θα ήταν χρήσιμο το να συνεργαστούμε με εταιρείες τηλεπικοινωνιών, με σκοπό να κάνουεμ optimise το δίκτυο των μαγαζιών με τα οποία θα συνεργαζόμαστε ως μέρος του πακέτου, και .. ++ 
 - Θα ήταν χρήσιμο να υπάρχει η δυνατότητα εντός ενός λεπτού να γίνει αλλαγή της παραγγελίας? 
 - Έχουν θέση οι influencers και affiliates, given της φύσης της επιχείρησης μας? --> Γιατί π.χ. δεν είναι ότι διαφημίζουν στον κοινό καταναλωτή στο Instagram - οι πελάτες μας είναι συγκεκριμένα άτομα τα οποία ενδεχομένως να μην κάνουν reach (ίσως κάποιος πιο targeted influencer με κατάλληλο κοινό? ++) 
+- Συζήτηση για ==overheads κόστη== για να δούμε επιγραμματικά τα συνολικά, και να δούμε λίγο και ==marketing== και ==ερωτηματολόγιο== 
+

@@ -1,6 +1,6 @@
 # 5. Ανάλυση Αγοράς (Market Analysis & Strategy)
 Πού στοχεύει το προϊόν και ποιο είναι το ανταγωνιστικό του πλεονέκτημα.
-
+==Fix this part==. 
 ## Βασικά Insights & Υποθέσεις
 
 **Το Κενό:** Λύσεις όπως το QR ordering δεν εφαρμόζονται παντού λόγω δισταγμού των managers, υψηλού κόστους λογισμικού ή κακού marketing — όχι λόγω τεχνικών προβλημάτων.
@@ -43,7 +43,7 @@ Tasks:
 - [ ] Demo MVP 
 - [ ] Pitch σε μαγαζιά πιλοτικά (μπορούμε δλδ στην αρχή να το πλασάρουμε ως δωρεάν service) + για traction (conditions - να γίνει το demo και το ερωτηματολόγιο, έτσι ώστε να έχουμε ένα πιο πειστικό approach) 
 
-Τρόποι για να κάνουμε marketting και να γίνουμε γνωστοί - short term και long term: 
+#### Τρόποι για να κάνουμε marketing και να γίνουμε γνωστοί - short term και long term + ακριβοί φτηνοί κλπ. 
 
 Γενικοί τύποι: 
 **Paid Acquisition** = you pay a platform/event to put you in front of potential clients --> ==fb ads== 
@@ -51,34 +51,31 @@ Tasks:
 **Incentives** = you give something _away_ to make signing up feel less risky --> ==first month free px== 
 **Organic/Content** = you invest in being _found naturally_ over time --> ==e.g. writing blog posts that bar owners find on Google== 
 
-Για την περίπτωση μας, events που μαζεύονται άτομα εστίασης, + referrals/ στόμα σε στόμα από ικανοποιημένους πελάτες, newsletters είναι πιο efficient. 
+Για την περίπτωση μας, events που μαζεύονται άτομα εστίασης, + referrals/ στόμα σε στόμα από ικανοποιημένους πελάτες + organic . 
 
 Για την περίπτωση μας, ίσως ΔΕΝ είναι relevant οι affilliates, + influencers --> [[open-questions]]. 
 
 Ιδανικά, θέλουμε χαμηλού κόστους διαφήμιση, με ψηλή αποδοτικότητα, δλδ χαμηλό CAC (customer acquisition rate). 
 
-
-
-
 Αναλυτικά παραδείγματα: 
 Paid: 
 1. Ads - social media οπουδήποτε κλπ. 
-2. Affiliate marketing - influencers 
+2. Affiliate marketing - influencers
 
 Sales: 
 1. Cold outreach - είτε από κοντά είτε με mail (αυτό μπορούμε να το κάνουμε και εμείς) 
 2. Demo calls 
-3. CRM - customer relationship management - consistent emails, ενημερωτικά, follow ups σε σωστούς χρόνους κλπ. 
+3. CRM - customer relationship management - consistent emails, ενημερωτικά, follow ups σε σωστούς χρόνους κλπ. --> Πάρα πολύ σημαντικό 
+4. **Walking In** Literally visiting bars and cafés in person with a tablet demo. Obvious but underrated — hospitality owners respond to people, not emails
 
 Incentive: 
 1. Δωρεάν πρώτοι μήνες π.χ. 
 2. Δωρεάν εξοπλισμός, setup κλπ. π.χ. 
-3. Δωρεάν υπηρεσίες από συνεργαζόμενες εταιρείες 
-4. ++ 
-
+3. Δωρεάν υπηρεσίες από συνεργαζόμενες εταιρείες (π.χ. ίντερνετ ή άλλα services που ενδεχομένως να μπορούμε να παρέχουμε είτε μέσω εμάς, είτε μέσω των άλλων εταιρειών) 
+4. Πακέτα τύπου 1+1 αν μπορούμε να σκεφτούμε, ή κάτι τύπου loyalty με πόντους 
 
 Organic: (building long term presence) 
-1. SEO - 
+1. SEO (search engine optimization) 
 2. Social media content creation 
 3. Email newsletters 
 
@@ -86,13 +83,27 @@ Referrals:
 1. Από τον έναν manager στον άλλο - review επιτυχίας 
 2. Συνεργασία με μέλη της ομάδας της εστίασης - π.χ. τους προμηθευτές, τους accountants, και ουσιαστικά targeted μέλη που "γνωρίζουν" καλά το κοινό μας, το κοινό μας τους εμπιστεύεται, και έμμεσα αγοράζουμε αυτή την εμπιστοσύνη για ένα ποσό (π.χ. 100 euro) ως αντάλλαγμα - σαν affiliate. 
 
-
 Άλλες άσχετες ιδέες: 
 - **PR** --> visibility σε groups και εφημερίδες, events που αφορούν την εστίαση 
+	- Ανεξάρτητοι φορείς που ασχολούνται με την εστίαση - τύπου δημοσιογράφοι podcasts κλπ - κανονίζουμε π.χ. συνέντευξη με αυτούς, και να πιάνουμε "δωρεάν" visibility έτσι 
 - **Community building** — owning a Facebook group or forum for bar/café owners
 	- Ουσιαστικά είναι σαν το social media που λέω πάνω, αλλά αυτό το κάνεις για να μαζέψεις άσχετους που ασχολούνται με εστίαση 
-- **Events** — hosting your own hospitality meetups
+- **Events** — hosting your own hospitality meetups 
 	- Δλδ οργανώνουμε εμείς event για τοπικές επιχειρήσεις, με ομιλητές, φαι πότο κλπ - και γενικά θέματα που να τους ενδιαφέρουν (άσχετα με την ιδέα μας αλλά σχετικά με την εστίαση, τα pains των managers) 
-	- 
 
-Both PR and community are highly relevant and underutilised for your market.
+Από όλα αυτά, ιδανικά θα πρότεινα ==όλα όσα γράφω στο sales==, και θα έλεγα να το κάνουμε είτε εμείς, είτε προσλαμβάνοντας/ hiring κάποιον για αυτό. 
+++ ==Όλα στο incentive και organic== (με ένα ερωτηματικό στα newsletters λόγω σπαμ) 
+Από τα referrals --> να φροντίσουμε να έχουμε ικανοποιημένους πελάτες, έτσι ώστε να μας προτείνουν και παρακάτω, και να βρούμε ενδεχομένως τα άτομα που σχετίζονται με την εστίαση για να τους πάρουμε από κοντά σαν affiliates. 
+Από τις άσχετες ιδέες, θα άφηνα τα events creations για πιο long term, αλλά το community building και επαφή με φορείς εστίασης είναι τοπ, όπως και παρουσία σε τόπους που βρέθονται όλοι μαζί οι managers if possible. 
+
+Summing up - 
+Για αρχή 
+1. Cold outreach walking in etc 
+2. Demo calls + demo pitch + [[Questionnaire]] info + traction μελλοντικά από analytics που θα έχουμε 
+3. CRM 
+4. Organics + incentive (παραδείγματα πάνω πιο αναλυτικά) 
+5. Referrals, PR, community building, event joining τοπ 
+
+--> Long term --> event building 
+
+Τα paid είναι πανάκριβα και ειδικά για το niche μας δεν νομίζω ότι μας δίνουν αρκετό benefit, εκτός από την περίπτωση referral affiliate. 

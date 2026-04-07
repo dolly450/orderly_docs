@@ -4,4 +4,4 @@
 - [Ethniki Fasoladoula] χρήση πιλωτικά για δημιουργία metrics και proof για καλύτερο selling point
 - [Ethniki Fasoladoula] διαφορα extra module ασφαλειας για το καθε μαγαζι εστιασης (authenticate σερβιτορος, wifi τοπικο, πληρωμη μονο με καρτα )
 - [Ethniki Fasoladoula] Να κάνουμε ένα ξεχωριστό board στο Planka, για να καταγράφουμε με ποια καταστήματα έχουμε αντιλήσει και σε τι κατάσταση είναι η επικοινωνία μας.
-- Tou glitwnei ergatwres me pollous tropous --> Auto omws den mporeis na .. --> Mesw traction ideally. --> Kapoio metric ideally? ++ Marios 
+- Metric to opoio na deixneis stin praksi tis ergatwres pou glitwneis tou manager, etsi wste na antilamvanetai poso kerdizei me tin platforma ++ Marios 

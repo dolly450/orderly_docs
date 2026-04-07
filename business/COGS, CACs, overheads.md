@@ -54,6 +54,11 @@ I guess ta smaller tiers tha exoun tipou 60% margin, ke ta higher 100% margin, k
 - Free trial or discounted first month to onboard
 [[market_strategy]]
 
+Από αυτά, τα πραγματικά μας αρχικά κόστη είναι: 
+Από τα sales μόνο αν χρησιμοποιήσουμε ==κάποιο CRM tool or cold email tool==, 
+Από incentives ==μόνο το κόστος COGS== 
+==Ουσιαστικά πέραν από τα referral affiliates== (δλδ το να γνωρίσουμε π.χ. accountant καφετεριών και να του πούμε να μας συστήσει τους managers των 20 καφετεριών με τις οποίες συνεργάζεται και να του δώσουμε ένα ποσό για κάθε deal), ==το μόνο κόστος είναι ο χρόνος μας==. 
+
 # Overheads 
 1. Salaries of people working for the company (Social media managing etc.)
 2. Subscriptions that are NOT needed for the product (e.g. claude email etc.) 
@@ -63,6 +68,9 @@ I guess ta smaller tiers tha exoun tipou 60% margin, ke ta higher 100% margin, k
 6. "About" website maintenance 
 7. Domain cost
 8. Developer that makes it + that improves it 
+--> ==Αυτά δεν ξέρω αν είναι relevant από την αρχή==
+Υπάρχουν one time costs (registration and basic legal stuff), + πράγματα που μπαίνουν όταν ξεκινήσεις να έχεις έσοδα (accountant, insurance, etc.). 
+Λογικά γύρω στα 200-300 per month? 
 
 ROI = net return/ cost of investment x 100. In other words - efficient investment. 
 

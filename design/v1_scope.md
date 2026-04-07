@@ -18,6 +18,8 @@ trial px 15 meres + agorazei subscription apo admin
 13) kalo knowledge gia **pos / pda integration**
 14) multilingual
 15) Live diathesimotita/ plirotita magaziou  
+
+==Simple and easy to use --> Είδα να το λένε στα θετικά του Butler αυτό==. 
    
 
 | επιχείρηση     | menu | servitoros | self co | queues | call button | booking |
