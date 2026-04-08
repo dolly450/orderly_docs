@@ -1,104 +1,16 @@
 {
-  "nodes": [
-    {
-      "id": "key-partners",
-      "type": "text",
-      "text": "## Key Partners\n- Προμηθευτές συστημάτων POS / Ταμειακών\n- Πάροχοι B2B τηλεπικοινωνιών (πιθανή συνεργασία για Internet)\n- Τοπικοί προμηθευτές εστίασης (ως affiliates / referrals)\n- Stripe / Πάροχοι πληρωμών",
-      "x": -600,
-      "y": -300,
-      "width": 250,
-      "height": 400
-    },
-    {
-      "id": "key-activities",
-      "type": "text",
-      "text": "## Key Activities\n- Ανάπτυξη & Συντήρηση Πλατφόρμας (SaaS)\n- Sales & Cold Outreach σε managers\n- B2B Customer Support & Onboarding\n- Συνεχής έρευνα αγοράς & Product Validation",
-      "x": -300,
-      "y": -300,
-      "width": 250,
-      "height": 200
-    },
-    {
-      "id": "key-resources",
-      "type": "text",
-      "text": "## Key Resources\n- Development Team (Κώδικας & Υποδομή)\n- Sales & Marketing Team\n- Cloud Infrastructure (AWS/Servers)\n- Brand & IP (Υπό διαμόρφωση)",
-      "x": -300,
-      "y": -50,
-      "width": 250,
-      "height": 150
-    },
-    {
-      "id": "value-props",
-      "type": "text",
-      "text": "## Value Propositions\n**Για Καταστήματα:**\n- Αύξηση throughput παραγγελιών & μείωση ουρών.\n- Χαμηλό ρίσκο αρχικής επένδυσης (Commission/Tiered).\n- Εξοικονόμηση εργατοωρών προσωπικού.\n\n**Για Πελάτες:**\n- Γρήγορη παραγγελία χωρίς αναμονή.\n- Διαφάνεια στο χρόνο προετοιμασίας.\n- Υβριδικές επιλογές πληρωμής.",
-      "x": 0,
-      "y": -300,
-      "width": 250,
-      "height": 400
-    },
-    {
-      "id": "customer-relations",
-      "type": "text",
-      "text": "## Customer Relationships\n- Άμεση B2B υποστήριξη (Dedicated account management για Pro/Enterprise).\n- Onboarding assistance (για εύκολη μετάβαση).\n- Community Building / Newsletters.\n- Feedback loops & Co-creation με πιλοτικούς πελάτες.",
-      "x": 300,
-      "y": -300,
-      "width": 250,
-      "height": 200
-    },
-    {
-      "id": "channels",
-      "type": "text",
-      "text": "## Channels\n- Direct Sales (Cold outreach & Walking In).\n- Demo calls & Pitch σε events.\n- Word of mouth & Referrals.\n- SEO & Content Marketing (Long-term).",
-      "x": 300,
-      "y": -50,
-      "width": 250,
-      "height": 150
-    },
-    {
-      "id": "customer-segments",
-      "type": "text",
-      "text": "## Customer Segments\n**B2B (Βασικοί πελάτες):**\n- Beach Bars & Εποχιακά μαγαζιά.\n- Food Festivals & Καντίνες Συναυλιών.\n- Καφετέριες Self-Service ή High-Traffic.\n\n**B2C (Τελικοί Χρήστες):**\n- Νέοι/Tech-savvy καταναλωτές.\n- Πελάτες που βιάζονται (Takeaway/Quick Service).",
-      "x": 600,
-      "y": -300,
-      "width": 250,
-      "height": 400
-    },
-    {
-      "id": "cost-structure",
-      "type": "text",
-      "text": "## Cost Structure\n- Υποδομή Cloud & Server Hosting.\n- Κόστη ανάπτυξης (Dev/Maint).\n- Customer Acquisition Cost (CAC) - Πωλήσεις & Marketing.\n- Stripe / Payment Processing Fees.\n- Πιθανά overheads ([[COGS, CACs, overheads]]).",
-      "x": -600,
-      "y": 150,
-      "width": 550,
-      "height": 200
-    },
-    {
-      "id": "revenue-streams",
-      "type": "text",
-      "text": "## Revenue Streams\n- **SaaS Subscription:** (Free, Basic, Pro, Enterprise tiers).\n- **Commission-based:** (3-5% επί των πωλήσεων για εποχιακά venues).\n- Πιθανά έξτρα maintenance fees ή hardware rentals.\n- *Αναφορά: [[pricing_model]]*",
-      "x": 0,
-      "y": 150,
-      "width": 850,
-      "height": 200
-    },
-    {
-      "id": "backlinks",
-      "type": "text",
-      "text": "## Σχετικές Σημειώσεις\n- [[pricing_model]]: Λεπτομέρειες για Revenue Streams.\n- [[market_strategy]]: Λεπτομέρειες για Channels και Customer Segments.\n- [[deck]]: Σύνδεση με το Pitch Deck.",
-      "x": -600,
-      "y": 400,
-      "width": 400,
-      "height": 150
-    },
-    {
-      "id": "footer",
-      "type": "text",
-      "text": "**Last Updated:** 2026-04-08\n\n**Key Changes Today:**\n- Δημιουργήθηκε το αρχικό Business Model Canvas (9 blocks).\n- Συνδέθηκαν τα blocks με υπάρχουσες σημειώσεις στρατηγικής και τιμολόγησης.\n- Ενσωματώθηκαν υποθέσεις για εποχικότητα και GTM.",
-      "x": 0,
-      "y": 400,
-      "width": 400,
-      "height": 150
-    }
-  ],
-  "edges": []
+	"nodes":[
+		{"id":"key-partners","type":"text","text":"## Key Partners\n- Προμηθευτές συστημάτων POS / Ταμειακών\n- Πάροχοι B2B τηλεπικοινωνιών (πιθανή συνεργασία για Internet)\n- Τοπικοί προμηθευτές εστίασης (ως affiliates / referrals)\n- Stripe / Πάροχοι πληρωμών","x":-600,"y":-300,"width":250,"height":400},
+		{"id":"key-resources","type":"text","text":"## Key Resources\n- Development Team (Κώδικας & Υποδομή)\n- Sales & Marketing Team\n- Cloud Infrastructure (AWS/Servers)\n- Brand & IP (Υπό διαμόρφωση)","x":-300,"y":-50,"width":239,"height":256},
+		{"id":"customer-segments","type":"text","text":"## Customer Segments\n**B2B (Βασικοί πελάτες):**\n- Beach Bars & Εποχιακά μαγαζιά.\n- Food Festivals & Καντίνες Συναυλιών.\n- Καφετέριες Self-Service ή High-Traffic.\n\n**B2C (Τελικοί Χρήστες):**\n- Νέοι/Tech-savvy καταναλωτές.\n- Πελάτες που βιάζονται (Takeaway/Quick Service).","x":600,"y":-300,"width":250,"height":478},
+		{"id":"footer","type":"text","text":"**Last Updated:** 2026-04-08\n\n**Key Changes Today:**\n- Δημιουργήθηκε το αρχικό Business Model Canvas (9 blocks).\n- Συνδέθηκαν τα blocks με υπάρχουσες σημειώσεις στρατηγικής και τιμολόγησης.\n- Ενσωματώθηκαν υποθέσεις για εποχικότητα και GTM.","x":0,"y":470,"width":400,"height":150},
+		{"id":"backlinks","type":"text","text":"## Σχετικές Σημειώσεις\n- [[pricing_model]]: Λεπτομέρειες για Revenue Streams.\n- [[market_strategy]]: Λεπτομέρειες για Channels και Customer Segments.\n- [[deck]]: Σύνδεση με το Pitch Deck.","x":-600,"y":470,"width":400,"height":220},
+		{"id":"cost-structure","type":"text","text":"## Cost Structure\n- Υποδομή Cloud & Server Hosting.\n- Κόστη ανάπτυξης (Dev/Maint).\n- Customer Acquisition Cost (CAC) - Πωλήσεις & Marketing.\n- Stripe / Payment Processing Fees.\n- Πιθανά overheads ([[COGS, CACs, overheads]]).","x":-611,"y":240,"width":550,"height":210},
+		{"id":"key-activities","type":"text","text":"## Key Activities\n- Ανάπτυξη & Συντήρηση Πλατφόρμας (SaaS)\n- Sales & Cold Outreach σε managers\n- B2B Customer Support & Onboarding\n- Συνεχής έρευνα αγοράς & Product Validation","x":-305,"y":-340,"width":250,"height":280},
+		{"id":"value-props","type":"text","text":"## Value Propositions\n**Για Καταστήματα:**\n- Αύξηση throughput παραγγελιών & μείωση ουρών.\n- Χαμηλό ρίσκο αρχικής επένδυσης (Commission/Tiered).\n- Εξοικονόμηση εργατοωρών προσωπικού.\n\n**Για Πελάτες:**\n- Γρήγορη παραγγελία χωρίς αναμονή.\n- Διαφάνεια στο χρόνο προετοιμασίας.\n- Υβριδικές επιλογές πληρωμής.","x":-20,"y":-340,"width":300,"height":502},
+		{"id":"customer-relations","type":"text","text":"## Customer Relationships\n- Άμεση B2B υποστήριξη (Dedicated account management για Pro/Enterprise).\n- Onboarding assistance (για εύκολη μετάβαση).\n- Community Building / Newsletters.\n- Feedback loops & Co-creation με πιλοτικούς πελάτες.","x":300,"y":-340,"width":250,"height":380},
+		{"id":"channels","type":"text","text":"## Channels\n- Direct Sales (Cold outreach & Walking In).\n- Demo calls & Pitch σε events.\n- Word of mouth & Referrals.\n- SEO & Content Marketing (Long-term).","x":300,"y":40,"width":250,"height":280},
+		{"id":"revenue-streams","type":"text","text":"## Revenue Streams\n- **SaaS Subscription:** (Free, Basic, Pro, Enterprise tiers).\n- **Commission-based:** (3-5% επί των πωλήσεων για εποχιακά venues).\n- Πιθανά έξτρα maintenance fees ή hardware rentals.\n- *Αναφορά: [[pricing_model]]*","x":0,"y":250,"width":850,"height":200}
+	],
+	"edges":[]
 }

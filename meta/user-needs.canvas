@@ -1,264 +1,38 @@
 {
-  "nodes": [
-    {
-      "id": "persona-1",
-      "type": "text",
-      "text": "# Persona: Πελάτης (Customer)\nΟ τελικός χρήστης που κάνει την παραγγελία στο κατάστημα.",
-      "x": -600,
-      "y": -300,
-      "width": 300,
-      "height": 150
-    },
-    {
-      "id": "need-1a",
-      "type": "text",
-      "text": "**Ανάγκη 1:** Γρήγορη πρόσβαση στο μενού χωρίς αναμονή σερβιτόρου.",
-      "x": -200,
-      "y": -400,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "need-1b",
-      "type": "text",
-      "text": "**Ανάγκη 2:** Εύκολη και ασφαλής πληρωμή (App + Cash options).",
-      "x": -200,
-      "y": -250,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "need-1c",
-      "type": "text",
-      "text": "**Ανάγκη 3:** Ενημέρωση για το χρόνο προετοιμασίας / ουρά.",
-      "x": -200,
-      "y": -100,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "persona-2",
-      "type": "text",
-      "text": "# Persona: Manager / Ιδιοκτήτης\nΟ επιχειρηματίας που θέλει να αυξήσει τον τζίρο και να μειώσει τα κόστη.",
-      "x": -600,
-      "y": 200,
-      "width": 300,
-      "height": 150
-    },
-    {
-      "id": "need-2a",
-      "type": "text",
-      "text": "**Ανάγκη 1:** Αύξηση throughput παραγγελιών (ειδικά σε ώρες αιχμής).",
-      "x": -200,
-      "y": 50,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "need-2b",
-      "type": "text",
-      "text": "**Ανάγκη 2:** Χαμηλό ρίσκο αρχικής επένδυσης (Software cost).",
-      "x": -200,
-      "y": 200,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "need-2c",
-      "type": "text",
-      "text": "**Ανάγκη 3:** Πρόσβαση σε Analytics (ώρες αιχμής, δημοφιλή προϊόντα).",
-      "x": -200,
-      "y": 350,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "solution-1a",
-      "type": "text",
-      "text": "**Λύση:** Digital Menu με QR code, χωρίς υποχρεωτικό registration.",
-      "x": 200,
-      "y": -400,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "solution-1b",
-      "type": "text",
-      "text": "**Λύση:** Ενσωμάτωση Stripe/Apple Pay και επιλογή \"Cash to waiter\".",
-      "x": 200,
-      "y": -250,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "solution-1c",
-      "type": "text",
-      "text": "**Λύση:** Real-time progress tracker παραγγελίας.",
-      "x": 200,
-      "y": -100,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "solution-2a",
-      "type": "text",
-      "text": "**Λύση:** Batch Preparation Logic (για την κουζίνα) + AI suggestions (upselling).",
-      "x": 200,
-      "y": 50,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "solution-2b",
-      "type": "text",
-      "text": "**Λύση:** Commission-based pricing ή Freemium model ([[pricing_model]]).",
-      "x": 200,
-      "y": 200,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "solution-2c",
-      "type": "text",
-      "text": "**Λύση:** Dashboard με βασικά end-of-day reports.",
-      "x": 200,
-      "y": 350,
-      "width": 300,
-      "height": 100
-    },
-    {
-      "id": "mvp-table",
-      "type": "text",
-      "text": "# MVP Feature Table & Metrics\n\n| Υποψήφια Λύση | MVP; | Metric Επιτυχίας |\n|---|---|---|\n| Digital Menu & QR | ✅ Ναι | > 50% των παραγγελιών του μαγαζιού να γίνεται μέσω QR. |\n| Stripe/Apple Pay & Cash | ✅ Ναι | > 30% πληρωμές in-app (μείωση χρόνου αναμονής). |\n| Real-time tracker | ❌ Όχι (V2) | N/A |\n| Batch Prep / AI Upsell | ❌ Όχι (V2) | N/A |\n| Basic Analytics Dashboard | ✅ Ναι | Manager login > 2 φορές/εβδομάδα. |\n| Call Waiter Button | ✅ Ναι | Σταθερή χρήση στα pilot καταστήματα (5+ χρήσεις/μέρα). |",
-      "x": 600,
-      "y": -150,
-      "width": 450,
-      "height": 400
-    },
-    {
-      "id": "backlinks",
-      "type": "text",
-      "text": "## Σχετικές Σημειώσεις\n- [[v1_scope]]: Αναλυτικό feature list του MVP.\n- [[market_strategy]]: Προσέγγιση αγοράς και target audience.\n- [[user_flow]]: Το ταξίδι του χρήστη μέσα στην εφαρμογή.",
-      "x": -600,
-      "y": 500,
-      "width": 400,
-      "height": 150
-    },
-    {
-      "id": "footer",
-      "type": "text",
-      "text": "**Last Updated:** 2026-04-08\n\n**Key Changes Today:**\n- Δημιουργήθηκε το αρχικό user-needs canvas.\n- Προστέθηκαν Personas, ανάγκες, λύσεις και MVP feature table.\n- Ορίστηκαν success metrics για το MVP.",
-      "x": 200,
-      "y": 500,
-      "width": 400,
-      "height": 150
-    }
-  ],
-  "edges": [
-    {
-      "id": "e-1a",
-      "fromNode": "persona-1",
-      "fromSide": "right",
-      "toNode": "need-1a",
-      "toSide": "left"
-    },
-    {
-      "id": "e-1b",
-      "fromNode": "persona-1",
-      "fromSide": "right",
-      "toNode": "need-1b",
-      "toSide": "left"
-    },
-    {
-      "id": "e-1c",
-      "fromNode": "persona-1",
-      "fromSide": "right",
-      "toNode": "need-1c",
-      "toSide": "left"
-    },
-    {
-      "id": "e-2a",
-      "fromNode": "persona-2",
-      "fromSide": "right",
-      "toNode": "need-2a",
-      "toSide": "left"
-    },
-    {
-      "id": "e-2b",
-      "fromNode": "persona-2",
-      "fromSide": "right",
-      "toNode": "need-2b",
-      "toSide": "left"
-    },
-    {
-      "id": "e-2c",
-      "fromNode": "persona-2",
-      "fromSide": "right",
-      "toNode": "need-2c",
-      "toSide": "left"
-    },
-    {
-      "id": "e-sol-1a",
-      "fromNode": "need-1a",
-      "fromSide": "right",
-      "toNode": "solution-1a",
-      "toSide": "left"
-    },
-    {
-      "id": "e-sol-1b",
-      "fromNode": "need-1b",
-      "fromSide": "right",
-      "toNode": "solution-1b",
-      "toSide": "left"
-    },
-    {
-      "id": "e-sol-1c",
-      "fromNode": "need-1c",
-      "fromSide": "right",
-      "toNode": "solution-1c",
-      "toSide": "left"
-    },
-    {
-      "id": "e-sol-2a",
-      "fromNode": "need-2a",
-      "fromSide": "right",
-      "toNode": "solution-2a",
-      "toSide": "left"
-    },
-    {
-      "id": "e-sol-2b",
-      "fromNode": "need-2b",
-      "fromSide": "right",
-      "toNode": "solution-2b",
-      "toSide": "left"
-    },
-    {
-      "id": "e-sol-2c",
-      "fromNode": "need-2c",
-      "fromSide": "right",
-      "toNode": "solution-2c",
-      "toSide": "left"
-    },
-    {
-      "id": "e-mvp-1",
-      "fromNode": "solution-1a",
-      "fromSide": "right",
-      "toNode": "mvp-table",
-      "toSide": "left"
-    },
-    {
-      "id": "e-mvp-2",
-      "fromNode": "solution-1b",
-      "fromSide": "right",
-      "toNode": "mvp-table",
-      "toSide": "left"
-    },
-    {
-      "id": "e-mvp-3",
-      "fromNode": "solution-2b",
-      "fromSide": "right",
-      "toNode": "mvp-table",
-      "toSide": "left"
-    }
-  ]
+	"nodes":[
+		{"id":"persona-1","type":"text","text":"# Persona: Πελάτης (Customer)\nΟ τελικός χρήστης που κάνει την παραγγελία στο κατάστημα.","x":-600,"y":-300,"width":300,"height":152},
+		{"id":"need-1a","type":"text","text":"**Ανάγκη 1:** Γρήγορη πρόσβαση στο μενού χωρίς αναμονή σερβιτόρου.","x":-200,"y":-400,"width":300,"height":100},
+		{"id":"need-1b","type":"text","text":"**Ανάγκη 2:** Εύκολη και ασφαλής πληρωμή (App + Cash options).","x":-200,"y":-250,"width":300,"height":100},
+		{"id":"need-1c","type":"text","text":"**Ανάγκη 3:** Ενημέρωση για το χρόνο προετοιμασίας / ουρά.","x":-200,"y":-100,"width":300,"height":100},
+		{"id":"persona-2","type":"text","text":"# Persona: Manager / Ιδιοκτήτης\nΟ επιχειρηματίας που θέλει να αυξήσει τον τζίρο και να μειώσει τα κόστη.","x":-600,"y":200,"width":300,"height":182},
+		{"id":"need-2a","type":"text","text":"**Ανάγκη 1:** Αύξηση throughput παραγγελιών (ειδικά σε ώρες αιχμής).","x":-200,"y":50,"width":300,"height":100},
+		{"id":"need-2b","type":"text","text":"**Ανάγκη 2:** Χαμηλό ρίσκο αρχικής επένδυσης (Software cost).","x":-200,"y":200,"width":300,"height":100},
+		{"id":"need-2c","type":"text","text":"**Ανάγκη 3:** Πρόσβαση σε Analytics (ώρες αιχμής, δημοφιλή προϊόντα).","x":-200,"y":350,"width":300,"height":100},
+		{"id":"solution-1a","type":"text","text":"**Λύση:** Digital Menu με QR code, χωρίς υποχρεωτικό registration.","x":200,"y":-400,"width":300,"height":100},
+		{"id":"solution-1b","type":"text","text":"**Λύση:** Ενσωμάτωση Stripe/Apple Pay και επιλογή \"Cash to waiter\".","x":200,"y":-250,"width":300,"height":100},
+		{"id":"solution-1c","type":"text","text":"**Λύση:** Real-time progress tracker παραγγελίας.","x":200,"y":-100,"width":300,"height":100},
+		{"id":"solution-2a","type":"text","text":"**Λύση:** Batch Preparation Logic (για την κουζίνα) + AI suggestions (upselling).","x":200,"y":50,"width":300,"height":100},
+		{"id":"solution-2b","type":"text","text":"**Λύση:** Commission-based pricing ή Freemium model ([[pricing_model]]).","x":200,"y":200,"width":300,"height":100},
+		{"id":"solution-2c","type":"text","text":"**Λύση:** Dashboard με βασικά end-of-day reports.","x":200,"y":350,"width":300,"height":100},
+		{"id":"mvp-table","type":"text","text":"# MVP Feature Table & Metrics\n\n| Υποψήφια Λύση | MVP; | Metric Επιτυχίας |\n|---|---|---|\n| Digital Menu & QR | ✅ Ναι | > 50% των παραγγελιών του μαγαζιού να γίνεται μέσω QR. |\n| Stripe/Apple Pay & Cash | ✅ Ναι | > 30% πληρωμές in-app (μείωση χρόνου αναμονής). |\n| Real-time tracker | ❌ Όχι (V2) | N/A |\n| Batch Prep / AI Upsell | ❌ Όχι (V2) | N/A |\n| Basic Analytics Dashboard | ✅ Ναι | Manager login > 2 φορές/εβδομάδα. |\n| Call Waiter Button | ✅ Ναι | Σταθερή χρήση στα pilot καταστήματα (5+ χρήσεις/μέρα). |","x":600,"y":-150,"width":450,"height":400},
+		{"id":"backlinks","type":"text","text":"## Σχετικές Σημειώσεις\n- [[v1_scope]]: Αναλυτικό feature list του MVP.\n- [[market_strategy]]: Προσέγγιση αγοράς και target audience.\n- [[user_flow]]: Το ταξίδι του χρήστη μέσα στην εφαρμογή.","x":-600,"y":500,"width":400,"height":205},
+		{"id":"footer","type":"text","text":"**Last Updated:** 2026-04-08\n\n**Key Changes Today:**\n- Δημιουργήθηκε το αρχικό user-needs canvas.\n- Προστέθηκαν Personas, ανάγκες, λύσεις και MVP feature table.\n- Ορίστηκαν success metrics για το MVP.","x":200,"y":500,"width":400,"height":217}
+	],
+	"edges":[
+		{"id":"e-1a","fromNode":"persona-1","fromSide":"right","toNode":"need-1a","toSide":"left"},
+		{"id":"e-1b","fromNode":"persona-1","fromSide":"right","toNode":"need-1b","toSide":"left"},
+		{"id":"e-1c","fromNode":"persona-1","fromSide":"right","toNode":"need-1c","toSide":"left"},
+		{"id":"e-2a","fromNode":"persona-2","fromSide":"right","toNode":"need-2a","toSide":"left"},
+		{"id":"e-2b","fromNode":"persona-2","fromSide":"right","toNode":"need-2b","toSide":"left"},
+		{"id":"e-2c","fromNode":"persona-2","fromSide":"right","toNode":"need-2c","toSide":"left"},
+		{"id":"e-sol-1a","fromNode":"need-1a","fromSide":"right","toNode":"solution-1a","toSide":"left"},
+		{"id":"e-sol-1b","fromNode":"need-1b","fromSide":"right","toNode":"solution-1b","toSide":"left"},
+		{"id":"e-sol-1c","fromNode":"need-1c","fromSide":"right","toNode":"solution-1c","toSide":"left"},
+		{"id":"e-sol-2a","fromNode":"need-2a","fromSide":"right","toNode":"solution-2a","toSide":"left"},
+		{"id":"e-sol-2b","fromNode":"need-2b","fromSide":"right","toNode":"solution-2b","toSide":"left"},
+		{"id":"e-sol-2c","fromNode":"need-2c","fromSide":"right","toNode":"solution-2c","toSide":"left"},
+		{"id":"e-mvp-1","fromNode":"solution-1a","fromSide":"right","toNode":"mvp-table","toSide":"left"},
+		{"id":"e-mvp-2","fromNode":"solution-1b","fromSide":"right","toNode":"mvp-table","toSide":"left"},
+		{"id":"e-mvp-3","fromNode":"solution-2b","fromSide":"right","toNode":"mvp-table","toSide":"left"}
+	]
 }
