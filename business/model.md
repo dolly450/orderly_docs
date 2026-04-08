@@ -77,6 +77,6 @@
 
 ## Επόμενες Ενέργειες
 
-- [ ] Οριστικοποίηση Value Proposition (Πρόταση Αξίας) με βάση feedback από τα πιλοτικά → [[bot_questions]]
+- [ ] Οριστικοποίηση Value Proposition (Πρόταση Αξίας) με βάση feedback από τα πιλοτικά → [[../meta/active_investigations]]
 - [ ] Συμπλήρωση λεπτομερών αριθμών στη Δομή Κόστους (Cost Structure)
 - [ ] Συνεντεύξεις Lean Startup (τουλάχιστον 5 venues) με A/B testing στο επιλεγμένο Value Proposition ("Λειτουργική Ηρεμία" vs "Ταχύτητα & Τζίρος")
