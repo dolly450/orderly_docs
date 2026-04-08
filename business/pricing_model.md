@@ -83,3 +83,8 @@ An ta tiers exoun different running costs, exoume tin apantisi mas.
 - Onboarding assistance for larger clients
 
 ==DISCUSS THESE + ADD MORE + REMOVE SOME== 
+
+## Σχετικές Σημειώσεις
+- [[market_strategy]]: Πώς το pricing model συνδέεται με την Go-To-Market στρατηγική.
+- [[COGS, CACs, overheads]]: Υπολογισμός κόστους ανά Tier.
+- [[open-questions]]: Ερωτήσεις για tiers και maintenance fees.

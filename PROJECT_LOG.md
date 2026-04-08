@@ -12,6 +12,11 @@
 - [2026-03-31] **Gemini CLI Fallback:** Implemented automated fallback to Gemini CLI when Claude API quota limits are reached.
 - [2026-03-31] **Push Rule Enforcement:** Added enforcement of pushing after every commit to ensure vault sync.
 - [2026-03-31] **Cleanup & Insights:** Cleaned up questions and ideas; added insights and commission model from Fasoladoula discussion.
+- [2026-04-08] **Daily Knowledge Update:**
+  - Updated `business/market_strategy.md`, `business/pricing_model.md`, and `design/v1_scope.md` with backlinks.
+  - Created `meta/questions.md` containing the top 10 pressing questions.
+  - Initialized `meta/user-needs.canvas` and `meta/business-model.canvas`.
+  - Created `meta/knowledge-health.md` for daily metrics tracking.
 
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).

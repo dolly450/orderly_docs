@@ -37,3 +37,8 @@ strech goals:
 cart configurable?
 -  local db master/ slave? kai service workers gia na trexei offline gia to katastima
 - ai chat bot / smart suggestions
+
+## Σχετικές Σημειώσεις
+- [[market_strategy]]: Σύνδεση με το MVP validation και τα pilot deployments.
+- [[pricing_model]]: Πώς τα features του v1 συνδέονται με τα διαφορετικά tiers.
+- [[idea-dump]]: Ιδέες για extra modules (π.χ. wifi, κράτηση).

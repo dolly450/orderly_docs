@@ -8,6 +8,7 @@
 **Η Ευκαιρία:** Δεν υπάρχει ακόμα μια κυρίαρχη, productized λύση. Όπου υπάρχει βελτίωση που δεν έχει εφαρμοστεί παντού, υπάρχει επιχειρηματική ευκαιρία.
 
 **Υπόθεση:** Το AI (πρόβλεψη παραγγελιών, dynamic menus, upselling) και το commission pricing δίνουν ξεκάθαρη, μετρήσιμη αξία στον μαγαζιά.
+**Validation Experiment:** Σχεδιασμός Landing Page A/B test (Feature comparison: Standard vs AI-driven). **Metric επιτυχίας:** >15% conversion rate στο AI feature list sign-up φόρμα ενδιαφέροντος.
 
 ## Go-to-Market Στρατηγική
 
@@ -107,3 +108,9 @@ Summing up -
 --> Long term --> event building 
 
 Τα paid είναι πανάκριβα και ειδικά για το niche μας δεν νομίζω ότι μας δίνουν αρκετό benefit, εκτός από την περίπτωση referral affiliate. 
+
+## Σχετικές Σημειώσεις
+- [[pricing_model]]: Σύνδεση με commission pricing και tiered models.
+- [[deck]]: Αναφορά στο traction και GTM strategy.
+- [[Questionnaire]]: Εργαλείο validation πριν το pilot.
+- [[open-questions]]: Ερωτήματα για affiliate/influencer marketing.
