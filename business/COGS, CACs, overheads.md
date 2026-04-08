@@ -1,5 +1,4 @@
-![[Images/P]]
-![[Pasted image 20260407172306.png]]
+![[Practical Decision Process.png]]
 Three important things to consider when deciding product price: 
 1. Cost of production + overheads - otidipote kostos exoume (apo resources, mexri eksoplismo, xrono, lefta - ola), gia na kataliksoume se ena minimum "running cost" + 85% margin panw se auto. 
 2. Value that the customer gains - dld information on sales increase before our product vs after our product, so that we can adapt pricing based on the value that we give 
