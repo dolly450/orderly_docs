@@ -12,6 +12,7 @@
 - [2026-03-31] **Gemini CLI Fallback:** Implemented automated fallback to Gemini CLI when Claude API quota limits are reached.
 - [2026-03-31] **Push Rule Enforcement:** Added enforcement of pushing after every commit to ensure vault sync.
 - [2026-03-31] **Cleanup & Insights:** Cleaned up questions and ideas; added insights and commission model from Fasoladoula discussion.
+- [2026-03-31] **Mentors Evaluation:** Δημιουργήθηκε το `meta/mentors.md` για την αξιολόγηση και επιλογή 12 time slots με μέντορες, εστιάζοντας σε B2B Πωλήσεις, MVP Scaling και Fundraising.
 
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).
