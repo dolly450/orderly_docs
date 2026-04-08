@@ -1,9 +1,12 @@
-# Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
+# Knowledge Base Health Report
 
-## Τελευταία Ενημέρωση: 2026-03-31
-- **Νέα Προσθήκη:** Αξιολόγηση Μεντόρων (`meta/mentors.md`).
-- **Σύνδεση με προηγούμενη γνώση:** Συνδέθηκε με τα user needs και business model.
-- **Αναπάντητα / Υπό Διερεύνηση:** Επιλογή ονόματος brand (ουδέτερο) και επιβεβαίωση μοντέλου εσόδων (Subscription vs Commission) βάσει των συμβουλών που θα πάρουμε στα time slots.
-- **Προτεινόμενα Πειράματα Validation:**
-  - *Assumptions:* Τα ξενοδοχεία ενδιαφέρονται να αντικαταστήσουν το υπάρχον τους σύστημα F&B.
-  - *Metric:* Nα κλείσουμε τουλάχιστον 3 discovery calls με F&B Managers ξενοδοχείων μετά την επαφή με μέντορες του τουρισμού (π.χ. Σαρχώση, Hrelja).
+**Ημερομηνία Τελευταίας Ενημέρωσης:** 08/04/2026
+
+## Daily Knowledge Health metrics:
+- **Νέα backlinks σήμερα:** 12 (προστέθηκαν σε notes, canvases, architecture, design)
+- **Ερωτήσεις χωρίς απάντηση (σύνολο):** 3 (Στο `meta/bot_questions.md`)
+- **Stale notes (>14 μέρες χωρίς edit):** 0
+- **Orphaned notes (εκτίμηση):** Χαμηλή, αυξήθηκε η διασύνδεση.
+- **Συνολική υγεία KB:** Healthy
+
+*Σημείωση: Το Knowledge Base αρχίζει να αποκτά συνοχή με τα νέα canvases και την προσθήκη actionable items. Επόμενος στόχος η απάντηση των 3 κρίσιμων open questions.*

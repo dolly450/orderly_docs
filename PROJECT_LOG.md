@@ -13,6 +13,12 @@
 - [2026-03-31] **Push Rule Enforcement:** Added enforcement of pushing after every commit to ensure vault sync.
 - [2026-03-31] **Cleanup & Insights:** Cleaned up questions and ideas; added insights and commission model from Fasoladoula discussion.
 - [2026-03-31] **Mentors Evaluation:** Δημιουργήθηκε το `meta/mentors.md` για την αξιολόγηση και επιλογή 12 time slots με μέντορες, εστιάζοντας σε B2B Πωλήσεις, MVP Scaling και Fundraising.
+- [2026-04-08] **Daily Knowledge Operator Updates:**
+  - Καθαρισμός και μετάφραση `business/Questionnaire.md`.
+  - Εξαγωγή actionable insights στα `notes/Product Design.md` και `notes/Business Model Canvas Initial Plan.md`.
+  - Αναδόμηση του `meta/bot_questions.md` με νέα active priorities και prompts για AI έρευνα.
+  - Δημιουργία των `meta/user-needs.canvas` και `meta/business-model.canvas`.
+  - Προσθήκη backlinks σε `design/v1_scope.md` και `architecture/overview.md`.
 
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).

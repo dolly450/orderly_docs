@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "key_partners",
+      "type": "text",
+      "text": "## 1. Key Partners\n- Πάροχοι Πληρωμών (Viva Wallet)\n- Πάροχοι ERP/POS (SBZ Systems, Oxygen) - βλ. [[architecture/pos_compliance]]\n- Προμηθευτές Hardware (Raspberry Pi, tablets)\n- Λογιστές / Προμηθευτές εστίασης (ως Affiliates)",
+      "x": -600,
+      "y": -300,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "key_activities",
+      "type": "text",
+      "text": "## 2. Key Activities\n- Ανάπτυξη πλατφόρμας (Next.js/Supabase)\n- Άμεσες Πωλήσεις & Demos στα μαγαζιά\n- Εγκατάσταση υβριδικού εξοπλισμού (offline sync)\n- Customer Support & Onboarding",
+      "x": -250,
+      "y": -300,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "key_resources",
+      "type": "text",
+      "text": "## 3. Key Resources\n- Η ιδρυτική/τεχνική ομάδα\n- Cloud & Local υποδομή (Servers, DBs)\n- Δίκτυο μεντόρων (B2B Sales, MVP) - βλ. [[meta/mentors]]\n- Το Brand (βλ. [[meta/bot_questions]])",
+      "x": -250,
+      "y": -50,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "value_proposition",
+      "type": "text",
+      "text": "## 4. Value Proposition\n**B2B (Venue):**\n- Αύξηση τζίρου & ταχύτητας.\n- Λιγότερα λάθη στις παραγγελίες.\n- Αδιάλειπτη λειτουργία (Offline mode).\n- Λειτουργική ηρεμία.\n\n**B2C (Πελάτης):**\n- Zero-friction παραγγελία (χωρίς app).\n- Πολυγλωσσικό μενού.\n- Προσωπικός έλεγχος (status παραγγελίας).",
+      "x": 100,
+      "y": -300,
+      "width": 350,
+      "height": 450
+    },
+    {
+      "id": "customer_relationships",
+      "type": "text",
+      "text": "## 5. Customer Relationships\n**B2B:**\n- Προσωπική επαφή & Onboarding.\n- Υποστήριξη στο πιλοτικό στάδιο.\n- CRM follow-ups.\n\n**B2C:**\n- Αυτοματοποιημένη εξυπηρέτηση.\n- Feedback loops.",
+      "x": 500,
+      "y": -300,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "channels",
+      "type": "text",
+      "text": "## 6. Channels\n- Άμεσες πωλήσεις (Door-to-door, Walk-ins)\n- Affiliate δίκτυο\n- Οργανικό SEO / Social Media (B2B marketing)\n- Στόμα με στόμα (από τουρίστες)",
+      "x": 500,
+      "y": -50,
+      "width": 300,
+      "height": 200
+    },
+    {
+      "id": "customer_segments",
+      "type": "text",
+      "text": "## 7. Customer Segments\n**B2B:**\n- Beach bars\n- Festivals / Events\n- Self-service cafes\n- Πανηγύρια\n\n**B2C:**\n- Τουρίστες στην Ελλάδα\n- Νέοι/Φοιτητές\n- βλ. [[business/Questionnaire]]",
+      "x": 850,
+      "y": -300,
+      "width": 300,
+      "height": 450
+    },
+    {
+      "id": "cost_structure",
+      "type": "text",
+      "text": "## 8. Cost Structure\n- Cloud Hosting & APIs (Vercel, Twilio, DeepL)\n- Εξοπλισμός (Local servers/tablets)\n- Κόστη μετακινήσεων/πωλήσεων (Phase 1)\n- Affiliate commissions & Marketing",
+      "x": -600,
+      "y": 200,
+      "width": 500,
+      "height": 150
+    },
+    {
+      "id": "revenue_streams",
+      "type": "text",
+      "text": "## 9. Revenue Streams\n- SaaS Subscription (Tiered model)\n- Commission-based (ως στρατηγική εισόδου)\n- Πωλήσεις / Ενοικίαση Hardware (έμμεσο έσοδο)",
+      "x": -50,
+      "y": 200,
+      "width": 500,
+      "height": 150
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "--- \n**Last Updated:** 08/04/2026\n**Key Changes Today:**\n- Δημιουργία Business Model Canvas βάσει του [[notes/Business Model Canvas Initial Plan]].\n- Προσθήκη bullets σε όλα τα 9 blocks.\n- Προσθήκη backlinks προς σημαντικά έγγραφα.",
+      "x": -250,
+      "y": 400,
+      "width": 500,
+      "height": 150
+    }
+  ],
+  "edges": []
+}

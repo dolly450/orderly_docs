@@ -37,3 +37,8 @@ strech goals:
 cart configurable?
 -  local db master/ slave? kai service workers gia na trexei offline gia to katastima
 - ai chat bot / smart suggestions
+
+---
+## Σχετικές Σημειώσεις
+* [[architecture/overview]]
+* [[notes/Product Design]]

@@ -59,3 +59,17 @@ https://drive.google.com/file/d/18NjHjX3JWkfjrN6kAd7IZCSFYCVN3jq3/view?usp=shari
 ||• Η ιδρυτική/τεχνική ομάδα<br><br>  <br><br>• Cloud & Local υποδομή<br><br>  <br><br>• Δίκτυο μεντόρων (B2B Sales, MVP)||• Door-to-door / Walking in<br><br>  <br><br>• Affiliate δίκτυο (~€100/deal)<br><br>  <br><br>• Οργανικό SEO / Social Media||
 |**Δομή Κόστους (Cost Structure)**||||**Ροές Εσόδων (Revenue Streams)**|
 |• Cloud Hosting & APIs (Vercel, Twilio, DeepL)<br><br>  <br><br>• Εξοπλισμός (Local servers/tablets)<br><br>  <br><br>• Κόστη μετακινήσεων/πωλήσεων (Phase 1)<br><br>  <br><br>• Affiliate commissions||||• SaaS Subscription (Tiered: €19, €39, €69)<br><br>  <br><br>• Commission-based (1-3% per sale - ως στρατηγική εισόδου)<br><br>  <br><br>• Πωλήσεις Hardware|
+
+---
+## Επιπτώσεις για την ομάδα (Impact)
+* **Ονοματολογία:** Πρέπει να συμφωνήσουμε γρήγορα στο brand name καθώς επηρεάζει το πώς θα στηθεί το domain, τα λογότυπα και το marketing υλικό.
+* **Value Proposition:** Χρειάζεται να καταλήξουμε σε ένα (το πολύ δύο) μηνύματα που θα τεστάρουμε μέσω του ερωτηματολογίου ή/και landing pages (π.χ. "Ταχύτητα & Τζίρος" έναντι "Λειτουργική Ηρεμία").
+
+## Σχετικές Σημειώσεις
+* [[meta/startup_synopsis]]
+* [[business/Questionnaire]]
+* [[pitch/deck]]
+
+## Επόμενες Ενέργειες
+- [ ] Οργάνωση μικρής ψηφοφορίας (poll) στο Discord της ομάδας για τις 3 επικρατέστερες επιλογές ονόματος.
+- [ ] Δημιουργία A/B test (π.χ. 2 απλές landing pages) για να δοκιμάσουμε ποιο Value Proposition έχει μεγαλύτερο conversion.

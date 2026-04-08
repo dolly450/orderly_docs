@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "id": "persona1",
+      "type": "text",
+      "text": "## Persona 1: Τουρίστας (B2C)\n\n**Προφίλ:** Επισκέπτης από το εξωτερικό, δεν μιλάει καλά αγγλικά ή ελληνικά, θέλει να χαλαρώσει στο beach bar.\n**Ανάγκες:**\n- Θέλει να παραγγείλει άμεσα χωρίς να περιμένει τον σερβιτόρο.\n- Θέλει να δει το μενού στη μητρική του γλώσσα.\n- Δεν θέλει να κατεβάσει κάποιο app (zero friction).\n- Θέλει να γνωρίζει την κατάσταση (status) της παραγγελίας του.",
+      "x": -600,
+      "y": -200,
+      "width": 350,
+      "height": 250
+    },
+    {
+      "id": "persona2",
+      "type": "text",
+      "text": "## Persona 2: Ιδιοκτήτης / Manager (B2B)\n\n**Προφίλ:** Διαχειρίζεται ένα πολυάσχολο beach bar/καφέ. Θέλει να μεγιστοποιήσει το κέρδος τις ώρες αιχμής.\n**Ανάγκες:**\n- Θέλει να αυξήσει το throughput των παραγγελιών (ταχύτητα & τζίρος).\n- Θέλει να μειώσει τα λάθη στην παραγγελιοληψία.\n- Χρειάζεται ένα σύστημα που να μην πέφτει όταν δεν έχει ίντερνετ.\n- Δεν θέλει να αλλάξει το υπάρχον POS σύστημα του.",
+      "x": -600,
+      "y": 100,
+      "width": 350,
+      "height": 250
+    },
+    {
+      "id": "solutions",
+      "type": "text",
+      "text": "## Υποψήφιες Λύσεις\n\n- **QR Ordering Layer:** Σκανάρισμα και παραγγελία μέσω browser (βλ. [[design/v1_scope]]).\n- **Multilingual Menu:** Αυτόματη μετάφραση (DeepL) για τους τουρίστες.\n- **Offline Sync:** Υβριδικό μοντέλο για αδιάλειπτη λειτουργία (βλ. [[architecture/system_architecture]]).\n- **POS Integration:** Διασύνδεση με το υπάρχον POS αντί για αντικατάσταση (βλ. [[architecture/pos_compliance]]).",
+      "x": -100,
+      "y": -50,
+      "width": 400,
+      "height": 200
+    },
+    {
+      "id": "mvp_matrix",
+      "type": "text",
+      "text": "## MVP Feature Matrix\n\n| Feature | Είναι MVP; | Success Metric (Κριτήριο) |\n| :--- | :---: | :--- |\n| Web QR Menu (No app) | ΝΑΙ | Drop-off rate < 20% στο καλάθι |\n| Πολυγλωσσικό Μενού | ΝΑΙ | Χρήση μετάφρασης > 40% |\n| Κουμπί Κλήσης Σερβιτόρου | ΝΑΙ | > 5 κλήσεις/μέρα/τραπέζι |\n| Offline Mode (Local DB) | ΟΧΙ | (Phase 2) |\n| Full POS Integration | ΟΧΙ | (Phase 2) |\n\n*Δείτε περισσότερα: [[notes/Product Design]]*",
+      "x": 350,
+      "y": -50,
+      "width": 400,
+      "height": 250
+    },
+    {
+      "id": "footer",
+      "type": "text",
+      "text": "--- \n**Last Updated:** 08/04/2026\n**Key Changes Today:**\n- Δημιουργία χάρτη Personas vs Needs.\n- Ορισμός MVP Matrix με μετρήσιμα κριτήρια επιτυχίας.\n- Προσθήκη backlinks προς την αρχιτεκτονική και το design.",
+      "x": -100,
+      "y": 400,
+      "width": 400,
+      "height": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge1",
+      "fromNode": "persona1",
+      "fromSide": "right",
+      "toNode": "solutions",
+      "toSide": "left"
+    },
+    {
+      "id": "edge2",
+      "fromNode": "persona2",
+      "fromSide": "right",
+      "toNode": "solutions",
+      "toSide": "left"
+    },
+    {
+      "id": "edge3",
+      "fromNode": "solutions",
+      "fromSide": "right",
+      "toNode": "mvp_matrix",
+      "toSide": "left"
+    }
+  ]
+}
