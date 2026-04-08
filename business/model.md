@@ -73,7 +73,6 @@
 - [[Business Model Canvas Initial Plan]] — Σημειώσεις σεμιναρίου BMC
 - [[pricing_model]] — Λεπτομέρειες τιμολόγησης
 - [[competitive_analysis]] — Ανταγωνισμός
-- [[startup_synopsis]] — Σύνοψη startup
 
 ## Επόμενες Ενέργειες
 

@@ -15,11 +15,10 @@
 > **Επιπτώσεις για την Ομάδα:**
 > Πρέπει να μετατοπίσουμε την προσοχή μας από το «πώς θα το χτίσουμε τέλεια» στο «πώς θα μάθουμε γρήγορα». Το κλειδί είναι η λογική Build-Measure-Learn. Εφόσον στοχεύουμε σε zero-friction (χωρίς login), χρειαζόμαστε άμεσα εργαλεία analytics (PostHog/Mixpanel) για να μετράμε το scan-to-order conversion rate και τα drop-offs. → [[Product Design]]
 
-### Οπτικοποίηση
 
 ```mermaid
 flowchart TD
-    A[Unvalidated Assumption:\nAI & Commission Pricing\nφέρνουν Measurable Value] --> B{Validation Experiment}
+    A[Unvalidated Assumption: AI & Commission Pricing φέρνουν Measurable Value] --> B{Validation Experiment}
     B -->|Ερωτηματολόγιο| C[Feedback από 100+ venues]
     B -->|Walking-in Demos| D[Demo σε 5 venues]
     C --> E[Data & Insights]
