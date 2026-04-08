@@ -38,7 +38,7 @@ product: business + tech + ux (design)
    d) N/A - I no longer use this product
 
 ## the right product:
-![[Pasted image 20260408173322.png]]
+![[Images/Pasted image 20260408173322.png]]
 Αυτή η εικόνα δείχνει ένα απλό διάγραμμα Venn που ορίζει τι αποτελεί «Το ΣΩΣΤΟ προϊόν» (**The RIGHT product**).
 Συγκεκριμένα, αποτελείται από δύο κύκλους που τέμνονται:
 - **Αριστερός κύκλος:** Προϊόντα που «Οι πελάτες τα χρειάζονται» (**Customers need it**). 
