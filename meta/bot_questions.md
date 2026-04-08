@@ -133,14 +133,14 @@ Google Forms είναι η 2η επιλογή μόνο αν θες κάτι ultr
    **Prompt για AI έρευνα (copy-paste ready):**
    > Θέλουμε να τρέξουμε ερωτηματολόγιο validation για QR ordering πλατφόρμα στον ελληνικό χώρο εστίασης. Στόχος: να αποδείξουμε ότι η αναμονή, το γλωσσικό φράγμα, και η έλλειψη ψηφιακής παραγγελίας είναι πραγματικά pain points. Κοινό: πελάτες εστίασης (φοιτητές, τουρίστες, εργαζόμενοι). Πρότεινε: (a) τις 5-6 καλύτερες ερωτήσεις (τύπου Likert scale + πολλαπλής επιλογής) που μεγιστοποιούν actionable insights, (b) ποια πλατφόρμα να χρησιμοποιήσουμε (Google Forms vs Typeform vs Tally), (c) πώς να το διανείμουμε zero-budget (φοιτητικά groups, Erasmus, Facebook), (d) πόσες απαντήσεις χρειαζόμαστε για στατιστικά σημαντικό δείγμα, (e) πώς να αποτρέψουμε διπλές συμπληρώσεις χωρίς login.
 
-4. **Ερώτηση:** Ποιο θα είναι το «one metric that matters» (OMTM) στα 5 πιλοτικά τον Ιούνιο; Πώς θα μετρήσουμε αν πετύχαμε Product-Market Fit;
+3. **Ερώτηση:** Ποιο θα είναι το «one metric that matters» (OMTM) στα 5 πιλοτικά τον Ιούνιο; Πώς θα μετρήσουμε αν πετύχαμε Product-Market Fit;
    **Γιατί είναι κρίσιμη:** Στο [[Product Design]] αναφέρεται η ανάγκη για ένα και μοναδικό metric, αλλά δεν έχει αποφασιστεί ποιο είναι. Χωρίς αυτό, κινδυνεύουμε να βγούμε από τα πιλοτικά χωρίς ξεκάθαρο αποτέλεσμα.
    **Επίπεδο:** High
    **Πεδίο:** Product/Business
    **Απάντηση:** → Συμπλήρωσε εδώ
 
    **Prompt για AI έρευνα (copy-paste ready):**
-   > Είμαστε QR ordering startup για εστίαση στην Ελλάδα. Τον Ιούνιο 2026 θα τρέξουμε πιλοτικό σε 5 venues (beach bars, festivals). Χρησιμοποιούμε ordering-first approach (δεν είμαστε POS). Πιθανά metrics: (a) χρόνος ολοκλήρωσης παραγγελίας, (b) scan-to-order conversion rate, (c) NPS score, (d) ποσοστό πελατών που χρησιμοποίησαν vs δεν χρησιμοποίησαν, (e) αύξηση τζίρου ανά ημέρα. Πρότεινε ποιο One Metric That Matters (OMTM) πρέπει να επιλέξουμε, τι threshold αποδεικνύει PMF (Product-Market Fit), πώς να το μετρήσουμε τεχνικά (PostHog, Mixpanel, custom), και τι benchmarks υπάρχουν από παρόμοιες startups (me&u, Sunday, Flipdish).
+   > Είμαστε QR ordering startup για εστίαση στην Ελλάδα. Τον Ιούνιο 2026 θα τρέξουμε πιλοτικό σε 5 venues (beach bars, festivals). Χρησιμοποιούμε ordering-first approach (δεν είμαστε POS). Πιθανά metrics: (a) χρόνος ολοκλήρωσης παραγγελίας, (b) scan-to-order conversion rate, (c) NPS score, (d) ποσοστό πελατών που χρησιμοποίησαν vs δεν χρησιμοποίησαν, (e) αύξηση throughput παραγελλιών / τζίρου ανά ημέρα. Πρότεινε ποιο One Metric That Matters (OMTM) πρέπει να επιλέξουμε, τι threshold αποδεικνύει PMF (Product-Market Fit), πώς να το μετρήσουμε τεχνικά (PostHog, Mixpanel, custom), και τι benchmarks υπάρχουν από παρόμοιες startups (me&u, Sunday, Flipdish).
 
 ---
 ### Αρχειοθετημένες Ερωτήσεις & Απαντήσεις
