@@ -8,7 +8,42 @@
    **Γιατί είναι κρίσιμη:** Η πρόταση αξίας δεν έχει οριστικοποιηθεί — το [[model|Business Model Canvas]] είχε τελείως κενά πεδία. Χωρίς ξεκάθαρο Value Proposition δεν μπορούμε να κάνουμε ούτε pitch, ούτε ερωτηματολόγιο, ούτε demo πειστικά. Υπάρχουν 3 drafts στο [[Business Model Canvas Initial Plan]] αλλά κανένα δεν έχει επιλεγεί.
    **Επίπεδο:** High
    **Πεδίο:** Product/Business
-   **Απάντηση:** → Συμπλήρωσε εδώ
+   **Απάντηση:** → 
+```
+**3 Εναλλακτικές Value Propositions** (κάθε μία < 30 λέξεις)
+
+**1. «Μετατρέπουμε την αναμονή σε άμεσες πωλήσεις: QR ordering χωρίς app, offline & στη γλώσσα του τουρίστα.»**  
+(14 λέξεις)  
+
+**2. «Το Greek-first digital ordering layer για beach bars, festivals & self-service: zero-friction, offline, myDATA & Viva.»**  
+(13 λέξεις)  
+
+**3. «Τουρίστες παραγγέλνουν στη γλώσσα τους. Εσείς σερβίρετε batch & πουλάτε περισσότερο — ακόμα και offline.»**  
+(15 λέξεις)  
+
+### Γιατί λειτουργεί η καθεμιά
+
+**Εναλλακτική 1**  
+Εστιάζει στην **άμεση οικονομική αξία** (πωλήσεις) που νοιάζει περισσότερο τον ιδιοκτήτη καταστήματος. Ενσωματώνει τα 3 πιο ισχυρά differentiators (zero-friction, offline, multilingual) σε μία φράση. Είναι εξαιρετικά memorable και λειτουργεί σαν tagline.
+
+**Εναλλακτική 2**  
+Είναι **positioning statement**. Λέει «είμαστε το layer που φτιάχτηκε για την Ελλάδα» και βάζει όλους τους ανταγωνιστές σε δεύτερη μοίρα (Butler.gr = ολοκληρωμένο αλλά όχι offline, me&u = ξένο). Ιδανικό όταν θέλεις να χτίσεις κατηγορία και όχι απλά χαρακτηριστικά.
+
+**Εναλλακτική 3**  
+Μιλάει **απευθείας στον ιδιοκτήτη** με «εσείς/εμείς» και δείχνει το αποτέλεσμα της λειτουργίας (batch preparation + offline). Δημιουργεί εικόνα: «ο τουρίστας παραγγέλνει από το κινητό του στα Αγγλικά/Γερμανικά, εσύ βλέπεις μαζική παραγγελία στην κουζίνα ακόμα κι αν πέσει το Wi-Fi».
+
+### Ποια να χρησιμοποιήσεις πού
+
+| Χρήση          | Ιδανική VP          | Λόγος                                                                 |
+|----------------|---------------------|-----------------------------------------------------------------------|
+| **Pitch Deck** | **#1**              | Επενδυτές θέλουν να δουν revenue upside αμέσως. Είναι σύντομη, punchy και δείχνει TAM (τουρίστες + πωλήσεις). |
+| **Landing Page** | **#3**            | Μετατρέπει τον επισκέπτη σε «ιδιοκτήτη» από την πρώτη στιγμή. Το «εσείς» δημιουργεί οικειότητα και αφήνει χώρο για testimonials & demo. |
+| **Sales Call** | **#2**              | Ανοίγει συζήτηση. Μπορείς να πεις «Δεν είμαστε άλλο ένα QR app… είμαστε το layer που φτιάχτηκε για την ελληνική φιλοξενία» και μετά να μπεις σε pain points & differentiators. |
+
+**Πρότασή μου για τελική επιλογή:**  
+Ξεκίνα με **#1** ως κύριο tagline παντού (pitch deck + website hero). Χρησιμοποίησε την **#3** στο body copy της landing page και στα sales materials. Η **#2** κράτα την για investor deck και όταν μιλάς με μεγαλύτερα chains/festivals που θέλουν «στρατηγικό partner».
+
+```
 
    **Prompt για AI έρευνα (copy-paste ready):**
    > Είμαστε μια early-stage startup που αναπτύσσει cloud-based QR ordering πλατφόρμα για τον ελληνικό χώρο φιλοξενίας (beach bars, festivals, self-service cafes). Στοχεύουμε σε 73.000+ καταστήματα εστίασης, 40M+ τουρίστες/χρόνο. Κύριοι ανταγωνιστές: Butler.gr (ελληνικός, ολοκληρωμένο), BringFood (cloud POS), me&u (διεθνής, μηδενική παρουσία Ελλάδα). Η δική μας διαφοροποίηση: offline mode, batch preparation logic, zero-friction (χωρίς app/login), πολυγλωσσικότητα (DeepL), Greek-first (myDATA/Viva Wallet). Έχουμε 3 draft value propositions: (a) «Μετατρέπουμε την αναμονή σε πωλήσεις», (b) «Το digital ordering layer για την ελληνική φιλοξενία», (c) «Καταργούμε τριβή — τουρίστες παραγγέλνουν στη γλώσσα τους». Βοήθησε μας να επιλέξουμε ή να συνθέσουμε ένα τελικό Value Proposition. Δώσε 3 εναλλακτικές (κάτω από 30 λέξεις η καθεμία), εξηγώντας γιατί λειτουργεί η καθεμιά, και πρότεινε ποια είναι ιδανική για pitch deck vs landing page vs sales call.
@@ -137,7 +172,77 @@ Google Forms είναι η 2η επιλογή μόνο αν θες κάτι ultr
    **Γιατί είναι κρίσιμη:** Στο [[Product Design]] αναφέρεται η ανάγκη για ένα και μοναδικό metric, αλλά δεν έχει αποφασιστεί ποιο είναι. Χωρίς αυτό, κινδυνεύουμε να βγούμε από τα πιλοτικά χωρίς ξεκάθαρο αποτέλεσμα.
    **Επίπεδο:** High
    **Πεδίο:** Product/Business
-   **Απάντηση:** → Συμπλήρωσε εδώ
+   **Απάντηση:** → 
+```
+**Προτείνω ως One Metric That Matters (OMTM) το (b) scan-to-order conversion rate.**
+
+### Γιατί ακριβώς αυτό το metric (και όχι τα άλλα);
+Στην pilot phase (Ιούνιος 2026, 5 venues, ordering-first approach, beach bars + festivals) το κρίσιμο είναι να αποδείξεις **product-market fit από την πλευρά του πελάτη** γρήγορα και με leading indicator. Το scan-to-order conversion rate (= ποσοστό scans που καταλήγουν σε πραγματική παραγγελία) είναι το πιο καθαρό, actionable και early signal ότι:
+
+- Ο πελάτης βρίσκει αξία στο να σκανάρει και να παραγγείλει μόνος του (αντί να περιμένει σερβιτόρο).
+- Το UX/flow είναι frictionless (δεν εγκαταλείπουν μετά το scan).
+- Άμεσα συνδέεται με business impact: περισσότερες/γρηγορότερες παραγγελίες → higher throughput & τζίρος (metric e).
+
+Τα υπόλοιπα metrics είναι σημαντικά αλλά δευτερεύοντα για OMTM:
+- (a) χρόνος ολοκλήρωσης → operational efficiency (καλό secondary).
+- (c) NPS → satisfaction, αλλά lagging και subjective.
+- (d) % πελατών που χρησιμοποίησαν vs δεν → καλό, αλλά δύσκολο να μετρηθεί αξιόπιστα σε open venues (festivals/beach bars) χωρίς ακριβή footfall data.
+- (e) αύξηση throughput/τζίρου → outcome metric, ιδανικό για venue retention αλλά όχι για early validation του product (εξαρτάται από πολλούς παράγοντες όπως pricing, menu, καιρικές συνθήκες).
+
+Σε ordering-first startups όπως εσείς, το conversion rate είναι το κλασικό “activation metric” που χρησιμοποιούν οι περισσότερες επιτυχημένες QR platforms για να αποφασίσουν scale.
+
+### Threshold που αποδεικνύει PMF
+**>70% scan-to-order conversion rate** (σταθερό σε όλες τις venues και σε όλη τη διάρκεια του pilot).
+
+- **Γιατί 70%+;** Είναι το επίπεδο που βλέπουμε σε mature, scaled players και δείχνει ότι το προϊόν “κολλάει” πραγματικά.
+- Αν φτάσετε **>80%** → πολύ δυνατό PMF (πάνω από το μέσο όρο της αγοράς).
+- **60-70%** → ενθαρρυντικό, αλλά χρειάζεται optimization (A/B testing flow, CTA, menu UX).
+- <60% → κόκκινο flag (υψηλό abandonment μετά το scan → friction στο onboarding ή στο checkout).
+
+Συνδυάστε το με secondary signals για πλήρη εικόνα PMF:
+- Αύξηση τζίρου/throughput ≥15-20% (από venues).
+- NPS ≥40-50 (ή % “would be very disappointed if gone” ≥40% από Sean Ellis test).
+- Venue retention: τα 5/5 venues θέλουν να συνεχίσουν μετά τον Ιούνιο.
+
+### Πώς να το μετρήσετε τεχνικά (PostHog, Mixpanel ή custom)
+**Πιο εύκολη & recommended λύση: PostHog (self-hosted ή cloud).** Είναι ιδανικό για ελληνική startup (GDPR-friendly, low cost, open-source option).
+
+**Events που πρέπει να track-άρετε (funnel):**
+1. **QR Scan / Session Start** → trigger όταν φορτώνει η ordering page (ή auto-event στο landing).
+2. **Order Placed** → event όταν η παραγγελία υποβάλλεται επιτυχώς (backend confirmation).
+
+**Formula:**
+Scan-to-order conversion rate = (Αριθμός Order Placed / Αριθμός μοναδικών QR Scan sessions) × 100
+
+- **PostHog**: Funnels → αυτοματοποιημένο dashboard + daily alerts. Μπορείτε να segment-άρετε ανά venue, ημέρα, ώρα, device.
+- **Mixpanel**: ίδια λογική, λίγο πιο ακριβό αλλά εξαιρετικό για user-level analytics.
+- **Custom** (αν έχετε ήδη backend): query στη βάση σας (scans από QR params + orders table). Απλό SQL dashboard στο Metabase/Superset.
+
+**Extra tips μέτρησης:**
+- Χρησιμοποιήστε unique session ID ή anonymous user ID για να μην μετράτε repeat scans από ίδιο άτομο.
+- Track abandonment points (π.χ. “added to cart” αλλά δεν completed) για optimization.
+- Για (d) ως secondary: ζητήστε από venues ακαθάριστα covers/transactions ανά ημέρα και υπολογίστε % orders via QR.
+
+### Benchmarks από παρόμοιες startups
+| Εταιρεία       | Κύριο Metric                          | Benchmark                          | Σημειώσεις |
+|----------------|---------------------------------------|------------------------------------|------------|
+| **Sunday**    | % scanners που complete pay/order    | **83%** (σταθερό σε όλους τους πελάτες) | Η πιο άμεση σύγκριση. Επίσης +21% check size, +11% tips, -12 λεπτά table turn. |
+| **me&u**      | Incremental sales & usage            | +20-40% spend όταν χρησιμοποιούν<br>Έως 60% incremental sales (με Tap to Pay) | Σε casual venues (pubs, food halls) ~50% guests χρησιμοποιούν το Pay σε κάποια venues. |
+| **Flipdish**  | Order volume & AOV uplift            | Δεν δημοσιεύουν ακριβές conversion, αλλά industry-wide 15-35% ↑ AOV & order volume με QR ordering | Εστίαση σε Ευρώπη, παρόμοιο μοντέλο. |
+
+**Γενικά industry (2025-2026):**
+- QR ordering → 15-35% αύξηση average order value.
+- Σε casual/high-volume venues (όπως beach bars/festivals) η adoption είναι υψηλότερη από full-service restaurants.
+- ~35% των orders μπορεί να περνάνε από QR όταν το σύστημα είναι καλά implement-άρεται.
+
+**Συμπέρασμα & action plan για τον Ιούνιο:**
+1. Ορίστε OMTM = scan-to-order conversion rate.
+2. Στόχος pilot: **>70%** (stretch >80%).
+3. Set up PostHog/Mixpanel **τώρα** (πριν τον Ιούνιο) με events.
+4. Δημιουργήστε weekly dashboard + alerts.
+5. Μετά το pilot: αν πετύχετε το threshold → scale + pitch σε investors/venues με data.
+
+```
 
    **Prompt για AI έρευνα (copy-paste ready):**
    > Είμαστε QR ordering startup για εστίαση στην Ελλάδα. Τον Ιούνιο 2026 θα τρέξουμε πιλοτικό σε 5 venues (beach bars, festivals). Χρησιμοποιούμε ordering-first approach (δεν είμαστε POS). Πιθανά metrics: (a) χρόνος ολοκλήρωσης παραγγελίας, (b) scan-to-order conversion rate, (c) NPS score, (d) ποσοστό πελατών που χρησιμοποίησαν vs δεν χρησιμοποίησαν, (e) αύξηση throughput παραγελλιών / τζίρου ανά ημέρα. Πρότεινε ποιο One Metric That Matters (OMTM) πρέπει να επιλέξουμε, τι threshold αποδεικνύει PMF (Product-Market Fit), πώς να το μετρήσουμε τεχνικά (PostHog, Mixpanel, custom), και τι benchmarks υπάρχουν από παρόμοιες startups (me&u, Sunday, Flipdish).
