@@ -12,7 +12,7 @@ USP - Unique Selling Points
 product: business + tech + ux (design)
 
 ## Stages of Product and Growth
-![[Images/Stages of Product and Growth.png]]
+![Stages of Product and Growth](../images/Stages%20of%20Product%20and%20Growth.png)
 Η εικόνα είναι ένα γράφημα που αναλύει τα στάδια ανάπτυξης ενός προϊόντος («Stages of Product & Growth»). Απεικονίζει μια καμπύλη ανάπτυξης (Growth) που χωρίζεται σε τρεις βασικές περιόδους:
 1. **Product-first period:** * Ξεκινά με την αναζήτηση ταύτισης προβλήματος-λύσης και τη δημιουργία του **MVP** (Minimum Viable Product).
     - Οδηγεί στο **Product/Market Fit**, όπου αναζητείται η ταύτιση προϊόντος-αγοράς και γλώσσας-αγοράς.    
@@ -38,7 +38,7 @@ product: business + tech + ux (design)
    d) N/A - I no longer use this product
 
 ## the right product:
-![[the Right product.png]]
+![the Right product](../images/the%20Right%20product.png)
 Αυτή η εικόνα δείχνει ένα απλό διάγραμμα Venn που ορίζει τι αποτελεί «Το ΣΩΣΤΟ προϊόν» (**The RIGHT product**).
 Συγκεκριμένα, αποτελείται από δύο κύκλους που τέμνονται:
 - **Αριστερός κύκλος:** Προϊόντα που «Οι πελάτες τα χρειάζονται» (**Customers need it**). 
