@@ -18,17 +18,22 @@
 - **Κρυπτογράφηση δεδομένων (Tokenization):** Τα δεδομένα πληρωμής δεν αποθηκεύονται στους διακομιστές μας
 - **Τοπική αποθήκευση (Local Storage):** Χρήση EU-based servers
 
-## 3. Όταν Πέφτει το Internet (Offline Fallback)
+## 3. Όταν Πέφτει το Internet & Local-First Architecture (Offline Fallback)
 
-Το μεγαλύτερο πρόβλημα στα νησιά και τα φεστιβάλ.
+Το μεγαλύτερο πρόβλημα στα νησιά και τα φεστιβάλ αντιμετωπίζεται με μια Local-First προσέγγιση:
+
+1. **Εύκολη Εγκατάσταση:** Ο καταστηματάρχης κατεβάζει ένα αρχείο/script (π.χ. .exe ή αυτοματοποιημένη εντολή) το οποίο εγκαθιστά μια ελαφριά τοπική βάση δεδομένων (σαν container) σε μια συσκευή του μαγαζιού (Laptop, Raspberry Pi, ή ακόμα και παλιό Android/iOS κινητό).
+2. **Network Routing:** Η τοπική συσκευή εντοπίζει το τοπικό IP της και το στέλνει στον Cloud Server μας.
+3. **Ταχύτητα:** Όταν οι χρήστες (σερβιτόροι, πελάτες) βρίσκονται στο τοπικό WiFi, τα αιτήματα δρομολογούνται **πρώτα τοπικά** στην εγκατάσταση της συσκευής, εξασφαλίζοντας μέγιστη ταχύτητα.
+4. **Cloud Sync:** Παράλληλα, η τοπική βάση συγχρονίζει ασύγχρονα με το Cloud DB (όπου εξετάζονται Supabase, CockroachDB κ.λπ.). Αν κοπεί το internet, το μαγαζί συνεχίζει να δουλεύει 100% από την τοπική βάση, και κάνει sync όταν η σύνδεση επανέλθει.
 
 ```mermaid
 flowchart TD
-    A[Πτώση Internet] --> B{Υπάρχει Τοπικό Server;}
-    B -- Ναι --> C[PWA Menu Caching & Local Kitchen Wi-Fi]
-    B -- Όχι --> D[Fallback σε Φυσικό Κατάλογο & Χειροκίνητη Λήψη]
-    C --> E[Queue Orders Locally]
-    E --> F[Sync to Cloud when Internet returns]
+    A[Συσκευή Καταστήματος\n(Laptop / Mobile / RPi)] -->|1-Click Setup| B[Local Database Running]
+    B -->|Ping IP| C[Cloud Server]
+    D[Χρήστης στο Local WiFi] -->|Primary Route| B
+    B -.->|Background Sync| E[Cloud Database\n(Supabase/CockroachDB/etc)]
+    D -.->|Fallback Route\n(Αν δεν είναι στο WiFi)| E
 ```
 
 → [[technical_stack#2. Υβριδική Αρχιτεκτονική]] / [[system_architecture]]

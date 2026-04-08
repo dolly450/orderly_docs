@@ -6,7 +6,7 @@
 Για το demo των 10 ημερών, η βέλτιστη επιλογή είναι:
 *   **Frontend:** Svelte / SvelteKit - PWA approach (Package Manager: Bun).
 *   **Backend:** SvelteKit Server (μελλοντικά πιθανώς Golang).
-*   **Database:** Υπό εξέταση (προς το παρόν δεν έχει κλειδώσει η απόφαση).
+*   **Database:** Υπό διερεύνηση (Supabase, CockroachDB ή άλλη λύση που να υποστηρίζει local-first sync).
 *   **Styling:** Tailwind CSS + shadcn/ui.
 *   **Deployment:** Vercel.
 
