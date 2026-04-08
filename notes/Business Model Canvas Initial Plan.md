@@ -50,12 +50,5 @@ https://drive.google.com/file/d/18NjHjX3JWkfjrN6kAd7IZCSFYCVN3jq3/view?usp=shari
 
 ---
 
-### Προσχέδιο: Business Model Canvas (Orderly)
 
-|**Βασικοί Συνεργάτες (Key Partners)**|**Βασικές Δραστηριότητες (Key Activities)**|**Value Proposition**|**Σχέσεις Πελατών (Customer Relationships)**|**Τμήματα Αγοράς (Customer Segments)**|
-|---|---|---|---|---|
-|• Πάροχοι Πληρωμών (Viva Wallet)<br><br>  <br><br>• Πάροχοι ERP/POS (SBZ Systems, Oxygen)<br><br>  <br><br>• Λογιστές / Προμηθευτές εστίασης (Affiliates)<br><br>  <br><br>• Προμηθευτές Hardware (Raspberry Pi)|• Ανάπτυξη πλατφόρμας (Next.js/Supabase)<br><br>  <br><br>• Άμεσες Πωλήσεις & Demos<br><br>  <br><br>• Εγκατάσταση υβριδικού εξοπλισμού (offline sync)|**Για το Venue (B2B):**<br><br>  <br><br>• Αύξηση τζίρου & ταχύτητας (Batch prep).<br><br>  <br><br>• Λιγότερα λάθη στις παραγγελίες.<br><br>  <br><br>• Αδιάλειπτη λειτουργία (Offline mode).<br><br>  <br>  <br><br>**Για τον Πελάτη (B2C):**<br><br>  <br><br>• Zero-friction παραγγελία (χωρίς app/login).<br><br>  <br><br>• Πολυγλωσσικό μενού (DeepL).|**B2B:** Προσωπική επαφή, CRM follow-ups, υποστήριξη στο πιλοτικό στάδιο.<br><br>  <br>  <br><br>**B2C:** Αυτοματοποιημένη, ανώνυμη εξυπηρέτηση, άμεση ενημέρωση status παραγγελίας.|**B2B:**<br><br>  <br><br>• Beach bars (Ουρές/Αναμονή)<br><br>  <br><br>• Festivals / Events<br><br>  <br><br>• Self-service cafes<br><br>  <br><br>• Πανηγύρια<br><br>  <br>  <br><br>**B2C:**<br><br>  <br><br>• Τουρίστες (40M+/έτος)|
-||**Βασικοί Πόροι (Key Resources)**||**Κανάλια (Channels)**||
-||• Η ιδρυτική/τεχνική ομάδα<br><br>  <br><br>• Cloud & Local υποδομή<br><br>  <br><br>• Δίκτυο μεντόρων (B2B Sales, MVP)||• Door-to-door / Walking in<br><br>  <br><br>• Affiliate δίκτυο (~€100/deal)<br><br>  <br><br>• Οργανικό SEO / Social Media||
-|**Δομή Κόστους (Cost Structure)**||||**Ροές Εσόδων (Revenue Streams)**|
-|• Cloud Hosting & APIs (Vercel, Twilio, DeepL)<br><br>  <br><br>• Εξοπλισμός (Local servers/tablets)<br><br>  <br><br>• Κόστη μετακινήσεων/πωλήσεων (Phase 1)<br><br>  <br><br>• Affiliate commissions||||• SaaS Subscription (Tiered: €19, €39, €69)<br><br>  <br><br>• Commission-based (1-3% per sale - ως στρατηγική εισόδου)<br><br>  <br><br>• Πωλήσεις Hardware|
+> ℹ️ *Το πλήρες Business Model Canvas έχει μεταφερθεί στο* [[model]]

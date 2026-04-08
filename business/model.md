@@ -9,14 +9,14 @@
 - Προμηθευτές hardware (Hardware Suppliers): Raspberry Pi, Printers → [[technical_stack#2. Υβριδική Αρχιτεκτονική]]
 
 ## Key Activities (Βασικές Δραστηριότητες)
-- Ανάπτυξη πλατφόρμας (Platform Development): Next.js / Supabase → [[technical_stack]]
+- Ανάπτυξη πλατφόρμας (Platform Development): SvelteKit (και μελλοντικά πιθανώς Golang) → [[technical_stack]]
 - Άμεσες πωλήσεις & demos (Direct Sales & Demos) → [[market_strategy#Πωλήσεις (Sales)]]
 - Εγκατάσταση υβριδικού εξοπλισμού (Hybrid Equipment Setup) & offline sync
 - Υποστήριξη πελατών (Customer Support) & onboarding
 
 ## Key Resources (Βασικοί Πόροι)
 - Ιδρυτική / τεχνική ομάδα (Founding Team): 2 Devs + 2 Business → [[startup_synopsis#9. Ομάδα]]
-- Cloud & τοπική υποδομή (Infrastructure): Vercel, Supabase, Raspberry Pi
+- Cloud & τοπική υποδομή (Infrastructure): Vercel/Cloudflare, Υπό εξέταση DB, Raspberry Pi
 - Δίκτυο μεντόρων (Mentor Network): B2B Sales, MVP, Fundraising → [[mentors]]
 
 ## Value Propositions (Προτάσεις Αξίας)
@@ -29,10 +29,11 @@
 
 **Για τον Πελάτη (B2C):**
 - Μηδενική τριβή στην παραγγελία (Zero-friction Ordering) — χωρίς app/login → [[user_flow]]
-- Πολυγλωσσικό μενού (Multilingual Menu) μέσω DeepL → [[features#4. Πολυγλωσσικότητα]]
+- Πολυγλωσσικό μενού (Multilingual Menu) μέσω LLM / Google Translate → [[features#4. Πολυγλωσσικότητα]]
 - Ενημέρωση κατάστασης παραγγελίας (Order Status Updates) σε πραγματικό χρόνο
 
-> ⚠️ **Η πρόταση αξίας (Value Proposition) χρειάζεται οριστικοποίηση** → [[open-questions]] / [[Business Model Canvas Initial Plan#1. Το Value Proposition]]
+> 💡 **Επιλεγμένο Value Proposition (Εστιάζοντας στη Λειτουργική Ηρεμία & Ταχύτητα):**
+> "Για τα πιο πολυσύχναστα beach bars και φεστιβάλ, μετατρέπουμε την αναμονή σε πωλήσεις. Εξαλείφουμε το χάος των ουρών και τα γλωσσικά εμπόδια με ένα zero-friction σύστημα παραγγελιοληψίας που λειτουργεί αδιάλειπτα ακόμα και χωρίς ίντερνετ, χαρίζοντας ηρεμία στο προσωπικό και την απόλυτη καλοκαιρινή εμπειρία στους τουρίστες."
 
 ## Customer Relationships (Σχέσεις Πελατών)
 - **B2B:** Προσωπική επαφή, CRM follow-ups, υποστήριξη στο πιλοτικό στάδιο
@@ -56,7 +57,7 @@
 - Τουρίστες (40M+/έτος)
 
 ## Cost Structure (Δομή Κόστους)
-- Cloud Hosting & APIs: Vercel, Supabase, Twilio, DeepL → [[COGS, CACs, overheads#COGS]]
+- Cloud Hosting & APIs: Vercel/Cloudflare, DB Cost, Twilio, LLM API → [[COGS, CACs, overheads#COGS]]
 - Εξοπλισμός (Equipment): Local servers, tablets
 - Κόστη μετακινήσεων/πωλήσεων — Phase 1 → [[COGS, CACs, overheads#CAC]]
 - Affiliate commissions (~€100/deal)
@@ -78,3 +79,4 @@
 
 - [ ] Οριστικοποίηση Value Proposition (Πρόταση Αξίας) με βάση feedback από τα πιλοτικά → [[bot_questions]]
 - [ ] Συμπλήρωση λεπτομερών αριθμών στη Δομή Κόστους (Cost Structure)
+- [ ] Συνεντεύξεις Lean Startup (τουλάχιστον 5 venues) με A/B testing στο επιλεγμένο Value Proposition ("Λειτουργική Ηρεμία" vs "Ταχύτητα & Τζίρος")

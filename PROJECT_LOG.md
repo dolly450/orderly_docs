@@ -42,6 +42,25 @@
 - **Νέα tasks (- [ ]):** ~20
 - **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)
 
+## 📝 Ημερήσια Ενημέρωση — 2026-04-09 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/model.md` | Οριστικοποίηση Value Proposition, single source of truth |
+| `notes/Business Model Canvas Initial Plan.md` | Normalization/Deduplication |
+| `business/market_strategy.md` | Προσθήκη Mermaid flow, προσθήκη actionable insights (Επιπτώσεις για την ομάδα) |
+| `design/features.md` | Προσθήκη cross-links, validation suggestions |
+| `design/v1_scope.md` | Προσθήκη task (Fake MVP), προσθήκη analytics insights |
+| `architecture/ordering-flow.md` | Προσθήκη sequenceDiagram για το order flow |
+| `meta/bot_questions.md` | Αρχειοθέτηση ερώτησης brand, προσθήκη 3 νέων ερωτήσεων |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (bot_questions):** 3 ενεργές, 1 αρχειοθετημένη
+- **Νέα tasks (- [ ]):** 3
+- **Διπλότυπα κανονικοποιημένα:** 1
+- **Νέα Mermaid diagrams:** 2
+
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).
 - QR Codes on tables for ordering.

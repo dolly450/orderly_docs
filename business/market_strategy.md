@@ -12,6 +12,22 @@
 
 > ⚠️ **Αυτή η υπόθεση δεν έχει τεκμηριωθεί ακόμα (Unvalidated Assumption)** — απαιτεί επικύρωση μέσω πιλοτικών (Pilot Validation).
 
+> **Επιπτώσεις για την Ομάδα:**
+> Πρέπει να μετατοπίσουμε την προσοχή μας από το «πώς θα το χτίσουμε τέλεια» στο «πώς θα μάθουμε γρήγορα». Το κλειδί είναι η λογική Build-Measure-Learn. Εφόσον στοχεύουμε σε zero-friction (χωρίς login), χρειαζόμαστε άμεσα εργαλεία analytics (PostHog/Mixpanel) για να μετράμε το scan-to-order conversion rate και τα drop-offs. → [[Product Design]]
+
+### Οπτικοποίηση
+
+```mermaid
+flowchart TD
+    A[Unvalidated Assumption:\nAI & Commission Pricing\nφέρνουν Measurable Value] --> B{Validation Experiment}
+    B -->|Ερωτηματολόγιο| C[Feedback από 100+ venues]
+    B -->|Walking-in Demos| D[Demo σε 5 venues]
+    C --> E[Data & Insights]
+    D --> E
+    E --> F[Proof of Concept]
+    F --> G[Traction & Scaling]
+```
+
 ## Στρατηγική Εισόδου στην Αγορά (Go-to-Market Strategy)
 
 - **Γρήγορη είσοδος για κατάληψη αγοράς (Rapid Market Capture)** (λογική eFood): μπαίνουμε γρήγορα πριν γεμίσει η αγορά.
