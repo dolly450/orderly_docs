@@ -14,6 +14,34 @@
 - [2026-03-31] **Cleanup & Insights:** Cleaned up questions and ideas; added insights and commission model from Fasoladoula discussion.
 - [2026-03-31] **Mentors Evaluation:** Δημιουργήθηκε το `meta/mentors.md` για την αξιολόγηση και επιλογή 12 time slots με μέντορες, εστιάζοντας σε B2B Πωλήσεις, MVP Scaling και Fundraising.
 
+## 📝 Ημερήσια Ενημέρωση — 2026-04-08
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `design/v1_scope.md` | Πλήρης μετατροπή greeklish → Ελληνικά, δόμηση, backlinks, tasks |
+| `meta/open-questions.md` | Κατηγοριοποίηση ερωτήσεων, μετατροπή greeklish, backlinks |
+| `meta/idea-dump.md` | Μετατροπή greeklish, backlinks, tasks |
+| `business/pricing_model.md` | Πλήρης αναδιοργάνωση, greeklish → Ελληνικά, αγγλικοί όροι |
+| `business/Questionnaire.md` | Πλήρης μετατροπή greeklish, δόμηση ερωτήσεων, tasks |
+| `business/COGS, CACs, overheads.md` | Πλήρης μετατροπή, πίνακες, τύποι, backlinks |
+| `business/market_strategy.md` | Αναδιοργάνωση, greeklish →  Ελληνικά, backlinks |
+| `business/roadmap.md` | Μετατροπή greeklish, backlinks, tasks |
+| `business/model.md` | Συμπλήρωση κενού BMC με πραγματικά δεδομένα vault |
+| `business/competitive_analysis.md` | Καθαρισμός μορφοποίησης, backlinks, tasks |
+| `design/features.md` | Αγγλικοί/Ελληνικοί όροι, backlinks, tasks |
+| `meta/bot_questions.md` | **ΝΕΟ** — 3 κρίσιμες ερωτήσεις + AI prompts |
+| `meta/user-needs.canvas` | **ΝΕΟ** — 2 personas, ανάγκες, MVP πίνακας |
+| `meta/business-model.canvas` | **ΝΕΟ** — Πλήρες BMC canvas 9 blocks |
+| `meta/knowledge-health.md` | Πλήρης ενημέρωση metrics, validation experiments |
+| `PROJECT_LOG.md` | Προσθήκη ενότητας 2026-04-08 |
+
+### Στατιστικά σήμερα
+- **Νέα backlinks:** ~65
+- **Νέες ερωτήσεις (bot_questions):** 3
+- **Νέα tasks (- [ ]):** ~20
+- **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)
+
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).
 - QR Codes on tables for ordering.

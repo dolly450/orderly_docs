@@ -1,4 +1,5 @@
 # 6. Οδικός Χάρτης MVP (MVP Roadmap)
+
 Σχέδιο δράσης για την ανάπτυξη και την πρώτη δοκιμή του συστήματος.
 
 ```mermaid
@@ -18,6 +19,19 @@ gantt
     Pilot Test (Small Event)   :crit, a7, 2026-06-15, 7d
     Refining based on feedback :a8, 2026-06-22, 14d
 ```
-Plan: 
-1. First phase - questionnaire, MVP, pitching, basic marketing, reviewing and adapting changes based on customer needs. 
-2. Rapid expansion via low margins, low CAC - extremely fast customer acquisition. 
+
+## Σχέδιο Δράσης (Action Plan)
+
+1. **Πρώτη φάση:** Ερωτηματολόγιο (Questionnaire) → [[Questionnaire]], MVP, Pitching, βασικό μάρκετινγκ (Marketing), αξιολόγηση και προσαρμογή αλλαγών βάσει αναγκών πελατών.
+2. **Ταχεία επέκταση (Rapid Expansion):** Μέσω χαμηλών περιθωρίων (Low Margins) και χαμηλού κόστους απόκτησης πελατών (Low CAC — Customer Acquisition Cost) — εξαιρετικά γρήγορη απόκτηση πελατών. → [[COGS, CACs, overheads]] / [[market_strategy]]
+
+## Σχετικές Σημειώσεις
+
+- [[v1_scope]] — Εύρος MVP
+- [[market_strategy]] — Στρατηγική αγοράς
+- [[deck]] — Pitch deck
+- [[The long road of turning your idea toa successful startup]] — Στρατηγική ανάπτυξης
+
+## Επόμενες Ενέργειες
+
+- [ ] Επικαιροποίηση ημερομηνιών roadmap βάσει πραγματικής προόδου ανά εβδομάδα

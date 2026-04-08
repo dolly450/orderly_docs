@@ -1,39 +1,58 @@
-1) menu   + eikones (conf)
-2) kalathi? --> paraggelia
-3) ordering processs - poioi paraggelnoun? 
-4) info gia katastasi paraggelias + queue (time related)
-5) sindesi me ektipwtes -> xartakia?
-6) info gia wifi kai to magazi
-7) koumpi gia servitoro (me cooldown) -- configurable
-8) kratiseis / bookings - me auth
-9) mono cloud, oxi localhost
-10) analytics gia to ti xrisimopoioun oi xristes apo to ui
-11) 4 selides: xristes / pelates, servitoros, kouzina, admin + 
-12) ordely (diafimistiko)
-live demo apo fake katastima
-trial px 15 meres + agorazei subscription apo admin
-- ta susbriptions tha trexoun se ena ec2 instance (reliable) ws docker containers
-- ta trials tha trexoun se ena allo vm ws docker containers (free)
--  extra fee gia service / maintenance 
-13) kalo knowledge gia **pos / pda integration**
-14) multilingual
-15) Live diathesimotita/ plirotita magaziou  
+# Εύρος MVP v1 (MVP v1 Scope)
 
-==Simple and easy to use --> Είδα να το λένε στα θετικά του Butler αυτό==. 
-   
+Βασικά χαρακτηριστικά και λειτουργίες που πρέπει να περιλαμβάνει η πρώτη έκδοση.
 
-| επιχείρηση     | menu | servitoros | self co | queues | call button | booking |
-| -------------- | ---- | ---------- | ------- | ------ | ----------- | ------- |
-| full serv cafe | yes  | yes        | conf    | yes    | conf        | conf    |
-| beach bar      | yes  | yes        | conf    | yes    | conf        | conf    |
-| festival       | yes  | no         | conf    | yes    | no          | no      |
-| self serv cafe | yes  | no         | conf    | yes    | no          | no      |
-| panigiri       | yes  | yes        | conf    | yes    | conf        | conf    |
+## Βασικές Λειτουργίες
 
+1. Μενού (Menu) + εικόνες (configurable)
+2. Καλάθι (Cart) → Παραγγελία (Order)
+3. Διαδικασία παραγγελίας (Ordering Process) — ποιοι παραγγέλνουν;
+4. Πληροφορίες για κατάσταση παραγγελίας (Order Status) + ουρά αναμονής (Queue) με χρονική εκτίμηση
+5. Σύνδεση με εκτυπωτές → χαρτάκια παραγγελίας
+6. Πληροφορίες για WiFi και το μαγαζί
+7. Κουμπί κλήσης σερβιτόρου (Call Button) με cooldown — configurable
+8. Κρατήσεις / Bookings — με αυθεντικοποίηση (Authentication)
+9. Μόνο cloud, όχι localhost
+10. Αναλυτικά στοιχεία χρήσης (Analytics) για το τι χρησιμοποιούν οι χρήστες από το UI
+11. Τέσσερις σελίδες: Χρήστες/Πελάτες, Σερβιτόρος, Κουζίνα, Admin
+12. Διαφημιστική σελίδα (Landing Page) — live demo από ψεύτικο κατάστημα
+13. Δοκιμαστική περίοδος (Trial) π.χ. 15 ημέρες → αγορά συνδρομής (Subscription) από admin
+    - Τα subscriptions θα τρέχουν σε EC2 instance (αξιόπιστο) ως Docker containers
+    - Τα trials θα τρέχουν σε ξεχωριστό VM ως Docker containers (δωρεάν)
+    - Επιπλέον χρέωση (Extra Fee) για service / maintenance
+14. Καλή γνώση για **POS / PDA ενσωμάτωση (Integration)** → [[pos_compliance]]
+15. Πολυγλωσσικότητα (Multilingual) → [[features#4. Πολυγλωσσικότητα (Multilingual)]]
+16. Ζωντανή διαθεσιμότητα / πληρότητα μαγαζιού (Live Capacity)
 
-strech goals:
-- qr code mass print a4 page
-- epilogi checkout as guest / auth / elegxos  sms - security measures ?
-cart configurable?
--  local db master/ slave? kai service workers gia na trexei offline gia to katastima
-- ai chat bot / smart suggestions
+> **Σημείωση:** Απλό και εύκολο στη χρήση (Simple and easy to use) — αυτό αναφέρεται και ως θετικό του [[competitive_analysis|Butler]].
+
+## Πίνακας Λειτουργιών ανά Τύπο Venue
+
+| Τύπος Επιχείρησης | Μενού | Σερβιτόρος | Self-Service | Ουρές | Κλήση Σερβιτόρου | Κράτηση |
+|---|---|---|---|---|---|---|
+| Full-service καφετέρια | ✅ | ✅ | Conf | ✅ | Conf | Conf |
+| Beach bar | ✅ | ✅ | Conf | ✅ | Conf | Conf |
+| Φεστιβάλ (Festival) | ✅ | ❌ | Conf | ✅ | ❌ | ❌ |
+| Self-service καφετέρια | ✅ | ❌ | Conf | ✅ | ❌ | ❌ |
+| Πανηγύρι | ✅ | ✅ | Conf | ✅ | Conf | Conf |
+
+## Stretch Goals (Μελλοντικοί Στόχοι)
+
+- Μαζική εκτύπωση QR codes σε σελίδα A4 (QR Code Mass Print)
+- Επιλογή checkout ως επισκέπτης / αυθεντικοποίηση / έλεγχος μέσω SMS — μέτρα ασφαλείας
+- Configurable καλάθι (Cart)
+- Τοπική βάση δεδομένων Master/Slave (Local DB) + Service Workers για λειτουργία εκτός σύνδεσης (Offline Mode) → [[features#3. Όταν Πέφτει το Internet]]
+- AI chatbot / έξυπνες προτάσεις (Smart Suggestions) → [[startup_synopsis#4. Main Selling Points (Επιβεβαιωμένα)]]
+
+## Σχετικές Σημειώσεις
+
+- [[features]] — Λεπτομέρειες λειτουργιών
+- [[user_flow]] — Διαδρομή πελάτη
+- [[staff_workflow]] — Ροή εργασίας προσωπικού
+- [[pricing_model]] — Μοντέλο τιμολόγησης
+- [[roadmap]] — Χρονοδιάγραμμα ανάπτυξης
+
+## Επόμενες Ενέργειες
+
+- [ ] Οριστικοποίηση λίστας χαρακτηριστικών ανά tier (Free/Basic/Pro/Enterprise) → [[pricing_model#Tiered subscription]]
+- [ ] Δημιουργία wireframes για τις 4 βασικές σελίδες (Πελάτης, Σερβιτόρος, Κουζίνα, Admin)

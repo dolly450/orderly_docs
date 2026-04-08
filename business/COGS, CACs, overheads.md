@@ -1,92 +1,127 @@
+# Κόστη Παραγωγής, Απόκτησης Πελατών & Λειτουργικά Έξοδα (COGS, CACs, Overheads)
+
 ![Practical Decision Process](../images/Practical%20Decision%20Process.png)
-Three important things to consider when deciding product price: 
-1. Cost of production + overheads - otidipote kostos exoume (apo resources, mexri eksoplismo, xrono, lefta - ola), gia na kataliksoume se ena minimum "running cost" + 85% margin panw se auto. 
-2. Value that the customer gains - dld information on sales increase before our product vs after our product, so that we can adapt pricing based on the value that we give 
-3. Based on how much the customer ALREADY pays for the problem we are solving (if applicable - e.g. other apps), OR how people that offer similar services charge them 
 
-Premium service, vs value for money competitive service. 
+## Τρεις Βασικοί Παράγοντες Τιμολόγησης
 
-Interesting factors - 
-1. Customer's willingness to pay - "tha to agorazes auto?", + diafora subscription tiers me premium features gia na doume an einai diatethimenoi na ta gorasoun --> note - ==pelates mas einai oi katastimatarxes, +++ == 
-2. Business model - scales on customer's no of sales 
-3. Customer acquisition cost - has to do with marketing and diafimiseis 
-4. Stage of business - VERY relevant, if we want to dominate the market early (as it is something that most people will eventually start doing more and more), we may want to start with a bearable healthy pricing margin, so that we can gain traction and lots of the market quickly before competitors, and AFTER we gain most of the market, we can raise the prices 
+Τρία σημαντικά πράγματα που πρέπει να λάβουμε υπόψη κατά τον καθορισμό της τιμής του προϊόντος:
 
+1. **Κόστος Παραγωγής (Cost of Production) + Λειτουργικά Έξοδα (Overheads)** — οτιδήποτε κόστος έχουμε (από πόρους, μέχρι εξοπλισμό, χρόνο, χρήματα — όλα), ώστε να καταλήξουμε σε ένα ελάχιστο «κόστος λειτουργίας» (Running Cost) + 85% περιθώριο (Margin) πάνω σε αυτό.
+2. **Αξία που κερδίζει ο πελάτης (Customer Value)** — δηλαδή πληροφορίες για αύξηση πωλήσεων πριν το προϊόν μας έναντι μετά, ώστε να προσαρμόσουμε την τιμολόγηση βάσει της αξίας που δίνουμε.
+3. **Βάσει πόσα πληρώνει ήδη ο πελάτης (Competitor Pricing)** — για το πρόβλημα που λύνουμε (αν ισχύει — π.χ. άλλες εφαρμογές), ή πώς χρεώνουν παρόμοιες υπηρεσίες.
 
-# COGS 
-1. Servers gia platforma / app / cloud - otidipote related pou scalarei oso megalwnei I platforma --> The only cost - 100-200 yearly (enas mpousoulas). 
-2. Database storages if needed 
-3. Bandwith (transferring data between us and users) - CDN (storages of data in different servers of the world) 
-4. Keeping app running (bug fixed etc)/ maintenance 
-5. Live customer support 
-6. Any licenses we may use 
-7. Third-party APIs (stripe px) - gt kanei charge per transaction 
+**Στρατηγική επιλογή:** Premium υπηρεσία (Premium Service) ή ανταγωνιστική υπηρεσία με καλή σχέση ποιότητας-τιμής (Value for Money).
 
---> For V1, most probably will be almost 0. 
+## Ενδιαφέροντες Παράγοντες
 
-For gross margin 80%: 
-revenue - COGS/ revenue = 0.8 
-0.8 x revenue = revenue - COGS 
-COGS = revenue - 0.8 x revenue 
-COGS = revenue (1 - %margin) 
+1. **Προθυμία πληρωμής πελάτη (Customer's Willingness to Pay):** «Θα το αγόραζες αυτό;» + διαφορετικές βαθμίδες συνδρομής (Subscription Tiers) με premium χαρακτηριστικά (Premium Features) ώστε να δούμε αν είναι διατεθειμένοι να τα αγοράσουν → **Σημείωση: Πελάτες μας είναι οι καταστηματάρχες (B2B)**
+2. **Επιχειρηματικό μοντέλο (Business Model):** Κλιμακώνεται βάσει αριθμού πωλήσεων του πελάτη
+3. **Κόστος Απόκτησης Πελάτη (CAC — Customer Acquisition Cost):** Σχετίζεται με μάρκετινγκ (Marketing) και διαφημίσεις → [[market_strategy]]
+4. **Στάδιο Επιχείρησης (Stage of Business):** Πολύ σχετικό — αν θέλουμε να κυριαρχήσουμε στην αγορά νωρίς (Market Domination), μπορεί να ξεκινήσουμε με βιώσιμο αλλά χαμηλό περιθώριο (Healthy Low Margin), ώστε να κερδίσουμε δέσιμο (Traction) και μερίδιο αγοράς (Market Share) γρήγορα πριν τους ανταγωνιστές, και **μετά** ανεβάζουμε τις τιμές.
 
-MAS LEIPOUN TA COGS GIA NA TA IPOLOGISOUME AUTA 
---> ==Arxika, isws kanoume settle ke me pio xamila margins apla gia na kanoume dominate to market nwris==. VS 
---> To % montello pou me to commision per sale 
+---
 
-Verdict - pame me commision based to dominate the market early, ke meta apo ligous mines switch off se tiered subscription 
+## COGS (Κόστος Πωληθέντων Αγαθών — Cost of Goods Sold)
 
-1-3% commission (matches peripou 80% margin)
-monthly fee pou na kamnei match to 80% margin
+1. Διακομιστές (Servers) για πλατφόρμα / εφαρμογή / cloud — οτιδήποτε σχετικό που κλιμακώνεται (Scales) όσο μεγαλώνει η πλατφόρμα → **Μοναδικό κόστος: €100-200 ετησίως**
+2. Αποθηκευτικός χώρος βάσεων δεδομένων (Database Storage) αν χρειαστεί
+3. Εύρος ζώνης (Bandwidth) — μεταφορά δεδομένων — CDN (Content Delivery Network — Δίκτυο Διανομής Περιεχομένου)
+4. Λειτουργία & συντήρηση εφαρμογής (App Maintenance) — διόρθωση σφαλμάτων (Bug Fixes) κ.λπ.
+5. Ζωντανή υποστήριξη πελατών (Live Customer Support)
+6. Τυχόν άδειες χρήσης (Licenses)
+7. Third-party APIs (Εξωτερικές Υπηρεσίες) π.χ. Stripe — χρεώνει ανά συναλλαγή (Per Transaction)
 
-You're not charging more because it _costs_ you more. You're charging more because it's _worth_ more to them.
-I guess ta smaller tiers tha exoun tipou 60% margin, ke ta higher 100% margin, ke to mid mas 80%. 
+> **Για V1:** Πιθανότατα σχεδόν μηδενικό κόστος (Near Zero Cost).
 
-# CAC 
-1. Fb ad campaigns 
-2. Marketing 
-	1. Affiliates + influencers (fixed or commision) 
-	2. Social media + ads 
-	3. Email newsletters 
-- Hiring a sales rep to cold-call bars/cafes
-- Attending hospitality trade shows or events
-- Paid Instagram/Google ads targeting restaurant owners
-- Free trial or discounted first month to onboard
-[[market_strategy]]
+### Υπολογισμός Περιθωρίου (Margin Calculation)
 
-Από αυτά, τα πραγματικά μας αρχικά κόστη είναι: 
-Από τα sales μόνο αν χρησιμοποιήσουμε ==κάποιο CRM tool or cold email tool==, 
-Από incentives ==μόνο το κόστος COGS== 
-==Ουσιαστικά πέραν από τα referral affiliates== (δλδ το να γνωρίσουμε π.χ. accountant καφετεριών και να του πούμε να μας συστήσει τους managers των 20 καφετεριών με τις οποίες συνεργάζεται και να του δώσουμε ένα ποσό για κάθε deal), ==το μόνο κόστος είναι ο χρόνος μας==. 
+Για μικτό περιθώριο (Gross Margin) 80%:
+```
+Μικτό Περιθώριο = (Έσοδα - COGS) / Έσοδα = 0.8
+COGS = Έσοδα × (1 - % Περιθωρίου)
+```
 
-# Overheads 
-1. Salaries of people working for the company (Social media managing etc.)
-2. Subscriptions that are NOT needed for the product (e.g. claude email etc.) 
-3. Legal costs (agnwsto mou) 
-4. Accounting fees 
-5. Business insurance?? 
-6. "About" website maintenance 
-7. Domain cost
-8. Developer that makes it + that improves it 
---> ==Αυτά δεν ξέρω αν είναι relevant από την αρχή==
-Υπάρχουν one time costs (registration and basic legal stuff), + πράγματα που μπαίνουν όταν ξεκινήσεις να έχεις έσοδα (accountant, insurance, etc.). 
-Λογικά γύρω στα 200-300 per month? 
+> **Μας λείπουν τα ακριβή COGS για να υπολογίσουμε αυτά.**
+> Αρχικά, ίσως κάνουμε settle και με πιο χαμηλά περιθώρια απλά για να κυριαρχήσουμε στην αγορά νωρίς (Market Domination).
 
-ROI = net return/ cost of investment x 100. In other words - efficient investment. 
+**Τελική Απόφαση:** Πάμε με commission-based (Βασισμένο σε Προμήθεια) για να κυριαρχήσουμε στην αγορά νωρίς, και μετά από λίγους μήνες switch σε κλιμακωτή συνδρομή (Tiered Subscription). → [[pricing_model#6. Commission-based εναντίον Subscription-based]]
 
-Creating the app is NOT COGS. 
+- 1-3% commission (αντιστοιχεί περίπου σε 80% margin)
+- Μηνιαία χρέωση (Monthly Fee) που αντιστοιχεί στο 80% margin
 
-# Margin goal 
-Gross margin: 80% 
-Net margin: 0-30% - depending on business stage. 
---> Ousiastika, oti lefta xanontai kai den einai included sto gross margin, sxetizontai eite me ==overheads== (misthous, working on new features gia to product mas, services we pay etc), eite me ==CAC==. 
-Arxika, ta ==net margins== tha einai ==pio xamila== giati tha kanoume invest lefta se diafimisi marketing klp gia na piasoume pelates + misthoi, ==ke meta tha peftoun giati tha vgazoume sinolika parapanw lefta enw auta ta kosti tha paramenoun sxetika stathera==. 
+> «Δεν χρεώνεις περισσότερο επειδή σε κοστίζει περισσότερο. Χρεώνεις περισσότερο επειδή αξίζει περισσότερο γι' αυτούς.» (Value-based Pricing)
 
-Net margin = net profit/ revenue x 100 
-Gross margin = gross profit/ revenue x 100 
-Revenue = sinolika kerdi 
-Gross profit = revenue - COGS (running kosti dld) 
-Net profit = gross profit - CAC - overheads 
+Πιθανότατα οι μικρότερες βαθμίδες θα έχουν ~60% margin, οι υψηλότερες ~100% margin, και η μεσαία μας ~80%.
 
+> **Σημείωση:** Η δημιουργία της εφαρμογής ΔΕΝ είναι COGS (Cost of Goods Sold). Είναι κεφαλαιακή δαπάνη (Capital Expenditure / CapEx).
 
+---
 
+## CAC (Κόστος Απόκτησης Πελάτη — Customer Acquisition Cost)
+
+1. Διαφημιστικές καμπάνιες στο Facebook (Ad Campaigns)
+2. Μάρκετινγκ (Marketing)
+   - Affiliates + Influencers (σταθερή αμοιβή ή προμήθεια / Fixed or Commission)
+   - Κοινωνικά δίκτυα (Social Media) + διαφημίσεις (Ads)
+   - Ενημερωτικά δελτία μέσω email (Email Newsletters)
+3. Πρόσληψη εκπροσώπου πωλήσεων (Sales Rep) για cold-calling σε bars/cafes
+4. Συμμετοχή σε εκθέσεις/εκδηλώσεις φιλοξενίας (Hospitality Trade Shows/Events)
+5. Πληρωμένες διαφημίσεις Instagram/Google με στόχευση ιδιοκτητών εστιατορίων
+6. Δωρεάν δοκιμαστική περίοδος (Free Trial) ή εκπτωτικός πρώτος μήνας
+
+→ [[market_strategy]]
+
+### Τα Πραγματικά Αρχικά Κόστη
+
+- Από τις πωλήσεις (Sales): μόνο αν χρησιμοποιήσουμε κάποιο εργαλείο CRM ή cold email
+- Από τα κίνητρα (Incentives): μόνο το κόστος COGS
+- Πέρα από τα referral affiliates (δηλαδή να γνωρίσουμε π.χ. accountant καφετεριών, να του πούμε να μας συστήσει τους managers των ~20 καφετεριών με τις οποίες συνεργάζεται, και να του δώσουμε ~€100/deal): **το μόνο κόστος είναι ο χρόνος μας**.
+
+---
+
+## Overheads (Γενικά Λειτουργικά Έξοδα)
+
+1. Μισθοί ατόμων που εργάζονται στην εταιρεία (π.χ. Διαχείριση Social Media κ.λπ.)
+2. Συνδρομές μη απαραίτητες για το προϊόν (π.χ. Claude, email κ.λπ.)
+3. Νομικά κόστη (Legal Costs)
+4. Λογιστικά τέλη (Accounting Fees)
+5. Ασφάλιση επιχείρησης (Business Insurance)
+6. Συντήρηση ιστοσελίδας «About» (Website Maintenance)
+7. Κόστος Domain
+8. Προγραμματιστής (Developer) που αναπτύσσει + βελτιώνει
+
+> **Σημείωση:** Κάποια από αυτά δεν είναι σχετικά από την αρχή. Υπάρχουν εφάπαξ κόστη (One-time Costs) (εγγραφή και βασικά νομικά), + πράγματα που μπαίνουν όταν ξεκινήσεις να έχεις έσοδα (λογιστής, ασφάλεια κ.λπ.). Λογικά γύρω στα **€200-300/μήνα**.
+
+---
+
+## Βασικοί Τύποι (Key Formulas)
+
+| Μέτρηση | Τύπος |
+|---|---|
+| **ROI (Απόδοση Επένδυσης / Return On Investment)** | Καθαρή Απόδοση / Κόστος Επένδυσης × 100 |
+| **Μικτό Περιθώριο (Gross Margin)** | Μικτό Κέρδος / Έσοδα × 100 |
+| **Καθαρό Περιθώριο (Net Margin)** | Καθαρό Κέρδος / Έσοδα × 100 |
+| **Έσοδα (Revenue)** | Συνολικά κέρδη |
+| **Μικτό Κέρδος (Gross Profit)** | Έσοδα − COGS |
+| **Καθαρό Κέρδος (Net Profit)** | Μικτό Κέρδος − CAC − Overheads |
+
+---
+
+## Στόχοι Περιθωρίου (Margin Goals)
+
+- **Μικτό Περιθώριο (Gross Margin):** 80%
+- **Καθαρό Περιθώριο (Net Margin):** 0-30% — ανάλογα με το στάδιο της επιχείρησης
+
+> Ουσιαστικά, ό,τι χρήματα χάνονται και δεν είναι included στο μικτό περιθώριο, σχετίζονται είτε με **Overheads** (μισθούς, ανάπτυξη νέων features, υπηρεσίες κ.λπ.), είτε με **CAC**. Αρχικά, τα **καθαρά περιθώρια θα είναι πιο χαμηλά** γιατί θα επενδύσουμε σε μάρκετινγκ κ.λπ. για απόκτηση πελατών, **και μετά θα βελτιώνονται** γιατί θα βγάζουμε συνολικά περισσότερα ενώ αυτά τα κόστη θα παραμένουν σχετικά σταθερά.
+
+## Σχετικές Σημειώσεις
+
+- [[pricing_model]] — Μοντέλο τιμολόγησης
+- [[market_strategy]] — Στρατηγική αγοράς
+- [[competitive_analysis]] — Ανάλυση ανταγωνισμού
+- [[roadmap]] — Χρονοδιάγραμμα
+
+## Επόμενες Ενέργειες
+
+- [ ] Υπολογισμός ακριβών COGS για τους πρώτους 6 μήνες λειτουργίας (Vercel, Supabase, APIs, Domain κ.λπ.)
+- [ ] Εκτίμηση μηνιαίων Overheads ανά σενάριο (Bootstrapping vs VC-funded)
