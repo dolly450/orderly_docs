@@ -5,4 +5,4 @@ __pycache__/
 opencode_session.json
 orderly_bot.log
 claude_session.json
-/.obsidian/workspace.json
+.obsidian/
