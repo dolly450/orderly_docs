@@ -12,7 +12,7 @@ USP - Unique Selling Points
 product: business + tech + ux (design)
 
 ## Stages of Product and Growth
-![[Stages of Product and Growth.png]]
+![[Images/Stages of Product and Growth.png]]
 Η εικόνα είναι ένα γράφημα που αναλύει τα στάδια ανάπτυξης ενός προϊόντος («Stages of Product & Growth»). Απεικονίζει μια καμπύλη ανάπτυξης (Growth) που χωρίζεται σε τρεις βασικές περιόδους:
 1. **Product-first period:** * Ξεκινά με την αναζήτηση ταύτισης προβλήματος-λύσης και τη δημιουργία του **MVP** (Minimum Viable Product).
     - Οδηγεί στο **Product/Market Fit**, όπου αναζητείται η ταύτιση προϊόντος-αγοράς και γλώσσας-αγοράς.    
