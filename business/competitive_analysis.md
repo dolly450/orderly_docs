@@ -55,7 +55,6 @@ quadrantChart
 - [[model]] — Business Model Canvas
 - [[market_strategy]] — Στρατηγική αγοράς
 - [[pricing_model]] — Μοντέλο τιμολόγησης
-- [[startup_synopsis]] — Σύνοψη startup
 - [[deck]] — Pitch deck
 
 ## Επόμενες Ενέργειες
