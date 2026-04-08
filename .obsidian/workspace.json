@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "business/COGS, CACs, overheads.md",
+                "file": "meta/mentors.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "COGS, CACs, overheads"
+              "title": "mentors"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "business/COGS, CACs, overheads.md",
+                "file": "meta/mentors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for COGS, CACs, overheads"
+              "title": "Backlinks for mentors"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "business/COGS, CACs, overheads.md",
+                "file": "meta/mentors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from COGS, CACs, overheads"
+              "title": "Outgoing links from mentors"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "business/COGS, CACs, overheads.md",
+                "file": "meta/mentors.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of COGS, CACs, overheads"
+              "title": "Outline of mentors"
             }
           },
           {
@@ -197,11 +197,17 @@
   },
   "active": "2ead6332ba9b6f80",
   "lastOpenFiles": [
-    "pitch/Business model canvas.md",
-    "business/Questionnaire.md",
     "meta/open-questions.md",
-    "business/market_strategy.md",
+    "meta/mentors.md",
+    "meta/knowledge-health.md",
+    "meta/questions.md",
+    "PROJECT_LOG.md",
+    "meta/business-model.canvas",
+    "meta/user-needs.canvas",
+    "pitch/Business model canvas.md",
     "business/COGS, CACs, overheads.md",
+    "business/Questionnaire.md",
+    "business/market_strategy.md",
     "Images/Pasted image 20260407175230.png",
     "Images/Pasted image 20260407175225.png",
     "Images/Pasted image 20260407172306.png",
@@ -210,16 +216,11 @@
     "business/Total costs + overheads.md",
     "Done tasks.md",
     "TODO tasks.md",
-    "PROJECT_LOG.md",
     "design/user_flow.md",
     "business/roadmap.md",
     "design/v1_scope.md",
     "design/features.md",
     "pitch/deck.md",
-    "meta/business-model.canvas",
-    "meta/user-needs.canvas",
-    "meta/knowledge-health.md",
-    "meta/questions.md",
     "design/order_lifecycle.md",
     "business/competitive_analysis.md",
     "meta/idea-dump.md",
@@ -228,7 +229,6 @@
     "pitch/pitch_strategy.md",
     "design/staff_workflow.md",
     "business/model.md",
-    "architecture/overview.md",
     "tests/test_vault_sync.py",
     "tests/test_vault_json.py",
     "tests/test_vault.py",
