@@ -123,5 +123,5 @@ COGS = Έσοδα × (1 - % Περιθωρίου)
 
 ## Επόμενες Ενέργειες
 
-- [ ] Υπολογισμός ακριβών COGS για τους πρώτους 6 μήνες λειτουργίας (Vercel, Supabase, APIs, Domain κ.λπ.)
+- [ ] Υπολογισμός ακριβών COGS για τους πρώτους 6 μήνες λειτουργίας (Vercel/Cloudflare, Database, LLM APIs, Domain κ.λπ.)
 - [ ] Εκτίμηση μηνιαίων Overheads ανά σενάριο (Bootstrapping vs VC-funded)

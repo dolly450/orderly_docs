@@ -7,12 +7,12 @@
 ```mermaid
 sequenceDiagram
     participant C as Customer (PWA)
-    participant S as Server (Next.js/Supabase)
+    participant S as Server (SvelteKit)
     participant K as Kitchen Display
     participant P as POS / Fiscal
 
     C->>S: Scan QR & Fetch Menu
-    S-->>C: Return Menu (DeepL Cached)
+    S-->>C: Return Menu (LLM/Google Translated Cached)
     C->>S: Submit Order (Cart items)
     S->>S: Create Order (Status: Pending)
     S->>P: Send to POS / Tax Verification

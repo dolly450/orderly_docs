@@ -4,8 +4,9 @@
 
 ## 1. MVP Stack (Rapid Development)
 Για το demo των 10 ημερών, η βέλτιστη επιλογή είναι:
-*   **Frontend:** Next.js 14+ (App Router) - PWA approach.
-*   **Backend/Database:** Supabase (Auth, Real-time DB, Storage).
+*   **Frontend:** Svelte / SvelteKit - PWA approach (Package Manager: Bun).
+*   **Backend:** SvelteKit Server (μελλοντικά πιθανώς Golang).
+*   **Database:** Υπό εξέταση (προς το παρόν δεν έχει κλειδώσει η απόφαση).
 *   **Styling:** Tailwind CSS + shadcn/ui.
 *   **Deployment:** Vercel.
 

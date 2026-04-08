@@ -9,14 +9,14 @@
 - Προμηθευτές hardware (Hardware Suppliers): Raspberry Pi, Printers → [[technical_stack#2. Υβριδική Αρχιτεκτονική]]
 
 ## Key Activities (Βασικές Δραστηριότητες)
-- Ανάπτυξη πλατφόρμας (Platform Development): Next.js / Supabase → [[technical_stack]]
+- Ανάπτυξη πλατφόρμας (Platform Development): SvelteKit (και μελλοντικά πιθανώς Golang) → [[technical_stack]]
 - Άμεσες πωλήσεις & demos (Direct Sales & Demos) → [[market_strategy#Πωλήσεις (Sales)]]
 - Εγκατάσταση υβριδικού εξοπλισμού (Hybrid Equipment Setup) & offline sync
 - Υποστήριξη πελατών (Customer Support) & onboarding
 
 ## Key Resources (Βασικοί Πόροι)
 - Ιδρυτική / τεχνική ομάδα (Founding Team): 2 Devs + 2 Business → [[startup_synopsis#9. Ομάδα]]
-- Cloud & τοπική υποδομή (Infrastructure): Vercel, Supabase, Raspberry Pi
+- Cloud & τοπική υποδομή (Infrastructure): Vercel/Cloudflare, Υπό εξέταση DB, Raspberry Pi
 - Δίκτυο μεντόρων (Mentor Network): B2B Sales, MVP, Fundraising → [[mentors]]
 
 ## Value Propositions (Προτάσεις Αξίας)
@@ -29,7 +29,7 @@
 
 **Για τον Πελάτη (B2C):**
 - Μηδενική τριβή στην παραγγελία (Zero-friction Ordering) — χωρίς app/login → [[user_flow]]
-- Πολυγλωσσικό μενού (Multilingual Menu) μέσω DeepL → [[features#4. Πολυγλωσσικότητα]]
+- Πολυγλωσσικό μενού (Multilingual Menu) μέσω LLM / Google Translate → [[features#4. Πολυγλωσσικότητα]]
 - Ενημέρωση κατάστασης παραγγελίας (Order Status Updates) σε πραγματικό χρόνο
 
 > 💡 **Επιλεγμένο Value Proposition (Εστιάζοντας στη Λειτουργική Ηρεμία & Ταχύτητα):**
@@ -57,7 +57,7 @@
 - Τουρίστες (40M+/έτος)
 
 ## Cost Structure (Δομή Κόστους)
-- Cloud Hosting & APIs: Vercel, Supabase, Twilio, DeepL → [[COGS, CACs, overheads#COGS]]
+- Cloud Hosting & APIs: Vercel/Cloudflare, DB Cost, Twilio, LLM API → [[COGS, CACs, overheads#COGS]]
 - Εξοπλισμός (Equipment): Local servers, tablets
 - Κόστη μετακινήσεων/πωλήσεων — Phase 1 → [[COGS, CACs, overheads#CAC]]
 - Affiliate commissions (~€100/deal)
@@ -73,6 +73,7 @@
 - [[Business Model Canvas Initial Plan]] — Σημειώσεις σεμιναρίου BMC
 - [[pricing_model]] — Λεπτομέρειες τιμολόγησης
 - [[competitive_analysis]] — Ανταγωνισμός
+- [[startup_synopsis]] — Σύνοψη startup
 
 ## Επόμενες Ενέργειες
 
