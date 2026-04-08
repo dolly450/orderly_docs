@@ -1,34 +1,31 @@
 # Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
 
-## Ημερήσια Αναφορά: 2026-04-08
+## Ημερήσια Αναφορά: 2026-04-09
 
 ### Μετρήσεις Υγείας (Health Metrics)
 
 | Μέτρηση                                 | Τιμή                                                        |
 | --------------------------------------- | ----------------------------------------------------------- |
-| **Νέα backlinks σήμερα**                | ~65                                                         |
+| **Νέα backlinks σήμερα**                | ~15                                                         |
 | **Ερωτήσεις χωρίς απάντηση**            | 3 (bot_questions) + 12 (open-questions)                     |
-| **Stale notes (>14 ημέρες χωρίς edit)** | 0 (όλα ενημερώθηκαν σήμερα)                                 |
+| **Stale notes (>14 ημέρες χωρίς edit)** | 0                                                           |
 | **Orphaned notes (χωρίς σύνδεση)**      | 1 (meta/test-topic.md)                                      |
-| **Κενά / ελλιπή αρχεία**                | 2 (architecture/overview.md, architecture/ordering-flow.md) |
-| **Συνολική υγεία KB**                   | **Needs Attention** ⚠️                                      |
+| **Κενά / ελλιπή αρχεία**                | 1 (architecture/overview.md)                                |
+| **Συνολική υγεία KB**                   | **Improving** 🟢                                            |
 
 ### Λόγοι «Needs Attention»
 
-1. **Value Proposition δεν έχει οριστικοποιηθεί** — κρίσιμο για pitch, BMC, sales → [[bot_questions]]
-2. **Ερωτηματολόγιο σε draft** — δεν έχει σταλεί ακόμα σε κανέναν → [[Questionnaire]]
-3. **Κενά αρχεία αρχιτεκτονικής** — overview.md και ordering-flow.md σχεδόν άδεια
-4. **COGS ακριβή νούμερα λείπουν** — δεν μπορούμε να υπολογίσουμε margins χωρίς αυτά → [[COGS, CACs, overheads]]
-5. **Brand name ακόμα ανοιχτό** → [[open-questions#Branding & Ταυτότητα]]
+1. **Ερωτηματολόγιο σε draft** — δεν έχει σταλεί ακόμα σε κανέναν → [[Questionnaire]]
+2. **COGS ακριβή νούμερα λείπουν** — δεν μπορούμε να υπολογίσουμε margins χωρίς αυτά → [[COGS, CACs, overheads]]
+3. **Brand name ακόμα ανοιχτό** → [[open-questions#Branding & Ταυτότητα]]
 
 ### Validation Experiments (Πειράματα Επικύρωσης)
 
 | Υπόθεση (Assumption) | Πείραμα | Μέτρηση Επιτυχίας | Κατάσταση |
 |---|---|---|---|
 | Οι πελάτες εστίασης θέλουν QR ordering | Ερωτηματολόγιο σε 100+ πελάτες | >60% «θα χρησιμοποιούσα» | ⏳ Αναμονή |
-| Τα beach bars θα πληρώσουν | Walking-in σε 5 venues με demo | ≥3 από 5 λένε ΝΑΙ | ⏳ Αναμονή |
-| Τα ξενοδοχεία ενδιαφέρονται για F&B replacement | 3 discovery calls με F&B Managers | ≥1 θετική ανταπόκριση | ⏳ Αναμονή |
-| Offline mode είναι κρίσιμο | Τεστ σε νησιώτικο venue χωρίς WiFi | Σύστημα λειτουργεί >4 ώρες | ⏳ Αναμονή |
+| Τα beach bars θα πληρώσουν | Walking-in σε 5 venues με demo (Fake MVP) | ≥3 από 5 λένε ΝΑΙ | ⏳ Αναμονή |
+| Το Value Proposition "Λειτουργική Ηρεμία" επικρατεί | A/B Testing κατά τη διάρκεια Demo | Μεγαλύτερο ενδιαφέρον | ⏳ Αναμονή |
 
 ---
 
@@ -39,3 +36,7 @@
 - **Σύνδεση με προηγούμενη γνώση:** Συνδέθηκε με user needs και business model
 - **Αναπάντητα / Υπό Διερεύνηση:** Επιλογή ονόματος brand + μοντέλο εσόδων
 - **Προτεινόμενα Πειράματα:** 3 discovery calls με F&B Managers ξενοδοχείων
+
+### 2026-04-09
+- **Βελτίωση:** Value Proposition οριστικοποιήθηκε και μειώθηκε ο αριθμός των ασαφών αρχείων.
+- **Εκκρεμότητες:** Validation tasks με fake MVP σε beach bars και χρήση analytics (PostHog/Mixpanel).

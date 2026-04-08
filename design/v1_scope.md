@@ -13,7 +13,7 @@
 7. Κουμπί κλήσης σερβιτόρου (Call Button) με cooldown — configurable
 8. Κρατήσεις / Bookings — με αυθεντικοποίηση (Authentication)
 9. Μόνο cloud, όχι localhost
-10. Αναλυτικά στοιχεία χρήσης (Analytics) για το τι χρησιμοποιούν οι χρήστες από το UI
+10. Αναλυτικά στοιχεία χρήσης (Analytics) για το τι χρησιμοποιούν οι χρήστες από το UI — ενσωμάτωση εργαλείων όπως PostHog/Mixpanel από την 1η μέρα για παρακολούθηση QR scans, cart additions και drop-offs. → [[Product Design]]
 11. Τέσσερις σελίδες: Χρήστες/Πελάτες, Σερβιτόρος, Κουζίνα, Admin
 12. Διαφημιστική σελίδα (Landing Page) — live demo από ψεύτικο κατάστημα
 13. Δοκιμαστική περίοδος (Trial) π.χ. 15 ημέρες → αγορά συνδρομής (Subscription) από admin
@@ -56,3 +56,4 @@
 
 - [ ] Οριστικοποίηση λίστας χαρακτηριστικών ανά tier (Free/Basic/Pro/Enterprise) → [[pricing_model#Tiered subscription]]
 - [ ] Δημιουργία wireframes για τις 4 βασικές σελίδες (Πελάτης, Σερβιτόρος, Κουζίνα, Admin)
+- [ ] Δοκιμή "Fake MVP": Πριν χτιστεί πλήρως το backend, δημιουργία mockup στο κινητό για demo/walk-in σε beach bars. Στόχος: μέτρηση άμεσου ενδιαφέροντος (Ναι/Όχι).
