@@ -153,69 +153,33 @@
 **Prompt για AI έρευνα (copy-paste ready):**
 > Φτιάχνουμε frontend-heavy PWA ordering app (Svelte / SvelteKit). Θέλουμε να κάνουμε track conversion events (QR scan, add to cart, checkout error) με έμφαση στο zero-friction (no login). Σύγκρινε τεχνικά και κοστολογικά το PostHog με το Mixpanel για early stage startups και δώσε μου το ιδανικό architecture schema.
 
-**3. Ερώτηση:** Πώς θα υλοποιήσουμε τεχνικά την εγκατάσταση (One-click install) του τοπικού Server/DB για τους ιδιοκτήτες καταστημάτων που δεν έχουν τεχνικές γνώσεις;
-**Γιατί είναι κρίσιμη:** Πρέπει να είναι πανεύκολο, δωρεάν και γρήγορο για τον καταστηματάρχη να στήσει το local-first setup.
-**Επίπεδο:** Medium
-**Πεδίο:** Development/Architecture
+**3. Ερώτηση:** Ποιο θα είναι το όνομα του startup μας;
+**Γιατί είναι κρίσιμη:** Έχουμε καταλήξει ότι το "Orderly" είναι πολύ safe και ότι χρειαζόμαστε κάτι που να εκπέμπει ταχύτητα και καλοκαίρι. Χωρίς brand name δυσκολευόμαστε να φτιάξουμε τα pitch decks.
+**Επίπεδο:** High
+**Πεδίο:** Branding
 **Απάντηση:** →
-```
-**Συγκεντρωτική απάντηση: Η ιδανική λύση για το local-first QR ordering app σου (MVP φάση)**
 
-Εφόσον είσαι ακόμα σε **pre-built MVP** και δεν έχεις έτοιμο server, το **Tauri v2+** είναι η **πιο one-in-all, εύκολη και future-proof** επιλογή που υπάρχει το 2026. Δεν χρειάζεται να κάνεις τίποτα περίπλοκο (ούτε Docker, ούτε port-forwarding, ούτε router settings). Ο ιδιοκτήτης κατεβάζει **ένα μόνο αρχείο** (EXE / APK / IPA / AppImage), το ανοίγει με ένα κλικ και ο server + DB + IP registration στο Cloud σου ξεκινάει αυτόματα.
+**Prompt για AI έρευνα (copy-paste ready):**
+> Φτιάχνουμε ένα B2B2C startup για QR ordering σε beach bars, χωρίς app install (web). Ψάχνουμε για 1-3 συλλαβές brand names που να είναι "Airplane test approved" (να καταλαβαίνει κάποιος πώς γράφεται αν το ακούσει στο τηλέφωνο). Δώσε μου 5 επιλογές με διαθέσιμα .io ή .com domains.
 
-### 1. Γιατί Tauri είναι η καλύτερη επιλογή για σένα τώρα
-- **Cross-platform από ένα codebase**: Windows, macOS, Linux, **Android** και **iOS** (όλα μαζί).
-- **One-click εκκίνηση**: Το app ξεκινάει αυτόματα τον τοπικό server, βρίσκει το local IP (LAN) και το στέλνει στο Cloud backend σου.
-- **Ελαφρύ & γρήγορο**: 5-15 MB, τρέχει άνετα σε παλιές συσκευές (Android 8+, iPhone 8+).
-- **Εύκολο για MVP**: Το V1 σου είναι cloud-only με **SvelteKit** → μετά μπορείς να προσθέσεις το local service χωρίς να αλλάξεις τίποτα στο frontend των πελατών.
+**4. Ερώτηση:** Πώς θα διαχειριστούμε την επιστροφή χρημάτων (refunds) και το payment routing;
+**Γιατί είναι κρίσιμη:** Πώς θα διαχειριστούμε την επιστροφή χρημάτων (refunds) αν ο πελάτης ακυρώσει ή αν το προϊόν δεν υπάρχει, χωρίς να έχουμε εμείς την ευθύνη των χρημάτων (liability);
+**Επίπεδο:** High
+**Πεδίο:** Business/Finance
+**Απάντηση:** →
 
-Δεν χρειάζεται να ξέρεις Rust από τώρα. Το AI (εγώ ή οποιοδήποτε άλλο) θα σου γράψει σχεδόν όλο τον κώδικα. Είναι από τις πιο εύκολες γλώσσες να μάθεις για backend (ειδικά αν ξέρεις ήδη JavaScript/TypeScript).
+**Prompt για AI έρευνα (copy-paste ready):**
+> Είμαστε ένα marketplace ordering platform όπου ο πελάτης πληρώνει μέσω κινητού. Ποιος είναι ο καλύτερος τρόπος να γίνει το payment routing (π.χ. Stripe Connect, Viva Wallet) ώστε τα χρήματα να πηγαίνουν απευθείας στο κατάστημα και οι ακυρώσεις να βαρύνουν εκείνο, κρατώντας εμείς μόνο ένα fee;
 
-### 2. Πώς θα δουλέψει η αρχιτεκτονική σου (V1 → V2)
-- **V1**: Μόνο Cloud + SvelteKit (όπως σκέφτεσαι).
-- **V2 (local-first)**: Το Tauri app του ιδιοκτήτη:
-  - Τρέχει **τοπικό server + SQLite**.
-  - Συνδέεται με το Cloud σου για licensing, updates και remote control.
-  - Οι πελάτες σκανάρουν QR → Cloud δίνει το local IP → συνδέονται απευθείας στο κατάστημα (χωρίς internet μετά).
+**5. Ερώτηση:** Πώς ακριβώς θα προσεγγίσουμε τους πρώτους 10 πελάτες;
+**Γιατί είναι κρίσιμη:** Έχουμε ήδη 2 personas (Beach Bar & Festival) αλλά πώς ακριβώς θα προσεγγίσουμε τους πρώτους 10 πελάτες;
+**Επίπεδο:** High
+**Πεδίο:** Marketing/Sales
+**Απάντηση:** →
 
-**Ενσωμάτωση**: Πολύ εύκολη. Το Tauri μπορεί να καλεί το ίδιο API που έχεις ήδη στο SvelteKit Cloud. Απλά προσθέτεις ένα endpoint `/register-node` και `/validate-license`.
+**Prompt για AI έρευνα (copy-paste ready):**
+> Για ένα QR Ordering SaaS στην Ελλάδα, ποιο είναι το πιο effective sales channel για να κλείσουμε τα πρώτα 10 beach bars πριν το καλοκαίρι; Direct sales (walking in) ή partnerships με POS providers (όπως Epsilon Net);
 
-### 3. Ασφάλεια – Updates – Licensing (όλα εφικτά και εύκολα)
-- **Ασφάλεια**: Το Rust είναι **μία από τις πιο ασφαλείς** γλώσσες (memory-safe, χωρίς buffer overflows). Το Tauri έχει built-in permissions system (least privilege). Δεν χρειάζεται να είναι 100% Rust για να είναι ασφαλές, αλλά το Rust δίνει **πολύ μεγαλύτερη ασφάλεια και απόδοση** από Node/Go/Python. Δεν είναι υποχρεωτικό, αλλά **σου το προτείνω ανεπιφύλακτα** γιατί θα μάθεις γρήγορα και θα σου λύσει πολλά προβλήματα μακροπρόθεσμα.
-- **Εύκολα updates**: Το Tauri έχει **built-in auto-updater** (με ψηφιακή υπογραφή). Μπορείς να στείλεις νέα έκδοση από το Cloud σου και το app να αναβαθμιστεί αυτόματα. Ο ιδιοκτήτης δεν χρειάζεται να κάνει τίποτα.
-- **Licensing & remote control** (ακριβώς αυτό που θες):
-  - **Lifetime license 300€**: Το app στο startup ελέγχει online (ή offline με JWT) αν έχει άδεια. Αν ναι, τρέχει για πάντα.
-  - **Συνδρομή**: Αν δεν πληρώνει, το app σταματάει (ή μπαίνει σε read-only mode).
-  - **Remote cut-off**: Μπορείς να απενεργοποιήσεις απομακρυσμένα οποιοδήποτε node μέσω Cloud (χωρίς να μπορεί ο χρήστης να πειράξει τον κώδικα). Όλα γίνονται με απλά HTTP calls από Rust.
-  - **Δεν μπορεί να επέμβει**: Ο κώδικας είναι compiled binary. Δεν έχει source code μέσα.
-
-Είναι **πλήρως εφικτό** και χρησιμοποιείται ήδη από πολλές εταιρείες (υπάρχουν έτοιμα εργαλεία όπως Keyforge για Tauri).
-
-### 4. Tauri Sidecar: Τι είναι και πώς δουλεύει
-Αν δεν θες να ξαναγράψεις τον server σου σε Rust από την αρχή:
-- Γράφεις τον server σε **όποια γλώσσα θέλεις** (Go, Node, Python κ.λπ.).
-- Το Tauri το **bundle-άρει** αυτόματα σαν **sidecar** (ένα ξεχωριστό executable μέσα στο app).
-- Όταν ανοίξει το Tauri app, ξεκινάει αυτόματα το sidecar + το δικό σου Rust κομμάτι για IP registration και licensing.
-
-**Πλεονεκτήματα**:
-- Δεν χρειάζεται refactor τώρα.
-- Compile σε **όλες τις πλατφόρμες** (desktop + Android + iOS) από ένα project.
-
-**Μειονεκτήματα / κρυφά προβλήματα** (δεν κρύβει πολλά):
-- Το app γίνεται λίγο μεγαλύτερο (ακόμα <30 MB συνήθως).
-- Στα κινητά (ειδικά iOS) υπάρχει περιορισμός background execution (πρέπει το app να είναι ανοιχτό ή να χρησιμοποιείς foreground service).
-- Αν το sidecar είναι Python/Go, χρειάζεται να είναι standalone binary (χωρίς εξωτερικές dependencies).
-
-**Αξίζει το ρίσκο;** Ναι, 100%. Είναι η πιο ώριμη λύση αυτή τη στιγμή για ακριβώς το use-case σου. Χιλιάδες developers το χρησιμοποιούν επιτυχώς.
-
-### Τελική σύσταση (για τις σημειώσεις σου)
-**Πήγαινε με Tauri v2 + Rust backend (ή sidecar αν θες να ξεκινήσεις γρήγορα)**.  
-Είναι το **πιο all-in-one σύστημα**: εύκολο install, εύκολα updates, πλήρης remote control, licensing (lifetime ή subscription), υψηλή ασφάλεια και απόδοση.  
-Το V1 σου (SvelteKit Cloud) ενσωματώνεται άψογα.  
-Μπορείς να ξεκινήσεις **ακόμα και σήμερα** χωρίς να ξέρεις Rust – το AI θα σου δίνει έτοιμο κώδικα βήμα-βήμα.
-
-
-```
 
 ---
 ### Αρχειοθετημένες Ερωτήσεις & Απαντήσεις
@@ -227,5 +191,15 @@
 Insights / Επιπτώσεις: Χρειαζόμαστε ένα brand name που να δείχνει ταχύτητα, καλοκαίρι και λειτουργικότητα, χωρίς να είναι περιοριστικό.
 
 **Reference:**
-- `meta/bot_questions.md`
+- `meta/decision-log.md`
 - `notes/Business Model Canvas Initial Plan.md`
+
+**2. Τοπική Αρχιτεκτονική MVP (Local-first MVP Architecture) - 2026-04-10**
+
+Απάντηση: Επιλογή του Tauri v2+ για την υλοποίηση του local-first ordering setup (με server και DB), ως ένα απλό, cross-platform εκτελέσιμο (one-click install) χωρίς να χρειάζεται περίπλοκο setup. Για DB επιλέχθηκε Turso/libSQL cloud με embedded replicas τοπικά.
+
+Insights / Επιπτώσεις: Ξεκινάμε με SvelteKit Cloud-only (V1) και προσθέτουμε το Tauri v2 local-first αργότερα (V2) χωρίς αλλαγές στο web frontend.
+
+**Reference:**
+- `meta/decision-log.md`
+- `architecture/technical_stack.md`

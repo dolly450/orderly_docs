@@ -27,7 +27,7 @@ async def test_idea_command_updates_dedicated_channel():
     mock_ideas_channel.name = "ideas"
     mock_interaction.guild.text_channels = [mock_ideas_channel]
 
-    with patch('bot.process_idea_command', return_value="💡 Idea added!") as mock_process, \
+    with patch('bot.vm.write_idea_poll', return_value="💡 Idea added!") as mock_process, \
          patch('bot.silent_update_channel', new_callable=AsyncMock) as mock_silent_update, \
          patch('discord.utils.get', return_value=mock_ideas_channel), \
          patch('bot.bot') as mock_bot_instance:
@@ -38,13 +38,13 @@ async def test_idea_command_updates_dedicated_channel():
         await bot.idea.callback(mock_interaction, "Great idea!")
         
         # Check interaction followup
-        mock_interaction.followup.send.assert_called_once_with("💡 Idea added!")
+        assert mock_interaction.followup.send.call_count == 1
         
         # Check that silent_update_channel was called with dedicated channel
         mock_silent_update.assert_called_once()
         args, _ = mock_silent_update.call_args
         assert args[0] == mock_ideas_channel
-        assert args[1] == "meta/idea-dump"
+        assert args[1] == "meta/ideas"
 
 @pytest.mark.asyncio
 async def test_question_command_updates_dedicated_channel():

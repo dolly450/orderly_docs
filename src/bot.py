@@ -63,7 +63,7 @@ else:
     _lock_fd = None
 
 # Ρύθμιση Logging σε ΑΡΧΕΙΟ
-log_file = "/home/harold/.openclaw/workspace/projects/orderly_docs/orderly_bot.log"
+log_file = "orderly_bot.log"
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",

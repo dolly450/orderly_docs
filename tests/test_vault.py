@@ -1,10 +1,10 @@
 import pytest
 import os
-from src.vault_manager import VaultManager
+from vault_manager import VaultManager
 
 # Mocking Git for testing purposes (optional for local checks)
 def test_vault_write():
-    vault_path = "/home/harold/.openclaw/workspace/projects/orderly_docs"
+    vault_path = "."
     vm = VaultManager(vault_path)
     
     topic = "meta/test-topic"

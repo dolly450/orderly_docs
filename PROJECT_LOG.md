@@ -69,3 +69,26 @@
 ## 📌 Links
 - GitHub: https://github.com/dolly450/orderly_docs
 - Discord Server: Orderly Startup Hub
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-10 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Προσθήκη 3 νέων AI prompts/ερωτήσεων (Brand Name, Payment Routing, GTM) και αρχειοθέτηση απόφασης Tauri v2+ |
+| `meta/open-questions.md` | Αφαίρεση παλιάς ερώτησης brand name |
+| `meta/decision-log.md` | Αρχειοθέτηση απόφασης για τοπική αρχιτεκτονική (Tauri v2+ & Turso) |
+| `notes/Product Design.md` | Εξαγωγή deduplicated content, προσθήκη task και Impact |
+| `business/market_strategy.md` | Μεταφορά market definitions από το Product Design notes |
+| `architecture/technical_stack.md` | Προσθήκη technical details για το Tauri v2+ & Turso |
+| `architecture/system_architecture.md` | Ενημέρωση οπτικού διαγράμματος με Tauri v2+ gateway |
+| `architecture/overview.md` | Πλήρης αναμόρφωση και ενημέρωση wikilinks |
+| `design/user_flow.md` | Διόρθωση headings του Mermaid diagram |
+| `business/Questionnaire.md` | Προσθήκη action task για ανάλυση ερωτηματολογίου |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** 3
+- **Νέα tasks (- [ ]):** 2
+- **Διπλότυπα κανονικοποιημένα:** 1
