@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"id":"title","type":"text","text":"# Business Model Canvas — Orderly (Απρίλιος 2026)","x":-500,"y":-600,"width":1800,"height":70},
+		{"id":"title","type":"text","text":"# Business Model Canvas — Orderly (Απρίλιος 2026) - Last Updated: 2026-04-10","x":-500,"y":-600,"width":1800,"height":70},
 		{"id":"kp","type":"text","text":"## Key Partners\n(Βασικοί Συνεργάτες)\n\n- Viva Wallet (Πληρωμές)\n- SBZ Systems / Epsilon Net (POS)\n- Λογιστές / Προμηθευτές (Affiliates ~€100/deal)\n- Raspberry Pi / Hardware\n→ [[pos_compliance]] [[market_strategy]]","x":-500,"y":-500,"width":280,"height":320,"color":"4"},
 		{"id":"ka","type":"text","text":"## Key Activities\n(Βασικές Δραστηριότητες)\n\n- Ανάπτυξη πλατφόρμας (Next.js/Supabase)\n- Άμεσες πωλήσεις & Demos\n- Εγκατάσταση υβριδικού εξοπλισμού\n→ [[technical_stack]]","x":-180,"y":-500,"width":280,"height":269,"color":"1"},
 		{"id":"vp","type":"text","text":"## Value Propositions\n(Προτάσεις Αξίας)\n\n**B2B (Venue):**\n- Αύξηση τζίρου & ταχύτητας\n- Λιγότερα λάθη παραγγελιών\n- Offline λειτουργία\n- Αποσυμφόρηση προσωπικού\n\n**B2C (Πελάτης):**\n- Zero-friction ordering\n- Πολυγλωσσικό μενού (DeepL)\n- Order status σε πραγματικό χρόνο\n→ [[model]] [[startup_synopsis]]","x":140,"y":-500,"width":320,"height":423,"color":"5"},

@@ -1,8 +1,5 @@
 # Ανοιχτές Ερωτήσεις (Open Questions)
 
-## Branding & Ταυτότητα
-- Ποιες είναι οι επικρατέστερες επιλογές για ουδέτερο όνομα της startup μας; → [[Business Model Canvas Initial Plan#2. Brainstorming για το Brand Name]]
-
 ## Στρατηγική Προϊόντος (Product Strategy)
 - Θα αντικαταστήσουμε τα υπάρχοντα PDA (Personal Digital Assistant – Φορητή Συσκευή Παραγγελιοληψίας) ή θα ενσωματωθούμε στα υπάρχοντα; → [[pos_compliance]]
 - Ποιο είναι το πραγματικό «σημείο πόνου» (Pain Point) του μαγαζιού — κόστος λογισμικού, δισταγμός manager, ή κάτι άλλο;

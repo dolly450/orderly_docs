@@ -1,9 +1,6 @@
 https://drive.google.com/file/d/1PdhPwBNBAzjzk6av4FKMecvBdI2eclS3/view?usp=sharing
 
-
-total market: ολοι οσοι εχουν το προβλημα που εμεις λυνουμε
-addressable market: ολοι οσοι θα μπορουσαν να χρησιμοποιησουν το προιον μας για να λυσουν το προβλημα
-target market: εκει που κανουμε launch (καπου συγκεκριμενα) πχ στο Παγκρατι
+[[business/market_strategy.md]]
 
 USP - Unique Selling Points
 - γιατι το προιον μου ειναι καλυτερο απο τον ανταγωνισμο, ειτε αμεσα ειτε εμμεσα
@@ -28,15 +25,6 @@ product: business + tech + ux (design)
    c) Not dissapointed, it really isn't that useful
    d) N/A - I no longer use this product
 
-## product market fit questions
-1) how likely it is that you would suggest this product or service to a colleague or friends? (1 -10) "NPS" (Net Promoter Score) από -100% έως 100%. 
-   Θέλουμε τουλάχιστον +30% για να πούμε ότι έχουμε fit.
-2) How dissapointed would you be if you could no longer use this product?
-   a) very dissapointed (>75%)
-   b) Somewhat dissapointed
-   c) Not dissapointed, it really isn't that useful
-   d) N/A - I no longer use this product
-
 ## the right product:
 ![the Right product](../images/the%20Right%20product.png)
 Αυτή η εικόνα δείχνει ένα απλό διάγραμμα Venn που ορίζει τι αποτελεί «Το ΣΩΣΤΟ προϊόν» (**The RIGHT product**).
@@ -44,6 +32,7 @@ product: business + tech + ux (design)
 - **Αριστερός κύκλος:** Προϊόντα που «Οι πελάτες τα χρειάζονται» (**Customers need it**). 
 - **Δεξιός κύκλος:** Προϊόντα που «Αναπτύσσουν την επιχείρηση» (**Grows the business**).
 Στο σημείο τομής των δύο κύκλων υπάρχει η λέξη «**ΝΑΙ**» (**YES**).
+
 ### 1. Η Νοοτροπία του "Fake MVP" (Ταχύτητα)
 
 - **Τι λέει το workshop:** Μιλάει για δημιουργία MVP σε 4 μέρες, "Fake MVPs" και χρήση εργαλείων (όπως v0/bolt.new για κώδικα ή low-code λύσεις) για να βγει το προϊόν γρήγορα.
@@ -71,4 +60,8 @@ product: business + tech + ux (design)
 
 Έχοντας στο μυαλό τη λογική του "Build-Measure-Learn", ποιο είναι το **ένα και μοναδικό metric** (π.χ. χρόνος ολοκλήρωσης παραγγελίας, ποσοστό μετατροπής) που αν το πιάσετε στα 5 πιλοτικά σας τον Ιούνιο, θα σας πείσει 100% ότι το προϊόν σας έχει πετύχει;
 
+## Επιπτώσεις για την ομάδα (Impact for the team)
+Πρέπει να μετατοπίσουμε την εστίασή μας από το "πώς θα χτίσουμε το τέλειο σύστημα τεχνικά" στο "πώς θα μετρήσουμε γρήγορα την αλληλεπίδραση των χρηστών". Η προτεραιότητα είναι η επικύρωση των υποθέσεών μας (Build-Measure-Learn loop).
 
+## Επόμενες Ενέργειες
+- [ ] Ρύθμιση tracking (π.χ. PostHog/Mixpanel) για το scan-to-order conversion rate στο Fake MVP.
