@@ -46,5 +46,5 @@
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
 
 ### 2026-04-11
-- **Βελτίωση:** Δημιουργία `meta/bot_questions.md` και σύνδεση με active investigations. Normalization/deduplication σημειώσεων χρηματοδότησης στο `business/market_strategy.md`. Ενημέρωση των στρατηγικών pitch. Καθαρισμός canvas duplication.
+- **Βελτίωση:** Normalization/deduplication σημειώσεων χρηματοδότησης στο `business/market_strategy.md`. Ενημέρωση των στρατηγικών pitch. Καθαρισμός canvas duplication.
 - **Εκκρεμότητες:** Αποστολή cold-emails/κλήσεων σε beach bars για A/B testing του Value Proposition και εύρεση brand name.

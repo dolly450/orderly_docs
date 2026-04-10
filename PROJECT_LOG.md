@@ -98,7 +98,6 @@
 ### Αρχεία που ενημερώθηκαν
 | Αρχείο | Τι έγινε |
 |---|---|
-| `meta/bot_questions.md` | **ΝΕΟ** — Δημιουργία με 3 top ερωτήσεις (Value Prop, Brand, CAC) |
 | `meta/active_investigations.md` | Προσθήκη ερώτησης #6 για A/B Testing Value Proposition |
 | `notes/introduction to fund raising.md` | Deduplication & μεταφορά στο `business/market_strategy.md`. Αντικατάσταση με wikilinks/insights/tasks |
 | `business/market_strategy.md` | Προσθήκη ενότητας "Fundraising Timing & Επενδυτές" και Mermaid Flow |
@@ -109,7 +108,7 @@
 | `meta/knowledge-health.md` | Ενημέρωση metrics, νέα metrics/backlinks, προσθήκη ιστορικού 2026-04-11 |
 
 ### Στατιστικά σήμερα
-- **Νέες ερωτήσεις:** 1 στο active_investigations (σύνολο 5) + 3 στο bot_questions
+- **Νέες ερωτήσεις:** 1 στο active_investigations (σύνολο 5)
 - **Νέα backlinks:** ~12
 - **Νέα tasks (- [ ]):** 5
 - **Διπλότυπα κανονικοποιημένα:** 2
