@@ -148,7 +148,7 @@
 **Γιατί είναι κρίσιμη:** Αν δεν μετρήσουμε, δεν μπορούμε να τρέξουμε Lean Startup (Build-Measure-Learn).
 **Επίπεδο:** High
 **Πεδίο:** Development/Architecture
-**Απάντηση:** →
+**Απάντηση:** → PostHog
 
 **Prompt για AI έρευνα (copy-paste ready):**
 > Φτιάχνουμε frontend-heavy PWA ordering app (Svelte / SvelteKit). Θέλουμε να κάνουμε track conversion events (QR scan, add to cart, checkout error) με έμφαση στο zero-friction (no login). Σύγκρινε τεχνικά και κοστολογικά το PostHog με το Mixpanel για early stage startups και δώσε μου το ιδανικό architecture schema.
@@ -175,7 +175,7 @@
 **Γιατί είναι κρίσιμη:** Έχουμε ήδη 2 personas (Beach Bar & Festival) αλλά πώς ακριβώς θα προσεγγίσουμε τους πρώτους 10 πελάτες;
 **Επίπεδο:** High
 **Πεδίο:** Marketing/Sales
-**Απάντηση:** →
+**Απάντηση:** → Direct sales.
 
 **Prompt για AI έρευνα (copy-paste ready):**
 > Για ένα QR Ordering SaaS στην Ελλάδα, ποιο είναι το πιο effective sales channel για να κλείσουμε τα πρώτα 10 beach bars πριν το καλοκαίρι; Direct sales (walking in) ή partnerships με POS providers (όπως Epsilon Net);
