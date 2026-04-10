@@ -92,3 +92,27 @@
 - **Νέες ερωτήσεις (active investigations):** 3
 - **Νέα tasks (- [ ]):** 2
 - **Διπλότυπα κανονικοποιημένα:** 1
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-11 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/bot_questions.md` | **ΝΕΟ** — Δημιουργία με 3 top ερωτήσεις (Value Prop, Brand, CAC) |
+| `meta/active_investigations.md` | Προσθήκη ερώτησης #6 για A/B Testing Value Proposition |
+| `notes/introduction to fund raising.md` | Deduplication & μεταφορά στο `business/market_strategy.md`. Αντικατάσταση με wikilinks/insights/tasks |
+| `business/market_strategy.md` | Προσθήκη ενότητας "Fundraising Timing & Επενδυτές" και Mermaid Flow |
+| `pitch/pitch_strategy.md` | Καθαρισμός όρων, ενσωμάτωση insights, προσθήκη Gantt diagram (Roadmap) και tasks |
+| `pitch/Business model canvas.md` | Αφαίρεση διπλότυπου canvas, προσθήκη reference προς `business/model.md` |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας σε 2026-04-11 |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας σε 2026-04-11 |
+| `meta/knowledge-health.md` | Ενημέρωση metrics, νέα metrics/backlinks, προσθήκη ιστορικού 2026-04-11 |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις:** 1 στο active_investigations (σύνολο 5) + 3 στο bot_questions
+- **Νέα backlinks:** ~12
+- **Νέα tasks (- [ ]):** 5
+- **Διπλότυπα κανονικοποιημένα:** 2
+- **Νέα Mermaid diagrams:** 2 (1 Gantt + 1 Flowchart)
+- **Canvases ενημερωμένα:** Ναι
+- **Knowledge Health ενημερωμένο:** Ναι

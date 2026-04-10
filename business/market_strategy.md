@@ -131,3 +131,36 @@ mindmap
 - **Total market:** Όλοι όσοι έχουν το πρόβλημα που εμείς λύνουμε.
 - **Addressable market:** Όλοι όσοι θα μπορούσαν να χρησιμοποιήσουν το προϊόν μας για να λύσουν το πρόβλημα.
 - **Target market:** Εκεί που κάνουμε launch (κάπου συγκεκριμένα, π.χ. στο Παγκράτι).
+
+## Fundraising Timing & Επενδυτές (Fundraising Timing & Investors)
+
+*Πηγή: Σεμινάριο Introduction to Fund Raising*
+
+1. **Ιδανικό Timing (Ideal Timing):** Αμέσως μετά την επικύρωση του MVP και τη λήψη των πρώτων θετικών μηνυμάτων από την αγορά (Market Signals) – π.χ. μετά τα πιλοτικά (Pilots) του καλοκαιριού. Μην σηκώνετε κεφάλαια πριν το Product-Market Fit (PMF) για να αποφύγετε μεγάλη απώλεια μετοχών (Dilution).
+2. **Οικονομικός Σχεδιασμός (Financial Planning):** Υπολογίστε αρκετό κεφάλαιο για runway 12-18 μηνών + buffer. Το B2B στον κλάδο της φιλοξενίας απαιτεί "υπομονετικά" κεφάλαια (Patient Capital) λόγω μεγαλύτερου sales cycle.
+3. **Τι Ψάχνουν οι Επενδυτές:**
+   - **Traction:** Τα δεδομένα από τα 5 πιλοτικά venues είναι το ισχυρότερο χαρτί.
+   - **TAM (Total Addressable Market):** Τεράστιο μέγεθος αγοράς (75k επιχειρήσεις, 40M τουρίστες).
+   - **Scalability & Defensibility:** Η υβριδική αρχιτεκτονική (Cloud + Local/Raspberry Pi) και το batch preparation logic δημιουργούν τεχνικό ανάχωμα (Moat) στον ανταγωνισμό.
+4. **Στρατηγική Προσέγγισης (Outreach Strategy):**
+   - Έμφαση στα integrations (π.χ. διασύνδεση POS/myDATA).
+   - Προετοιμασία Data Room, Pitch Deck, Financials.
+   - Συνδυασμός warm intros (μέσω μεντόρων) και στοχευμένων cold emails.
+   - Δημιουργία FOMO (Fear Of Missing Out) βασισμένο στα θερινά metrics.
+
+### Οπτικοποίηση: Στρατηγική Χρηματοδότησης (Fundraising Strategy)
+
+```mermaid
+graph TD
+    A[Bootstrapping & F&F] --> B(Ανάπτυξη MVP & Υποδομών)
+    B --> C{Pilot Tests - Καλοκαίρι}
+    C -->|Αποτυχία/Αδυναμίες| B
+    C -->|Επικύρωση & Traction| D[Προετοιμασία Data Room & Pitch Deck]
+    D --> E(Στόχευση Angel Investors / Pre-Seed VCs)
+    E --> F((Στόχος: 12-18 μήνες Runway))
+
+    style A fill:#e1f5fe,stroke:#0288d1
+    style C fill:#fff9c4,stroke:#fbc02d
+    style E fill:#e8f5e9,stroke:#388e3c
+    style F fill:#c8e6c9,stroke:#2e7d32
+```

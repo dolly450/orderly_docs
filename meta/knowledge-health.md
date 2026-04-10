@@ -1,13 +1,13 @@
 # Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
 
-## Ημερήσια Αναφορά: 2026-04-10
+## Ημερήσια Αναφορά: 2026-04-11
 
 ### Μετρήσεις Υγείας (Health Metrics)
 
 | Μέτρηση                                 | Τιμή                                                        |
 | --------------------------------------- | ----------------------------------------------------------- |
-| **Νέα backlinks σήμερα**                | ~18                                                         |
-| **Ερωτήσεις χωρίς απάντηση**            | 3 (active investigations) + 11 (open-questions)                     |
+| **Νέα backlinks σήμερα**                | ~12                                                         |
+| **Ερωτήσεις χωρίς απάντηση**            | 5 (active investigations) + 11 (open-questions)                     |
 | **Stale notes (>14 ημέρες χωρίς edit)** | 0                                                           |
 | **Orphaned notes (χωρίς σύνδεση)**      | 1 (meta/test-topic.md)                                      |
 | **Κενά / ελλιπή αρχεία**                | 0                                |
@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-04-11
+- **Βελτίωση:** Δημιουργία `meta/bot_questions.md` και σύνδεση με active investigations. Normalization/deduplication σημειώσεων χρηματοδότησης στο `business/market_strategy.md`. Ενημέρωση των στρατηγικών pitch. Καθαρισμός canvas duplication.
+- **Εκκρεμότητες:** Αποστολή cold-emails/κλήσεων σε beach bars για A/B testing του Value Proposition και εύρεση brand name.
