@@ -65,3 +65,8 @@ product: business + tech + ux (design)
 
 ## Επόμενες Ενέργειες
 - [ ] Ρύθμιση tracking (π.χ. PostHog/Mixpanel) για το scan-to-order conversion rate στο Fake MVP.
+
+## Σχετικές Σημειώσεις
+- [[v1_scope]]
+- [[market_strategy]]
+- [[roadmap]]

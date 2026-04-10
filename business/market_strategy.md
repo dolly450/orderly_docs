@@ -131,3 +131,10 @@ mindmap
 - **Total market:** Όλοι όσοι έχουν το πρόβλημα που εμείς λύνουμε.
 - **Addressable market:** Όλοι όσοι θα μπορούσαν να χρησιμοποιήσουν το προϊόν μας για να λύσουν το πρόβλημα.
 - **Target market:** Εκεί που κάνουμε launch (κάπου συγκεκριμένα, π.χ. στο Παγκράτι).
+
+### Implementation Logic: Phase 1 Sales (Acquiring First 10 Customers)
+- **Primary Method:** Direct Sales (Walking In).
+- **Target Profiles:** Beach Bars and Festival Organizers.
+- **Pitch Focus:** Time saved, queue reduction, immediate ROI.
+- **Conversion Strategy:** Provide a free, no-obligation "Fake MVP" demo directly on the venue owner's mobile device to demonstrate the zero-friction experience.
+- **Tooling Constraint:** Use a simple CRM (e.g., Planka) to track touchpoints and follow-up reminders. Avoid complex automated email sequences initially; focus on face-to-face trust.

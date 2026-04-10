@@ -52,3 +52,11 @@ graph TD
 *   **Πλατφόρμα:** **Tauri v2+** ως ένα cross-platform εκτελέσιμο (EXE/APK) που περιέχει τον τοπικό server.
 *   **Βάση Δεδομένων:** **Turso (libSQL)** για το Cloud, με **embedded replicas** τοπικά στο Tauri. Αυτό προσφέρει microsecond reads τοπικά και αυτόματο συγχρονισμό (sync) των writes με το Cloud.
 *   **Πλεονέκτημα:** Ο ιδιοκτήτης δεν χρειάζεται τεχνικές γνώσεις (ούτε Docker, ούτε ρυθμίσεις router). Ανοίγει απλώς την εφαρμογή και η τοπική IP γίνεται εγγραφή (register) στο Cloud backend μας.
+
+### Analytics & Data Tracking
+*   **Platform:** **PostHog** (Selected for robust feature-set tailored to early-stage startups).
+*   **Tracking Strategy (Zero-Friction):**
+    *   Initialize PostHog in the SvelteKit frontend.
+    *   Track anonymous user interactions without requiring login.
+    *   Use distinct IDs tied to the local session or device fingerprint to map user journeys (scan -> view menu -> add to cart -> checkout).
+*   **Key Event to Track:** OMTM (One Metric That Matters) - The Scan-to-Order conversion rate.

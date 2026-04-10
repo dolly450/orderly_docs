@@ -52,3 +52,9 @@ https://drive.google.com/file/d/18NjHjX3JWkfjrN6kAd7IZCSFYCVN3jq3/view?usp=shari
 
 
 > ℹ️ *Το πλήρες Business Model Canvas έχει μεταφερθεί στο* [[model]]
+
+## Σχετικές Σημειώσεις
+- [[model]]
+- [[Relevance Branding Workshop]]
+
+- [ ] Κατοχύρωση domain name για το επιλεγμένο Brand Name (π.χ. Kima, Velo).
