@@ -70,5 +70,3 @@ product: business + tech + ux (design)
 - [[v1_scope]]
 - [[market_strategy]]
 - [[roadmap]]
-
-- [ ] Έρευνα PostHog/Mixpanel για tracking του scan-to-order rate (OMTM).
