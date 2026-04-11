@@ -126,6 +126,7 @@ mindmap
 - [ ] Ερωτηματολόγιο (5-6 απλές ερωτήσεις τύπου ΝΑΙ/ΟΧΙ και πολλαπλής επιλογής, θα το πλασάρουμε σε φίλους, groups) → [[Questionnaire]]
 - [ ] Demo MVP → [[roadmap]]
 - [ ] Pitch σε μαγαζιά πιλοτικά (στην αρχή ως δωρεάν service) + για traction (**Προϋπόθεση:** να γίνει πρώτα το demo και το ερωτηματολόγιο, ώστε να έχουμε πιο πειστικό approach) → [[deck#6. Traction]]
+- [ ] Validation Experiment: Εκτέλεση πιλοτικής δοκιμής (walking-in demo) σε 5 καταστήματα για την επικύρωση του scan-to-order conversion rate και του ενδιαφέροντος για το add-on μοντέλο έναντι της αντικατάστασης των PDA.
 
 ### Ορισμοί Αγοράς (Market Definitions)
 - **Total market:** Όλοι όσοι έχουν το πρόβλημα που εμείς λύνουμε.
@@ -133,7 +134,8 @@ mindmap
 - **Target market:** Εκεί που κάνουμε launch (κάπου συγκεκριμένα, π.χ. στο Παγκράτι).
 
 ### Implementation Logic: Phase 1 Sales (Acquiring First 10 Customers)
-- **Primary Method:** Direct Sales (Walking In).
+- **Primary Method:** Direct Sales (Walking In) and Integration.
+- **Product Strategy:** Το σύστημα λειτουργεί ως add-on (self-service layer) και στέλνει παραγγελίες κατευθείαν στο υπάρχον POS (π.χ., Epsilon Net). **Δεν** προσπαθούμε να αντικαταστήσουμε τα υπάρχοντα PDA των σερβιτόρων για να μειώσουμε το adoption friction.
 - **Target Profiles:** Beach Bars and Festival Organizers.
 - **Pitch Focus:** Time saved, queue reduction, immediate ROI.
 - **Conversion Strategy:** Provide a free, no-obligation "Fake MVP" demo directly on the venue owner's mobile device to demonstrate the zero-friction experience.
