@@ -6,7 +6,7 @@
 Για το demo των 10 ημερών, η βέλτιστη επιλογή είναι:
 *   **Frontend:** Svelte / SvelteKit - PWA approach (Package Manager: Bun).
 *   **Backend:** SvelteKit Server (μελλοντικά πιθανώς Golang).
-*   **Database:** Υπό διερεύνηση (Supabase, CockroachDB ή άλλη λύση που να υποστηρίζει local-first sync).
+*   **Database:** Turso/libSQL. Επιλέχθηκε για την υποστήριξη local-first sync, μικρό footprint (ιδανικό για Pi/Android), και ενσωματωμένα embedded replicas (τοπικό SQLite που κάνει sync στο cloud). Θα χρησιμοποιηθεί Drizzle ORM για Type-safety.
 *   **Styling:** Tailwind CSS + shadcn/ui.
 *   **Deployment:** Vercel.
 

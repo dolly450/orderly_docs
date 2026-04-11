@@ -92,3 +92,24 @@
 - **Νέες ερωτήσεις (active investigations):** 3
 - **Νέα tasks (- [ ]):** 2
 - **Διπλότυπα κανονικοποιημένα:** 1
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-11 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Αφαίρεση απαντημένων ερωτήσεων (Turso & Product Strategy) |
+| `meta/decision-log.md` | Προσθήκη αποφάσεων για Turso/libSQL και Integration Strategy |
+| `architecture/technical_stack.md` | Ενημέρωση με την επιλογή του Turso/libSQL database |
+| `business/market_strategy.md` | Ενημέρωση GTM με τη στρατηγική add-on (αντί αντικατάστασης PDA) και προσθήκη task |
+| `architecture/ordering-flow.md` | Ολοκλήρωση Mermaid sequence diagram και προσθήκη πειράματος |
+| `notes/Product Design.md` | Προσθήκη "Επιπτώσεις για την ομάδα" και task για tracking |
+| `notes/Business Model Canvas Initial Plan.md` | Προσθήκη "Επιπτώσεις για την ομάδα" και tasks ψηφοφορίας |
+| `meta/user-needs.canvas` | Ενημέρωση canvas text και ημερομηνίας |
+| `meta/business-model.canvas` | Ενημέρωση canvas text, tech stack, και ημερομηνίας |
+
+### Στατιστικά σήμερα
+- **Απαντημένες ερωτήσεις:** 2 μεταφέρθηκαν στο decision-log
+- **Νέα tasks (- [ ]):** 4
+- **Ενημερωμένα διαγράμματα Mermaid:** 1
+- **Canvases ενημερωμένα:** Ναι

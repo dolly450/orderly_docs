@@ -53,8 +53,14 @@ https://drive.google.com/file/d/18NjHjX3JWkfjrN6kAd7IZCSFYCVN3jq3/view?usp=shari
 
 > ℹ️ *Το πλήρες Business Model Canvas έχει μεταφερθεί στο* [[model]]
 
+## Επιπτώσεις για την ομάδα (Team Implications)
+Η αναζήτηση για το ιδανικό brand name (1-3 συλλαβές, airplane test approved) είναι ακόμα ανοιχτή, καθώς το "Orderly" θεωρείται safe. Η τελική επιλογή θα πρέπει να αντικατοπτρίζει ταχύτητα και καλοκαίρι για να ενισχύσει το pitch. Συνδέεται άμεσα με την επικύρωση του Value Proposition μας στο [[model]].
+
 ## Σχετικές Σημειώσεις
 - [[model]]
 - [[Relevance Branding Workshop]]
+- [[pitch/deck.md]]
 
-- [ ] Κατοχύρωση domain name για το επιλεγμένο Brand Name (π.χ. Kima, Velo).
+## Επόμενες Ενέργειες
+- [ ] 15-λεπτο meeting για ψηφοφορία στο brand name (Zeno, Kima, Lio κλπ).
+- [ ] Κατοχύρωση domain name για το επιλεγμένο Brand Name.
