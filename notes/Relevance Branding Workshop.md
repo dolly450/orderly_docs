@@ -92,8 +92,13 @@ gantt
 ---
 
 Έχετε μια πραγματικά συμπαγή βάση. Επειδή αναφέρατε ότι το **Value Proposition** και το **Οριστικό Brand Name** είναι από τα πράγματα που δεν έχουν αποφασιστεί ακόμα, θέλετε να κάνουμε ένα γρήγορο brainstorming πάνω σε αυτά τα δύο για να κλείσουμε τα ανοιχτά μέτωπα;
+## Επιπτώσεις για την ομάδα (Impact for the team)
+Πρέπει να ορίσουμε το vesting schedule άμεσα. Το GTM μας χρειάζεται affiliates. Η στόχευση πρέπει να παραμείνει στο Product-Market Fit (PMF) λύνοντας προβλήματα για τα 5 πιλοτικά venues.
+
 ## Σχετικές Σημειώσεις
 - [[Business Model Canvas Initial Plan]]
 - [[model]]
+- [[mentors]]
 
 - [ ] Οριστικοποίηση του Brand Name (1-3 συλλαβές) που να περνάει το "Airplane Test".
+- [ ] Έρευνα (Validation experiment): A/B test 2 υποψήφια brand names (π.χ. Kima vs Velo) σε απλές διαφημίσεις (ads) με μετρική το CTR.

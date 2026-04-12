@@ -37,3 +37,4 @@ sequenceDiagram
 ## Επόμενες Ενέργειες
 
 - [ ] Σχεδιασμός UI/UX για το batch action της προετοιμασίας (Kitchen Display System).
+- [ ] Έρευνα (Validation experiment): Δοκιμή πρωτοτύπου UI για batch action (π.χ. στο Figma) με 3 bartenders. Μετρική επιτυχίας: ολοκλήρωση 10 εικονικών παραγγελιών σε < 30s.

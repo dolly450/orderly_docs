@@ -57,3 +57,4 @@
 - [ ] Οριστικοποίηση λίστας χαρακτηριστικών ανά tier (Free/Basic/Pro/Enterprise) → [[pricing_model#Tiered subscription]]
 - [ ] Δημιουργία wireframes για τις 4 βασικές σελίδες (Πελάτης, Σερβιτόρος, Κουζίνα, Admin)
 - [ ] Δοκιμή "Fake MVP": Πριν χτιστεί πλήρως το backend, δημιουργία mockup στο κινητό για demo/walk-in σε beach bars. Στόχος: μέτρηση άμεσου ενδιαφέροντος (Ναι/Όχι).
+- [ ] Έρευνα (Validation experiment): Παρουσίαση του Fake MVP σε 5 beach bars. Μετρική επιτυχίας: ≥3 επιχειρήσεις να δεχτούν να συμμετέχουν στο δωρεάν trial.

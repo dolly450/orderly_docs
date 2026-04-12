@@ -48,9 +48,13 @@ graph TD
 3. **Προσέγγιση:** Συνδυασμός warm intros (ιδανικά μέσω των μεντόρων σας) και cold emails.
 4. **Pitch:** Χτίστε μια συναρπαστική ιστορία με σαφήνεια, στην οποία οι επενδυτές θα θέλουν να συμμετέχουν.
 5. **Κλείσιμο:** Εκμεταλλευτείτε το momentum (π.χ. τα metrics από τη θερινή σεζόν) και δημιουργήστε FOMO (Fear Of Missing Out).
+## Επιπτώσεις για την ομάδα (Impact for the team)
+Το pitch deck πρέπει να εστιάζει στα integrations (myDATA, Epsilon Net, κλπ) και στο traction από τα πιλοτικά. Τα KPIs πρέπει να αναδεικνύουν την επίλυση πραγματικών προβλημάτων στο guest journey.
+
 ## Σχετικές Σημειώσεις
 - [[Relevance Branding Workshop]]
 - [[pricing_model]]
 - [[deck]]
 
 - [ ] Έρευνα για pre-seed VCs στην Ελλάδα που ειδικεύονται σε B2B Hospitality Tech.
+- [ ] Έρευνα (Validation experiment): Παρουσίαση του pitch deck σε 3 φιλικούς Angel Investors. Μετρική επιτυχίας: 80% κατανόηση του value prop.

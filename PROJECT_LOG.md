@@ -92,3 +92,24 @@
 - **Νέες ερωτήσεις (active investigations):** 3
 - **Νέα tasks (- [ ]):** 2
 - **Διπλότυπα κανονικοποιημένα:** 1
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-12 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `notes/Relevance Branding Workshop.md` | Προσθήκη impact, validation experiment, wikilinks |
+| `notes/The long road of turning your idea toa successful startup.md` | Προσθήκη impact, validation experiment |
+| `notes/introduction to fund raising.md` | Προσθήκη impact, validation experiment |
+| `design/staff_workflow.md` | Προσθήκη validation experiment |
+| `architecture/ordering-flow.md` | Προσθήκη validation experiment |
+| `design/v1_scope.md` | Προσθήκη validation experiment |
+| `architecture/technical_stack.md` | Προσθήκη validation experiments |
+| `architecture/pos_compliance.md` | Προσθήκη validation experiment |
+| `meta/decision-log.md` | Καταγραφή απόφασης για το Brand Name |
+| `meta/knowledge-health.md` | Νέα αναφορά υγείας KB (2026-04-12) |
+| `PROJECT_LOG.md` | Καταγραφή αλλαγών 2026-04-12 |
+
+### Στατιστικά σήμερα
+- **Νέα tasks (- [ ]):** 9
+- **Διπλότυπα κανονικοποιημένα:** 0
