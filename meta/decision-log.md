@@ -1,5 +1,10 @@
 # Ημερολόγιο Αποφάσεων (Decision Log)
 
+### 2026-04-12 - Brand Name
+- **Απόφαση / Σύνοψη:** Προς το παρόν κρατάμε το "Orderly" ως safe λύση, αλλά θα γίνει ψηφοφορία. Εναλλακτικές 1-3 συλλαβών: TapServe, EasyTab, QResto, Breeze, Velo, Kima, Lio, Zeno.
+- **Αρχεία που ενημερώθηκαν:** [[notes/Relevance Branding Workshop.md]], [[meta/active_investigations.md]]
+- **Σημείωση για Implementation:** Αναμονή οριστικής απόφασης και κατοχύρωσης domain.
+
 ### 2026-04-10 - Τοπική Αρχιτεκτονική MVP (Local-first MVP Architecture)
 - **Απόφαση / Σύνοψη:** Επιλογή του Tauri v2+ για την υλοποίηση του local-first ordering setup (με server και DB), ως ένα απλό, cross-platform εκτελέσιμο (one-click install) χωρίς να χρειάζεται περίπλοκο setup. Για DB επιλέχθηκε Turso/libSQL cloud με embedded replicas τοπικά.
 - **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]], [[meta/active_investigations.md]]

@@ -24,3 +24,7 @@ flowchart LR
     SBZ -->|Reporting| MyDATA[ΑΑΔΕ myDATA]
     SBZ -->|Fiscal Sign| FIMAS[ΦΗΜΑΣ / Πάροχος]
 ```
+
+## Επόμενες Ενέργειες
+
+- [ ] Έρευνα (Validation experiment): Επαλήθευση του SBZ Systems API για το order injection endpoint. Μετρική: Επιτυχής αποστολή test παραγγελίας.

@@ -60,3 +60,8 @@ graph TD
     *   Track anonymous user interactions without requiring login.
     *   Use distinct IDs tied to the local session or device fingerprint to map user journeys (scan -> view menu -> add to cart -> checkout).
 *   **Key Event to Track:** OMTM (One Metric That Matters) - The Scan-to-Order conversion rate.
+
+## Επόμενες Ενέργειες
+
+- [ ] Έρευνα (Validation experiment): Δοκιμή (load test) του τοπικού server (Tauri v2+) με 100 ταυτόχρονες εικονικές παραγγελίες. Μετρική: 0 dropped requests.
+- [ ] Έρευνα (Validation experiment): Έλεγχος ανάκτησης (recovery time) των Turso embedded replicas μετά από αποσύνδεση. Μετρική: < 2 δευτερόλεπτα.
