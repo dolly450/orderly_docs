@@ -1,5 +1,8 @@
-# 2. Αρχιτεκτονική Συστήματος (Υβριδικό Μοντέλο)
-Οπτικοποίηση της αλληλεπίδρασης μεταξύ Cloud, τοπικού δικτύου και συσκευών. Η τοπική πύλη (Gateway) υλοποιείται μέσω **Tauri v2+** (one-click install), το οποίο φιλοξενεί έναν τοπικό server και μία embedded replica βάση δεδομένων (μέσω Turso/libSQL).
+# Αρχιτεκτονική Συστήματος (System Architecture - Υβριδικό Μοντέλο)
+
+Οπτικοποίηση της αλληλεπίδρασης μεταξύ Cloud, τοπικού δικτύου (Local Network) και συσκευών. Η τοπική πύλη (Gateway) υλοποιείται μέσω **Tauri v2+** (one-click install), το οποίο φιλοξενεί έναν τοπικό διακομιστή (Local Server) και μία embedded replica βάση δεδομένων (μέσω Turso/libSQL).
+
+### Οπτικοποίηση (Visualisation)
 
 ```mermaid
 graph LR
@@ -26,3 +29,11 @@ graph LR
     API --> CloudDB
     API --> Auth
 ```
+
+## Σχετικές Σημειώσεις
+- [[data_model]]
+- [[technical_stack]]
+- [[overview]]
+
+## Επόμενες Ενέργειες
+- [ ] Δοκιμή (Stress Test) του Gateway (Tauri v2+) σε συνθήκες offline λειτουργίας (απουσία internet) για 24 ώρες για να επιβεβαιωθεί η αξιοπιστία της τοπικής βάσης.

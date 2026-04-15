@@ -60,3 +60,24 @@ graph TD
     *   Track anonymous user interactions without requiring login.
     *   Use distinct IDs tied to the local session or device fingerprint to map user journeys (scan -> view menu -> add to cart -> checkout).
 *   **Key Event to Track:** OMTM (One Metric That Matters) - The Scan-to-Order conversion rate.
+
+## 6. Turso / libSQL Database Architecture Setup
+*Ανάλυση βασισμένη στην έρευνα κόστους και τεχνικών δυνατοτήτων του Turso (αντί για PocketBase).*
+
+### Τιμολόγηση & Κόστος (Turso Cloud)
+- **Developer Tier:** $4.99/μήνα. Περιλαμβάνει 500 Active DBs, 9GB storage, 2.5B reads. (Δωρεάν τα επιπλέον DBs κάτω από 500). Ιδανικό ξεκίνημα.
+- **Scaler Tier:** $24.92/μήνα. Καλύπτει μέχρι 2.500 Active DBs.
+- Η προσέγγιση είναι **Database-per-tenant** (μία DB ανά κατάστημα), κάτι που λύνει και την ανάγκη για Row Level Security (RLS) στο Cloud.
+- Τα **Embedded Replicas** (για το local-first) είναι δωρεάν, πληρώνουμε μόνο τα sync bytes (τα οποία για QR ordering εγγραφές είναι πολύ λίγα).
+
+### SDKs & Λειτουργικότητα
+- **Frontend (SvelteKit):** Χρήση του `@libsql/client` TypeScript SDK. Προτείνεται η ενσωμάτωση του **Drizzle ORM** που προσφέρει άριστη TS υποστήριξη και type-safety για το libSQL.
+- **Backend (Golang):** Χρήση του `@libsql/client-go` SDK (ή `database/sql` + `sqlc`).
+- **SSE / Realtime:** Το Turso δεν έχει native realtime endpoints. Το **Server-Sent Events (SSE)** πρέπει να υλοποιηθεί custom μέσω του Backend (π.χ. στο Golang, ~20 γραμμές κώδικα) ή μέσω του `/listen` endpoint + polling, το οποίο επαρκεί για παραγγελίες.
+- **Authentication:** Το Turso δεν έχει built-in Auth. Θα χρησιμοποιήσουμε λύσεις όπως Auth.js ή Clerk, αποστέλλοντας JWTs.
+
+### Εναλλακτική Self-Hosted Λύση
+Όταν ξεπεράσουμε τα ~1000 καταστήματα και τα fees αυξηθούν, είναι εφικτή η 100% μετάβαση σε **self-hosted `libsql-server` (sqld)** σε δικό μας VPS (με ελάχιστο κόστος ~$40-80/μήνα), διατηρώντας το ίδιο πρωτόκολλο επικοινωνίας και τα Embedded Replicas.
+
+**Τελική Απόφαση:**
+Ξεκινάμε με το **Turso Cloud (Developer tier)** για ταχύτητα (zero Ops) και scaling out-of-the-box. Μετάβαση σε Self-Hosted όταν φτάσουμε μεγάλο scale.

@@ -1,5 +1,8 @@
-# 7. Μοντέλο Δεδομένων (ERD)
-Οι σχέσεις μεταξύ των βασικών οντοτήτων για την υποστήριξη της λογικής του συστήματος.
+# Μοντέλο Δεδομένων (Data Model - ERD)
+
+Οι σχέσεις μεταξύ των βασικών οντοτήτων (entities) για την υποστήριξη της επιχειρησιακής λογικής (business logic) του συστήματος.
+
+### Οπτικοποίηση (Visualisation)
 
 ```mermaid
 erDiagram
@@ -58,3 +61,10 @@ erDiagram
     PRODUCT ||--o{ ORDER_ITEM : ordered_as
     PRODUCT ||--|| INVENTORY : tracked_by
 ```
+
+## Σχετικές Σημειώσεις
+- [[system_architecture]]
+- [[technical_stack]]
+
+## Επόμενες Ενέργειες
+- [ ] Επαλήθευση του μοντέλου δεδομένων (ERD) με τους developers για τυχόν παραλείψεις πριν την έναρξη του Phase 1 (MVP - Minimum Viable Product).
