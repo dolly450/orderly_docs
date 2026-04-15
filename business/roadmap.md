@@ -1,29 +1,36 @@
 # 6. Οδικός Χάρτης MVP (MVP Roadmap)
 
-Σχέδιο δράσης για την ανάπτυξη και την πρώτη δοκιμή του συστήματος.
+Σχέδιο δράσης για την ανάπτυξη και την πρώτη δοκιμή του συστήματος, έχοντας ως βάση το ήδη υλοποιημένο Demo Orderly (37 λειτουργίες, 4 ρόλοι, 5 SSE κανάλια, 2 γλώσσες).
 
 ```mermaid
 gantt
     title Σχέδιο Δράσης MVP (Προτεινόμενο)
     dateFormat  YYYY-MM-DD
-    section Φάση 1: Core
-    Βασικό UI & Ordering       :a1, 2026-04-01, 20d
+    section Φάση 1: Core (Ολοκληρώθηκε στο Demo)
+    Βασικό UI & Ordering       :done, a1, 2026-04-01, 20d
     Database Schema & API      :done, a2, 2026-04-01, 15d
+    Staff Dashboard & Admin    :done, a3, 2026-04-10, 10d
     section Φάση 2: Operations
-    Staff Dashboard (KDS)     :a3, 2026-04-20, 15d
-    QR Management & ID logic   :a4, 2026-04-25, 10d
+    E2E Testing Suite         :a4, 2026-04-20, 10d
+    Payment Integration       :a5, 2026-04-25, 10d
+    Floor Plan Editor         :a6, 2026-05-01, 15d
     section Φάση 3: Connectivity
-    Offline Local Sync         :a5, 2026-05-10, 20d
-    Hybrid Payments (Cash/Stripe): a6, 2026-05-20, 15d
-    section Φάση 4: Testing
-    Pilot Test (Small Event)   :crit, a7, 2026-06-15, 7d
-    Refining based on feedback :a8, 2026-06-22, 14d
+    Offline Local Sync         :a7, 2026-05-10, 20d
+    Push Notifications         :a8, 2026-05-20, 10d
+    section Φάση 4: Testing & Scale
+    Pilot Test (Small Event)   :crit, a9, 2026-06-15, 7d
+    Refining based on feedback :a10, 2026-06-22, 14d
 ```
 
-## Σχέδιο Δράσης (Action Plan)
+## Σχέδιο Δράσης (Action Plan) & Insights
 
-1. **Πρώτη φάση:** Ερωτηματολόγιο (Questionnaire) → [[Questionnaire]], MVP, Pitching, βασικό μάρκετινγκ (Marketing), αξιολόγηση και προσαρμογή αλλαγών βάσει αναγκών πελατών.
-2. **Ταχεία επέκταση (Rapid Expansion):** Μέσω χαμηλών περιθωρίων (Low Margins) και χαμηλού κόστους απόκτησης πελατών (Low CAC — Customer Acquisition Cost) — εξαιρετικά γρήγορη απόκτηση πελατών. → [[COGS, CACs, overheads]] / [[market_strategy]]
+Η πλατφόρμα είναι σε προχωρημένο στάδιο. Βάσει των insights, τα παρακάτω είναι "Low-Hanging Fruits" (Σχεδόν έτοιμα):
+
+1. **E2E Testing Suite & CI Pipeline:** Η υποδομή (Vitest, i18n checks) είναι έτοιμη. Απαιτείται ολοκλήρωση των test workflows.
+2. **Analytics:** Tα ωριαία γραφήματα χρησιμοποιούν ήδη πραγματικά δεδομένα από τη DB. Απαιτείται απλώς αφαίρεση τυχόν υπολειπόμενων mock data.
+3. **Per-Role Feature Configuration:** Το Feature Registry υπάρχει. Λείπει μόνο το UI διαχείρισης στο Admin panel.
+4. **Floor Plan Visual Editor:** Οι συντεταγμένες (x, y) υπάρχουν στη βάση. Χρειάζεται ένα drag-and-drop UI.
+5. **Payment Integration & Push Notifications:** Η υποδομή billing (tabs/pay_now) και τα SSE channels υπάρχουν, έτοιμα να δεχθούν τα αντίστοιχα external APIs.
 
 ## Σχετικές Σημειώσεις
 
@@ -34,4 +41,4 @@ gantt
 
 ## Επόμενες Ενέργειες
 
-- [ ] Επικαιροποίηση ημερομηνιών roadmap βάσει πραγματικής προόδου ανά εβδομάδα
+- [ ] Δημιουργία issues στο repository για τα 5 "Σχεδόν Έτοιμα" insights (π.χ. E2E tests, Floor Plan editor).

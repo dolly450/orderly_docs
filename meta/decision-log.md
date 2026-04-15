@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-15 - Επιλογή Βάσης Δεδομένων (Database selection)
+- **Απόφαση / Σύνοψη:** Επιλογή του Turso/libSQL με database-per-tenant, αντί του PocketBase, λόγω της δωρεάν υποστήριξης embedded replicas. Θα ξεκινήσουμε με το Cloud Developer Tier ($4.99) και θα προσθέσουμε Drizzle ORM και custom SSE στο backend.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Το Turso δεν έχει native RLS οπότε πάμε με database-per-tenant isolation. Δεν έχει native Auth, οπότε θα χρησιμοποιήσουμε external Auth (π.χ. Auth.js).

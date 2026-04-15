@@ -1,13 +1,13 @@
 # Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
 
-## Ημερήσια Αναφορά: 2026-04-10
+## Ημερήσια Αναφορά: 2026-04-15
 
 ### Μετρήσεις Υγείας (Health Metrics)
 
 | Μέτρηση                                 | Τιμή                                                        |
 | --------------------------------------- | ----------------------------------------------------------- |
-| **Νέα backlinks σήμερα**                | 16                                                          |
-| **Ερωτήσεις χωρίς απάντηση**            | 3 (active investigations) + 11 (open-questions)             |
+| **Νέα backlinks σήμερα**                | 7                                                           |
+| **Ερωτήσεις χωρίς απάντηση**            | 5 (active investigations) + 11 (open-questions)             |
 | **Stale notes (>14 ημέρες χωρίς edit)** | 0                                                           |
 | **Orphaned notes (χωρίς σύνδεση)**      | 1 (meta/test-topic.md)                                      |
 | **Κενά / ελλιπή αρχεία**                | 0                                                           |
@@ -17,7 +17,7 @@
 
 1. **Ερωτηματολόγιο σε draft** — δεν έχει σταλεί ακόμα σε κανέναν → [[Questionnaire]]
 2. **COGS ακριβή νούμερα λείπουν** — δεν μπορούμε να υπολογίσουμε margins χωρίς αυτά → [[COGS, CACs, overheads]]
-3. **Brand name ακόμα ανοιχτό** → [[open-questions#Branding & Ταυτότητα]]
+3. **Brand name ακόμα ανοιχτό** → [[meta/active_investigations#1. Τίτλος Έρευνας: Οριστικό Όνομα του Startup (Brand Name)]]
 
 ### Validation Experiments (Πειράματα Επικύρωσης)
 
@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-04-15
+- **Βελτίωση:** Ενημέρωση αρχιτεκτονικής, Active investigations limit, και Canvas updates. (Και ενσωμάτωση Demo Orderly specs σε design/architecture).
+- **Εκκρεμότητες:** Επαλήθευση ERD, Stress testing (Tauri v2+ offline mode), και επικοινωνία με SBZ Systems για API.
