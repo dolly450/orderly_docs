@@ -110,3 +110,15 @@
 - **Νέα tasks (- [ ]):** 3
 - **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)
 - **Προσθήκη/Ενημέρωση Mermaid diagrams:** 3
+
+## 📝 Έκτακτη Ενημέρωση — 2026-04-15 (Ενσωμάτωση Demo Orderly Specs)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `architecture/overview.md` | Προσθήκη Feature Registry pattern, SvelteKit 2/Svelte 5 stack, Better Auth, RBAC, SSE, Demo Mode. |
+| `architecture/data_model.md` | Πλήρης ανανέωση ERD και πίνακα με 15+ domain tables βάσει `src/lib/server/db/schema.ts`. |
+| `design/user_flow.md` | Ενημέρωση Customer Flow με `localStorage` rules και SSE updates. |
+| `design/staff_workflow.md` | Ενσωμάτωση Order Lifecycle, Kitchen Flow, και Assignment Engine. |
+| `design/features.md` | Προσθήκη αναλυτικής λίστας των 37 υλοποιημένων features ανά ρόλο. |
+| `business/roadmap.md` | Ενημέρωση Gantt chart και ενσωμάτωση των "Σχεδόν Έτοιμων" (Insights) λειτουργιών. |

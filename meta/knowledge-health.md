@@ -46,5 +46,5 @@
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
 
 ### 2026-04-15
-- **Βελτίωση:** Ενημέρωση αρχιτεκτονικής, Active investigations limit, και Canvas updates.
+- **Βελτίωση:** Ενημέρωση αρχιτεκτονικής, Active investigations limit, και Canvas updates. (Και ενσωμάτωση Demo Orderly specs σε design/architecture).
 - **Εκκρεμότητες:** Επαλήθευση ERD, Stress testing (Tauri v2+ offline mode), και επικοινωνία με SBZ Systems για API.
