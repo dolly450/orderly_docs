@@ -51,6 +51,6 @@ graph TD
 ## Σχετικές Σημειώσεις
 - [[Relevance Branding Workshop]]
 - [[pricing_model]]
-- [[deck]]
+- [[../pitch/deck - φαμφάρες type shit]]
 
 - [ ] Έρευνα για pre-seed VCs στην Ελλάδα που ειδικεύονται σε B2B Hospitality Tech.

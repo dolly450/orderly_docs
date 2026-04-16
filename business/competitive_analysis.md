@@ -55,10 +55,10 @@ quadrantChart
 - [[model]] — Business Model Canvas
 - [[market_strategy]] — Στρατηγική αγοράς
 - [[pricing_model]] — Μοντέλο τιμολόγησης
-- [[deck]] — Pitch deck
+- [[../pitch/deck - φαμφάρες type shit]] — Pitch deck
 
 ## Επόμενες Ενέργειες
 
 - [ ] Δημιουργία λεπτομερούς πίνακα σύγκρισης (Feature Comparison Table) εμάς vs ελληνικές και διεθνείς εταιρείες
-- [ ] Ολοκλήρωση pitch → [[deck]]
+- [ ] Ολοκλήρωση pitch → [[../pitch/deck - φαμφάρες type shit]]
 - [ ] Ολοκλήρωση Business Model Canvas — ειδικά Value Proposition → [[model]]

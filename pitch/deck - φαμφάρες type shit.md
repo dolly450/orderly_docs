@@ -16,6 +16,8 @@ Fully on cloud, customer only needs Internet connection. -> if no internet conne
 
 On Cloud hosted by orderly.
 *Bigger "companies" could have a "standalone" selfhosted option  with different prices (to be reviewed)*
+
+
 ## 3. Target Market
 <!-- Ποιος είναι ο πελάτης σου; -->
 Events
@@ -36,6 +38,8 @@ Hosting menu plus some extra PDA features for limited time as demo*
 ## 6. Traction
 <!-- Τι έχεις δείξει μέχρι τώρα; -->
 MVP 
+- [ ] μαγαζάτορες
+- [ ] αποτελέσματα ερωτηματολογίου
 ## 7. Team
 <!-- Ποιοι είστε; -->
 

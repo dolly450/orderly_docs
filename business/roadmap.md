@@ -29,7 +29,7 @@ gantt
 
 - [[v1_scope]] — Εύρος MVP
 - [[market_strategy]] — Στρατηγική αγοράς
-- [[deck]] — Pitch deck
+- [[../pitch/deck - φαμφάρες type shit]] — Pitch deck
 - [[The long road of turning your idea toa successful startup]] — Στρατηγική ανάπτυξης
 
 ## Επόμενες Ενέργειες

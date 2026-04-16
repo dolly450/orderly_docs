@@ -31,7 +31,7 @@ flowchart TD
 ## Στρατηγική Εισόδου στην Αγορά (Go-to-Market Strategy)
 
 - **Γρήγορη είσοδος για κατάληψη αγοράς (Rapid Market Capture)** (λογική eFood): μπαίνουμε γρήγορα πριν γεμίσει η αγορά.
-- **Επικύρωση πριν την κλίμακα (Validation Before Scale):** Πιλοτικό σε 5 καταστήματα/venues/ερωτηματολόγια → μετρήσεις (Metrics) → απόδειξη ιδέας (Proof of Concept) → επιχείρημα πώλησης (Selling Point). → Δέσιμο (Traction) → [[deck#6. Traction]]
+- **Επικύρωση πριν την κλίμακα (Validation Before Scale):** Πιλοτικό σε 5 καταστήματα/venues/ερωτηματολόγια → μετρήσεις (Metrics) → απόδειξη ιδέας (Proof of Concept) → επιχείρημα πώλησης (Selling Point). → Δέσιμο (Traction) → [[../pitch/deck - φαμφάρες type shit#6. Traction]]
 - **Άμεση έρευνα αγοράς (Market Research):** Συνομιλία με 10 μαγαζιά για ανατροφοδότηση (Feedback) πριν οριστικοποιηθεί οτιδήποτε.
 
 ```mermaid
@@ -117,7 +117,7 @@ mindmap
 - [[competitive_analysis]] — Ανάλυση ανταγωνισμού
 - [[pricing_model]] — Μοντέλο τιμολόγησης
 - [[COGS, CACs, overheads]] — Κόστη
-- [[deck]] — Pitch deck
+- [[../pitch/deck - φαμφάρες type shit]] — Pitch deck
 - [[mentors]] — Μέντορες
 
 ## Επόμενες Ενέργειες
@@ -125,7 +125,7 @@ mindmap
 - [ ] Μιλάμε σε μαγαζιά, φίλους, γενικά για την ιδέα, να δούμε τι παίζει (π.χ. μπαρ στην Κύπρο που κάνει κάτι αρκετά παρόμοιο + McDonalds)
 - [ ] Ερωτηματολόγιο (5-6 απλές ερωτήσεις τύπου ΝΑΙ/ΟΧΙ και πολλαπλής επιλογής, θα το πλασάρουμε σε φίλους, groups) → [[Questionnaire]]
 - [ ] Demo MVP → [[roadmap]]
-- [ ] Pitch σε μαγαζιά πιλοτικά (στην αρχή ως δωρεάν service) + για traction (**Προϋπόθεση:** να γίνει πρώτα το demo και το ερωτηματολόγιο, ώστε να έχουμε πιο πειστικό approach) → [[deck#6. Traction]]
+- [ ] Pitch σε μαγαζιά πιλοτικά (στην αρχή ως δωρεάν service) + για traction (**Προϋπόθεση:** να γίνει πρώτα το demo και το ερωτηματολόγιο, ώστε να έχουμε πιο πειστικό approach) → [[../pitch/deck - φαμφάρες type shit#6. Traction]]
 
 ### Ορισμοί Αγοράς (Market Definitions)
 - **Total market:** Όλοι όσοι έχουν το πρόβλημα που εμείς λύνουμε.
