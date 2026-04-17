@@ -1,6 +1,7 @@
 # Επιχειρησιακές Εξαιρέσεις & Λειτουργίες (Operational Edge Cases & Features)
 
 Λεπτομέρειες που καθορίζουν την επιτυχία στην πράξη.
+Το τρέχον baseline είναι cloud-first web app. Το local-first/offline κομμάτι εδώ είναι future-phase υλικό, όχι shipped υλοποίηση.
 
 ## 1. Πληρωμές: Viva Wallet (Προτίμηση)
 
@@ -36,7 +37,7 @@ flowchart TD
     D -.->|Fallback Route\n(Αν δεν είναι στο WiFi)| E
 ```
 
-→ [[technical_stack#2. Υβριδική Αρχιτεκτονική]] / [[system_architecture]]
+→ [[technical_stack]] / [[system_architecture]]
 
 ## 4. Πολυγλωσσικότητα (Multilingual)
 
@@ -73,4 +74,4 @@ flowchart TD
 ## Επόμενες Ενέργειες
 
 - [ ] Έρευνα κόστους LLM APIs vs Google Translate API για αυτόματη μετάφραση μενού
-- [ ] Τεστ offline mode σε πραγματικές συνθήκες (χωρίς Wi-Fi) πριν τα πιλοτικά
+- [ ] Τεστ offline mode σε πραγματικές συνθήκες (χωρίς Wi-Fi) πριν τα πιλοτικά, όταν ενεργοποιηθεί η future-phase local-first κατεύθυνση

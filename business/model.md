@@ -1,82 +1,91 @@
 # Business Model Canvas — Orderly
 
-Πλήρες Business Model Canvas (Καμβάς Επιχειρηματικού Μοντέλου) βάσει δεδομένων από το vault.
+Πλήρες Business Model Canvas βάσει του τρέχοντος προϊόντος και του στρατηγικού πλάνου.
 
 ## Key Partners (Βασικοί Συνεργάτες)
-- Πάροχοι πληρωμών (Payment Providers): **Viva Wallet**, Stripe → [[features#1. Πληρωμές]]
-- Πάροχοι ERP/POS: **SBZ Systems**, Epsilon Net, Oxygen → [[pos_compliance]]
-- Λογιστές / Προμηθευτές εστίασης (Affiliates ~€100/deal) → [[market_strategy#Παραπομπές (Referrals)]]
-- Προμηθευτές hardware (Hardware Suppliers): Raspberry Pi, Printers → [[technical_stack#2. Υβριδική Αρχιτεκτονική]]
+
+- Πάροχοι πληρωμών: Viva Wallet, Stripe
+- Πάροχοι POS / ERP: SBZ Systems, Epsilon Net, Oxygen
+- Πάροχοι cloud / infra: Vercel, Turso/libSQL, ενδεχομένως Cloudflare
+- Λογιστές / συνεργάτες εστίασης / affiliates
 
 ## Key Activities (Βασικές Δραστηριότητες)
-- Ανάπτυξη πλατφόρμας (Platform Development): SvelteKit (και μελλοντικά πιθανώς Golang) → [[technical_stack]]
-- Άμεσες πωλήσεις & demos (Direct Sales & Demos) → [[market_strategy#Πωλήσεις (Sales)]]
-- Εγκατάσταση υβριδικού εξοπλισμού (Hybrid Equipment Setup) & offline sync
-- Υποστήριξη πελατών (Customer Support) & onboarding
+
+- Ανάπτυξη της web-first πλατφόρμας σε SvelteKit
+- Βελτίωση της customer, staff, kitchen και admin ροής
+- Direct sales, demos και onboarding σε πραγματικά venues
+- Υποστήριξη πελατών, feedback loops και προϊοντική επανάληψη
 
 ## Key Resources (Βασικοί Πόροι)
-- Ιδρυτική / τεχνική ομάδα (Founding Team): 2 Devs + 2 Business → [[startup_synopsis#9. Ομάδα]]
-- Cloud & τοπική υποδομή (Infrastructure): Vercel/Cloudflare, Υπό εξέταση DB, Raspberry Pi
-- Δίκτυο μεντόρων (Mentor Network): B2B Sales, MVP, Fundraising → [[mentors]]
+
+- Ιδρυτική / τεχνική ομάδα
+- Current web stack και feature registry
+- Demo data, translation pipeline και operational docs
+- Network από venues, mentors και early adopters
 
 ## Value Propositions (Προτάσεις Αξίας)
 
 **Για το Venue (B2B):**
-- Αύξηση τζίρου & ταχύτητας (Revenue & Speed Increase) μέσω Batch Preparation → [[staff_workflow]]
-- Λιγότερα λάθη στις παραγγελίες (Fewer Order Errors)
-- Αδιάλειπτη λειτουργία ακόμα χωρίς internet (Offline Mode) → [[features#3. Όταν Πέφτει το Internet]]
-- Αποσυμφόρηση προσωπικού (Staff Relief) τις ώρες αιχμής
+- Λιγότερα λάθη και λιγότερο χάος στις ουρές
+- Ταχύτερη παραγγελιοληψία και clearer staff coordination
+- Zone-aware μενού και realtime operational visibility
+- Πολυγλωσσικότητα για τουριστικό κοινό
+- Future path για POS / offline / local-first όταν το business το ζητήσει
 
 **Για τον Πελάτη (B2C):**
-- Μηδενική τριβή στην παραγγελία (Zero-friction Ordering) — χωρίς app/login → [[user_flow]]
-- Πολυγλωσσικό μενού (Multilingual Menu) μέσω LLM / Google Translate → [[features#4. Πολυγλωσσικότητα]]
-- Ενημέρωση κατάστασης παραγγελίας (Order Status Updates) σε πραγματικό χρόνο
+- Χωρίς app install, χωρίς τριβή
+- Γρήγορη είσοδος από QR / deep link
+- Σαφής εικόνα κατάστασης παραγγελίας
+- Καλύτερη εμπειρία σε τουριστικά ή υπερφορτωμένα venues
 
-> 💡 **Επιλεγμένο Value Proposition (Εστιάζοντας στη Λειτουργική Ηρεμία & Ταχύτητα):**
-> "Για τα πιο πολυσύχναστα beach bars και φεστιβάλ, μετατρέπουμε την αναμονή σε πωλήσεις. Εξαλείφουμε το χάος των ουρών και τα γλωσσικά εμπόδια με ένα zero-friction σύστημα παραγγελιοληψίας που λειτουργεί αδιάλειπτα ακόμα και χωρίς ίντερνετ, χαρίζοντας ηρεμία στο προσωπικό και την απόλυτη καλοκαιρινή εμπειρία στους τουρίστες."
+> Κεντρική ιδέα: το προϊόν δεν πουλάει απλώς ordering. Πουλάει ηρεμία λειτουργίας, ταχύτητα και πιο προβλέψιμη εμπειρία για venue και πελάτη.
 
 ## Customer Relationships (Σχέσεις Πελατών)
-- **B2B:** Προσωπική επαφή, CRM follow-ups, υποστήριξη στο πιλοτικό στάδιο
-- **B2C:** Αυτοματοποιημένη, ανώνυμη εξυπηρέτηση, άμεση ενημέρωση status παραγγελίας
+
+- **B2B:** προσωπική επαφή, demo, onboarding και follow-up
+- **B2C:** αυτοματοποιημένη, ανώνυμη ροή με άμεση ενημέρωση status
 
 ## Channels (Κανάλια Διανομής)
-- Door-to-door / Walking in → [[market_strategy#Πωλήσεις (Sales)]]
-- Δίκτυο affiliates (~€100/deal)
-- Οργανικό SEO / Social Media
-- Demo calls & presentations → [[Questionnaire]]
+
+- Walking in / direct sales
+- Demo calls και live παρουσιάσεις
+- Referrals από συνεργάτες και venues
+- Content / SEO / social proof
 
 ## Customer Segments (Τμήματα Πελατών)
 
 **B2B:**
-- Beach bars (Ουρές/Αναμονή) → [[v1_scope]]
-- Festivals / Events (Φεστιβάλ / Εκδηλώσεις)
-- Self-service cafes (Καφετέριες αυτοεξυπηρέτησης)
-- Πανηγύρια
+- Beach bars
+- Festivals / events
+- Self-service cafes
+- Full-service cafes / restaurants
 
 **B2C:**
-- Τουρίστες (40M+/έτος)
+- Τουρίστες και πελάτες που θέλουν γρήγορη self-service εμπειρία
 
 ## Cost Structure (Δομή Κόστους)
-- Cloud Hosting & APIs: Vercel/Cloudflare, DB Cost, Twilio, LLM API → [[COGS, CACs, overheads#COGS]]
-- Εξοπλισμός (Equipment): Local servers, tablets
-- Κόστη μετακινήσεων/πωλήσεων — Phase 1 → [[COGS, CACs, overheads#CAC]]
-- Affiliate commissions (~€100/deal)
-- Λειτουργικά έξοδα (Overheads): ~€200-300/μήνα → [[COGS, CACs, overheads#Overheads]]
+
+- Hosting, database, auth και realtime infrastructure
+- Sales / demos / onboarding / support
+- Analytics και translation automation
+- Future hardware, POS integration και local-first delivery όταν ενεργοποιηθούν
 
 ## Revenue Streams (Ροές Εσόδων)
-- **SaaS Subscription (Συνδρομή):** Κλιμακωτή — €0/€19/€39/€69+ → [[pricing_model]]
-- **Commission-based (Προμήθεια):** 1-3% per sale — ως στρατηγική εισόδου
-- **Πωλήσεις Hardware (Hardware Sales):** Local servers, tablets
+
+- SaaS subscription
+- Commission-based option για early adoption / seasonal venues
+- Setup / onboarding fees
+- Future hardware / integration services
 
 ## Σχετικές Σημειώσεις
 
-- [[Business Model Canvas Initial Plan]] — Σημειώσεις σεμιναρίου BMC
-- [[pricing_model]] — Λεπτομέρειες τιμολόγησης
-- [[competitive_analysis]] — Ανταγωνισμός
-- [[startup_synopsis]] — Σύνοψη startup
+- [[pricing_model]] — Τιμολόγηση
+- [[market_strategy]] — Go-to-market
+- [[competitive_analysis]] — Ανάλυση ανταγωνισμού
+- [[v1_scope]] — Εύρος MVP
 
 ## Επόμενες Ενέργειες
 
-- [ ] Οριστικοποίηση Value Proposition (Πρόταση Αξίας) με βάση feedback από τα πιλοτικά → [[../meta/active_investigations]]
-- [ ] Συμπλήρωση λεπτομερών αριθμών στη Δομή Κόστους (Cost Structure)
-- [ ] Συνεντεύξεις Lean Startup (τουλάχιστον 5 venues) με A/B testing στο επιλεγμένο Value Proposition ("Λειτουργική Ηρεμία" vs "Ταχύτητα & Τζίρος")
+- [ ] Οριστικοποίηση του target segment για το πρώτο pilot wave
+- [ ] Επιβεβαίωση αν το commission μοντέλο θα είναι εισαγωγικό ή μόνιμο
+- [ ] Σύνδεση του value proposition με τα πραγματικά demo metrics

@@ -92,3 +92,22 @@
 - **Νέες ερωτήσεις (active investigations):** 3
 - **Νέα tasks (- [ ]):** 2
 - **Διπλότυπα κανονικοποιημένα:** 1
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-17 (Docs Sync)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `README.md` | Επικαιροποίηση feature count και baseline σημείωσης για web-first / future local-first |
+| `FEATURES.md` | Πλήρης συγχρονισμός με το `featureRegistry` και το `feature-config` |
+| `architecture/overview.md` | Αρχιτεκτονική cloud-first με ρητή διάκριση future-phase local-first |
+| `architecture/system_architecture.md` | Νέο διάγραμμα web app / API / SSE / DB |
+| `architecture/technical_stack.md` | Επικαιροποίηση stack και analytics σημείωσης |
+| `business/model.md` | Αναπροσαρμογή BMC στο τρέχον product shape |
+| `business/pricing_model.md` | Μικρές αλλαγές στα tiers ώστε να δένουν με το shipped app |
+| `business/market_strategy.md` | Προσθήκη baseline note για web-first / cloud-first |
+| `meta/decision-log.md` | Αλλαγή baseline από local-first σε cloud-first web app |
+| `meta/active_investigations.md` | Banner ότι το local-first υλικό είναι ιστορικό |
+
+### Σημείωση
+- Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.

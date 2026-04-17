@@ -1,62 +1,36 @@
-# Τεχνική Αρχιτεκτονική (Technical Architecture)
+# Τεχνική Αρχιτεκτονική (Technical Stack)
 
-Στρατηγική επιλογή για ταχύτητα (MVP) και αξιοπιστία (Production).
+Η τρέχουσα υλοποίηση είναι web-first και βελτιστοποιημένη για γρήγορη ανάπτυξη, καθαρό domain separation και εύκολη επέκταση ανά feature.
 
-## 1. MVP Stack (Rapid Development)
-Για το demo των 10 ημερών, η βέλτιστη επιλογή είναι:
-*   **Frontend:** Svelte / SvelteKit - PWA approach (Package Manager: Bun).
-*   **Backend:** SvelteKit Server (μελλοντικά πιθανώς Golang).
-*   **Database:** Υπό διερεύνηση (Supabase, CockroachDB ή άλλη λύση που να υποστηρίζει local-first sync).
-*   **Styling:** Tailwind CSS + shadcn/ui.
-*   **Deployment:** Vercel.
+## 1. Τρέχον MVP Stack
 
-## 2. Υβριδική Αρχιτεκτονική (Production)
-Στην παραγωγή, ειδικά για Beach Bars και Festivals, η σύνδεση στο internet είναι συχνά ασταθής.
+- **Frontend:** SvelteKit 2, Svelte 5, Tailwind CSS 4
+- **Routing / App Shell:** route groups για customer, staff, kitchen και admin
+- **Auth:** Better Auth
+- **Data:** Drizzle ORM + libSQL/Turso-style storage layer
+- **Realtime:** SSE για orders, waiter calls, reservations, tabs και occupancy
+- **i18n:** Paraglide JS
+- **Testing:** Vitest
+- **Tooling:** Bun
 
-```mermaid
-graph TD
-    subgraph Cloud [Cloud Layer]
-        API[Admin Dashboard & Sync API]
-        DB[(Global Database)]
-    end
-    
-    subgraph Local [Local Venue Layer]
-        Router[Local WiFi Router]
-        LocalSrv[Local Server / Raspberry Pi]
-        KDS[Kitchen Display System]
-        Printers[Star/Epson Printers]
-    end
-    
-    subgraph Client [Customer Device]
-        Phone[Customer Smartphone]
-    end
+## 2. Τι δεν είναι baseline ακόμα
 
-    Phone -->|WiFi| Router
-    Router --> LocalSrv
-    LocalSrv --> KDS
-    LocalSrv --> Printers
-    LocalSrv -->|Auto-Sync via SSE/WebSockets| API
-    API --> DB
-```
+- Local-first packaging με Tauri v2+ δεν είναι το τρέχον shipping model.
+- Embedded replicas / local gateway είναι future-phase κατεύθυνση, όχι baseline που στηρίζεται το repo σήμερα.
+- Offline sync και local device routing παραμένουν strategic research, όχι production default.
 
-## 3. Real-time Ενημερώσεις
-Για το MVP προτείνεται η χρήση **SSE (Server-Sent Events)** αντί για WebSockets, καθώς το 95% της επικοινωνίας είναι server-to-client (status updates). Είναι απλούστερο στην υλοποίηση και πιο ανθεκτικό σε proxies.
+## 3. Analytics & Tracking
 
-## 4. Push Notifications
-*   **Android:** Πλήρης υποστήριξη μέσω Web Push.
-*   **iOS (16.4+):** Λειτουργεί μόνο αν ο χρήστης προσθέσει το PWA στην αρχική οθόνη.
-*   **Στρατηγική Fallback:** In-browser alerts (Audio) + Προαιρετικό SMS (via Twilio).
+- Το strategy doc έχει επιλέξει PostHog ως πιθανή λύση για anonymous conversion tracking.
+- Το repo πρέπει να το αντιμετωπίζει ως επόμενη ενσωμάτωση, όχι ως δεδομένο ήδη wired-in stack component.
 
-## 5. Τοπική Αρχιτεκτονική (Local-First MVP)
-Για την ευκολότερη δυνατή εγκατάσταση (One-click install) στα καταστήματα, έχει επιλεγεί η εξής προσέγγιση:
-*   **Πλατφόρμα:** **Tauri v2+** ως ένα cross-platform εκτελέσιμο (EXE/APK) που περιέχει τον τοπικό server.
-*   **Βάση Δεδομένων:** **Turso (libSQL)** για το Cloud, με **embedded replicas** τοπικά στο Tauri. Αυτό προσφέρει microsecond reads τοπικά και αυτόματο συγχρονισμό (sync) των writes με το Cloud.
-*   **Πλεονέκτημα:** Ο ιδιοκτήτης δεν χρειάζεται τεχνικές γνώσεις (ούτε Docker, ούτε ρυθμίσεις router). Ανοίγει απλώς την εφαρμογή και η τοπική IP γίνεται εγγραφή (register) στο Cloud backend μας.
+## 4. Deployment Logic
 
-### Analytics & Data Tracking
-*   **Platform:** **PostHog** (Selected for robust feature-set tailored to early-stage startups).
-*   **Tracking Strategy (Zero-Friction):**
-    *   Initialize PostHog in the SvelteKit frontend.
-    *   Track anonymous user interactions without requiring login.
-    *   Use distinct IDs tied to the local session or device fingerprint to map user journeys (scan -> view menu -> add to cart -> checkout).
-*   **Key Event to Track:** OMTM (One Metric That Matters) - The Scan-to-Order conversion rate.
+- Το app τρέχει ως web application και το backend logic μένει στο SvelteKit server layer.
+- Τα feature-specific modules παραμένουν απομονωμένα μέσα στο feature registry και τα route orchestrators.
+
+## Σχετικές Σημειώσεις
+
+- [[overview]] — High-level architecture.
+- [[system_architecture]] — Διάγραμμα ροής.
+- [[pos_compliance]] — Φάσεις POS / fiscal integration.
