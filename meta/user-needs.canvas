@@ -14,12 +14,13 @@
 		{"id":"314d6da52311d59a","type":"text","text":"**χρήστης (πελάτης του πελάτη)**","x":-392,"y":-469,"width":280,"height":60},
 		{"id":"7d4223f6d6f66f30","type":"text","text":"να βλέπει το μενού στη γλώσσα του","x":-230,"y":-341,"width":172,"height":60},
 		{"id":"091d929a7c02a5e7","type":"text","text":"σερβιτόρος","x":190,"y":-529,"width":250,"height":60},
-		{"id":"8fdf2241881b59a3","type":"text","text":"να ενημερώνει το σερβιτόρο για την παραγγελία","x":520,"y":-229,"width":260,"height":80},
 		{"id":"6079c4498872ba95","type":"text","text":"κουζίνα / μπαρίστας","x":624,"y":-528,"width":208,"height":59},
 		{"id":"aef23e9b99220d48","type":"text","text":"να ξέρει ποιος χρειάζεται εξυπηρέτηση","x":60,"y":-341,"width":210,"height":60},
 		{"id":"f73c2afd24b0272c","x":100,"y":-250,"width":250,"height":60,"type":"text","text":"να βλέπει την κατάσταση των τραπεζιών γρήγορα"},
 		{"id":"1fbbd0feca262cda","x":190,"y":-140,"width":250,"height":60,"type":"text","text":"να μπορεί να επεξεργάζεται το τράπεζι (λογαριασμό)"},
-		{"id":"90c1fcf98501ab79","x":331,"y":-41,"width":250,"height":60,"type":"text","text":"να κρατά σημειώσεις για τους άλλους staff"}
+		{"id":"90c1fcf98501ab79","x":331,"y":-41,"width":250,"height":60,"type":"text","text":"να κρατά σημειώσεις για τους άλλους staff"},
+		{"id":"8fdf2241881b59a3","type":"text","text":"να ενημερώνει το σερβιτόρο για την παραγγελία","x":680,"y":-220,"width":260,"height":80},
+		{"id":"f0742f612141181b","x":456,"y":-393,"width":250,"height":60,"type":"text","text":""}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
@@ -35,6 +36,7 @@
 		{"id":"cc54ec3b0e071943","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"7d4223f6d6f66f30","toSide":"top"},
 		{"id":"069dd58c477b4fe3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"f73c2afd24b0272c","toSide":"top"},
 		{"id":"9c1d4e6559ab04da","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"1fbbd0feca262cda","toSide":"top"},
-		{"id":"7ecd9889530001b3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"90c1fcf98501ab79","toSide":"top"}
+		{"id":"7ecd9889530001b3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"90c1fcf98501ab79","toSide":"top"},
+		{"id":"de0223795424ef21","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"f0742f612141181b","toSide":"top"}
 	]
 }
