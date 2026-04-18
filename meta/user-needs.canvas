@@ -3,15 +3,18 @@
 		{"id":"title","type":"text","text":"# Χάρτης Αναγκών Χρηστών (User Needs Map) - Last Updated: 2026-04-10","x":-392,"y":-640,"width":1600,"height":80},
 		{"id":"56f4fe42b6271904","x":-850,"y":-460,"width":250,"height":60,"type":"text","text":"καταστηματάρχης (admin)"},
 		{"id":"314d6da52311d59a","x":-532,"y":-460,"width":280,"height":60,"type":"text","text":"**χρήστης (πελάτης του πελάτη)**"},
-		{"id":"091d929a7c02a5e7","x":-180,"y":-460,"width":250,"height":60,"type":"text","text":"σερβιτόρος"},
 		{"id":"persona1","type":"text","text":"## 🏖️ Persona 1: Ιδιοκτήτης Beach Bar\n\n**Προφίλ:** Γιάννης, 42, διαχειρίζεται beach bar 80 τραπεζιών σε νησί.\n**Πόνοι:** Ουρές, γλωσσικό φράγμα με τουρίστες, αργή πληρωμή, έλλειψη internet τις ώρες αιχμής.\n**Στόχοι:** Ταχύτερη εξυπηρέτηση, λιγότερο προσωπικό, αύξηση τζίρου.\n→ [[market_strategy]] [[v1_scope]]","x":1008,"y":-362,"width":400,"height":280,"color":"1"},
 		{"id":"persona2","type":"text","text":"## 🎪 Persona 2: Διοργανωτής Festival\n\n**Προφίλ:** Μαρία, 35, διοργανώνει food festivals 2-3 φορές/χρόνο.\n**Πόνοι:** Τεράστιες ουρές, χάος παραγγελιών, αδυναμία tracking πωλήσεων.\n**Στόχοι:** Self-service ordering, batch prep ώστε να εξυπηρετεί 500+ πελάτες/ώρα.\n→ [[staff_workflow]] [[Questionnaire]]","x":1008,"y":18,"width":400,"height":300,"color":"4"},
 		{"id":"needs1","type":"text","text":"## Ανάγκες Beach Bar\n\n1. **Πολυγλωσσικό μενού** — 80% πελατών τουρίστες\n2. **Offline λειτουργία** — κακό σήμα στο νησί\n3. **Γρήγορη πληρωμή** — χωρίς αναμονή ταμείου\n4. **Ειδοποιήσεις πελατών** — status παραγγελίας\n5. **Εποχιακή τιμολόγηση** — pause χειμώνα\n→ [[features]] [[pricing_model#3. Εποχιακή Στρατηγική]]","x":1438,"y":-400,"width":300,"height":378,"color":"6"},
 		{"id":"needs2","type":"text","text":"## Ανάγκες Festival\n\n1. **Self-service ordering** — χωρίς σερβιτόρους\n2. **Queue management** — μείωση ουρών\n3. **Batch preparation** — ομαδική ετοιμασία\n4. **Προσωρινό setup** — plug & play\n5. **Analytics σε πραγματικό χρόνο** — live πωλήσεις\n→ [[staff_workflow]] [[v1_scope]]","x":1438,"y":18,"width":300,"height":330,"color":"6"},
 		{"id":"solutions","type":"text","text":"## 🔧 Υποψήφιες Λύσεις\n\n| Λύση | MVP | Metric Επιτυχίας |\n|---|---|---|\n| QR Digital Menu | ✅ Ναι | >70% scan rate |\n| Ordering & Cart | ✅ Ναι | >50% conversion |\n| Order Status | ✅ Ναι | <2 ερωτήσεις/ώρα |\n| Multilingual Menu | ✅ Ναι | 80% γλωσσών |\n| Offline Mode | ✅ Ναι | 99% uptime |\n| Batch Prep Logic | ✅ Ναι | +30% throughput |\n| Call Button | ✅ Ναι | <3s response |\n| Online Payment | ❌ Phase 2 | — |\n| AI Chatbot | ❌ Phase 3+ | — |\n| Booking System | ❌ Phase 2 | — |\n| Live Capacity | ❌ Phase 3+ | — |\n→ [[v1_scope]] [[roadmap]]","x":1748,"y":-362,"width":440,"height":710,"color":"5"},
-		{"id":"6079c4498872ba95","x":200,"y":-460,"width":208,"height":59,"type":"text","text":"κουζίνα / μπαρίστας"},
-		{"id":"8fdf2241881b59a3","x":148,"y":-260,"width":260,"height":80,"type":"text","text":"να ενημερώνει το σερβιτόρο για την παραγγελία"},
-		{"id":"aef23e9b99220d48","x":-211,"y":-228,"width":210,"height":60,"type":"text","text":"να ξέρει ποιος χρειάζεται εξυπηρέτηση"}
+		{"id":"8fdf2241881b59a3","x":200,"y":-220,"width":260,"height":80,"type":"text","text":"να ενημερώνει το σερβιτόρο για την παραγγελία"},
+		{"id":"2b383ac329fa3bda","x":-671,"y":-220,"width":278,"height":60,"type":"text","text":"να παραγγείλει ανά πάσα στιγμή"},
+		{"id":"aef23e9b99220d48","x":-60,"y":-220,"width":210,"height":60,"type":"text","text":"να ξέρει ποιος χρειάζεται εξυπηρέτηση"},
+		{"id":"6079c4498872ba95","x":304,"y":-519,"width":208,"height":59,"type":"text","text":"κουζίνα / μπαρίστας"},
+		{"id":"091d929a7c02a5e7","x":-20,"y":-519,"width":250,"height":60,"type":"text","text":"σερβιτόρος"},
+		{"id":"528eb3576c8133e1","x":-451,"y":-80,"width":172,"height":60,"type":"text","text":"να βλέπει το μενού"},
+		{"id":"3c2714dd98248c5e","x":-310,"y":60,"width":250,"height":60,"type":"text","text":"να ξέρει πότε θα έρθει το φαγητό του"}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
@@ -19,6 +22,9 @@
 		{"id":"e3","fromNode":"needs1","fromSide":"right","toNode":"solutions","toSide":"left"},
 		{"id":"e4","fromNode":"needs2","fromSide":"right","toNode":"solutions","toSide":"left"},
 		{"id":"4419296ff09ab76c","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"8fdf2241881b59a3","toSide":"top"},
-		{"id":"a6ef04175014571a","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"aef23e9b99220d48","toSide":"top"}
+		{"id":"a6ef04175014571a","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"aef23e9b99220d48","toSide":"top"},
+		{"id":"1c6c6ca1bfcba115","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"2b383ac329fa3bda","toSide":"top"},
+		{"id":"ac97e26f465364bc","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"528eb3576c8133e1","toSide":"top"},
+		{"id":"e6b86e637017a958","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"3c2714dd98248c5e","toSide":"top"}
 	]
 }
