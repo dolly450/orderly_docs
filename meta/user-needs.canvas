@@ -17,7 +17,6 @@
 		{"id":"needs1","type":"text","text":"## Ανάγκες Beach Bar\n\n1. **Πολυγλωσσικό μενού** — 80% πελατών τουρίστες\n2. **Offline λειτουργία** — κακό σήμα στο νησί\n3. **Γρήγορη πληρωμή** — χωρίς αναμονή ταμείου\n4. **Ειδοποιήσεις πελατών** — status παραγγελίας\n5. **Εποχιακή τιμολόγηση** — pause χειμώνα\n→ [[features]] [[pricing_model#3. Εποχιακή Στρατηγική]]","x":1830,"y":-428,"width":300,"height":378,"color":"6"},
 		{"id":"needs2","type":"text","text":"## Ανάγκες Festival\n\n1. **Self-service ordering** — χωρίς σερβιτόρους\n2. **Queue management** — μείωση ουρών\n3. **Batch preparation** — ομαδική ετοιμασία\n4. **Προσωρινό setup** — plug & play\n5. **Analytics σε πραγματικό χρόνο** — live πωλήσεις\n→ [[staff_workflow]] [[v1_scope]]","x":1830,"y":-10,"width":300,"height":330,"color":"6"},
 		{"id":"solutions","type":"text","text":"## 🔧 Υποψήφιες Λύσεις\n\n| Λύση | MVP | Metric Επιτυχίας |\n|---|---|---|\n| QR Digital Menu | ✅ Ναι | >70% scan rate |\n| Ordering & Cart | ✅ Ναι | >50% conversion |\n| Order Status | ✅ Ναι | <2 ερωτήσεις/ώρα |\n| Multilingual Menu | ✅ Ναι | 80% γλωσσών |\n| Offline Mode | ✅ Ναι | 99% uptime |\n| Batch Prep Logic | ✅ Ναι | +30% throughput |\n| Call Button | ✅ Ναι | <3s response |\n| Online Payment | ❌ Phase 2 | — |\n| AI Chatbot | ❌ Phase 3+ | — |\n| Booking System | ❌ Phase 2 | — |\n| Live Capacity | ❌ Phase 3+ | — |\n→ [[v1_scope]] [[roadmap]]","x":2140,"y":-390,"width":440,"height":710,"color":"5"},
-		{"id":"275475f7c5650282","type":"text","text":"να ξέρει απόθεμα live","x":-1100,"y":-341,"width":250,"height":60},
 		{"id":"3c2714dd98248c5e","type":"text","text":"να ξέρει πότε θα έρθει το φαγητό του","x":-480,"y":19,"width":250,"height":60},
 		{"id":"393df4c495d46be5","type":"text","text":"να μη περιμένει σε ουρά (self service)","x":-323,"y":119,"width":250,"height":60},
 		{"id":"7d4223f6d6f66f30","type":"text","text":"να βλέπει το μενού στη γλώσσα του","x":-284,"y":-140,"width":172,"height":60},
@@ -26,7 +25,10 @@
 		{"id":"8fdf2241881b59a3","type":"text","text":"να ενημερώνει συναδέλφους για την παραγγελία","x":707,"y":-170,"width":242,"height":90},
 		{"id":"f0742f612141181b","x":842,"y":-300,"width":189,"height":60,"type":"text","text":"να ξέρει απόθεμα live"},
 		{"id":"6079c4498872ba95","type":"text","text":"κουζίνα / μπαρίστας","x":707,"y":-519,"width":208,"height":59},
-		{"id":"6397ebf8c9407a3e","x":582,"y":-331,"width":187,"height":50,"type":"text","text":"να καλούν σερβιτόρο ή runner"}
+		{"id":"6397ebf8c9407a3e","x":582,"y":-331,"width":187,"height":50,"type":"text","text":"να καλούν σερβιτόρο ή runner"},
+		{"id":"2a5351ce931717df","x":-99,"y":29,"width":205,"height":60,"type":"text","text":"να μπορεί να κάνει split"},
+		{"id":"275475f7c5650282","type":"text","text":"να ξέρει απόθεμα live","x":-1160,"y":-390,"width":250,"height":60},
+		{"id":"c1bf365346013b60","x":-1071,"y":-269,"width":250,"height":60,"type":"text","text":"analytics "}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
@@ -49,6 +51,8 @@
 		{"id":"6c7767285fe5ef5d","fromNode":"56f4fe42b6271904","fromSide":"left","toNode":"275475f7c5650282","toSide":"top"},
 		{"id":"56a71d4e31c8ec45","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"a8f955bb79ddabe6","toSide":"top"},
 		{"id":"1054050d877e34ed","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"977c085c6db85065","toSide":"top"},
-		{"id":"a92f8d68bd25a7cb","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"6397ebf8c9407a3e","toSide":"top"}
+		{"id":"a92f8d68bd25a7cb","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"6397ebf8c9407a3e","toSide":"top"},
+		{"id":"02f26623fdc6f1e7","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"2a5351ce931717df","toSide":"top"},
+		{"id":"83f54f2bc71cdcac","fromNode":"56f4fe42b6271904","fromSide":"bottom","toNode":"c1bf365346013b60","toSide":"top"}
 	]
 }
