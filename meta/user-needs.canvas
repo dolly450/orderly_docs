@@ -28,12 +28,12 @@
 		{"id":"6397ebf8c9407a3e","x":582,"y":-331,"width":187,"height":50,"type":"text","text":"να καλούν σερβιτόρο ή runner"},
 		{"id":"2a5351ce931717df","x":-99,"y":29,"width":175,"height":60,"type":"text","text":"να μπορεί να κάνει split το λογαριασμό"},
 		{"id":"275475f7c5650282","type":"text","text":"να ξέρει απόθεμα live","x":-1160,"y":-390,"width":189,"height":60},
-		{"id":"c1bf365346013b60","x":-1051,"y":-269,"width":212,"height":59,"type":"text","text":"analytics παραγγελιών, προσωπικού"},
 		{"id":"eae7c5122b8afc65","x":-1035,"y":-170,"width":155,"height":60,"type":"text","text":"σετάρει μενού"},
 		{"id":"e3c5c72c54d375e4","x":-1035,"y":-80,"width":196,"height":60,"type":"text","text":"διαχείριση κρατήσεων"},
 		{"id":"2eba8ce094a74868","x":-975,"y":19,"width":235,"height":60,"type":"text","text":"ρυθμίζει τραπέζια και ζώνες"},
 		{"id":"7c5c31eda6213c82","x":-1160,"y":-520,"width":250,"height":60,"type":"text","text":"διαχείριση προσωπικού"},
-		{"id":"3844e7c39dad962c","x":-823,"y":129,"width":196,"height":50,"type":"text","text":"παραμετροποίηση  καταστήματος"}
+		{"id":"3844e7c39dad962c","x":-823,"y":129,"width":196,"height":50,"type":"text","text":"παραμετροποίηση  καταστήματος"},
+		{"id":"c1bf365346013b60","x":-1122,"y":-281,"width":212,"height":59,"type":"text","text":"analytics παραγγελιών, προσωπικού"}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
