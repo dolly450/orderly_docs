@@ -1,9 +1,11 @@
-pithano name:
+- **skipq.menu**
+
+επιλαχόντα:
 - ordersnap
+
+pithano name:
 - waitease
-- piase.gr/miampyra
 - piase.menu
-- skipq
 - easy + q / quick / snap q
 - zeroq
 - 0wait
