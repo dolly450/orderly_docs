@@ -8,6 +8,8 @@
 
 Πολλες εφαρμογες που χρειαζονται να τις κατεβασεις και να κανεις sign up (?)
 
+## Proof του Προβλήματος
+
 ## 2. Solution
 <!-- Πώς το λύνεις; -->
 Fully customisable per client app (Could be only helper -> Menu only, Full PDA/Ordering self-service app and so on)
@@ -18,30 +20,41 @@ On Cloud hosted by orderly.
 *Bigger "companies" could have a "standalone" selfhosted option  with different prices (to be reviewed)*
 
 
-## 3. Target Market
+## Target Market TAM SAM SOM
 <!-- Ποιος είναι ο πελάτης σου; -->
 Events
 Bistros(Cafeterias/Restaurants)
 Self Service bars
 Beach bars
-## 4. Business Model
+
+
+## DEMO (video?)
+
+
+## Business Model
 <!-- Πώς κερδίζεις χρήματα; -->
 Subscription based model, plus extensions.
 
-
 *Applies also as to how to approach the market
 Free "demo" or product could be  -> Hosting only the menu for "a freebie" or a get-to-know basis -> or hosting only menu for limited time
-Hosting menu plus some extra PDA features for limited time as demo*
-## 5. Competition
-<!-- Ποιοι είναι οι ανταγωνιστές; -->
+Hosting menu plus some extra PDA features for limited time as demo
 
-## 6. Traction
+## Go To Market
+
+
+## Traction
 <!-- Τι έχεις δείξει μέχρι τώρα; -->
 MVP 
 - [ ] μαγαζάτορες
 - [ ] αποτελέσματα ερωτηματολογίου
-## 7. Team
+## Competition
+<!-- Ποιοι είναι οι ανταγωνιστές; -->
+
+
+## Team
 <!-- Ποιοι είστε; -->
 
-## 8. Ask
+## Ask
 <!-- Τι ζητάς; -->
+
+
