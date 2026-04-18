@@ -26,7 +26,7 @@
 		{"id":"8fdf2241881b59a3","type":"text","text":"να ενημερώνει συναδέλφους για την παραγγελία","x":707,"y":-170,"width":242,"height":90},
 		{"id":"f0742f612141181b","x":842,"y":-300,"width":189,"height":60,"type":"text","text":"να ξέρει απόθεμα live"},
 		{"id":"6079c4498872ba95","type":"text","text":"κουζίνα / μπαρίστας","x":707,"y":-519,"width":208,"height":59},
-		{"id":"6397ebf8c9407a3e","x":582,"y":-331,"width":187,"height":50,"type":"text","text":"να καλούν σερβιτόρο"}
+		{"id":"6397ebf8c9407a3e","x":582,"y":-331,"width":187,"height":50,"type":"text","text":"να καλούν σερβιτόρο ή runner"}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
