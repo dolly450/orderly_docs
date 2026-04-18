@@ -23,7 +23,8 @@
 		{"id":"275475f7c5650282","type":"text","text":"να ξέρει απόθεμα live","x":-1100,"y":-341,"width":250,"height":60},
 		{"id":"3c2714dd98248c5e","type":"text","text":"να ξέρει πότε θα έρθει το φαγητό του","x":-480,"y":19,"width":250,"height":60},
 		{"id":"393df4c495d46be5","type":"text","text":"να μη περιμένει σε ουρά (self service)","x":-323,"y":119,"width":250,"height":60},
-		{"id":"7d4223f6d6f66f30","type":"text","text":"να βλέπει το μενού στη γλώσσα του","x":-284,"y":-140,"width":172,"height":60}
+		{"id":"7d4223f6d6f66f30","type":"text","text":"να βλέπει το μενού στη γλώσσα του","x":-284,"y":-140,"width":172,"height":60},
+		{"id":"a8f955bb79ddabe6","x":-198,"y":-270,"width":198,"height":60,"type":"text","text":"να ξέρει τι είναι διαθέσιμο (απόθεμα)"}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
@@ -43,6 +44,7 @@
 		{"id":"de0223795424ef21","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"f0742f612141181b","toSide":"top"},
 		{"id":"c77c049f77a14a02","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"2ddad24fcdf18156","toSide":"top"},
 		{"id":"35920c7cbd0c82c3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"a107d57f222c4496","toSide":"top"},
-		{"id":"6c7767285fe5ef5d","fromNode":"56f4fe42b6271904","fromSide":"left","toNode":"275475f7c5650282","toSide":"top"}
+		{"id":"6c7767285fe5ef5d","fromNode":"56f4fe42b6271904","fromSide":"left","toNode":"275475f7c5650282","toSide":"top"},
+		{"id":"56a71d4e31c8ec45","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"a8f955bb79ddabe6","toSide":"top"}
 	]
 }
