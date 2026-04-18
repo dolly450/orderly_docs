@@ -18,10 +18,11 @@
 		{"id":"aef23e9b99220d48","type":"text","text":"να ξέρει ποιος χρειάζεται εξυπηρέτηση","x":60,"y":-341,"width":210,"height":60},
 		{"id":"f73c2afd24b0272c","x":100,"y":-250,"width":250,"height":60,"type":"text","text":"να βλέπει την κατάσταση των τραπεζιών γρήγορα"},
 		{"id":"1fbbd0feca262cda","x":190,"y":-140,"width":250,"height":60,"type":"text","text":"να μπορεί να επεξεργάζεται το τράπεζι (λογαριασμό)"},
-		{"id":"90c1fcf98501ab79","x":331,"y":-41,"width":250,"height":60,"type":"text","text":"να κρατά σημειώσεις για τους συναδέλφους"},
+		{"id":"90c1fcf98501ab79","x":331,"y":-41,"width":209,"height":60,"type":"text","text":"να κρατά σημειώσεις για τους συναδέλφους"},
 		{"id":"2ddad24fcdf18156","x":457,"y":89,"width":250,"height":60,"type":"text","text":"να έχει δίκαιο φόρτο σε σχέση με τους συναδέλφους"},
 		{"id":"8fdf2241881b59a3","type":"text","text":"να ενημερώνει το σερβιτόρο για την παραγγελία","x":728,"y":-250,"width":260,"height":80},
-		{"id":"f0742f612141181b","x":499,"y":-400,"width":250,"height":60,"type":"text","text":""}
+		{"id":"f0742f612141181b","x":499,"y":-400,"width":250,"height":60,"type":"text","text":""},
+		{"id":"a107d57f222c4496","x":378,"y":-252,"width":250,"height":60,"type":"text","text":"διαχείριση κρα΄τ"}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
@@ -39,6 +40,7 @@
 		{"id":"9c1d4e6559ab04da","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"1fbbd0feca262cda","toSide":"top"},
 		{"id":"7ecd9889530001b3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"90c1fcf98501ab79","toSide":"top"},
 		{"id":"de0223795424ef21","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"f0742f612141181b","toSide":"top"},
-		{"id":"c77c049f77a14a02","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"2ddad24fcdf18156","toSide":"top"}
+		{"id":"c77c049f77a14a02","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"2ddad24fcdf18156","toSide":"top"},
+		{"id":"35920c7cbd0c82c3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"a107d57f222c4496","toSide":"top"}
 	]
 }
