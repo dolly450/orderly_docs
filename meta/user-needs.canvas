@@ -26,9 +26,9 @@
 		{"id":"f0742f612141181b","x":842,"y":-300,"width":189,"height":60,"type":"text","text":"να ξέρει απόθεμα live"},
 		{"id":"6079c4498872ba95","type":"text","text":"κουζίνα / μπαρίστας","x":707,"y":-519,"width":208,"height":59},
 		{"id":"6397ebf8c9407a3e","x":582,"y":-331,"width":187,"height":50,"type":"text","text":"να καλούν σερβιτόρο ή runner"},
-		{"id":"2a5351ce931717df","x":-99,"y":29,"width":205,"height":60,"type":"text","text":"να μπορεί να κάνει split"},
+		{"id":"2a5351ce931717df","x":-99,"y":29,"width":205,"height":60,"type":"text","text":"να μπορεί να κάνει split το λογαριασμό"},
 		{"id":"275475f7c5650282","type":"text","text":"να ξέρει απόθεμα live","x":-1160,"y":-390,"width":250,"height":60},
-		{"id":"c1bf365346013b60","x":-1071,"y":-269,"width":250,"height":60,"type":"text","text":"analytics "}
+		{"id":"c1bf365346013b60","x":-1051,"y":-269,"width":201,"height":59,"type":"text","text":"analytics (στατιστικά)"}
 	],
 	"edges":[
 		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
