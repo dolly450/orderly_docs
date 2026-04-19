@@ -111,3 +111,24 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-19 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Κανονικοποίηση brand names από notes, μετατροπή greeklish, προσθήκη task |
+| `meta/active_investigations.md` | Διόρθωση template, επιλογή top 5, αφαίρεση table artifacts |
+| `business/pricing_model.md` | Προσθήκη Mermaid diagram για pricing tiers |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας |
+
+### Στατιστικά σήμερα
+- **Αρχεία που ενημερώθηκαν:** 6
+- **Νέες ερωτήσεις προστέθηκαν:** 0
+- **Νέα backlinks μπήκαν:** 0
+- **Νέα tasks (- [ ]) προστέθηκαν:** 1
+- **Διπλότυπες πληροφορίες κανονικοποιήθηκαν/αφαιρέθηκαν:** 1
+- **Νέα Mermaid diagrams προστέθηκαν ή ενημερώθηκαν:** 1
+- **Ενημερώθηκαν τα 2 canvases:** Ναι
+- **Ενημερώθηκε το project_log.md και το knowledge-health.md:** Ναι

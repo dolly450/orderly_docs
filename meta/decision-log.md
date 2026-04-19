@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-19 - Επιλογή Βάσης Δεδομένων (Database Selection)
+- **Απόφαση / Σύνοψη:** Επιλογή Turso / libSQL για τη βάση δεδομένων, επειδή προσφέρει δωρεάν embedded replicas για local-first λειτουργία, και είναι πιο cost-effective από Supabase / PocketBase για >500 καταστήματα.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]]
+- **Σημείωση για Implementation:** Το Turso δεν έχει native RLS και Realtime SSE. Θα χρειαστεί cuστοm SSE στο Go backend και Database-per-tenant isolation αντί για RLS.

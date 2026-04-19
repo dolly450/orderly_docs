@@ -40,3 +40,8 @@ graph LR
 
 - [[technical_stack]] — Αναλυτική λίστα stack.
 - [[overview]] — Υψηλού επιπέδου αρχιτεκτονική.
+
+
+### Τεχνικές Προδιαγραφές (Technical Specs) - Database Isolation
+- **Αρχιτεκτονική Βάσης Δεδομένων (Database Architecture):** Προτείνεται απομόνωση database-per-tenant με το Turso/libSQL για να αντικατασταθεί η έλλειψη εγγενούς Row Level Security (RLS).
+- **Συγχρονισμός σε Πραγματικό Χρόνο (Realtime Sync):** Τα custom Server-Sent Events (SSE) θα διαχειρίζονται τις ενημερώσεις σε πραγματικό χρόνο (π.χ. μέσω του επιπέδου Go backend) εφόσον το Turso δεν προσφέρει αντίστοιχο εγγενές `Supabase Realtime`.
