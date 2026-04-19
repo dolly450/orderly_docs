@@ -19,6 +19,16 @@
 - Embedded replicas / local gateway είναι future-phase κατεύθυνση, όχι baseline που στηρίζεται το repo σήμερα.
 - Offline sync και local device routing παραμένουν strategic research, όχι production default.
 
+
+### Επιλογή Βάσης Δεδομένων (Database Details)
+- **Turso (libSQL):** Επιλέχθηκε για την υποστήριξη embedded replicas που προσφέρουν microsecond reads τοπικά, επιτρέποντας δωρεάν syncing για local-first λειτουργία στο μέλλον.
+- **Κόστος & Scaling:** Ιδιαίτερα cost-effective για >500 καταστήματα σε σύγκριση με Supabase ή PocketBase, καθώς το pricing model βασίζεται σε active DBs.
+- **Περιορισμοί:**
+  - **RLS:** Δεν υπάρχει native Row Level Security. Η προτεινόμενη λύση είναι **database-per-tenant** για πλήρη απομόνωση.
+  - **Realtime:** Δεν έχει built-in SSE/Realtime (όπως η Supabase). Απαιτείται custom SSE υλοποίηση στο Go backend.
+- **SDKs:** Πλήρης υποστήριξη Type-safe Drizzle ORM για το SvelteKit και `@libsql/client-go` για το Go.
+- **Self-Hosting:** Διαθέσιμη επιλογή self-hosting με `libsql-server` για περαιτέρω μείωση κόστους στο scale (1.000+ καταστήματα).
+
 ## 3. Analytics & Tracking
 
 - Το strategy doc έχει επιλέξει PostHog ως πιθανή λύση για anonymous conversion tracking.

@@ -84,6 +84,25 @@ graph LR
 - Βοήθεια ενσωμάτωσης (Onboarding Assistance) για μεγαλύτερους πελάτες
 - Προαιρετική βοήθεια σε POS / local-first phase
 
+### Οπτικοποίηση
+
+```mermaid
+flowchart TD
+    A[Πελάτης] --> B{Μοντέλο}
+    B -->|Υψηλό Ρίσκο / Εποχιακό| C[Commission Model]
+    B -->|Σταθερός Τζίρος| D[Subscription Model]
+
+    C -->|3-5% επί των πωλήσεων| E[Χαμηλό Εμπόδιο Εισόδου]
+    E --> F[Validation & Traction]
+
+    D --> G[Free Starter - €0]
+    D --> H[Basic - €19/mo]
+    D --> I[Pro - €39/mo]
+    D --> J[Enterprise - €69/mo]
+
+    F -->|Ωρίμανση Πελάτη| D
+```
+
 ## Σχετικές Σημειώσεις
 
 - [[model]] — Business Model Canvas

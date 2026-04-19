@@ -1,13 +1,21 @@
+# Προτάσεις Branding & Ονόματος (Branding & Name Ideas)
+
 - **skipq.menu**
+- **ordersnap**
+- **waitease**
+- **piase.menu**
+- **easy + q / quick / snap q**
+- **zeroq**
+- **0wait**
 
-- [ ] έχουμε θέμα με το 
+### Προτάσεις από Brainstorming (Workshop)
+- **Zeno (ή Xenio):** Από τον Ξένιο Δία (φιλοξενία). Μικρό, διεθνές, εύκολο στην προφορά.
+- **Kima (ή Kyma):** Η κίνηση, η ροή, η θάλασσα. Μικρό και πολύ "Ελληνικό καλοκαίρι", αλλά εύκολο για τους τουρίστες.
+- **Lio:** Από το Ήλιος. Δίνει την αίσθηση του καλοκαιριού και του φωτός, ιδανικό για festivals και beach bars.
+- **Breeze:** Ταιριάζει απόλυτα με το target group (beach bars, νησιά). Υποδηλώνει ότι η παραγγελία είναι "a breeze" (πανεύκολη).
+- **TapServe:** Πολύ άμεσο, δείχνει τη δράση (tap) και το αποτέλεσμα (serve).
+- **EasyTab:** Παίζει με την έννοια του ανοιχτού λογαριασμού (tab) και της ευκολίας.
+- **QResto:** Συνδυάζει το QR με το Restaurant/Rest (ξεκούραση).
 
-επιλαχόντα:
-- ordersnap
-
-pithano name:
-- waitease
-- piase.menu
-- easy + q / quick / snap q
-- zeroq
-- 0wait
+## Επόμενες Ενέργειες
+- [ ] Απόφαση για το τελικό Brand Name (ψηφοφορία στην ομάδα)
