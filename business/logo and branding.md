@@ -11,3 +11,6 @@ pithano name:
 - easy + q / quick / snap q
 - zeroq
 - 0wait
+
+
+menqr
