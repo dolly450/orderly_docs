@@ -1,9 +1,15 @@
 # Ημερολόγιο Αποφάσεων (Decision Log)
 
+### 2026-04-22 - Βάση Δεδομένων & Local-first Requirements (Turso/libSQL)
+- **Απόφαση / Σύνοψη:** Επιλογή της Turso (libSQL) Cloud με Developer Tier, υποστηριζόμενο από Embedded Replicas για offline λειτουργία.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[meta/active_investigations.md]]
+- **Σημείωση για Implementation:** Θα χρησιμοποιηθεί Drizzle ORM για type-safe queries. To Auth θα είναι ξεχωριστό (π.χ. Auth.js) και το SSE θα στηθεί στο Golang backend.
+
 ### 2026-04-10 - Αρχιτεκτονική MVP (Cloud-first Web App)
 - **Απόφαση / Σύνοψη:** Το τρέχον baseline του προϊόντος είναι cloud-first web εφαρμογή σε SvelteKit. Η local-first / Tauri κατεύθυνση παραμένει ερευνητική επιλογή για μελλοντική φάση, όχι το shipped μοντέλο.
 - **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]], [[meta/active_investigations.md]]
 - **Σημείωση για Implementation:** Κρατάμε το web frontend ως κύρια βάση και αφήνουμε το local-first packaging για ξεχωριστή φάση όταν το ζητήσει το προϊόν.
+
 ### 2026-04-10 - Analytics Setup (Data Tracking)
 - **Απόφαση / Σύνοψη:** Επιλογή του PostHog για το track-άρισμα του conversion rate (OMTM) ανώνυμα χωρίς login.
 - **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[notes/Product Design.md]]

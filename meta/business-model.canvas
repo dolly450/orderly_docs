@@ -1,16 +1,114 @@
 {
-	"nodes":[
-		{"id":"title","type":"text","text":"# Business Model Canvas — Orderly (Απρίλιος 2026) - Last Updated: 2026-04-10","x":-500,"y":-600,"width":1800,"height":70},
-		{"id":"kp","type":"text","text":"## Key Partners\n(Βασικοί Συνεργάτες)\n\n- Viva Wallet (Πληρωμές)\n- SBZ Systems / Epsilon Net (POS)\n- Λογιστές / Προμηθευτές (Affiliates ~€100/deal)\n- Raspberry Pi / Hardware\n→ [[pos_compliance]] [[market_strategy]]","x":-500,"y":-500,"width":280,"height":320,"color":"4"},
-		{"id":"ka","type":"text","text":"## Key Activities\n(Βασικές Δραστηριότητες)\n\n- Ανάπτυξη πλατφόρμας (SvelteKit)\n- Άμεσες πωλήσεις & Demos\n- Εγκατάσταση υβριδικού εξοπλισμού\n→ [[technical_stack]]","x":-180,"y":-500,"width":320,"height":269,"color":"1"},
-		{"id":"vp","type":"text","text":"## Value Propositions\n(Προτάσεις Αξίας)\n\n**B2B (Venue):**\n- Αύξηση τζίρου & ταχύτητας\n- Λιγότερα λάθη παραγγελιών\n- Offline λειτουργία\n- Αποσυμφόρηση προσωπικού\n[competitive_analysis](business/competitive_analysis.md)\n**Χρήστης:**\n- Zero-friction ordering\n- Πολυγλωσσικό μενού (Google Translate/LLMs)\n- Order status σε πραγματικό χρόνο\n→ [[model]] [[startup_synopsis]]","x":140,"y":-500,"width":360,"height":480,"color":"5"},
-		{"id":"cs","type":"text","text":"## Customer Segments\n(Τμήματα Πελατών)\n\n**B2B:**\n- Beach bars\n- Festivals / Events\n- Self-service cafes\n- Πανηγύρια\n\n**B2C:**\n- Τουρίστες (40M+/έτος)\n→ [[v1_scope]] [[competitive_analysis]]","x":820,"y":-500,"width":280,"height":394,"color":"3"},
-		{"id":"updated","type":"text","text":"## 📅 Last Updated: 2026-04-10\n\n### Key Changes Today\n- Δημιουργία πλήρους BMC canvas με 9 blocks\n- Σύνδεση με backlinks σε αρχεία vault\n- Προσθήκη αριθμητικών δεδομένων (τιμές, margins, overheads)\n- Επικύρωση με competitive_analysis & financials","x":-480,"y":260,"width":1300,"height":201,"color":"3"},
-		{"id":"cost","type":"text","text":"## Cost Structure (Δομή Κόστους)\n\n- Cloud: Vercel, Supabase, Twilio, DeepL/Google (~€100-200/yr)\n- Hardware: Local servers, tablets\n- Sales: Μετακινήσεις, demos (Phase 1)\n- Affiliates: ~€100/deal\n- Overheads: ~€200-300/μήνα\n→ [[COGS, CACs, overheads]]","x":-500,"y":-19,"width":580,"height":234,"color":"2"},
-		{"id":"kr","type":"text","text":"## Key Resources\n(Βασικοί Πόροι)\n\n- Ομάδα: 2 Devs + 2 Business\n- Cloud & Local υποδομή\n- Δίκτυο μεντόρων\n→ [[mentors]]","x":-180,"y":-241,"width":320,"height":221,"color":"1"},
-		{"id":"cr","type":"text","text":"## Customer Relationships\n(Σχέσεις Πελατών)\n\n**B2B:** Προσωπική επαφή, CRM, υποστήριξη πιλοτικού\n**B2C:** Αυτοματοποιημένη, ανώνυμη, status updates\n→ [[market_strategy]]","x":540,"y":-500,"width":280,"height":266,"color":"6"},
-		{"id":"ch","type":"text","text":"## Channels\n(Κανάλια)\n\n- Walking in / Door-to-door\n- Affiliate δίκτυο (~€100/deal)\n- Οργανικό SEO / Social Media\n→ [[market_strategy]]","x":540,"y":-234,"width":280,"height":221,"color":"6"},
-		{"id":"rev","type":"text","text":"## Revenue Streams (Ροές Εσόδων)\n\n- **SaaS Subscription:** €0/€19/€39/€69+ (Tiered)\n- **Commission:** 1-3% per sale (Στρατηγική εισόδου)\n- **Hardware Sales:** Local servers, tablets\n- **Στόχος:** ~80% Gross Margin\n→ [[pricing_model]]","x":140,"y":7,"width":580,"height":208,"color":"5"}
-	],
-	"edges":[]
+    "nodes": [
+        {
+            "id": "title",
+            "type": "text",
+            "text": "# Business Model Canvas — Orderly (Απρίλιος 2026) - Last Updated: 2026-04-22",
+            "x": -500,
+            "y": -600,
+            "width": 1800,
+            "height": 70
+        },
+        {
+            "id": "kp",
+            "type": "text",
+            "text": "## Key Partners\n(Βασικοί Συνεργάτες)\n\n- Viva Wallet (Πληρωμές)\n- SBZ Systems / Epsilon Net (POS)\n- Λογιστές / Προμηθευτές (Affiliates ~€100/deal)\n- Raspberry Pi / Hardware\n→ [[pos_compliance]] [[market_strategy]]",
+            "x": -500,
+            "y": -500,
+            "width": 280,
+            "height": 320,
+            "color": "4"
+        },
+        {
+            "id": "ka",
+            "type": "text",
+            "text": "## Key Activities\n(Βασικές Δραστηριότητες)\n\n- Ανάπτυξη πλατφόρμας (SvelteKit)\n- Άμεσες πωλήσεις & Demos\n- Εγκατάσταση υβριδικού εξοπλισμού\n→ [[technical_stack]]",
+            "x": -180,
+            "y": -500,
+            "width": 320,
+            "height": 269,
+            "color": "1"
+        },
+        {
+            "id": "vp",
+            "type": "text",
+            "text": "## Value Propositions\n(Προτάσεις Αξίας)\n\n**B2B (Venue):**\n- Αύξηση τζίρου & ταχύτητας\n- Λιγότερα λάθη παραγγελιών\n- Offline λειτουργία\n- Αποσυμφόρηση προσωπικού\n[competitive_analysis](business/competitive_analysis.md)\n**Χρήστης:**\n- Zero-friction ordering\n- Πολυγλωσσικό μενού (Google Translate/LLMs)\n- Order status σε πραγματικό χρόνο\n→ [[model]] [[startup_synopsis]]",
+            "x": 140,
+            "y": -500,
+            "width": 360,
+            "height": 480,
+            "color": "5"
+        },
+        {
+            "id": "cs",
+            "type": "text",
+            "text": "## Customer Segments\n(Τμήματα Πελατών)\n\n**B2B:**\n- Beach bars\n- Festivals / Events\n- Self-service cafes\n- Πανηγύρια\n\n**B2C:**\n- Τουρίστες (40M+/έτος)\n→ [[v1_scope]] [[competitive_analysis]]",
+            "x": 820,
+            "y": -500,
+            "width": 280,
+            "height": 394,
+            "color": "3"
+        },
+        {
+            "id": "updated",
+            "type": "text",
+            "text": "## 📅 Last Updated: 2026-04-22\n\n### Key Changes Today\n- Δημιουργία πλήρους BMC canvas με 9 blocks\n- Σύνδεση με backlinks σε αρχεία vault\n- Προσθήκη αριθμητικών δεδομένων (τιμές, margins, overheads)\n- Επικύρωση με competitive_analysis & financials\n- Προσθήκη Dynamic Pricing & Sunbed Groups στο Value Proposition",
+            "x": -480,
+            "y": 260,
+            "width": 1300,
+            "height": 201,
+            "color": "3"
+        },
+        {
+            "id": "cost",
+            "type": "text",
+            "text": "## Cost Structure (Δομή Κόστους)\n\n- Cloud: Vercel, Supabase, Twilio, DeepL/Google (~€100-200/yr)\n- Hardware: Local servers, tablets\n- Sales: Μετακινήσεις, demos (Phase 1)\n- Affiliates: ~€100/deal\n- Overheads: ~€200-300/μήνα\n→ [[COGS, CACs, overheads]]",
+            "x": -500,
+            "y": -19,
+            "width": 580,
+            "height": 234,
+            "color": "2"
+        },
+        {
+            "id": "kr",
+            "type": "text",
+            "text": "## Key Resources\n(Βασικοί Πόροι)\n\n- Ομάδα: 2 Devs + 2 Business\n- Cloud & Local υποδομή\n- Δίκτυο μεντόρων\n→ [[mentors]]",
+            "x": -180,
+            "y": -241,
+            "width": 320,
+            "height": 221,
+            "color": "1"
+        },
+        {
+            "id": "cr",
+            "type": "text",
+            "text": "## Customer Relationships\n(Σχέσεις Πελατών)\n\n**B2B:** Προσωπική επαφή, CRM, υποστήριξη πιλοτικού\n**B2C:** Αυτοματοποιημένη, ανώνυμη, status updates\n→ [[market_strategy]]",
+            "x": 540,
+            "y": -500,
+            "width": 280,
+            "height": 266,
+            "color": "6"
+        },
+        {
+            "id": "ch",
+            "type": "text",
+            "text": "## Channels\n(Κανάλια)\n\n- Walking in / Door-to-door\n- Affiliate δίκτυο (~€100/deal)\n- Οργανικό SEO / Social Media\n→ [[market_strategy]]",
+            "x": 540,
+            "y": -234,
+            "width": 280,
+            "height": 221,
+            "color": "6"
+        },
+        {
+            "id": "rev",
+            "type": "text",
+            "text": "## Revenue Streams (Ροές Εσόδων)\n\n- **SaaS Subscription:** €0/€19/€39/€69+ (Tiered)\n- **Commission:** 1-3% per sale (Στρατηγική εισόδου)\n- **Hardware Sales:** Local servers, tablets\n- **Στόχος:** ~80% Gross Margin\n→ [[pricing_model]]",
+            "x": 140,
+            "y": 7,
+            "width": 580,
+            "height": 208,
+            "color": "5"
+        }
+    ],
+    "edges": []
 }

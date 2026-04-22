@@ -111,3 +111,25 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-22 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Κανονικοποίηση (Normalization) ελληνικών, προσθήκη tasks |
+| `pitch/deck - φαμφάρες type shit.md` | Πλήρης μετάφραση σε επαγγελματικά Ελληνικά, προσθήκη Mermaid flows |
+| `notes/Revolutionary ideas - Claude.md` | Εξαγωγή Insights (Dynamic Pricing, Weather API, Sunbed groups) |
+| `design/features.md` | Προσθήκη καινοτόμων χαρακτηριστικών & validation tasks |
+| `business/pricing_model.md` | Ενσωμάτωση δυναμικής τιμολόγησης στις βαθμίδες (Tiers) |
+| `meta/decision-log.md` | Αρχειοθέτηση απόφασης για Database (Turso/libSQL) |
+| `meta/active_investigations.md` | Αντικατάσταση ερώτησης DB με νέα στρατηγική Dynamic Pricing (έμειναν 5) |
+| `meta/user-needs.canvas` | Ενημέρωση με Ομάδες Ξαπλώστρας (Sunbed groups) |
+| `meta/business-model.canvas` | Ενημέρωση last modified & key changes |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** 1 νέα (σύνολο 5)
+- **Νέα tasks (- [ ]):** 6
+- **Διπλότυπα κανονικοποιημένα:** 2
+- **Νέα Mermaid diagrams:** 2
+- **Canvases ενημερωμένα:** Ναι
