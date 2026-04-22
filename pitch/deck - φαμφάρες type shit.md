@@ -1,60 +1,83 @@
-# Orderly Pitch Deck
+# Παρουσίαση Επενδυτών (Pitch Deck)
 
-## 1. Problem
+## 1. Το Πρόβλημα (The Problem)
 <!-- Ποιο πρόβλημα λύνεις; -->
-Ουρές
-Αναμονή
-Καθυστερηση πληρωμης (οταν θελουμε να φυγουμε απο το μααζι) απο τον σερβιτορο/α να φερει το POS ή τα μετρητα.
+- Τεράστιες ουρές και χρόνοι αναμονής στις ώρες αιχμής.
+- Καθυστέρηση στην πληρωμή και την αποχώρηση, καθώς ο πελάτης περιμένει τον σερβιτόρο να φέρει το τερματικό POS (Point of Sale) ή τα μετρητά.
+- Απογοήτευση πελατών (Friction) από εφαρμογές παραγγελιοληψίας που απαιτούν λήψη (App Download) και υποχρεωτική εγγραφή (Sign-up).
 
-Πολλες εφαρμογες που χρειαζονται να τις κατεβασεις και να κανεις sign up (?)
+### Οπτικοποίηση
 
-## Proof του Προβλήματος
+```mermaid
+flowchart TD
+    A[Πελάτης φτάνει στο κατάστημα] --> B{Παραδοσιακό Σύστημα}
+    B --> C[Περιμένει κατάλογο (5-10 λεπτά)]
+    C --> D[Περιμένει να παραγγείλει (5-10 λεπτά)]
+    D --> E[Περιμένει το POS για πληρωμή (10 λεπτά)]
+    E --> F((Εκνευρισμός & Χαμένα Έσοδα))
 
-## 2. Solution
+    style A fill:#e1f5fe,stroke:#0288d1
+    style F fill:#ffcdd2,stroke:#c62828
+```
+
+## Αποδείξεις του Προβλήματος (Proof of Problem)
+*(Σημείωση: Προσθήκη δεδομένων από το ερωτηματολόγιο και μαρτυριών πελατών)*
+
+## 2. Η Λύση (The Solution)
 <!-- Πώς το λύνεις; -->
-Fully customisable per client app (Could be only helper -> Menu only, Full PDA/Ordering self-service app and so on)
-Browser app, works from every single endpoint that has internet
-Fully on cloud, customer only needs Internet connection. -> if no internet connection due to islands and poor connectivity -> Fallback on prem. -> *sell* that we are taking care of the hosting and all the hustle
+- **Πλήρως Παραμετροποιήσιμη Εφαρμογή (Fully Customisable App):** Προσαρμογή στις ανάγκες του πελάτη (από απλό ψηφιακό μενού μέχρι πλήρες self-service ordering system).
+- **Χωρίς Εγκατάσταση (Browser App/Zero Install):** Λειτουργεί απευθείας από τον browser κάθε συσκευής.
+- **Υβριδική Αρχιτεκτονική (Cloud-First με Offline Fallback):** Λειτουργεί στο cloud για άμεση πρόσβαση, με εναλλακτική λύση τοπικού διακομιστή (On-premise Fallback) για περιοχές με κακή συνδεσιμότητα (π.χ. νησιά). Εμείς αναλαμβάνουμε πλήρως τη διαχείριση φιλοξενίας (Hosting Management).
+- **Εταιρικές Λύσεις (Enterprise Options):** Δυνατότητα αυτόνομης εγκατάστασης (Standalone Self-hosted) για μεγάλους ομίλους, με εξειδικευμένη τιμολόγηση.
 
-On Cloud hosted by orderly.
-*Bigger "companies" could have a "standalone" selfhosted option  with different prices (to be reviewed)*
+### Οπτικοποίηση
 
+```mermaid
+flowchart TD
+    A[Πελάτης σκανάρει QR] --> B{Λύση Orderly}
+    B --> C[Πρόσβαση στο μενού (0 λεπτά)]
+    C --> D[Άμεση παραγγελία μέσω κινητού (1 λεπτό)]
+    D --> E[Άμεση ψηφιακή πληρωμή (1 λεπτό)]
+    E --> F((Αύξηση τζίρου & Ευχαριστημένοι πελάτες))
 
-## Target Market TAM SAM SOM
+    style A fill:#e1f5fe,stroke:#0288d1
+    style F fill:#c8e6c9,stroke:#2e7d32
+```
+
+## 3. Αγορά Στόχος (Target Market - TAM SAM SOM)
 <!-- Ποιος είναι ο πελάτης σου; -->
-Events
-Bistros(Cafeterias/Restaurants)
-Self Service bars
-Beach bars
+- Φεστιβάλ (Events)
+- Καφέ & Εστιατόρια (Bistros/Cafeterias/Restaurants)
+- Καταστήματα Αυτοεξυπηρέτησης (Self-Service Bars)
+- Beach Bars
 
+## 4. Επίδειξη Προϊόντος (Demo)
+*(Εδώ θα προστεθεί το live demo ή ένα βίντεο παρουσίασης)*
 
-## DEMO (video?)
-
-
-## Business Model
+## 5. Επιχειρηματικό Μοντέλο (Business Model)
 <!-- Πώς κερδίζεις χρήματα; -->
-Subscription based model, plus extensions.
+- **Μοντέλο Συνδρομής (Subscription-based Model):** Βασικό πάγιο με επιπλέον χρεώσεις για επεκτάσεις (Extensions).
+- **Στρατηγική Εισόδου (Go-to-Market Approach):**
+  - Δωρεάν "Demo" (π.χ. φιλοξενία του ψηφιακού μενού) για την πρώτη επαφή με τον πελάτη (Get-to-know basis).
+  - Δωρεάν πρόσβαση σε προχωρημένα χαρακτηριστικά παραγγελιοληψίας (PDA features) για περιορισμένο χρονικό διάστημα.
 
-*Applies also as to how to approach the market
-Free "demo" or product could be  -> Hosting only the menu for "a freebie" or a get-to-know basis -> or hosting only menu for limited time
-Hosting menu plus some extra PDA features for limited time as demo
+## 6. Στρατηγική Εισόδου στην Αγορά (Go To Market)
+*(Εδώ θα αναπτυχθεί η στρατηγική πωλήσεων και marketing)*
 
-## Go To Market
-
-
-## Traction
+## 7. Δυναμική / Απήχηση (Traction)
 <!-- Τι έχεις δείξει μέχρι τώρα; -->
-MVP 
-- [ ] μαγαζάτορες
-- [ ] αποτελέσματα ερωτηματολογίου
-## Competition
+- Ανάπτυξη του MVP (Minimum Viable Product - Ελάχιστο Βιώσιμο Προϊόν).
+- [ ] Συλλογή δεδομένων από ερωτηματολόγια (Questionnaire Results).
+- [ ] Προσεγγίσεις σε ιδιοκτήτες καταστημάτων (Venue Owners Feedback).
+
+## 8. Ανταγωνισμός (Competition)
 <!-- Ποιοι είναι οι ανταγωνιστές; -->
+*(Σύγκριση με τοπικούς και διεθνείς ανταγωνιστές)*
 
-
-## Team
+## 9. Η Ομάδα (Team)
 <!-- Ποιοι είστε; -->
+*(Παρουσίαση ιδρυτών και βασικών στελεχών)*
 
-## Ask
+## 10. Το Αίτημα (The Ask)
 <!-- Τι ζητάς; -->
-
-
+*(Παρουσίαση των οικονομικών αναγκών και των στόχων χρηματοδότησης)*

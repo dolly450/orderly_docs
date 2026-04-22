@@ -1,6 +1,6 @@
 # Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
 
-## Ημερήσια Αναφορά: 2026-04-10
+## Ημερήσια Αναφορά: 2026-04-22
 
 ### Μετρήσεις Υγείας (Health Metrics)
 
@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-04-22
+- **Βελτίωση:** Ενσωμάτωση Revolutionary Ideas (Dynamic Pricing, Sunbed Groups, Weather API) σε `features.md` και `pricing_model.md` για αύξηση της αξίας του B2B SaaS Value Proposition. Δημιουργία επαγγελματικού Pitch Deck.
+- **Εκκρεμότητες:** Απαιτείται νομικός και τεχνικός έλεγχος (Domain availability, Trademark) για τα προτεινόμενα ονόματα (skipq.menu, κλπ.). Διερεύνηση στρατηγικής Dynamic Pricing για αποφυγή friction με τους πελάτες.

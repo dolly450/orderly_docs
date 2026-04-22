@@ -9,8 +9,8 @@
 |------|------------|-----------------------|
 | **Free (Starter)** | €0 | Ψηφιακό μενού, QR ordering, βασικό branding, περιορισμένα tables |
 | **Basic** | €19 | Πλήρης παραγγελιοληψία, waiter calls, reservations, πολυγλωσσικό μενού |
-| **Pro** | €39 | Staff / kitchen workflows, analytics, unlimited tables, zone-aware operations |
-| **Enterprise** | €69+ | Multi-location, custom branding, POS integration, dedicated support |
+| **Pro** | €39 | Staff / kitchen workflows, analytics, unlimited tables, zone-aware operations, myDATA compliance |
+| **Enterprise** | €69+ | Multi-location, custom branding, POS integration, dedicated support, Dynamic Pricing & AI Upselling |
 
 ## 2. Εναλλακτικό Μοντέλο: Προμήθεια (Commission)
 
@@ -67,22 +67,29 @@ graph LR
 - Πολλαπλές τοποθεσίες (Multiple Locations) υπό έναν λογαριασμό
 - Λογαριασμοί προσωπικού (Staff Accounts) και επίπεδα δικαιωμάτων (Permission Levels)
 - Zone-aware operations και table management
+- Αυτόματη συμμόρφωση (myDATA compliance) — Σημαντικό κίνητρο (Selling Point) για την ελληνική αγορά.
 
 **Αναφορές & Πληροφόρηση (Reporting & Insights)**
 - Βασική σύνοψη πωλήσεων έναντι λεπτομερών αναλύσεων (ανά ώρα, προϊόν, υπάλληλο)
 - Αναφορές τέλους ημέρας έναντι real-time dashboards
 - Εξαγωγή (Export) σε λογιστικό λογισμικό (π.χ. QuickBooks)
+- Έξυπνες αναφορές (Revenue intelligence) με heatmap πωλήσεων ανά ζώνη/ξαπλώστρα.
 
 **Προσανατολισμένα στον Πελάτη (Customer-Facing)**
 - Ενσωματωμένο πρόγραμμα ανταμοιβών / πιστότητας (Loyalty/Rewards Programme)
 - Παραγγελιοληψία μέσω QR Code (QR Code Ordering)
 - Προσαρμοσμένο branding (Custom Branding) στις αποδείξεις
 - Πολυγλωσσικότητα και public venue info
+- **Δυναμική Τιμολόγηση (Dynamic Pricing):** Happy hour automations (π.χ. 11:00-14:00 διαφορετικές τιμές)
+- **AI Upselling:** Προτάσεις κατά τη στιγμή της παραγγελίας (π.χ. "Κάνει ζέστη, θες δροσερό ποτό;").
 
 **Υποστήριξη (Support)**
 - Μόνο email έναντι ζωντανής συνομιλίας (Live Chat) έναντι αφοσιωμένου υπεύθυνου λογαριασμού (Dedicated Account Manager)
 - Βοήθεια ενσωμάτωσης (Onboarding Assistance) για μεγαλύτερους πελάτες
 - Προαιρετική βοήθεια σε POS / local-first phase
+
+### Επιπτώσεις για την ομάδα
+Η δυναμική τιμολόγηση και η αυτόματη συμμόρφωση με myDATA αποτελούν ισχυρά επιχειρήματα πώλησης (Selling Points) που θα δικαιολογήσουν τα υψηλότερα tiers (Pro/Enterprise).
 
 ## Σχετικές Σημειώσεις
 
@@ -90,9 +97,10 @@ graph LR
 - [[competitive_analysis]] — Ανάλυση ανταγωνισμού
 - [[COGS, CACs, overheads]] — Κόστη και περιθώρια κέρδους
 - [[market_strategy]] — Στρατηγική αγοράς
+- [[features]] — Λειτουργίες και καινοτομίες (Revolutionary Ideas)
 
 ## Επόμενες Ενέργειες
 
-- [ ] Έρευνα για χρηματοδοτήσεις (Fundings) και μελλοντικά έξοδα (πόσα λεφτά και πού θα κατευθυνθούν) — για τον όποιο επενδυτή
+- [ ] Έρευνα για χρηματοδοτήσεις (Fundings) και μελλοντικά έξοδα (πόσα λεφτά και πού θα κατευθυνθούν) — για τον όποιο επενδυτή.
 - [ ] Υπολογισμός βασικών κοστών (COGS) + ροών εσόδων (Revenue Streams) + υγιών περιθωρίων (Healthy Margins): κόστη λειτουργίας (Overheads) + κόστος παραγωγής (Cost of Production) κ.λπ.
-- [ ] Οριστικοποίηση χαρακτηριστικών ανά βαθμίδα (Tier Features) μετά από ομαδική συζήτηση
+- [ ] Οριστικοποίηση χαρακτηριστικών ανά βαθμίδα (Tier Features) μετά από ομαδική συζήτηση, λαμβάνοντας υπόψη τη Δυναμική Τιμολόγηση και myDATA.
