@@ -6,8 +6,7 @@ Near-final slide copy aligned to the current 14-slide `.pptx`, rewritten to soun
 
 - SkipQ
 - Commission-free QR ordering for busy hospitality venues in Southern Europe
-- Angelos Papamichail - Founder / Product & Engineering
-- Investor pitch - 2026
+- CapsuleT Accelerator pitch - 2026
 
 ## Slide 2 - The problem
 
@@ -112,7 +111,7 @@ Near-final slide copy aligned to the current 14-slide `.pptx`, rewritten to soun
 ## Slide 14 - Final slide
 
 - Less waiting. More orders. Less pressure on staff.
-- [Founder Name]
+- CapsuleT Accelerator - 2026
 - [Email / Phone / QR / Website]
 
 ## What else should be added later to the PPTX
