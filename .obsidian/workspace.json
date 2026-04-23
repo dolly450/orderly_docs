@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3d5b1156914ff1ec",
+        "id": "a83a087dd6e9dd0a",
         "type": "tabs",
         "children": [
           {
-            "id": "8cfae2a17a128d35",
+            "id": "35f5505e60719442",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meta/mentors.md",
+                "file": "pitch/deck - φαμφάρες type shit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mentors"
+              "title": "deck - φαμφάρες type shit"
             }
           }
         ]
@@ -194,8 +194,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8cfae2a17a128d35",
+  "active": "35f5505e60719442",
   "lastOpenFiles": [
+    "pitch/Business model canvas.md",
     "pitch/deck - φαμφάρες type shit.md",
     "meta/meeting logs.md",
     "meta/mentors.md",
@@ -223,7 +224,6 @@
     "design/v1_scope.md",
     "design/features.md",
     "notes/Orderly's path to dominating Greek hospitality ordering - claude.md",
-    "meta/idea-dump.md",
     "Untitled.base",
     "fix_active_investigations.py",
     "tests/test_vault_json.py",

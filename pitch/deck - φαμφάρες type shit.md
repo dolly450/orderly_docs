@@ -1,208 +1,142 @@
-# SkipQ Pitch Deck Draft
+# SkipQ pitch deck draft
 
-Working draft aligned to the current 14-slide `.pptx`, cleaned with positioning and product context from the knowledge base.
+Near-final slide copy aligned to the current 14-slide `.pptx`, rewritten to sound more direct and less synthetic.
 
 ## Slide 1 - Cover
 
-- **SkipQ**
-- **Commission-free QR ordering + real-time staff optimization, built for Southern European hospitality.**
-- `[Founder name] - [Role]`
-- `Investor Pitch - 2026`
+- SkipQ
+- Commission-free QR ordering for busy hospitality venues in Southern Europe
+- Angelos Papamichail - Founder / Product & Engineering
+- Investor pitch - 2026
 
-## Slide 2 - The Problem
+## Slide 2 - The problem
 
-- Customers wait too long in cafes, beach bars, bars, and casual venues where speed matters more than high-touch service.
-- In peak moments, customers cannot easily get a waiter's attention, struggle with menu friction, and often order less or leave.
-- For venues, the problem is operational: staff time is wasted, busy zones get overwhelmed, idle capacity is hidden, and revenue walks out quietly.
-- The core framing should stay clear: this is not just a convenience issue. It is a revenue, throughput, and staff coordination problem.
+- Customers wait too long in busy cafes, beach bars, bars, and casual restaurants.
+- When service slows down, people get annoyed, order less, or leave.
+- Venues feel that immediately: fewer orders, slower turnover, stressed staff, and a floor that gets harder to manage.
+- The point is simple. Waiting is not just annoying. It costs money.
 
-## Slide 3 - Proof of Problem
+## Slide 3 - Proof of problem
 
-- The current deck already uses external wait-time and abandonment stats. Keep them as draft inputs, but verify every source before the final PPTX.
-- Stronger proof should combine external market/problem data with real validation from the field.
-- The final proof stack should include:
-  - operator interviews before heavy product build-out
-  - customer questionnaire data around waiting, friction, and language barriers
-  - pilot metrics such as scan-to-order conversion, order time, service time, queue reduction, and staff feedback
-- The most important proof is not "people dislike waiting." It is "venues lose money and operational calm when waiting gets out of control."
+- Long waits hurt both revenue and repeat business.
+- The current deck already has external stats. Keep the strongest ones, but fact-check every source before the final PPTX.
+- Over time, replace generic market proof with proof from the field: operator interviews, customer survey results, and pilot data on queue reduction, order speed, scan-to-order conversion, and staff feedback.
+- The message here should be clear: when service slows down, venues lose orders and lose control of the floor.
 
 ## Slide 4 - Solution
 
-- SkipQ turns waiting into ordering through a simple browser-based flow: `Scan -> Browse -> Order -> Done`.
-- No app download, no signup requirement, and no heavy behavior change for the customer.
-- The customer experience should emphasize:
-  - multilingual, easy-to-read live menu
-  - photos, allergens, and real-time availability
-  - live order tracking
-- The venue-side experience should emphasize:
-  - staff and kitchen visibility
-  - alerts that are actually noticeable during peak service
-  - clearer order flow and status handling
-  - payment intent as an operational signal: pay now by cash/card or add to tab
-- Real-time staff allocation can remain the main differentiator in the story, but it needs to be explained simply and shown as an operational advantage, not as abstract tech.
+- SkipQ lets customers order while they are still willing to order.
+- They scan a QR code, open the menu in the browser, order in a few taps, and follow the order without downloading an app.
+- On the customer side, the product needs to feel easy: a clear menu, photos, allergens, language support, and visible order status.
+- On the venue side, it needs to reduce chaos: direct order flow to staff and kitchen, clearer status handling, visible workload, and a payment signal that tells staff whether to collect now or add it to a tab.
+- If this works, the outcome is straightforward: fewer abandoned orders, faster service, and a calmer shift.
 
-## Slide 5 - Market Size
+## Slide 5 - Market size
 
-- Keep the current `TAM / SAM / SOM` structure from the PPTX.
-- The narrative should start from a simple wedge:
-  - tourism-heavy Southern European hospitality
-  - many venues with visible service friction
-  - low digital penetration compared to the opportunity size
-- Greece works best as the first story anchor because it combines hospitality density, seasonality, tourism pressure, and fragmented operations.
-- The current draft numbers and geographic expansion logic can stay for now, but the Greek placeholder text needs to be removed from the final PPTX.
-- For the markdown draft, the message is:
-  - **TAM:** large European F&B base
-  - **SAM:** Southern Europe plus adjacent tourist-heavy markets
-  - **SOM:** realistic 3-year capture through a focused niche-first rollout
+- The market story should start with a narrow wedge, not a grand theory.
+- Go after tourism-heavy hospitality markets where service friction is obvious and venues still run in a fragmented way.
+- Greece is the best opening market: high hospitality density, heavy seasonality, large tourist flows, and plenty of room for operational digitization.
+- Keep the slide in the usual TAM / SAM / SOM format:
+- TAM: European F&B venue base
+- SAM: Southern Europe and nearby tourist-heavy markets
+- SOM: a focused three-year capture based on a niche-first rollout
+- The Greek placeholder notes in the current PPTX need to go.
 
-## Slide 6 - Target Customer
+## Slide 6 - Target customer
 
-- Core principle: SkipQ belongs in venues where service friction is a cost, not where service itself is the premium product.
-- **Included segments:**
-  - cafes
-  - beach bars
-  - bars, pubs, and clubs
-  - casual restaurants and taverns
-  - fast-casual and self-service venues
-  - food-court and event/festival venues
-- **Excluded segments:**
-  - fine dining
-  - upscale hotel restaurants
-  - high-end cocktail bars where attended service is the experience
-- The strategic focus from the knowledge base is narrower than "all hospitality":
-  - high-volume, high-friction, counter-service or light-service venues
-  - visible queue or peak-time service pressure
-  - clear owner pain around time, mistakes, and throughput
+- SkipQ fits venues where service friction is a cost, not venues where high-touch service is the product.
+- Best-fit segments: cafes, beach bars, bars and pubs, casual restaurants, fast casual and self-service venues, and seasonal or event venues.
+- Not the first target: fine dining, upscale hotel restaurants, and high-end cocktail bars.
+- The ICP is pretty clear: high-volume venues, visible queue pressure, and owners who can feel the pain in time, mistakes, and missed throughput.
 
 ## Slide 7 - Product
 
-- Keep the current structure of the product slide, but make the feature story more operational and less generic.
-- Core product blocks:
-  - QR ordering with a live menu
-  - call-waiter / service signal
-  - live order tracking
-  - kitchen and staff dashboard
-  - POS-compatible future path
-- The product should be positioned as a layered system:
-  - customer ordering layer
-  - operational visibility layer
-  - staff coordination layer
-- The key product claim remains:
-  - **real-time staff allocation / workload visibility** is the operational differentiator
-- This slide should still support a later demo insertion if needed, but for now the markdown note stays aligned to the current slide structure.
+- The product should look like it was built for a busy floor, not for a software demo.
+- Core pieces: QR ordering, a live menu, a service signal, order tracking, and one shared dashboard for staff and kitchen.
+- Underneath that, the real product story is operational visibility and staff coordination.
+- The strongest differentiator is still workload visibility and staff allocation. That is the part that makes this more than another QR menu.
 
-## Slide 8 - Business Model
+## Slide 8 - Business model
 
-- Keep the current commission-free SaaS framing:
-  - `Basic - EUR29/month`
-  - `Standard - EUR59/month`
-  - `Premium - EUR119/month`
-- The current story should remain:
-  - `0% commission`
-  - `EUR0 setup fee`
-  - low lock-in / flexible commitment
-- From the knowledge base, the commercial nuance is:
-  - entry may still happen through free demo, free site, trial, or pilot-first motion
-  - seasonal logic matters for this market
-  - premium add-ons can come later through analytics, multi-location, branding, integrations, and support
-- In other words, the pricing slide can stay clean and SaaS-first, while the go-to-market motion remains flexible.
+- Keep this slide clean.
+- Basic - EUR29/month
+- Standard - EUR59/month
+- Premium - EUR119/month
+- The commercial message is simple: no commission, no setup fee, and simple monthly pricing.
+- In practice, the first deals may still come through pilots, free demos, or trial periods. That is fine. The slide itself does not need to explain every edge case.
 
 ## Slide 9 - Traction
 
-- Keep this as a pre-launch / validation-in-motion slide for now.
-- The current placeholders should remain placeholders until real numbers exist.
-- The traction story should be framed around validation, not vanity:
-  - venue operator discussions
-  - partnership pipeline
-  - pilot roster in development
-- The knowledge base suggests what "real traction" should eventually mean:
-  - interviews with operators
-  - fake MVP or free venue demo in real conditions
-  - pilot venues with measurable operational data
-  - early ROI story based on time saved, fewer lost orders, fewer mistakes, and smoother service
-- If this slide gets stronger later, it should show stage progression clearly from `conversations -> pilots -> metrics -> conversions`.
+- For now, this is still a pre-launch slide.
+- Use it to show movement, not to fake maturity.
+- Current buckets: operator conversations, partnership discussions, and a pilot list in progress.
+- Once real traction exists, this slide should get sharper: real venue conversations, live demos, early pilot metrics, and one plain-English ROI story about time saved, fewer lost orders, and smoother service.
+- The ideal progression is easy to follow: conversations, pilots, measured results, then conversions.
 
-## Slide 10 - Competitive Landscape
+## Slide 10 - Competitive landscape
 
-- Keep the current comparison logic: the market is crowded at the edges but weak in the middle.
-- The deck should continue to compare SkipQ against:
-  - Greek QR or POS-adjacent tools
-  - European or international QR ordering platforms
-  - enterprise-first tools that are too heavy for the target segment
-- The current differentiation should stay:
-  - zero commission
-  - no hard lock-in
-  - operational focus instead of consumer-app focus
-  - casual Southern European hospitality as the primary target
-  - staff allocation / workload layer as the unique claim
-- The most defensible competitive line from the knowledge base is:
-  - SkipQ is **ordering-first, hospitality-operations-first, and measurable**
-  - not just a QR menu
-  - not just a POS add-on
+- The competition slide should not try to prove that nobody else exists. It should show where SkipQ fits.
+- Compare against Greek QR or POS-adjacent tools, international ordering platforms, and heavier enterprise systems that do too much for the first target segment.
+- SkipQ wins on a clearer angle: no commission, no hard lock-in, a casual hospitality focus, and a stronger operations layer.
+- The shortest honest version is this: it is not just a QR menu, and it is not just a POS add-on.
 
 ## Slide 11 - Team
 
-- Keep this slide as a placeholder-driven execution slide until names and roles are final.
-- The team story should emphasize:
-  - technical ability to ship an MVP quickly
-  - business and sales ownership for direct validation
-  - ability to speak with real venues and adapt the product fast
-- Post-raise hiring priorities can stay in the draft if useful, but the core slide should first convince the audience that this team can learn and execute quickly.
+- We are building SkipQ with a team that can ship fast, validate in the field, and sell directly to real venues.
+- Angelos Papamichail - Founder / Product & Engineering
+- Antonis Freris - Project Manager / IT Operations
+- Mario Liassidis - Business Strategy & Go-to-Market
+- Nikos Tsaatazoglou - Business Development & Sales
+- Keep any post-raise hiring note secondary. This slide should prove execution, not headcount ambition.
 
 ## Slide 12 - Financials
 
-- Keep the current `Year 1 / Year 2 / Year 3` path and the `EUR5M ARR in 3 years` framing as the draft narrative.
-- Keep the assumptions explicitly labeled as assumptions, not promises.
-- The deck's internal financial logic should continue to rely on:
-  - blended ARPU
-  - manageable churn assumptions
-  - strong gross margin profile
-  - CAC payback discipline
-- The current financials are still story-level, not evidence-level. That is acceptable for now as long as the slide is presented as directional and tied to focused execution.
-- Future versions should connect the revenue path more directly to the narrow ICP and rollout order.
+- Keep this slide simple and credible.
+- Year 1: validate the product in Greece, run pilots, and convert the first venues.
+- Year 2: improve onboarding, pricing, and repeatability, then expand into nearby markets.
+- Year 3: scale only after the model is working and the first pilots show clear ROI.
+- If you keep numbers on the slide, frame them as working targets, not promises.
+- The point of this slide is execution: prove the model locally, tighten the playbook, then grow.
 
-## Slide 13 - The Ask
+## Slide 13 - The ask
 
-- The ask should stay stage-dependent.
-- **Before real traction:**
-  - introductions to relevant venues
-  - pilots
-  - mentors and hospitality operators
-  - accelerator opportunities
-- **After traction exists:**
-  - funding for a clear `12-18 month` runway
-  - use of funds across product, sales, onboarding, and pilot expansion
-- The key rule is simple: the ask must match the proof level.
+- The ask should match the proof.
+- Right now, the strongest ask is practical:
+- pilot venues for summer
+- introductions to hospitality owners and operators
+- mentors and partners who can help us validate the first 5-10 deployments
+- We should still keep a capital line in the deck, but secondary:
+- once pilots prove ROI, we will be in a much stronger position to raise for product, sales, onboarding, and expansion
+- That keeps the ask serious without pretending we are already at the scale stage.
 
-## Slide 14 - Final Slide
+## Slide 14 - Final slide
 
-- End with a short, clean closing statement.
-- The final slide should reinforce the category:
-  - SkipQ helps venues reduce waiting, increase throughput, and run calmer operations.
-- Add founder/contact details once finalized.
+- Less waiting. More orders. Less pressure on staff.
+- [Founder Name]
+- [Email / Phone / QR / Website]
 
-## What Else Should Be Added Later to the PPTX
+## What else should be added later to the PPTX
 
-- **Live demo or simple QR flow screenshots**
-  - Why it matters: this product is much easier to believe when people see the flow in seconds rather than read about it.
+- Show the flow.
+- A tiny demo or a few screenshots will do more work than another paragraph of explanation.
 
-- **Pilot ROI slide**
-  - Why it matters: the strongest investor and operator story is not "digital ordering is cool," but "this venue saved time, reduced queues, and captured more orders."
+- Add one ROI slide once pilots exist.
+- That is the moment the story stops being theoretical.
 
-- **Payment intent as an operational signal**
-  - Why it matters: this is one of the clearest product insights in the knowledge base and helps explain why the product improves service operations, not just checkout.
+- Explain payment intent more clearly.
+- It is one of the best product insights in the knowledge base and shows that this is an operations tool, not just a checkout layer.
 
-- **Clearer narrow ICP framing**
-  - Why it matters: the knowledge base is strongest when SkipQ is aimed at high-volume, high-friction venues, not all hospitality at once.
+- Tighten the ICP even more.
+- The deck gets stronger when it clearly picks high-volume, high-friction venues first.
 
-- **Phase 2 hotel expansion framing**
-  - Why it matters: hotels can be a strong growth path later, but putting them too early in the core story risks making the deck feel too broad and enterprise-heavy.
+- Keep hotels as a later expansion path.
+- They make sense, but too much hotel language too early makes the story feel unfocused.
 
-- **Validation-first traction ladder**
-  - Why it matters: showing the path from conversations to pilots to measured outcomes makes the deck more credible than generic "pipeline" language.
+- Show the traction ladder.
+- Conversations to pilots to measured results is much more believable than vague pipeline language.
 
-- **One disciplined future roadmap block**
-  - Why it matters: AI helper, speech-to-text, dynamic menus, loyalty, and analytics are useful future differentiators, but they should appear as direction, not as current MVP dependencies.
+- Keep the future roadmap disciplined.
+- AI helper, speech-to-text, dynamic menus, loyalty, and analytics are useful later, but they should not crowd the MVP story.
 
-- **Source cleanup on problem and market claims**
-  - Why it matters: the current PPTX already has strong-stat style slides, so source quality and consistency will directly affect credibility.
+- Clean up every market and problem source.
+- If the stats feel shaky, the whole deck feels shaky.
