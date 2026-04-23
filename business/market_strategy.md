@@ -57,16 +57,16 @@ mindmap
     Στόχοι
       Αύξηση Throughput
       Μείωση Ουρών
-      Μείωση Λαθών Πληρωμής
+      Μείωση Λαθών Παραγγελίας
     Κοινό Στόχος
       Beach Bars
       Καντίνες Συναυλιών
       Food Festivals
       Στάδια
     Ανταγωνιστικό Πλεονέκτημα
-      Offline Λειτουργία
+      Plug and Play Onboarding
+      Basic Analytics
       Batch Preparation Logic
-      Υβριδική Πληρωμή (App + Cash)
     Προκλήσεις
       Crowd Behaviour
       Internet Reliability

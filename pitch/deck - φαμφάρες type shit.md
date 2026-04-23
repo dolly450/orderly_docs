@@ -27,10 +27,10 @@
 
 ## 3. Core Value Proposition
 
-- **Zero to no queues:** μειώνουμε τη φυσική ουρά και το χρόνο αναμονής.
-- **Tailored for you:** menu και ροή προσαρμοσμένα στο venue, στη γλώσσα και στις συνθήκες λειτουργίας.
-- **Optimised operations:** το προσωπικό βλέπει τι πρέπει να γίνει, μετράει χρόνους και αποφεύγει χάος.
-- **Measurable ROI:** δείχνουμε στον ιδιοκτήτη τι χρόνο γλίτωσε κάθε μήνα.
+- **Λιγότερη αναμονή:** ο πελάτης παραγγέλνει χωρίς να περιμένει σερβιτόρο ή POS.
+- **Περισσότερος τζίρος:** μειώνουμε χαμένες παραγγελίες και ανοίγουμε χώρο για upselling.
+- **Λιγότερο κόστος προσωπικού:** το staff οργανώνει καλύτερα τις παραγγελίες στα peak times.
+- **Measurable ROI:** δείχνουμε στον ιδιοκτήτη τι χρόνο, παραγγελίες και λάθη γλίτωσε κάθε μήνα.
 
 ## Target Market TAM SAM SOM
 
@@ -63,7 +63,7 @@
 
 - Αρχική είσοδος με free demo/free site ή trial.
 - SaaS subscription με seasonal plans.
-- Optional commission model για early/seasonal venues.
+- Light commission model σε δεύτερη φάση, αφού αποδειχθεί adoption και λυθεί η πολυπλοκότητα των payments.
 - Paid extensions: analytics, multi-location, custom branding, POS integration, dedicated support.
 
 ## Go To Market
@@ -80,7 +80,7 @@
 - [ ] Συνεντεύξεις με καταστηματάρχες
 - [ ] Αποτελέσματα ερωτηματολογίου
 - [ ] Pilot metrics από πραγματικά venues
-- [ ] ROI story: χρόνος εξυπηρέτησης και queue reduction
+- [ ] ROI story: χρόνος εξυπηρέτησης, queue reduction, περισσότερες παραγγελίες και λιγότερα λάθη
 
 ## Competition
 
@@ -97,8 +97,9 @@
 - Speech-to-text για αναζήτηση/παραγγελία.
 - Dynamic menu ανάλογα με το πόσο busy είναι το venue.
 - Feedback/reviews insights για βελτίωση service ή integration με Google Reviews.
+- Loyalty/personalization πάνω σε centralized user accounts.
 
-Αυτά μπαίνουν στο pitch ως product direction, όχι ως προϋπόθεση για το MVP.
+Αυτά μπαίνουν στο pitch ως product direction, όχι ως προϋπόθεση για το MVP. Το MVP μένει Scan -> Order -> Done + basic analytics.
 
 ## Team
 

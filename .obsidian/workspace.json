@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f9f7db7af879cfbd",
+        "id": "3d5b1156914ff1ec",
         "type": "tabs",
         "children": [
           {
-            "id": "da44e168c398f55b",
+            "id": "8cfae2a17a128d35",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "meta/mentors.md",
+                "file": "meta/meeting logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mentors"
+              "title": "meeting logs"
             }
           }
         ]
@@ -194,10 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "da44e168c398f55b",
+  "active": "8cfae2a17a128d35",
   "lastOpenFiles": [
-    "business/logo and branding.md",
     "meta/mentors.md",
+    "business/logo and branding.md",
     "meta/user-needs.canvas",
     "pitch/deck - φαμφάρες type shit.md",
     "pitch/pitch_strategy.md",
