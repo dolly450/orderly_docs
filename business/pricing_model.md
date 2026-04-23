@@ -7,7 +7,7 @@
 
 Mentorship update: στην πρώτη φάση το pricing πρέπει να υπηρετεί adoption. Δεν κυνηγάμε άμεσα revenue max. Ξεκινάμε με free/freemium ή πολύ χαμηλό pilot κόστος, με στόχο να αποδείξουμε measurable impact και μετά να περάσουμε σε subscription ή light commission.
 
-Σημαντική διευκρίνιση: το payment μπορεί να είναι core product signal χωρίς να είναι ακόμα core revenue model. Δηλαδή open tab / payment intent για commitment και prioritization, αλλά όχι απαραίτητα full commission/payments monetization από την πρώτη μέρα.
+Σημαντική διευκρίνιση: το payment μπορεί να είναι core product signal χωρίς να είναι ακόμα core revenue model. Στο MVP αυτό σημαίνει επιλογή στο καλάθι: πληρώνω τώρα με μετρητά/κάρτα ή μπαίνει στον λογαριασμό/tab. Το staff βλέπει τι χρειάζεται να εισπραχθεί ή να χρεωθεί, χωρίς να έχουμε απαραίτητα full commission/payments monetization από την πρώτη μέρα.
 
 | Βαθμίδα (Tier) | Τιμή / Μήνα | Βασικά Χαρακτηριστικά |
 |------|------------|-----------------------|

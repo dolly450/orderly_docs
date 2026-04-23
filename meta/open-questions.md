@@ -7,7 +7,7 @@
 - Ποιο είναι το πρώτο στενό use case: self-service καφέ, beach bar counter, festival bar ή hotel pool/bar;
 - Πόσο "AI" πρέπει να φαίνεται στο MVP χωρίς να κάνει το προϊόν να μοιάζει υπερβολικά σύνθετο;
 - Το dynamic menu ανάλογα με το πόσο busy είναι το venue λύνει πραγματικό πρόβλημα ή είναι pitch/future differentiator;
-- Ποιο είναι το ελάχιστο open tab / payment intent flow που δίνει operational signal χωρίς να κάνει το MVP βαρύ payment product;
+- Πώς πρέπει να εμφανίζεται στο staff dashboard το payment intent από το καλάθι: cash pending, card pending, added to tab, paid/collected;
 
 ## Ανταγωνισμός (Competition)
 - Ποιος είναι ο ανταγωνισμός που δεν έχουμε ακόμα χαρτογραφήσει και πόσο καλύτεροι είμαστε από το BringFood και τους βασικούς παίκτες; → [[competitive_analysis]]

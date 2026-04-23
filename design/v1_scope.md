@@ -10,7 +10,7 @@
 
 Το v1 μήνυμα πρέπει να μείνει καθαρό: **Scan -> Order -> Done**. Οτιδήποτε μπερδεύει αυτή τη ροή μπαίνει σε stretch goal ή επόμενο tier.
 
-Μετά το meeting με τον Σάββα Γεωργίου, υπάρχει σημαντική διευκρίνιση: το payment δεν εξετάζεται μόνο ως monetization ή checkout feature, αλλά ως **operational signal** για commitment, prioritization και table turnover. Άρα στο v1 πρέπει να αξιολογηθεί ένα απλό open tab / payment intent flow, χωρίς να γίνει βαρύ payment product.
+Μετά το meeting με τον Σάββα Γεωργίου, υπάρχει σημαντική διευκρίνιση: το payment δεν εξετάζεται μόνο ως monetization ή checkout feature, αλλά ως **operational signal** για commitment, prioritization και table turnover. Στο τρέχον MVP αυτό καλύπτεται από την επιλογή στο καλάθι: **πληρώνω τώρα** ή **μπαίνει στον λογαριασμό/tab μου**. Αν ο πελάτης επιλέξει πληρωμή τώρα, δηλώνει **μετρητά** ή **κάρτα**, ώστε να το διαχειριστεί το staff. Δεν χτίζουμε ακόμα βαρύ payment product.
 
 ## Βασικές Λειτουργίες
 
@@ -18,7 +18,7 @@
 2. Μενού (Menu) + εικόνες (configurable), γραμμένο σε καθαρή φυσική γλώσσα αντί για static PDF
 3. Καλάθι (Cart) → Παραγγελία (Order)
 4. Submit order με ελάχιστα πεδία πελάτη
-5. Open tab / payment intent logic για να φαίνεται commitment χωρίς να κλειδώνει full upfront payment
+5. Payment intent στο καλάθι: πληρώνω τώρα με μετρητά/κάρτα ή μπαίνει στον λογαριασμό/tab
 6. Πληροφορίες για κατάσταση παραγγελίας (Order Status) + ουρά αναμονής (Queue) με απλή χρονική ένδειξη
 7. Staff/KDS οθόνη για νέες παραγγελίες
 8. Staff/KDS ειδοποίηση νέας παραγγελίας με ήχο και έντονη χρωματική ένδειξη, ώστε να τραβάει την προσοχή του barista ή του operator
@@ -34,6 +34,7 @@
 ## Εκτός v1 / Να μην μπερδέψουν το αρχικό pitch
 
 - Full payments/commission product και πολύπλοκα payment integrations
+- Room charge για ξενοδοχεία, ως μελλοντική επέκταση του tab flow
 - Speech-to-text παραγγελία ή αναζήτηση στο μενού
 - AI chatbot / advanced AI flows
 - Κουμπί κλήσης σερβιτόρου ως core message
@@ -52,7 +53,7 @@
 - Orders per staff hour
 - Εκτίμηση μηνιαίου χρόνου που γλιτώνει το venue
 - Εκτίμηση uplift σε παραγγελίες ή average order value από upselling
-- Ποσοστό open tabs/payment intents που γίνονται completed orders
+- Ποσοστό επιλογών πληρωμής από το καλάθι που γίνονται completed/collected orders
 - Drop-offs ανά βήμα: scan, menu view, cart, order submit
 - Staff feedback για σημεία τριβής στη ροή
 
@@ -72,6 +73,7 @@
 - Επιλογή checkout ως επισκέπτης / αυθεντικοποίηση / έλεγχος μέσω SMS — μέτρα ασφαλείας
 - Configurable καλάθι (Cart)
 - Full payment settlement / light commission flow
+- Room charge σε δωμάτιο ξενοδοχείου
 - Κουμπί κλήσης σερβιτόρου (Call Button) με cooldown — configurable
 - Κρατήσεις / Bookings — με αυθεντικοποίηση (Authentication)
 - Ζωντανή διαθεσιμότητα / πληρότητα μαγαζιού (Live Capacity)

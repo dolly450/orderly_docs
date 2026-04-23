@@ -15,7 +15,7 @@ gantt
     QR Management & ID logic   :a4, 2026-04-25, 10d
     section Φάση 3: Validation
     Basic Analytics & ROI Report :a5, 2026-05-10, 12d
-    Open Tab / Payment Intent Test :a6, 2026-05-18, 10d
+    Cart Payment Intent Test :a6, 2026-05-18, 10d
     Door-to-door Demo Sprint     :a7, 2026-05-28, 15d
     section Φάση 4: Testing
     Pilot Test (Small Event)   :crit, a8, 2026-06-15, 7d
@@ -26,7 +26,7 @@ gantt
 
 1. **Πρώτη φάση:** Ερωτηματολόγιο (Questionnaire) → [[Questionnaire]], MVP, Pitching, βασικό μάρκετινγκ (Marketing), αξιολόγηση και προσαρμογή αλλαγών βάσει αναγκών πελατών.
 2. **Validation-first GTM:** free/πολύ φθηνά demos σε owners/managers, με στόχο να αποδειχθεί ότι το Scan -> Order -> Done μειώνει αναμονή και αυξάνει throughput.
-3. **Payment/open-tab validation:** δοκιμή αν το payment intent βοηθά prioritization, commitment και table turnover χωρίς full upfront payment.
+3. **Cart payment intent validation:** δοκιμή του υπάρχοντος flow "πληρώνω τώρα με μετρητά/κάρτα" ή "μπαίνει στον λογαριασμό/tab", ώστε να δούμε αν βοηθά staff coordination και table turnover χωρίς full online payment.
 4. **Ταχεία επέκταση (Rapid Expansion):** Μέσω χαμηλών περιθωρίων (Low Margins) και χαμηλού κόστους απόκτησης πελατών (Low CAC — Customer Acquisition Cost) — εξαιρετικά γρήγορη απόκτηση πελατών. → [[COGS, CACs, overheads]] / [[market_strategy]]
 
 ## Σχετικές Σημειώσεις

@@ -39,7 +39,7 @@ flowchart TD
 - **Στενό πρώτο ICP:** high-volume self-service / counter-service venue όπου η ουρά και ο χρόνος εξυπηρέτησης μετρώνται εύκολα. Τα ξενοδοχεία μένουν ως δεύτερη φάση μέσω ομίλων ή pool/bar pilots.
 - **Χαμηλό friction εισόδου:** δωρεάν demo/free site για το venue, παρουσίαση σε κινητό ή tablet και follow-up με σαφή metrics αντί για άμεση απαίτηση integration ή συνδρομής.
 - **Supply-first στόχος:** στην αρχή προτεραιότητα έχουν τα πολλά καταστήματα και τα pilot learnings, όχι η άμεση μεγιστοποίηση revenue. Ενδεικτικός στόχος: 100-1000 venues πριν πιεστεί το monetization.
-- **Payments as signal, not monetization-first:** δεν ξεκινάμε με βαρύ payment/commission product, αλλά εξετάζουμε open tab ή payment intent ως operational signal για commitment, prioritization και table turnover.
+- **Payments as signal, not monetization-first:** δεν ξεκινάμε με βαρύ payment/commission product. Το MVP payment signal είναι η επιλογή στο καλάθι: pay now με μετρητά/κάρτα ή add to tab, ώστε το staff να ξέρει αν πρέπει να εισπράξει ή να χρεώσει λογαριασμό.
 
 ## Validation Plan
 
@@ -47,7 +47,7 @@ flowchart TD
 
 1. Μιλάμε με καταστηματάρχες πριν χτίσουμε βαριά features.
 2. Δείχνουμε απλό Fake MVP ή free venue site σε πραγματικό περιβάλλον.
-3. Μετράμε scan-to-order conversion, χρόνο παραγγελίας, χρόνο εξυπηρέτησης, queue reduction, open tab/payment intent completion και staff feedback.
+3. Μετράμε scan-to-order conversion, χρόνο παραγγελίας, χρόνο εξυπηρέτησης, queue reduction, payment intent completion και staff feedback.
 4. Μετατρέπουμε τα pilot metrics σε ROI story: τι γλίτωσε το venue κάθε μήνα σε χρόνο, χαμένες παραγγελίες, λάθη και ανάγκη για επιπλέον προσωπικό.
 5. Χρησιμοποιούμε traction από pilots πριν από οποιαδήποτε σοβαρή VC/pre-seed συζήτηση.
 

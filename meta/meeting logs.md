@@ -87,7 +87,7 @@
 ### Ζουμί
 
 - Το payment δεν είναι απλά checkout. Είναι behavioral signal: δείχνει ποιος είναι committed και ποια παραγγελία/λίστα αναμονής πρέπει να πάρει προτεραιότητα.
-- Δεν πρέπει να ζητάμε full upfront payment με το πρώτο order, γιατί ο πελάτης μπορεί να προσθέσει κι άλλα. Χρειάζεται open tab / flexible payment logic.
+- Δεν πρέπει να ζητάμε full upfront payment με το πρώτο order, γιατί ο πελάτης μπορεί να προσθέσει κι άλλα. Το υπάρχον flow μπορεί να το καλύψει ως payment intent: πληρώνω τώρα με μετρητά/κάρτα ή μπαίνει στον λογαριασμό/tab.
 - Τα analytics πρέπει να μείνουν light αλλά χρήσιμα: QR orders, channel conversion, estimated time saved και πιθανό money saved.
 - Στα hotels δεν ξεκινάμε με όλο το ξενοδοχείο ή αλυσίδα. Entry point: μικρό unit όπως pool bar, breakfast ή restaurant.
 - Ενδεικτικά sales cycles: bar περίπου 1 μήνας, whole hotel περίπου 3 μήνες, chain περίπου 2 χρόνια.
@@ -103,7 +103,7 @@
 
 ### Επιπτώσεις για την Orderly
 
-- Το MVP πρέπει να εξετάσει payment/open tab logic ως core flow, όχι απαραίτητα ως πλήρες payment monetization model.
+- Το MVP πρέπει να κρατήσει την επιλογή payment intent στο καλάθι ως core flow: pay now με μετρητά/κάρτα ή add to tab. Room charge μπορεί να προστεθεί αργότερα για hotels.
 - Για hotels, το πρώτο pitch πρέπει να είναι για pool bar/breakfast/restaurant pilot, όχι για group-wide rollout.
 - Το product πρέπει να παραμείνει πολύ απλό για να μπει φέτος: στενό use case, λίγη τεχνολογία, γρήγορο onboarding.
 

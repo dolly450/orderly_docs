@@ -22,7 +22,7 @@
 - Web app που δουλεύει από οποιαδήποτε συσκευή με internet.
 - Cloud-hosted από την Orderly, ώστε ο πελάτης να μη χρειάζεται τεχνικό setup.
 - Staff/KDS dashboard για παραγγελίες, ουρά, status και ειδοποιήσεις με ήχο/χρώμα.
-- Open tab / payment intent logic για να φαίνεται ποιος είναι committed χωρίς να κλειδώνει full upfront payment.
+- Payment intent στο καλάθι: πληρώνω τώρα με μετρητά/κάρτα ή μπαίνει στον λογαριασμό/tab.
 - Configurable ανά venue: από απλό menu/free site μέχρι ordering και staff workflow.
 - Future path: POS/PDA integration, offline/local fallback και enterprise/self-hosted επιλογές όπου υπάρχει πραγματική ανάγκη.
 
@@ -55,7 +55,7 @@
 1. Scan QR.
 2. Menu σε φυσική γλώσσα.
 3. Cart και submit order.
-4. Open tab / payment intent.
+4. Επιλογή πληρωμής: μετρητά/κάρτα τώρα ή λογαριασμός/tab.
 5. Staff alert με χρώμα/ήχο.
 6. Status update και χρόνος εξυπηρέτησης.
 
