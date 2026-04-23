@@ -5,6 +5,8 @@
 
 ## 1. Μοντέλο Τιμολόγησης (Πρόταση)
 
+Mentorship update: στην πρώτη φάση το pricing πρέπει να υπηρετεί adoption. Δεν κυνηγάμε άμεσα revenue max. Ξεκινάμε με free/freemium ή πολύ χαμηλό pilot κόστος, με στόχο να αποδείξουμε measurable impact και μετά να περάσουμε σε subscription ή light commission.
+
 | Βαθμίδα (Tier) | Τιμή / Μήνα | Βασικά Χαρακτηριστικά |
 |------|------------|-----------------------|
 | **Free (Starter)** | €0 | Ψηφιακό μενού, QR ordering, βασικό branding, περιορισμένα tables |
@@ -14,7 +16,7 @@
 
 ## 2. Εναλλακτικό Μοντέλο: Προμήθεια (Commission)
 
-Αντί για πάγια συνδρομή, **3-5% επί των πωλήσεων** — μειώνει το ρίσκο για το venue. Κατάλληλο ιδιαίτερα για εποχιακά venues και για αρχική είσοδο στην αγορά. → [[COGS, CACs, overheads#Commission based vs Subscription based]]
+Αντί για πάγια συνδρομή, **light commission** σε δεύτερη φάση — μειώνει το ρίσκο για το venue. Κατάλληλο ιδιαίτερα για εποχιακά venues και για αρχική είσοδο στην αγορά, αλλά όχι πριν λυθεί το adoption και η πολυπλοκότητα των payments. → [[COGS, CACs, overheads#Commission based vs Subscription based]]
 
 ## 3. Εποχιακή Στρατηγική (Seasonality)
 

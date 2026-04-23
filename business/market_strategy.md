@@ -13,6 +13,8 @@
 
 > ⚠️ **Αυτή η υπόθεση δεν έχει τεκμηριωθεί ακόμα (Unvalidated Assumption)** — απαιτεί επικύρωση μέσω πιλοτικών (Pilot Validation).
 
+**Positioning Update από mentorships:** Το αρχικό μήνυμα δεν είναι "QR ordering" ή "καλύτερη εμπειρία". Είναι **revenue/operations tool**: λιγότερη αναμονή, περισσότερος τζίρος, λιγότερο κόστος προσωπικού και λιγότερα λάθη.
+
 > **Επιπτώσεις για την Ομάδα:**
 > Πρέπει να μετατοπίσουμε την προσοχή μας από το «πώς θα το χτίσουμε τέλεια» στο «πώς θα μάθουμε γρήγορα». Το κλειδί είναι η λογική Build-Measure-Learn. Εφόσον στοχεύουμε σε zero-friction (χωρίς login), χρειαζόμαστε άμεσα εργαλεία analytics (PostHog/Mixpanel) για να μετράμε το scan-to-order conversion rate και τα drop-offs. → [[Product Design]]
 
@@ -36,6 +38,8 @@ flowchart TD
 - **Άμεση έρευνα αγοράς (Market Research):** Συνομιλία με 10 μαγαζιά για ανατροφοδότηση (Feedback) πριν οριστικοποιηθεί οτιδήποτε.
 - **Στενό πρώτο ICP:** high-volume self-service / counter-service venue όπου η ουρά και ο χρόνος εξυπηρέτησης μετρώνται εύκολα. Τα ξενοδοχεία μένουν ως δεύτερη φάση μέσω ομίλων ή pool/bar pilots.
 - **Χαμηλό friction εισόδου:** δωρεάν demo/free site για το venue, παρουσίαση σε κινητό ή tablet και follow-up με σαφή metrics αντί για άμεση απαίτηση integration ή συνδρομής.
+- **Supply-first στόχος:** στην αρχή προτεραιότητα έχουν τα πολλά καταστήματα και τα pilot learnings, όχι η άμεση μεγιστοποίηση revenue. Ενδεικτικός στόχος: 100-1000 venues πριν πιεστεί το monetization.
+- **No payments at first:** αποφεύγουμε payments/commission complexity μέχρι να αποδειχθεί adoption και operational value.
 
 ## Validation Plan
 
@@ -44,7 +48,7 @@ flowchart TD
 1. Μιλάμε με καταστηματάρχες πριν χτίσουμε βαριά features.
 2. Δείχνουμε απλό Fake MVP ή free venue site σε πραγματικό περιβάλλον.
 3. Μετράμε scan-to-order conversion, χρόνο παραγγελίας, χρόνο εξυπηρέτησης, queue reduction και staff feedback.
-4. Μετατρέπουμε τα pilot metrics σε ROI story: τι γλίτωσε το venue κάθε μήνα σε χρόνο και λειτουργικό χάος.
+4. Μετατρέπουμε τα pilot metrics σε ROI story: τι γλίτωσε το venue κάθε μήνα σε χρόνο, χαμένες παραγγελίες, λάθη και ανάγκη για επιπλέον προσωπικό.
 5. Χρησιμοποιούμε traction από pilots πριν από οποιαδήποτε σοβαρή VC/pre-seed συζήτηση.
 
 ```mermaid
@@ -78,9 +82,10 @@ mindmap
 Πληρώνεις ένα _πρόσωπο_ να πείσει πελάτες να εγγραφούν → π.χ. **Sales rep κάνει cold calls σε bar owners**
 
 1. **Cold Outreach (Ψυχρή Προσέγγιση):** Είτε αυτοπροσώπως, είτε με email — μπορούμε να το κάνουμε κι εμείς.
-2. **Demo Calls (Επίδειξη Προϊόντος):** Παρουσίαση + pitch + δεδομένα [[Questionnaire]] + traction analytics.
+2. **Demo Calls (Επίδειξη Προϊόντος):** Παρουσίαση + pitch + δεδομένα [[Questionnaire]] + traction analytics. Το demo πρέπει να εξηγείται σε 10-20 δευτερόλεπτα.
 3. **CRM (Customer Relationship Management — Διαχείριση Σχέσεων Πελατών):** Consistent emails, ενημερωτικά, follow-ups σε σωστούς χρόνους → **Πάρα πολύ σημαντικό**.
 4. **Walking In (Αυτοπρόσωπη Επίσκεψη):** Κυριολεκτικά επισκεπτόμαστε bars και cafés με ένα tablet demo. Προφανές αλλά υποτιμημένο — οι ιδιοκτήτες εστίασης ανταποκρίνονται σε ανθρώπους, όχι σε emails.
+5. **Decision-maker focus:** μιλάμε με owners/managers, όχι γενικά με staff. Το μήνυμα είναι απλό: "λιγότερη αναμονή, περισσότερος τζίρος, λιγότερο κόστος προσωπικού".
 
 ### Κίνητρα (Incentives)
 Δίνεις κάτι _δωρεάν_ για να κάνεις την εγγραφή λιγότερο ρίσκο → π.χ. **Δωρεάν πρώτος μήνας**
@@ -149,7 +154,7 @@ mindmap
 ### Implementation Logic: Phase 1 Sales (Acquiring First 10 Customers)
 - **Primary Method:** Direct Sales (Walking In).
 - **Target Profiles:** Self-service cafes, beach bar counters and festival/event bars with visible queues.
-- **Pitch Focus:** Time saved, queue reduction, immediate ROI and easier staff coordination.
+- **Pitch Focus:** Time saved, queue reduction, more orders/revenue, fewer order mistakes and easier staff coordination.
 - **Conversion Strategy:** Provide a free, no-obligation "Fake MVP" demo directly on the venue owner's mobile device to demonstrate the zero-friction experience.
 - **Tooling Constraint:** Use a simple CRM (e.g., Planka) to track touchpoints and follow-up reminders. Avoid complex automated email sequences initially; focus on face-to-face trust.
 

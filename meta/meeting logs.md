@@ -36,6 +36,52 @@
 - Το MVP πρέπει να λύσει ένα επιχειρησιακό πρόβλημα και όχι να αποδείξει όλο το product vision.
 - Τα analytics πρέπει να είναι μέρος του validation, όχι "nice to have".
 
+## Άλεξ Σχίζας
+
+### Ζουμί
+
+- Να μη φαινόμαστε σαν "άλλο ένα QR ordering tool". Το positioning πρέπει να είναι revenue growth για το μαγαζί.
+- Το MVP μένει απλό: QR ordering που δουλεύει άψογα + basic analytics. Speech-to-text και advanced AI πάνε αργότερα.
+- Ξεκινάμε web app για low friction, αλλά κρατάμε από νωρίς centralized user accounts για loyalty/personalization/network effects.
+- Πρώτο GTM priority είναι supply: πολλά καταστήματα, όχι άμεσο revenue. Στόχος αρχικά 100-1000 venues.
+- Μην μπλέξουμε με payments στην αρχή. Πρώτα adoption, μετά subscription ή light commission.
+- Το onboarding πρέπει να είναι plug & play, γιατί κάθε μαγαζί έχει δικά του συστήματα.
+
+### Τι έχει ξεχωριστό από τους άλλους mentors
+
+- Έβαλε πολύ καθαρά το revenue narrative: δεν πουλάμε παραγγελιοληψία, πουλάμε αύξηση εσόδων.
+- Τόνισε supply-first growth και adoption metrics πριν το monetization.
+- Έφερε το θέμα centralized accounts ως θεμέλιο για μελλοντικό loyalty και network value.
+
+### Επιπτώσεις για την Orderly
+
+- Κεντρική φράση pitch: "Δεν πουλάμε παραγγελιοληψία — πουλάμε αύξηση εσόδων για το μαγαζί."
+- MVP: Scan -> Order -> Done + basic analytics. AI/speech/payments μένουν outside v1.
+- Το sales approach ξεκινά free/πολύ φθηνά και door-to-door, με στόχο pilot density και measurable impact.
+
+## Σωτηρία Γουναρίδη
+
+### Ζουμί
+
+- Οι ιδιοκτήτες δεν αγοράζουν "experience". Αγοράζουν περισσότερο τζίρο, λιγότερη αναμονή και λιγότερο κόστος προσωπικού.
+- Το μήνυμα πρέπει να είναι απλό και σε ευρώ: λιγότερη αναμονή, περισσότερος τζίρος, λιγότερο κόστος.
+- Το product focus πρέπει να μείνει σε ένα use case: QR -> παραγγελία χωρίς αναμονή.
+- Να μη μπερδευτεί το initial pitch με call waiter, notifications, complex flows ή speech-to-text.
+- Για τελικούς χρήστες το βασικό trigger είναι η ανυπομονησία: "Παράγγειλε χωρίς αναμονή", "Skip the wait".
+- Value boosters για αργότερα ή δεύτερο επίπεδο pitch: πολυγλωσσικό μενού, upselling, λιγότερα λάθη παραγγελιών.
+
+### Τι έχει ξεχωριστό από τους άλλους mentors
+
+- Ξεχώρισε το owner pitch από το end-user messaging.
+- Έκοψε το αφηρημένο "καλύτερη εμπειρία" και το γύρισε σε ROI/operations language.
+- Ζήτησε πολύ μικρό demo/video και decision-maker targeting, όχι γενική επικοινωνία σε staff.
+
+### Επιπτώσεις για την Orderly
+
+- TL;DR pitch προς ιδιοκτήτη: "Λιγότερη αναμονή, περισσότερος τζίρος, λιγότερο κόστος προσωπικού."
+- TL;DR message προς πελάτη: "Ξέρεις τι θέλεις; Παράγγειλε χωρίς αναμονή."
+- Χρειαζόμαστε demo που φαίνεται σε 10-20 δευτερόλεπτα και συζήτηση με owners/managers.
+
 ## Softone / Operational Notes
 
 - Η ειδοποίηση νέας παραγγελίας για barista/staff πρέπει να τραβάει προσοχή με ήχο και χρώμα, όχι μόνο με νέο row στο dashboard.
