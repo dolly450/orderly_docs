@@ -107,6 +107,91 @@
 - Για hotels, το πρώτο pitch πρέπει να είναι για pool bar/breakfast/restaurant pilot, όχι για group-wide rollout.
 - Το product πρέπει να παραμείνει πολύ απλό για να μπει φέτος: στενό use case, λίγη τεχνολογία, γρήγορο onboarding.
 
+## Αλέξανδρος Τρίμης
+
+### Ζουμί
+
+- Το pain είναι πραγματικό, αλλά δεν είναι universal. Δεν χτίζουμε γενικά για "εστίαση", χτίζουμε πρώτα για συγκεκριμένα scenarios: beach bars, μεγάλα venues, self-service vibes και peak load.
+- Το πιο καθαρό product framing είναι "express ordering layer" πάνω από την υπάρχουσα λειτουργία του μαγαζιού. Δεν αντικαθιστούμε απαραίτητα POS/PDA, γινόμαστε έξτρα κανάλι παραγγελίας.
+- Το μεγαλύτερο ρίσκο είναι το integration hell. POS/PDA integrations είναι fragmented, δύσκολα και δεν πρέπει να μπλοκάρουν το MVP.
+- Το σωστό αρχικό μοντέλο είναι bypass: δικό μας dashboard/tablet/printer flow. Integration μπαίνει ως future problem μόνο αν αποδειχθεί απαραίτητο.
+- Το MVP πρέπει να μείνει σε 3 πράγματα: πελάτης βλέπει menu και κάνει order, κατάστημα λαμβάνει order, order εκτελείται.
+- Loyalty, AI menu editing, simulations και advanced analytics είναι startup dopamine αν μπουν πριν κλειδώσει το core value.
+- Το customer journey είναι το πιο κρίσιμο κομμάτι. Ιδανικά ο πελάτης κάθεται, σκανάρει, βλέπει menu χωρίς friction και παραγγέλνει σε 10-15 δευτερόλεπτα.
+- Το pitch προς καταστήματα πρέπει να είναι αποτέλεσμα, όχι dashboard: λιγότερη πίεση στο προσωπικό, περισσότερες παραγγελίες στις busy ώρες, καμία αλλαγή στο υπάρχον setup.
+- Για τους πρώτους μήνες το onboarding των menus θα είναι χειροκίνητο από εμάς. Αυτό είναι φυσιολογικό marketplace/startup operation, όχι πρόβλημα.
+- Το AI menu editing με prompt αξίζει ως internal tool για να στήνουμε γρήγορα menus, όχι ως customer-facing MVP feature.
+
+### Τι έχει ξεχωριστό από τους άλλους mentors
+
+- Έβαλε πολύ καθαρά ότι το παιχνίδι δεν είναι "καλύτερο POS", αλλά "fastest ordering experience".
+- Έδωσε ξεκάθαρη απόφαση για bypass model στην αρχή, αντί να περιμένουμε integrations.
+- Τόνισε ότι η μεγαλύτερη δυσκολία είναι adoption, behavior change και operations, όχι το software.
+
+### Επιπτώσεις για την Orderly
+
+- Το πρώτο segment πρέπει να είναι beach bars και high-volume casual venues, όχι generic restaurants.
+- Το MVP πρέπει να αποδείξει ένα πράγμα: ότι το Orderly κάνει την παραγγελία πιο γρήγορη και πιο εύκολη σε πραγματική πίεση.
+- Το sales pitch πρέπει να είναι "increase revenue χωρίς αλλαγή συμπεριφοράς/setup".
+- Το menu onboarding πρέπει να θεωρηθεί service/ops κομμάτι του MVP, με AI tooling εσωτερικά όπου βοηθάει.
+
+## Στέφανος Βασδέκης
+
+### Ζουμί
+
+- Το βασικό concept είναι web-based σύστημα, όχι app: QR menu, παραγγελία, πιθανή online πληρωμή και admin/order management για τον επιχειρηματία.
+- Το μεγάλο ανοιχτό θέμα είναι οι πληρωμές. Marketplace model σημαίνει ότι κρατάμε χρήματα και αποδίδουμε στο κατάστημα, άρα έχει λογιστική/φορολογική πολυπλοκότητα.
+- Για MVP προτιμάται direct payment direction ή απλό payment intent, ώστε ο πελάτης να πληρώνει απευθείας το κατάστημα ή να δηλώνει τρόπο πληρωμής χωρίς να χτίσουμε settlement product.
+- Offline sync και τοπική βάση είναι overengineering για την αρχή. Έχει conflicts, sync logic και πολλά edge cases.
+- MVP πρέπει να είναι 100% online. Offline mode μπαίνει μόνο ως future version αν αποδειχθεί πραγματικό blocker.
+- Το μεγαλύτερο πρόβλημα είναι scope creep: QR ordering, bookings, AI voice assistant, offline mode και hotel integrations μαζί μπορούν να οδηγήσουν στο να μη βγει τίποτα.
+- Το core MVP είναι QR menu, παραγγελία, payment/payment intent και basic admin.
+- Το product πρέπει να σκέφτεται modular: core ordering τώρα, extras όπως bookings, analytics και hotel-specific flows αργότερα.
+- Το positioning χαλάει αν προσπαθούμε να πουλήσουμε ordering, bookings, AI και hotels ταυτόχρονα.
+- Οι συνεργασίες και οι τρίτοι αργούν περισσότερο από όσο φαίνεται. Δεν πρέπει να βασίζεται το MVP σε εξωτερικές συνεργασίες.
+- Το "last click wins" είναι σημαντικό insight: η αξία και τα λεφτά βρίσκονται στο τελικό στάδιο της παραγγελίας, όπου το Orderly ήδη βρίσκεται.
+
+### Τι έχει ξεχωριστό από τους άλλους mentors
+
+- Έβαλε τις πληρωμές ως στρατηγικό/λογιστικό decision, όχι μόνο ως product feature.
+- Έκοψε καθαρά το offline/local-first ως early complexity.
+- Έδωσε framework modular platform: πουλάμε core ordering, όχι όλα τα πιθανά hospitality modules μαζί.
+
+### Επιπτώσεις για την Orderly
+
+- Το MVP πρέπει να μείνει online-only και να μη μπλέξει με offline sync.
+- Το payment flow πρέπει να λυθεί με όσο γίνεται πιο απλό μοντέλο για pilots, χωρίς να μετατραπούμε νωρίς σε marketplace settlement layer.
+- Το roadmap πρέπει να φαίνεται modular: core QR ordering πρώτα, bookings/hotels/advanced analytics αργότερα.
+- Κάθε feature που δεν βοηθά το QR -> order -> pay/intent -> staff flow πρέπει να πάει εκτός αρχικού pitch.
+
+## Βασιλική Αργυροπούλου
+
+### Ζουμί
+
+- Το βασικό πρόβλημα δεν είναι το όνομα. Είναι ότι δεν έχει κλειδώσει 100% τι ακριβώς πουλάμε.
+- Αυτή τη στιγμή το προϊόν κινδυνεύει να φαίνεται σαν λίγο από όλα: QR ordering, μείωση ουράς και workflow optimization. Αυτά πρέπει να γίνουν ένα καθαρό μήνυμα.
+- Το δυνατό USP είναι QR-based ordering χωρίς app και με πλήρη προσωποποίηση για το κατάστημα.
+- Δεν είμαστε app-based όπως κάποιες λύσεις, δεν είμαστε marketplace όπως Wolt/eFood και δεν πρέπει να δείχνουμε generic.
+- Πιο καθαρό positioning: "We help restaurants take and manage orders digitally, without apps, without queues, fully branded."
+- Το SkipQ είναι narrow γιατί κλειδώνει το brand μόνο στην ουρά και ακούγεται σαν feature. Το Orderly είναι safer direction επειδή χωράει ordering και οργάνωση workflow.
+- Τα slogans τύπου "Make ordering easy", "Reduce queues", "Personalized for you" είναι features. Χρειάζεται ενιαία positioning πρόταση.
+- Το Orderly είναι B2B product με B2C interface. Το brand πρέπει να πείθει τον επιχειρηματία, ενώ η εμπειρία πρέπει να δουλεύει για τον πελάτη.
+- Στο deck χρειάζονται λίγα πράγματα ανά slide, ρεαλιστικά visuals και product μέσα σε context.
+- Το "Your logo here" concept είναι δυνατό γιατί βοηθά τον επιχειρηματία να φανταστεί το προϊόν ως δικό του.
+
+### Τι έχει ξεχωριστό από τους άλλους mentors
+
+- Έφερε το πρόβλημα focus/positioning πιο καθαρά από όλους.
+- Ξεχώρισε το brand decision από το product decision: πρώτα κλειδώνουμε τι πουλάμε, μετά το όνομα.
+- Έβαλε χρήσιμο framing ότι πουλάμε σε B2B buyer αλλά η εμπειρία καταναλώνεται από B2C user.
+
+### Επιπτώσεις για την Orderly
+
+- Πρέπει να κλειδώσει μία πρόταση προϊόντος πριν φτιαχτούν νέα pitch slides ή slogans.
+- Τα 3 βασικά value bullets πρέπει να είναι speed, no app και personalization/branding.
+- Το Orderly είναι πιο ασφαλής κατεύθυνση ονόματος από SkipQ για να μην περιοριστούμε μόνο στο "skip queue" use case.
+- Το pitch πρέπει να δείχνει το προϊόν πάνω σε πραγματικό venue context, ιδανικά με το logo/branding του καταστήματος.
+
 ## Softone / Operational Notes
 
 - Η ειδοποίηση νέας παραγγελίας για barista/staff πρέπει να τραβάει προσοχή με ήχο και χρώμα, όχι μόνο με νέο row στο dashboard.
@@ -132,6 +217,23 @@
 - Zero to no queues.
 - Optimised business operations / staff orchestrator.
 - Menu tailored to you.
+- Effortless ordering. No apps. Fully yours.
+- Smart ordering for modern restaurants.
+- Παραγγελίες από QR, χωρίς app, με την εικόνα του μαγαζιού σου.
+- Περισσότερες παραγγελίες στις busy ώρες, χωρίς αλλαγή στο setup σου.
+
+## Consolidated Mentor Consensus
+
+- Το Orderly πρέπει να ξεκινήσει ως branded QR ordering layer για busy venues, όχι ως POS replacement, marketplace ή all-in-one hospitality platform.
+- Το πρώτο target είναι beach bars, high-volume casual venues και self-service/counter-service scenarios όπου η ουρά και η καθυστέρηση φαίνονται.
+- Το MVP είναι QR -> menu -> order -> payment intent/pay choice -> staff receives order -> execution.
+- Εκτός αρχικού core μένουν AI, offline sync, bookings, hotel-wide flows, advanced analytics, loyalty και POS/PDA integrations.
+- Το customer journey είναι το προϊόν: scan, menu, order και done σε όσο γίνεται λιγότερα δευτερόλεπτα.
+- Το staff journey πρέπει να είναι εξίσου απλό: νέα παραγγελία με έντονο visual/audio signal και εύκολη εκτέλεση.
+- Το go-to-market pitch προς επιχειρηματία πρέπει να είναι: περισσότερες παραγγελίες στις ώρες αιχμής, λιγότερη πίεση στο προσωπικό, χωρίς αλλαγή στο υπάρχον setup.
+- Το onboarding στην αρχή θα είναι χειροκίνητο από την ομάδα. Αυτό περιλαμβάνει menu setup, demo pages και πιθανώς internal AI tools για γρήγορη δημιουργία/διόρθωση menus.
+- Τα πρώτα validation metrics πρέπει να είναι orders through Orderly, scan-to-order conversion, χρόνος ολοκλήρωσης παραγγελίας, χρόνος εξυπηρέτησης, queue/wait-time reduction και staff feedback.
+- Funding, integrations και μεγαλύτερα modules έχουν νόημα αφού υπάρχουν pilots και μετρήσιμη traction.
 
 ## Product Backlog Notes
 
