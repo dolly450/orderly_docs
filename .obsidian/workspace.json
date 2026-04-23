@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "e00dde1e5365cf13",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9f7db7af879cfbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da44e168c398f55b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "meta/mentors.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "mentors"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d08c459a32b72d93",
+    "type": "split",
+    "children": [
+      {
+        "id": "350cc0c856c290af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33adf2d62ddb7d40",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1963581f1bafdcc4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "ερωτημ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "85f301bac853f8da",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "bca3180f0494b9b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "88beefc2ca8a256d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c80f285a7df2532",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "design/v1_scope.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for v1_scope"
+            }
+          },
+          {
+            "id": "36ab72a9ebc35899",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "design/v1_scope.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from v1_scope"
+            }
+          },
+          {
+            "id": "24959c4494ad0050",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "83d3564c91fc17c6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "fa553eb2b8141a02",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "pitch/deck - φαμφάρες type shit.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of deck - φαμφάρες type shit"
+            }
+          },
+          {
+            "id": "ce7e29aa55c98179",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "da44e168c398f55b",
+  "lastOpenFiles": [
+    "business/logo and branding.md",
+    "meta/mentors.md",
+    "meta/user-needs.canvas",
+    "pitch/deck - φαμφάρες type shit.md",
+    "pitch/pitch_strategy.md",
+    "meta/business-model.canvas",
+    "design/staff_workflow.md",
+    "architecture/system_architecture.md",
+    "architecture/technical_stack.md",
+    "business/market_strategy.md",
+    "business/roadmap.md",
+    "business/Questionnaire.md",
+    "project_log.md",
+    "meta/decision-log.md",
+    "meta/decisions.md",
+    "meta/knowledge-health.md",
+    "notes/Relevance Branding Workshop.md",
+    "notes/Product Design.md",
+    "notes/introduction to fund raising.md",
+    "notes/Revolutionary ideas - Claude.md",
+    "business/model.md",
+    "architecture/overview.md",
+    "architecture/data_model.md",
+    "design/v1_scope.md",
+    "design/features.md",
+    "notes/Orderly's path to dominating Greek hospitality ordering - claude.md",
+    "meta/idea-dump.md",
+    "Untitled.base",
+    "fix_active_investigations.py",
+    "tests/test_vault_json.py",
+    "tests/test_planka.py",
+    "output_new-1.png",
+    "images/Practical Decision Process.png",
+    "Images/Pasted image 20260407175230.png",
+    "images/Stages of Product and Growth.png",
+    "images/the Right product.png",
+    "images/COGS.png",
+    "notes",
+    "images",
+    "tests/test_vault_sync.py",
+    "tests/test_vault.py",
+    "tests/test_channel_pinning.py",
+    "tests/test_bot_functions.py"
+  ]
+}

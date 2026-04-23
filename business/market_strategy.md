@@ -34,6 +34,18 @@ flowchart TD
 - **Γρήγορη είσοδος για κατάληψη αγοράς (Rapid Market Capture)** (λογική eFood): μπαίνουμε γρήγορα πριν γεμίσει η αγορά.
 - **Επικύρωση πριν την κλίμακα (Validation Before Scale):** Πιλοτικό σε 5 καταστήματα/venues/ερωτηματολόγια → μετρήσεις (Metrics) → απόδειξη ιδέας (Proof of Concept) → επιχείρημα πώλησης (Selling Point). → Δέσιμο (Traction) → [[../pitch/deck - φαμφάρες type shit#6. Traction]]
 - **Άμεση έρευνα αγοράς (Market Research):** Συνομιλία με 10 μαγαζιά για ανατροφοδότηση (Feedback) πριν οριστικοποιηθεί οτιδήποτε.
+- **Στενό πρώτο ICP:** high-volume self-service / counter-service venue όπου η ουρά και ο χρόνος εξυπηρέτησης μετρώνται εύκολα. Τα ξενοδοχεία μένουν ως δεύτερη φάση μέσω ομίλων ή pool/bar pilots.
+- **Χαμηλό friction εισόδου:** δωρεάν demo/free site για το venue, παρουσίαση σε κινητό ή tablet και follow-up με σαφή metrics αντί για άμεση απαίτηση integration ή συνδρομής.
+
+## Validation Plan
+
+Το validation πρέπει να απαντήσει πρώτα αν υπάρχει πραγματικό πρόβλημα που ο ιδιοκτήτης αναγνωρίζει και θα πλήρωνε να λύσει.
+
+1. Μιλάμε με καταστηματάρχες πριν χτίσουμε βαριά features.
+2. Δείχνουμε απλό Fake MVP ή free venue site σε πραγματικό περιβάλλον.
+3. Μετράμε scan-to-order conversion, χρόνο παραγγελίας, χρόνο εξυπηρέτησης, queue reduction και staff feedback.
+4. Μετατρέπουμε τα pilot metrics σε ROI story: τι γλίτωσε το venue κάθε μήνα σε χρόνο και λειτουργικό χάος.
+5. Χρησιμοποιούμε traction από pilots πριν από οποιαδήποτε σοβαρή VC/pre-seed συζήτηση.
 
 ```mermaid
 mindmap
@@ -102,10 +114,11 @@ mindmap
 
 ### Αρχική Φάση (Phase 1)
 1. Cold outreach / Walking in κ.λπ.
-2. Demo calls + Demo Pitch + Δεδομένα [[Questionnaire]] + Traction μελλοντικά από analytics
-3. CRM
-4. Organics + Incentive (παραδείγματα αναλυτικά πιο πάνω)
-5. Referrals, PR, Community Building, Event Joining — κορυφαία σημασία
+2. Free demo/free site σε narrow ICP, ώστε να μειωθεί το ρίσκο για τον πρώτο πελάτη
+3. Demo calls + Demo Pitch + Δεδομένα [[Questionnaire]] + Traction από analytics
+4. CRM
+5. Organics + Incentive (παραδείγματα αναλυτικά πιο πάνω)
+6. Referrals, PR, Community Building, Event Joining — κορυφαία σημασία
 
 ### Μακροπρόθεσμη Φάση (Phase 2 — Long Term)
 - Event building (Διοργάνωση δικών μας εκδηλώσεων)
@@ -135,7 +148,13 @@ mindmap
 
 ### Implementation Logic: Phase 1 Sales (Acquiring First 10 Customers)
 - **Primary Method:** Direct Sales (Walking In).
-- **Target Profiles:** Beach Bars and Festival Organizers.
-- **Pitch Focus:** Time saved, queue reduction, immediate ROI.
+- **Target Profiles:** Self-service cafes, beach bar counters and festival/event bars with visible queues.
+- **Pitch Focus:** Time saved, queue reduction, immediate ROI and easier staff coordination.
 - **Conversion Strategy:** Provide a free, no-obligation "Fake MVP" demo directly on the venue owner's mobile device to demonstrate the zero-friction experience.
 - **Tooling Constraint:** Use a simple CRM (e.g., Planka) to track touchpoints and follow-up reminders. Avoid complex automated email sequences initially; focus on face-to-face trust.
+
+### Phase 2: Ξενοδοχεία
+
+- Στόχος δεν είναι να ξεκινήσουμε από full hotel group integration. Ξεκινάμε με μικρό operational entry point: pool bar, beach bar, breakfast queue ή room-service-adjacent ordering.
+- Οι επαφές με ξενοδοχειακούς ομίλους χρησιμοποιούνται για να μάθουμε ποιος αγοράζει, ποιος μπλοκάρει, και ποιο metric τους ενδιαφέρει.
+- Τα integrations με PMS/POS/channel managers μπαίνουν μόνο αν αποδειχθεί ότι είναι blocker για pilot ή για enterprise deal.

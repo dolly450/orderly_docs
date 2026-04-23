@@ -2,29 +2,49 @@
 
 Βασικά χαρακτηριστικά και λειτουργίες που πρέπει να περιλαμβάνει η πρώτη έκδοση.
 
+## Στενό Αρχικό Use Case
+
+Μετά τις mentor σημειώσεις, το MVP πρέπει να στοχεύσει πρώτα σε ένα πολύ συγκεκριμένο σενάριο: **high-volume self-service / counter-service venue** όπου υπάρχει ορατή ουρά και γρήγορη επανάληψη παραγγελιών. Παραδείγματα: self-service καφέ, beach bar counter, festival bar.
+
+Στόχος δεν είναι να αποδείξουμε όλο το product vision. Στόχος είναι να αποδείξουμε ότι το QR ordering μειώνει την ουρά και κάνει το staff workflow πιο γρήγορο με μετρήσιμα δεδομένα.
+
 ## Βασικές Λειτουργίες
 
-1. Μενού (Menu) + εικόνες (configurable)
+1. Μενού (Menu) + εικόνες (configurable), γραμμένο σε καθαρή φυσική γλώσσα αντί για static PDF
 2. Καλάθι (Cart) → Παραγγελία (Order)
 3. Διαδικασία παραγγελίας (Ordering Process) — ποιοι παραγγέλνουν;
 4. Πληροφορίες για κατάσταση παραγγελίας (Order Status) + ουρά αναμονής (Queue) με χρονική εκτίμηση
-- [ ] Σύνδεση με εκτυπωτές → χαρτάκια παραγγελίας
-[ x] Πληροφορίες για WiFi και το μαγαζί
-[ x] Κουμπί κλήσης σερβιτόρου (Call Button) με cooldown — configurable
-7. Κρατήσεις / Bookings — με αυθεντικοποίηση (Authentication)
-8. Μόνο cloud, όχι localhost
-9. Αναλυτικά στοιχεία χρήσης (Analytics) για το τι χρησιμοποιούν οι χρήστες από το UI — ενσωμάτωση εργαλείων όπως PostHog/Mixpanel από την 1η μέρα για παρακολούθηση QR scans, cart additions και drop-offs. → [[Product Design]]
-10. Τέσσερις σελίδες: Χρήστες/Πελάτες, Σερβιτόρος, Κουζίνα, Admin
-11. Διαφημιστική σελίδα (Landing Page) — live demo από ψεύτικο κατάστημα
-12. Δοκιμαστική περίοδος (Trial) π.χ. 15 ημέρες → αγορά συνδρομής (Subscription) από admin
+5. Σύνδεση με εκτυπωτές → χαρτάκια παραγγελίας
+6. Πληροφορίες για WiFi και το μαγαζί
+7. Κουμπί κλήσης σερβιτόρου (Call Button) με cooldown — configurable
+8. Κρατήσεις / Bookings — με αυθεντικοποίηση (Authentication)
+9. Μόνο cloud, όχι localhost
+10. Αναλυτικά στοιχεία χρήσης (Analytics) για το τι χρησιμοποιούν οι χρήστες από το UI — ενσωμάτωση εργαλείων όπως PostHog/Mixpanel από την 1η μέρα για παρακολούθηση QR scans, cart additions, drop-offs, χρόνου ολοκλήρωσης παραγγελίας και χρόνου εξυπηρέτησης. → [[Product Design]]
+11. Τέσσερις σελίδες: Χρήστες/Πελάτες, Σερβιτόρος, Κουζίνα, Admin
+12. Διαφημιστική σελίδα (Landing Page) — live demo από ψεύτικο κατάστημα
+13. Δοκιμαστική περίοδος (Trial) π.χ. 15 ημέρες → αγορά συνδρομής (Subscription) από admin
     - Τα subscriptions θα τρέχουν σε EC2 instance (αξιόπιστο) ως Docker containers
     - Τα trials θα τρέχουν σε ξεχωριστό VM ως Docker containers (δωρεάν)
     - Επιπλέον χρέωση (Extra Fee) για service / maintenance
-13. Καλή γνώση για **POS / PDA ενσωμάτωση (Integration)** → [[pos_compliance]]
-[x] Πολυγλωσσικότητα (Multilingual) → [[features#4. Πολυγλωσσικότητα (Multilingual)]] 
-14. Ζωντανή διαθεσιμότητα / πληρότητα μαγαζιού (Live Capacity)
+14. Καλή γνώση για **POS / PDA ενσωμάτωση (Integration)** → [[pos_compliance]]
+15. Πολυγλωσσικότητα (Multilingual) → [[features#4. Πολυγλωσσικότητα (Multilingual)]]
+16. Ζωντανή διαθεσιμότητα / πληρότητα μαγαζιού (Live Capacity)
+17. Staff/KDS ειδοποίηση νέας παραγγελίας με ήχο και έντονη χρωματική ένδειξη, ώστε να τραβάει την προσοχή του barista ή του operator.
 
 > **Σημείωση:** Απλό και εύκολο στη χρήση (Simple and easy to use) — αυτό αναφέρεται και ως θετικό του [[competitive_analysis|Butler]].
+
+## MVP Metrics
+
+Τα παρακάτω πρέπει να μετρώνται στα pilots ώστε να αποδείξουμε αξία:
+
+- Scan-to-order conversion rate
+- Μέσος χρόνος ολοκλήρωσης παραγγελίας
+- Μέσος χρόνος εξυπηρέτησης από submit μέχρι ready/delivered
+- Queue/wait-time reduction σε σχέση με την προηγούμενη διαδικασία
+- Orders per staff hour
+- Εκτίμηση μηνιαίου χρόνου που γλιτώνει το venue
+- Drop-offs ανά βήμα: scan, menu view, cart, order submit
+- Staff feedback για σημεία τριβής στη ροή
 
 ## Πίνακας Λειτουργιών ανά Τύπο Venue
 
@@ -43,6 +63,9 @@
 - Configurable καλάθι (Cart)
 - Τοπική βάση δεδομένων Master/Slave (Local DB) + Service Workers για λειτουργία εκτός σύνδεσης (Offline Mode) → [[features#3. Όταν Πέφτει το Internet]]
 - AI chatbot / έξυπνες προτάσεις (Smart Suggestions) → [[startup_synopsis#4. Main Selling Points (Επιβεβαιωμένα)]]
+- Speech-to-text παραγγελία ή αναζήτηση στο μενού
+- Προσαρμοσμένο μενού ανάλογα με τις συνθήκες λειτουργίας, π.χ. προώθηση γρήγορων επιλογών όταν το venue είναι busy
+- Feedback/reviews module για operational insights ή integration με Google Reviews
 
 ## Σχετικές Σημειώσεις
 
@@ -57,3 +80,4 @@
 - [ ] Οριστικοποίηση λίστας χαρακτηριστικών ανά tier (Free/Basic/Pro/Enterprise) → [[pricing_model#Tiered subscription]]
 - [ ] Δημιουργία wireframes για τις 4 βασικές σελίδες (Πελάτης, Σερβιτόρος, Κουζίνα, Admin)
 - [ ] Δοκιμή "Fake MVP": Πριν χτιστεί πλήρως το backend, δημιουργία mockup στο κινητό για demo/walk-in σε beach bars. Στόχος: μέτρηση άμεσου ενδιαφέροντος (Ναι/Όχι).
+- [ ] Επιλογή ενός πρώτου narrow use case για pilot, πριν προστεθούν hotel/POS/AI-heavy flows.
