@@ -17,7 +17,7 @@
 
 - **Για ιδιοκτήτες:** λιγότερη αναμονή, περισσότερος τζίρος, λιγότερο κόστος προσωπικού.
 - **Για πελάτες:** scan -> order -> done, χωρίς app και χωρίς να περιμένεις σερβιτόρο.
-- **Για operations:** το staff βλέπει καθαρά τι πρέπει να ετοιμάσει, με ειδοποιήσεις που τραβούν προσοχή.
+- **Για operations:** το staff βλέπει καθαρά τι πρέπει να ετοιμάσει, με ειδοποιήσεις που τραβούν προσοχή και payment/open tab signals για prioritization.
 - **Long-term:** user accounts, loyalty, personalization και upselling χτίζονται πάνω στο αρχικό QR ordering.
 
 Κεντρική φράση: **Δεν πουλάμε παραγγελιοληψία — πουλάμε αύξηση εσόδων για το μαγαζί.**
@@ -27,6 +27,7 @@
 *   **Εποχιακή Επείγουσα Ανάγκη:** Πρέπει να βγούμε τον Ιούνιο για να προλάβουμε την κορύφωση της σεζόν.
 *   **Live Experience:** Η εμπειρία του judge που σκανάρει και βλέπει το menu στο κινητό του είναι αξεπέραστη.
 *   **Owner ROI:** Το pitch πρέπει να δείχνει άμεσο επιχειρηματικό όφελος: μικρότερη ουρά, λιγότερα λάθη, καλύτερο throughput, πιθανό upsell.
+*   **Payment insight:** Το payment/open tab δεν είναι απλώς checkout. Είναι signal commitment που μπορεί να βοηθήσει prioritization και table turnover.
 *   **Validation-first:** Δεν ζητάμε να πιστέψουν ένα μεγάλο product vision. Δείχνουμε απλό MVP, pilots και μετρήσιμα operational metrics.
 
 ## 4. AI & Future Differentiators
@@ -46,4 +47,5 @@
 *   *Ανταγωνισμός;* Η Orderly εστιάζει στην παραγγελιοληψία (Ordering-first) και όχι απλά στο POS.
 *   *Γιατί τώρα;* Το MVP μπορεί να μπει γρήγορα σε πραγματικά venues με free demo και να παράξει traction πριν τη σεζόν.
 *   *Γιατί funding;* Μόνο μετά από pilot traction, με καθαρό 12-18μηνο πλάνο για product, sales και onboarding.
-*   *Γιατί όχι payments/AI τώρα;* Γιατί το πρώτο validation είναι αν το venue κερδίζει χρόνο, παραγγελίες και λειτουργική ηρεμία από ένα απλό Scan -> Order -> Done.
+*   *Γιατί payment στο MVP;* Όχι για να γίνει βαρύ payment product. Για να δοκιμάσουμε open tab/payment intent ως signal commitment, prioritization και faster turnover.
+*   *Γιατί όχι AI τώρα;* Γιατί το πρώτο validation είναι αν το venue κερδίζει χρόνο, παραγγελίες και λειτουργική ηρεμία από ένα απλό Scan -> Order -> Done.

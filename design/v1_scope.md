@@ -10,27 +10,30 @@
 
 Το v1 μήνυμα πρέπει να μείνει καθαρό: **Scan -> Order -> Done**. Οτιδήποτε μπερδεύει αυτή τη ροή μπαίνει σε stretch goal ή επόμενο tier.
 
+Μετά το meeting με τον Σάββα Γεωργίου, υπάρχει σημαντική διευκρίνιση: το payment δεν εξετάζεται μόνο ως monetization ή checkout feature, αλλά ως **operational signal** για commitment, prioritization και table turnover. Άρα στο v1 πρέπει να αξιολογηθεί ένα απλό open tab / payment intent flow, χωρίς να γίνει βαρύ payment product.
+
 ## Βασικές Λειτουργίες
 
 1. QR web menu χωρίς app install
 2. Μενού (Menu) + εικόνες (configurable), γραμμένο σε καθαρή φυσική γλώσσα αντί για static PDF
 3. Καλάθι (Cart) → Παραγγελία (Order)
 4. Submit order με ελάχιστα πεδία πελάτη
-5. Πληροφορίες για κατάσταση παραγγελίας (Order Status) + ουρά αναμονής (Queue) με απλή χρονική ένδειξη
-6. Staff/KDS οθόνη για νέες παραγγελίες
-7. Staff/KDS ειδοποίηση νέας παραγγελίας με ήχο και έντονη χρωματική ένδειξη, ώστε να τραβάει την προσοχή του barista ή του operator
-8. Basic analytics για QR scans, cart additions, order submits, drop-offs, χρόνο ολοκλήρωσης παραγγελίας και χρόνο εξυπηρέτησης. → [[Product Design]]
-9. Βασικό owner/admin setup για προϊόντα, τιμές, QR και venue info
-10. Πολυγλωσσικότητα (Multilingual) ως value booster για τουριστικά venues → [[features#4. Πολυγλωσσικότητα (Multilingual)]]
-11. Κεντρικοί λογαριασμοί χρηστών ως τεχνική βάση για μελλοντικό loyalty/personalization, χωρίς να μπλοκάρουν το guest ordering
-12. Διαφημιστική σελίδα (Landing Page) — live demo από ψεύτικο κατάστημα
-13. Μόνο cloud, όχι localhost
+5. Open tab / payment intent logic για να φαίνεται commitment χωρίς να κλειδώνει full upfront payment
+6. Πληροφορίες για κατάσταση παραγγελίας (Order Status) + ουρά αναμονής (Queue) με απλή χρονική ένδειξη
+7. Staff/KDS οθόνη για νέες παραγγελίες
+8. Staff/KDS ειδοποίηση νέας παραγγελίας με ήχο και έντονη χρωματική ένδειξη, ώστε να τραβάει την προσοχή του barista ή του operator
+9. Basic analytics για QR scans, cart additions, order submits, drop-offs, χρόνο ολοκλήρωσης παραγγελίας και χρόνο εξυπηρέτησης. → [[Product Design]]
+10. Βασικό owner/admin setup για προϊόντα, τιμές, QR και venue info
+11. Πολυγλωσσικότητα (Multilingual) ως value booster για τουριστικά venues → [[features#4. Πολυγλωσσικότητα (Multilingual)]]
+12. Κεντρικοί λογαριασμοί χρηστών ως τεχνική βάση για μελλοντικό loyalty/personalization, χωρίς να μπλοκάρουν το guest ordering
+13. Διαφημιστική σελίδα (Landing Page) — live demo από ψεύτικο κατάστημα
+14. Μόνο cloud, όχι localhost
 
 > **Σημείωση:** Απλό και εύκολο στη χρήση (Simple and easy to use) — αυτό αναφέρεται και ως θετικό του [[competitive_analysis|Butler]].
 
 ## Εκτός v1 / Να μην μπερδέψουν το αρχικό pitch
 
-- Payments και payment integrations
+- Full payments/commission product και πολύπλοκα payment integrations
 - Speech-to-text παραγγελία ή αναζήτηση στο μενού
 - AI chatbot / advanced AI flows
 - Κουμπί κλήσης σερβιτόρου ως core message
@@ -49,6 +52,7 @@
 - Orders per staff hour
 - Εκτίμηση μηνιαίου χρόνου που γλιτώνει το venue
 - Εκτίμηση uplift σε παραγγελίες ή average order value από upselling
+- Ποσοστό open tabs/payment intents που γίνονται completed orders
 - Drop-offs ανά βήμα: scan, menu view, cart, order submit
 - Staff feedback για σημεία τριβής στη ροή
 
@@ -67,7 +71,7 @@
 - Μαζική εκτύπωση QR codes σε σελίδα A4 (QR Code Mass Print)
 - Επιλογή checkout ως επισκέπτης / αυθεντικοποίηση / έλεγχος μέσω SMS — μέτρα ασφαλείας
 - Configurable καλάθι (Cart)
-- Payments / light commission flow
+- Full payment settlement / light commission flow
 - Κουμπί κλήσης σερβιτόρου (Call Button) με cooldown — configurable
 - Κρατήσεις / Bookings — με αυθεντικοποίηση (Authentication)
 - Ζωντανή διαθεσιμότητα / πληρότητα μαγαζιού (Live Capacity)

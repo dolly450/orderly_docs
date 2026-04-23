@@ -22,6 +22,7 @@
 - Web app που δουλεύει από οποιαδήποτε συσκευή με internet.
 - Cloud-hosted από την Orderly, ώστε ο πελάτης να μη χρειάζεται τεχνικό setup.
 - Staff/KDS dashboard για παραγγελίες, ουρά, status και ειδοποιήσεις με ήχο/χρώμα.
+- Open tab / payment intent logic για να φαίνεται ποιος είναι committed χωρίς να κλειδώνει full upfront payment.
 - Configurable ανά venue: από απλό menu/free site μέχρι ordering και staff workflow.
 - Future path: POS/PDA integration, offline/local fallback και enterprise/self-hosted επιλογές όπου υπάρχει πραγματική ανάγκη.
 
@@ -54,8 +55,9 @@
 1. Scan QR.
 2. Menu σε φυσική γλώσσα.
 3. Cart και submit order.
-4. Staff alert με χρώμα/ήχο.
-5. Status update και χρόνος εξυπηρέτησης.
+4. Open tab / payment intent.
+5. Staff alert με χρώμα/ήχο.
+6. Status update και χρόνος εξυπηρέτησης.
 
 Το demo μπορεί να ξεκινήσει ως free site / Fake MVP για πραγματικό venue, ώστε να μειωθεί το ρίσκο του πρώτου pilot.
 
@@ -63,7 +65,7 @@
 
 - Αρχική είσοδος με free demo/free site ή trial.
 - SaaS subscription με seasonal plans.
-- Light commission model σε δεύτερη φάση, αφού αποδειχθεί adoption και λυθεί η πολυπλοκότητα των payments.
+- Light commission model σε δεύτερη φάση, αφού αποδειχθεί adoption και λυθεί η πολυπλοκότητα του full payment settlement.
 - Paid extensions: analytics, multi-location, custom branding, POS integration, dedicated support.
 
 ## Go To Market
@@ -72,7 +74,7 @@
 - Free demo σε κινητό ή tablet του ιδιοκτήτη.
 - Pilot σε 5 venues με μετρήσιμα operational metrics.
 - CRM follow-up και conversion σε trial/subscription αφού φανεί αξία.
-- Ξενοδοχεία ως δεύτερη φάση μέσω στοχευμένων hospitality mentors και ομίλων.
+- Ξενοδοχεία ως δεύτερη φάση μέσω μικρού unit: pool bar, breakfast ή restaurant pilot. Όχι chain rollout στην αρχή.
 
 ## Traction
 

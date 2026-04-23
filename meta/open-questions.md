@@ -7,6 +7,7 @@
 - Ποιο είναι το πρώτο στενό use case: self-service καφέ, beach bar counter, festival bar ή hotel pool/bar;
 - Πόσο "AI" πρέπει να φαίνεται στο MVP χωρίς να κάνει το προϊόν να μοιάζει υπερβολικά σύνθετο;
 - Το dynamic menu ανάλογα με το πόσο busy είναι το venue λύνει πραγματικό πρόβλημα ή είναι pitch/future differentiator;
+- Ποιο είναι το ελάχιστο open tab / payment intent flow που δίνει operational signal χωρίς να κάνει το MVP βαρύ payment product;
 
 ## Ανταγωνισμός (Competition)
 - Ποιος είναι ο ανταγωνισμός που δεν έχουμε ακόμα χαρτογραφήσει και πόσο καλύτεροι είμαστε από το BringFood και τους βασικούς παίκτες; → [[competitive_analysis]]
@@ -25,7 +26,7 @@
 - Θα ήταν χρήσιμο το να συνεργαστούμε με εταιρείες τηλεπικοινωνιών, με σκοπό να βελτιστοποιήσουμε (Optimize) το δίκτυο των μαγαζιών με τα οποία θα συνεργαζόμαστε ως μέρος του πακέτου;
 - Έχουν θέση οι influencers και affiliates, δεδομένης της φύσης της επιχείρησής μας; Γιατί π.χ. δεν διαφημίζουν στον κοινό καταναλωτή στο Instagram — οι πελάτες μας είναι συγκεκριμένα άτομα τα οποία ενδεχομένως να μην φτάνουν (reach). Ίσως κάποιος πιο στοχευμένος (Targeted) influencer με κατάλληλο κοινό; → [[market_strategy]]
 - Ποιος είναι ο ακριβής buyer ανά segment: owner, manager, operations lead, F&B manager ή ξενοδοχειακός όμιλος;
-- Μπαίνουμε σε ξενοδοχεία μέσω pool bar/restaurant pilot ή μέσω κεντρικής συμφωνίας με όμιλο;
+- Για hotels, το πρώτο pilot είναι pool bar, breakfast ή restaurant; Ποιο έχει μικρότερο sales cycle και πιο καθαρό ROI;
 - Τα reviews/feedback πρέπει να είναι δικό μας insight tool ή integration με Google Reviews;
 
 ## Metrics & Validation

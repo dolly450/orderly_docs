@@ -39,7 +39,7 @@ flowchart TD
 - **Στενό πρώτο ICP:** high-volume self-service / counter-service venue όπου η ουρά και ο χρόνος εξυπηρέτησης μετρώνται εύκολα. Τα ξενοδοχεία μένουν ως δεύτερη φάση μέσω ομίλων ή pool/bar pilots.
 - **Χαμηλό friction εισόδου:** δωρεάν demo/free site για το venue, παρουσίαση σε κινητό ή tablet και follow-up με σαφή metrics αντί για άμεση απαίτηση integration ή συνδρομής.
 - **Supply-first στόχος:** στην αρχή προτεραιότητα έχουν τα πολλά καταστήματα και τα pilot learnings, όχι η άμεση μεγιστοποίηση revenue. Ενδεικτικός στόχος: 100-1000 venues πριν πιεστεί το monetization.
-- **No payments at first:** αποφεύγουμε payments/commission complexity μέχρι να αποδειχθεί adoption και operational value.
+- **Payments as signal, not monetization-first:** δεν ξεκινάμε με βαρύ payment/commission product, αλλά εξετάζουμε open tab ή payment intent ως operational signal για commitment, prioritization και table turnover.
 
 ## Validation Plan
 
@@ -47,7 +47,7 @@ flowchart TD
 
 1. Μιλάμε με καταστηματάρχες πριν χτίσουμε βαριά features.
 2. Δείχνουμε απλό Fake MVP ή free venue site σε πραγματικό περιβάλλον.
-3. Μετράμε scan-to-order conversion, χρόνο παραγγελίας, χρόνο εξυπηρέτησης, queue reduction και staff feedback.
+3. Μετράμε scan-to-order conversion, χρόνο παραγγελίας, χρόνο εξυπηρέτησης, queue reduction, open tab/payment intent completion και staff feedback.
 4. Μετατρέπουμε τα pilot metrics σε ROI story: τι γλίτωσε το venue κάθε μήνα σε χρόνο, χαμένες παραγγελίες, λάθη και ανάγκη για επιπλέον προσωπικό.
 5. Χρησιμοποιούμε traction από pilots πριν από οποιαδήποτε σοβαρή VC/pre-seed συζήτηση.
 
@@ -160,6 +160,10 @@ mindmap
 
 ### Phase 2: Ξενοδοχεία
 
-- Στόχος δεν είναι να ξεκινήσουμε από full hotel group integration. Ξεκινάμε με μικρό operational entry point: pool bar, beach bar, breakfast queue ή room-service-adjacent ordering.
+- Στόχος δεν είναι να ξεκινήσουμε από full hotel group integration. Ξεκινάμε με μικρό operational entry point: pool bar, beach bar, breakfast queue ή restaurant pilot.
+- Ενδεικτικά sales cycles από mentorship: bar περίπου 1 μήνας, whole hotel περίπου 3 μήνες, chain περίπου 2 χρόνια.
+- Βασικοί decision makers: F&B Manager και Operations. Το IT μπαίνει κυρίως για approval, security και vendor checks.
 - Οι επαφές με ξενοδοχειακούς ομίλους χρησιμοποιούνται για να μάθουμε ποιος αγοράζει, ποιος μπλοκάρει, και ποιο metric τους ενδιαφέρει.
 - Τα integrations με PMS/POS/channel managers μπαίνουν μόνο αν αποδειχθεί ότι είναι blocker για pilot ή για enterprise deal.
+- Δεν πάμε multi-country early, γιατί κάθε χώρα έχει διαφορετικούς dominant POS/PMS vendors. Πρώτα μία αγορά, μετά expansion.
+- Για να μπει φέτος σε hotel, το offer πρέπει να είναι απλό, άμεσο, γρήγορο σε implementation και low friction. Αλλιώς η απάντηση θα είναι "ελάτε του χρόνου".

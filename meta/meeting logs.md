@@ -82,6 +82,31 @@
 - TL;DR message προς πελάτη: "Ξέρεις τι θέλεις; Παράγγειλε χωρίς αναμονή."
 - Χρειαζόμαστε demo που φαίνεται σε 10-20 δευτερόλεπτα και συζήτηση με owners/managers.
 
+## Σάββας Γεωργίου
+
+### Ζουμί
+
+- Το payment δεν είναι απλά checkout. Είναι behavioral signal: δείχνει ποιος είναι committed και ποια παραγγελία/λίστα αναμονής πρέπει να πάρει προτεραιότητα.
+- Δεν πρέπει να ζητάμε full upfront payment με το πρώτο order, γιατί ο πελάτης μπορεί να προσθέσει κι άλλα. Χρειάζεται open tab / flexible payment logic.
+- Τα analytics πρέπει να μείνουν light αλλά χρήσιμα: QR orders, channel conversion, estimated time saved και πιθανό money saved.
+- Στα hotels δεν ξεκινάμε με όλο το ξενοδοχείο ή αλυσίδα. Entry point: μικρό unit όπως pool bar, breakfast ή restaurant.
+- Ενδεικτικά sales cycles: bar περίπου 1 μήνας, whole hotel περίπου 3 μήνες, chain περίπου 2 χρόνια.
+- Decision makers στα hotels: F&B Manager και Operations. IT μπαίνει κυρίως για approval, security και vendor checks.
+- Τα POS/PMS integrations δεν είναι απαραίτητα τρομερά δύσκολα τεχνικά, αλλά κάθε χώρα έχει άλλους dominant vendors. Άρα δεν πάμε multi-country early.
+- Τα hotels δεν έχουν urgency από μόνα τους. Το offer πρέπει να είναι απλό, άμεσο, γρήγορο σε implementation και low friction.
+
+### Τι έχει ξεχωριστό από τους άλλους mentors
+
+- Αντέστρεψε την προηγούμενη υπόθεση για payments: όχι ως monetization/commission feature, αλλά ως core operational signal για prioritization και table turnover.
+- Έδωσε πιο ρεαλιστική εικόνα για hotel sales cycles και decision makers.
+- Έβαλε καθαρό constraint στο expansion: πρώτα μία αγορά/ένα hotel unit, μετά integrations και αλυσίδες.
+
+### Επιπτώσεις για την Orderly
+
+- Το MVP πρέπει να εξετάσει payment/open tab logic ως core flow, όχι απαραίτητα ως πλήρες payment monetization model.
+- Για hotels, το πρώτο pitch πρέπει να είναι για pool bar/breakfast/restaurant pilot, όχι για group-wide rollout.
+- Το product πρέπει να παραμείνει πολύ απλό για να μπει φέτος: στενό use case, λίγη τεχνολογία, γρήγορο onboarding.
+
 ## Softone / Operational Notes
 
 - Η ειδοποίηση νέας παραγγελίας για barista/staff πρέπει να τραβάει προσοχή με ήχο και χρώμα, όχι μόνο με νέο row στο dashboard.
