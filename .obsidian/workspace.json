@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "meeting logs"
             }
+          },
+          {
+            "id": "0159b4a3e4c1ba3a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "pitch/script.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "script"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,8 +209,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "35f5505e60719442",
+  "active": "0159b4a3e4c1ba3a",
   "lastOpenFiles": [
+    "meta/meeting logs.md",
+    "pitch/script.md",
     "pitch/deck - φαμφάρες type shit.md",
     "images/Pasted image 20260424132245.png",
     "pitch/tmp/pptx_edit/edit_skipq_pptx.py",
@@ -240,8 +257,6 @@
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/detect-libc/README.md",
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/agent-base/README.md",
     "pitch/tmp/pptx_edit/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
-    "pitch/tmp/pptx_edit/node_modules/pptxgenjs/node_modules/undici-types/README.md",
-    "pitch/tmp/pptx_edit/node_modules/playwright/lib/agents/playwright-test-planner.agent.md",
     "meta/user-needs.canvas",
     "meta/business-model.canvas"
   ]
