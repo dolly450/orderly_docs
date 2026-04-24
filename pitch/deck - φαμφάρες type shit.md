@@ -139,3 +139,6 @@ Near-final slide copy aligned to the current 14-slide `.pptx`, rewritten to soun
 
 - Clean up every market and problem source.
 - If the stats feel shaky, the whole deck feels shaky.
+
+
+![](../images/Pasted%20image%2020260424132245.png)

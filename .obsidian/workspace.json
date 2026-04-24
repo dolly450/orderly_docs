@@ -196,6 +196,7 @@
   },
   "active": "33adf2d62ddb7d40",
   "lastOpenFiles": [
+    "images/Pasted image 20260424132245.png",
     "pitch/tmp/pptx_edit/edit_skipq_pptx.py",
     "pitch/tmp/pptx_edit/inspect_import.mjs",
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/tools/cli-client/skill/references/video-recording.md",
@@ -215,7 +216,6 @@
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/utils/isomorphic/trace/versions/traceV3.js",
     "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/types/src/display/editor/drawers/signaturedraw.d.ts",
     "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/types/src/display/editor/drawers/outline.d.ts",
-    "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/types/src/display/editor/drawers/inkdraw.d.ts",
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/tools/cli-client/skill/SKILL.md",
     "pitch/tmp/pptx_edit/node_modules/pptxgenjs/node_modules/@types/node/README.md",
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/vite/traceViewer/playwright-logo.svg",
