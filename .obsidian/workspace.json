@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pitch/script.md",
+                "file": "pitch/deck - φαμφάρες type shit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "script"
+              "title": "deck - φαμφάρες type shit"
             }
           }
         ],
@@ -211,8 +211,9 @@
   },
   "active": "0159b4a3e4c1ba3a",
   "lastOpenFiles": [
-    "meta/meeting logs.md",
+    "pitch/pitch_strategy.md",
     "pitch/script.md",
+    "meta/meeting logs.md",
     "pitch/deck - φαμφάρες type shit.md",
     "images/Pasted image 20260424132245.png",
     "pitch/tmp/pptx_edit/edit_skipq_pptx.py",
@@ -256,7 +257,6 @@
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/follow-redirects/README.md",
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/detect-libc/README.md",
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/agent-base/README.md",
-    "pitch/tmp/pptx_edit/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
     "meta/user-needs.canvas",
     "meta/business-model.canvas"
   ]
