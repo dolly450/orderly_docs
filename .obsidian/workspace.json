@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pitch/deck - φαμφάρες type shit.md",
+                "file": "meta/meeting logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "deck - φαμφάρες type shit"
+              "title": "meeting logs"
             }
           }
         ]
@@ -194,8 +194,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "33adf2d62ddb7d40",
+  "active": "35f5505e60719442",
   "lastOpenFiles": [
+    "pitch/deck - φαμφάρες type shit.md",
     "images/Pasted image 20260424132245.png",
     "pitch/tmp/pptx_edit/edit_skipq_pptx.py",
     "pitch/tmp/pptx_edit/inspect_import.mjs",
@@ -228,7 +229,6 @@
     "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/legacy/web/images/toolbarButton-zoomOut.svg",
     "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/legacy/web/images/toolbarButton-zoomIn.svg",
     "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/legacy/web/images/toolbarButton-viewsManagerToggle.svg",
-    "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/legacy/web/images/toolbarButton-viewThumbnail.svg",
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/string-split-by/readme.md",
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/debug/README.md",
     "pitch/tmp/pptx_edit/node_modules/@oai/artifact-tool/node_modules/skia-canvas/README.md",
