@@ -111,3 +111,17 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-25 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+- `business/logo and branding.md` (Κανονικοποίηση brand names)
+- `pitch/script.md` (Format & tasks)
+- `meta/decisions.md` (Format & tasks)
+- `meta/meeting logs.md` (Mermaid diagram)
+- Canvases ενημερώθηκαν με pilot tasks.
+
+### Στατιστικά σήμερα
+- **Νέα tasks (- [ ]):** 4
+- **Διπλότυπα κανονικοποιημένα:** 1
+- **Νέα Mermaid diagrams:** 1

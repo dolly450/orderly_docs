@@ -244,3 +244,14 @@
 ### Order Flow / Tab
 
 - [ ] Edge case: τι γίνεται αν υπάρχει ανοιχτό tab και ο πελάτης φύγει.
+
+### Οπτικοποίηση
+
+```mermaid
+flowchart TD
+  A[Πελάτης / Customer] -->|Scan QR| B[Orderly Menu]
+  B -->|Order| C[Payment Intent / Direct Payment]
+  C -->|Staff receives order| D[Εκτέλεση Παραγγελίας / Execution]
+  D --> E[Τέλος / Done]
+  C -.->|Bypass| F[Χωρίς άμεσο POS Integration στο MVP]
+```
