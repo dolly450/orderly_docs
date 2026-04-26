@@ -167,3 +167,10 @@ mindmap
 - Τα integrations με PMS/POS/channel managers μπαίνουν μόνο αν αποδειχθεί ότι είναι blocker για pilot ή για enterprise deal.
 - Δεν πάμε multi-country early, γιατί κάθε χώρα έχει διαφορετικούς dominant POS/PMS vendors. Πρώτα μία αγορά, μετά expansion.
 - Για να μπει φέτος σε hotel, το offer πρέπει να είναι απλό, άμεσο, γρήγορο σε implementation και low friction. Αλλιώς η απάντηση θα είναι "ελάτε του χρόνου".
+
+- [ ] Συνέντευξη με 2 ιδιοκτήτες beach bar για να επικυρώσουμε την στρατηγική direct sales (Fake MVP).
+
+
+### Στρατηγική Προϊόντος (Phase 2 MVP)
+- **Λογική:** Direct sales και απευθείας αντικατάσταση αντί για ενσωμάτωση στα υπάρχοντα POS (Phase 1).
+- **Rationale:** Ελαχιστοποιεί το friction adoption.

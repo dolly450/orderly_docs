@@ -111,3 +111,23 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-26 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Αφαίρεση επεξεργασμένης ερώτησης (Στρατηγική PDA) |
+| `meta/decision-log.md` | Καταγραφή αποφάσεων για Product Strategy και Sales |
+| `business/market_strategy.md` | Ενημέρωση στρατηγικής PDA (χωρίς Mermaid flow) |
+| `business/pricing_model.md` | Προσθήκη Mermaid mindmap για pricing tiers |
+| `meta/user-needs.canvas` | Ενημέρωση timestamp |
+| `meta/business-model.canvas` | Ενημέρωση timestamp |
+| `meta/knowledge-health.md` | Ενημέρωση μετρήσεων health |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (bot_questions):** 0
+- **Νέα tasks (- [ ]):** 2 (Σε market strategy και pricing model)
+- **Νέα backlinks:** 2 (decision log)
+- **Canvases ενημερωμένα:** Ναι
+- **project_log & knowledge-health ενημερωμένα:** Ναι

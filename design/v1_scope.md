@@ -98,3 +98,7 @@
 - [ ] Δημιουργία wireframes για τις 3 βασικές σελίδες (Πελάτης, Staff/KDS, Admin)
 - [ ] Δοκιμή "Fake MVP": Πριν χτιστεί πλήρως το backend, δημιουργία mockup στο κινητό για demo/walk-in σε beach bars. Στόχος: μέτρηση άμεσου ενδιαφέροντος (Ναι/Όχι).
 - [ ] Επιλογή ενός πρώτου narrow use case για pilot, πριν προστεθούν hotel/POS/AI-heavy flows.
+
+
+### Αλληλεπίδραση με υπάρχοντα POS
+- Το σύστημα μας λειτουργεί αρχικά ως Staff Dashboard/αυτόνομο self-service layer, χωρίς περίπλοκα POS integrations στο MVP.
