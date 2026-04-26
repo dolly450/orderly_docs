@@ -100,3 +100,25 @@ graph LR
 - [ ] Έρευνα για χρηματοδοτήσεις (Fundings) και μελλοντικά έξοδα (πόσα λεφτά και πού θα κατευθυνθούν) — για τον όποιο επενδυτή
 - [ ] Υπολογισμός βασικών κοστών (COGS) + ροών εσόδων (Revenue Streams) + υγιών περιθωρίων (Healthy Margins): κόστη λειτουργίας (Overheads) + κόστος παραγωγής (Cost of Production) κ.λπ.
 - [ ] Οριστικοποίηση χαρακτηριστικών ανά βαθμίδα (Tier Features) μετά από ομαδική συζήτηση
+
+
+### Οπτικοποίηση
+
+```mermaid
+mindmap
+  root((Tiers))
+    Free
+      Digital Menu
+      Basic Analytics
+    Basic
+      QR Ordering
+      Staff Accounts
+    Pro
+      POS Integration
+      Multi-location
+    Enterprise
+      Custom Branding
+      SLA
+```
+
+- [ ] A/B Testing για τα tiers τιμολόγησης (δωρεάν vs commission) σε landing page.
