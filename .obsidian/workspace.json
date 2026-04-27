@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pitch/deck - φαμφάρες type shit.md",
+                "file": "business/competitive_analysis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "deck - φαμφάρες type shit"
+              "title": "competitive_analysis"
             }
           }
         ],
@@ -211,12 +211,13 @@
   },
   "active": "0159b4a3e4c1ba3a",
   "lastOpenFiles": [
+    "business/pricing_model.md",
+    "architecture/system_architecture.md",
+    "pitch/deck - φαμφάρες type shit.md",
     "meta/meeting logs.md",
     "meta/knowledge-health.md",
     "meta/idea-dump.md",
     "business/logo and branding.md",
-    "business/pricing_model.md",
-    "pitch/deck - φαμφάρες type shit.md",
     "notes/Orderly's path to dominating Greek hospitality ordering - claude.md",
     "notes/The long road of turning your idea toa successful startup.md",
     "notes/Revolutionary ideas - Claude.md",
@@ -247,7 +248,6 @@
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/utils/isomorphic/trace/versions/traceV3.js",
     "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/types/src/display/editor/drawers/signaturedraw.d.ts",
     "pitch/tmp/pptx_edit/node_modules/pdfjs-dist/types/src/display/editor/drawers/outline.d.ts",
-    "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/tools/cli-client/skill/SKILL.md",
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/vite/traceViewer/playwright-logo.svg",
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/vite/recorder/playwright-logo.svg",
     "pitch/tmp/pptx_edit/node_modules/playwright-core/lib/tools/dashboard/appIcon.png",
