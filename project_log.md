@@ -111,3 +111,20 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-05-01 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Κανονικοποίηση, μετάφραση σε Ελληνικά, προσθήκη Tasks & Backlinks |
+| `notes/Product Design.md` | Πλήρης αναδόμηση, μετάφραση, προσθήκη Mermaid diagram, Tasks |
+| `notes/Revolutionary ideas - Claude.md` | Μετάφραση, δόμηση, Mermaid diagram, εξαγωγή insights, Tasks |
+
+### Στατιστικά σήμερα
+- **Νέα backlinks:** ~10
+- **Νέες ερωτήσεις:** 0
+- **Νέα tasks (- [ ]):** 6
+- **Canvases ενημερωμένα:** Ναι
+- **Διπλότυπες πληροφορίες κανονικοποιήθηκαν:** 1
+- **Mermaid diagrams προστέθηκαν/ενημερώθηκαν:** 2
