@@ -111,3 +111,24 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-05-04 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/market_strategy.md` | Προσθήκη απόφασης στρατηγικής προϊόντος (Direct Sales, self-service layer, όχι αντικατάσταση PDA). |
+| `meta/decision-log.md` | Καταγραφή νέας απόφασης για στρατηγική προϊόντος (Phase 2 MVP). |
+| `meta/active_investigations.md` | Αφαίρεση της ερώτησης PDA και προσθήκη της open question για να διατηρηθεί ο αριθμός στις 5 ερωτήσεις. |
+| `meta/open-questions.md` | Αφαίρεση της ερώτησης που μετακινήθηκε στις ενεργές. |
+| `business/Questionnaire.md` | Προσθήκη task για validation experiment με μετρήσιμο στόχο. |
+| `architecture/overview.md` | Ενημέρωση Mermaid diagram με προσθήκη POS integration. |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/knowledge-health.md` | Προσθήκη νέων metrics και history entry. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** Διατήρηση στις 5
+- **Νέα tasks (- [ ]):** 1
+- **Νέα Mermaid diagrams:** 1 (ενημερώθηκε)
+- **Canvases ενημερωμένα:** 2/2
