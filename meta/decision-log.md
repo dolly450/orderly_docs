@@ -1,5 +1,10 @@
 # Ημερολόγιο Αποφάσεων (Decision Log)
 
+### 2026-05-04 - Στρατηγική Προϊόντος (Phase 2 MVP)
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε η στρατηγική ενσωμάτωσης στα υπάρχοντα POS (λειτουργία ως self-service layer) αντί για την αντικατάσταση των υπάρχοντων PDA των σερβιτόρων, μειώνοντας το friction. Η προώθηση θα γίνει μέσω Direct Sales.
+- **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]], [[meta/active_investigations.md]]
+- **Σημείωση για Implementation:** Το σύστημα σχεδιάζεται ως integration layer που στέλνει παραγγελίες στο υπάρχον σύστημα, χωρίς να μπαίνει σε σύγκρουση με τους μεγάλους παρόχους (π.χ. Epsilon Net).
+
 ### 2026-04-10 - Αρχιτεκτονική MVP (Cloud-first Web App)
 - **Απόφαση / Σύνοψη:** Το τρέχον baseline του προϊόντος είναι cloud-first web εφαρμογή σε SvelteKit. Η local-first / Tauri κατεύθυνση παραμένει ερευνητική επιλογή για μελλοντική φάση, όχι το shipped μοντέλο.
 - **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]], [[meta/active_investigations.md]]

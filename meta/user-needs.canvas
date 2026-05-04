@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"id":"title","type":"text","text":"# Χάρτης Αναγκών Χρηστών (User Needs Map) - Last Updated: 2026-04-18","x":-392,"y":-640,"width":1600,"height":80},
+		{"id":"title","type":"text","text":"# Χάρτης Αναγκών Χρηστών (User Needs Map) - Last Updated: 2026-05-04","x":-392,"y":-640,"width":1600,"height":80},
 		{"id":"56f4fe42b6271904","type":"text","text":"καταστηματάρχης (admin)","x":-850,"y":-460,"width":227,"height":60,"color":"6"},
 		{"id":"2b383ac329fa3bda","type":"text","text":"να παραγγείλει ανά πάσα στιγμή","x":-671,"y":-220,"width":270,"height":60},
 		{"id":"528eb3576c8133e1","type":"text","text":"να βλέπει το μενού","x":-482,"y":-110,"width":172,"height":60},

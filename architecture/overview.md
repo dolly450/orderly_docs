@@ -14,6 +14,8 @@
 - **Τρέχον baseline:** cloud-first web εφαρμογή που ήδη καλύπτει ordering, staff/kitchen/admin operations, reservations, translations και demo data.
 - **Μελλοντική φάση:** local-first gateway / embedded replica / Tauri-style packaging παραμένει ερευνητική κατεύθυνση, όχι το shipped μοντέλο του repo.
 
+### Οπτικοποίηση
+
 ```mermaid
 flowchart TD
     B[Browser / Mobile Web]
@@ -24,6 +26,7 @@ flowchart TD
     A1[Auth Layer\nBetter Auth]
     D[(Drizzle / libSQL)]
     E[SSE / Realtime]
+    P[Existing POS / Fiscal]
     M[Future Phase\nLocal-first Gateway]
 
     B --> A
@@ -33,6 +36,7 @@ flowchart TD
     S --> A1
     S --> D
     S --> E
+    S --> P
     M -. future .-> A
 ```
 
