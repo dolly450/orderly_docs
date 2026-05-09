@@ -34,3 +34,11 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+### Βάση Δεδομένων (Database)
+Επιλέχθηκε **Turso/libSQL** για το ενδεχόμενο local-first requirement:
+- Υποστηρίζει Embedded Replicas (δωρεάν τοπική αντιγραφή & αυτόματο sync με cloud).
+- Ελαφριά εγκατάσταση (single binary / container) κατάλληλη για Pi/Android.
+- SDK: `@libsql/client` (TypeScript) και `@libsql/client-go` (Go).
+- Drizzle ORM: Πλήρης υποστήριξη.
+- Σημείωση: Δεν έχει native SSE (χρειάζεται custom polling ή υλοποίηση στο Go backend) ούτε Auth (χρειάζεται Better Auth κ.λπ.).
