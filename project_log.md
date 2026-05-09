@@ -111,3 +111,20 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-18 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `design/order_lifecycle.md` | Προσθήκη "Refunded" state στο state machine |
+| `design/staff_workflow.md` | Normalization όρων (greeklish → ελληνικά), προσθήκη backlink |
+| `design/table - tab architecture.md` | Μετατροπή ASCII diagram σε Mermaid flowchart, προσθήκη backlinks & validation task |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/knowledge-health.md` | Ενημέρωση ημερήσιας αναφοράς & metrics |
+| `meta/active_investigations.md` | Εξαγωγή & αρχειοθέτηση αποφάσεων |
+| `meta/decision-log.md` | Καταγραφή νέων αποφάσεων (DB, Brand Name, GTM Add-on) |
+| `architecture/technical_stack.md` | Ενημέρωση πληροφοριών βάσης δεδομένων (Turso) |
+| `business/logo and branding.md` | Ενημέρωση shortlist ονομάτων |
+| `business/market_strategy.md` | Προσθήκη στρατηγικής "Add-on" vs PDA |
