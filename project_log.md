@@ -111,3 +111,14 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-18
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+| --- | --- |
+| `business/logo and branding.md` | Κανονικοποίηση, μετάφραση σε Ελληνικά, προσθήκη Mermaid mindmap, προσθήκη actionable validation tasks. |
+| `meta/active_investigations.md` | Αφαίρεση Question 1 (Database), προσθήκη Tech Lead σύνοψης, προσθήκη νέας ερώτησης χρηματοδότησης. |
+| `architecture/technical_stack.md` | Ενημέρωση με την απόφαση για Local-First Database Strategy. |
+| `meta/decision-log.md` | Καταγραφή της απόφασης Database / Local-First Strategy. |
+| `meta/user-needs.canvas` & `meta/business-model.canvas` | Ενημέρωση ημερομηνιών Last Updated. |
