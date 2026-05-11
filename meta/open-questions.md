@@ -14,7 +14,6 @@
 
 ## Οικονομικά & Τιμολόγηση (Financials & Pricing)
 - Πόσο θα κοστίσει το MVP (Minimum Viable Product – Ελάχιστο Βιώσιμο Προϊόν) (ανάπτυξη + λειτουργία) και σε πόσο χρόνο ολοκληρώνεται; → [[COGS, CACs, overheads]]
-- Startup/VC funding (10-20% equity) ή Indie SaaS/Bootstrapping — ποιο μοντέλο χρηματοδότησης (Funding Model) υιοθετούμε; → [[pricing_model#4. Δίλημμα Χρηματοδότησης]]
 - Ποιες θα είναι οι διαφορές των βαθμίδων (Tiers) μεταξύ τους στο μοντέλο κλιμακωτής συνδρομής (Tiered Subscription Model); → [[pricing_model#Tiered subscription]]
 - Θα χρεώνουμε επιπλέον (Extra Fee) τη συντήρηση (Maintenance) στα tier models;
 - Συζήτηση για κόστη λειτουργίας (Overheads) για να δούμε επιγραμματικά τα συνολικά, καθώς και για μάρκετινγκ (Marketing) και ερωτηματολόγιο (Questionnaire) → [[COGS, CACs, overheads#Overheads]] / [[Questionnaire]]

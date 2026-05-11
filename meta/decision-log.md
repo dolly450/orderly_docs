@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-18 - Βάση Δεδομένων & Local-First Επιλογή (Database & Local-First)
+- **Απόφαση / Σύνοψη:** Επελέγη το Turso/libSQL ως η κύρια βάση δεδομένων για offline/local-first υποστήριξη, με το PocketBase ως εναλλακτική. Απορρίφθηκαν η Supabase και το CockroachDB λόγω υψηλών απαιτήσεων σε πόρους (RAM, CPU).
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Θα χρειαστεί custom υλοποίηση Realtime (SSE) στο Golang backend, custom Authentication (μέσω Better Auth + JWT) και η αρχιτεκτονική πρέπει να είναι "database-per-tenant" καθώς δεν υποστηρίζεται Row Level Security (RLS) εγγενώς.
