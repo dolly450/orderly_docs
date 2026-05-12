@@ -111,3 +111,21 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-18 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `architecture/technical_stack.md` | Προσθήκη Turso local-first info και validation task. |
+| `business/logo and branding.md` | Κανονικοποίηση (cleanup greeklish) και προσθήκη status για brand name. |
+| `business/market_strategy.md` | Προσθήκη στρατηγικής Direct Sales vs Add-on και validation tasks. |
+| `meta/active_investigations.md` | Καθαρισμός και αρχειοθέτηση απαντημένων ερωτήσεων 1, 3, 5. |
+| `meta/decision-log.md` | Προσθήκη νέων αποφάσεων για DB, Brand Name και Sales strategy. |
+| `meta/business-model.canvas` | Ενημέρωση Last Updated date. |
+| `meta/user-needs.canvas` | Ενημέρωση Last Updated date. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** Διατηρούνται 2 ανοιχτές. (Καθαρίστηκαν 3)
+- **Νέα tasks (- [ ]):** 2 validation tasks προστέθηκαν
+- **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)
