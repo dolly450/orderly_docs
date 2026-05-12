@@ -145,6 +145,7 @@ mindmap
 - [ ] Ερωτηματολόγιο (5-6 απλές ερωτήσεις τύπου ΝΑΙ/ΟΧΙ και πολλαπλής επιλογής, θα το πλασάρουμε σε φίλους, groups) → [[Questionnaire]]
 - [ ] Demo MVP → [[roadmap]]
 - [ ] Pitch σε μαγαζιά πιλοτικά (στην αρχή ως δωρεάν service) + για traction (**Προϋπόθεση:** να γίνει πρώτα το demo και το ερωτηματολόγιο, ώστε να έχουμε πιο πειστικό approach) → [[../pitch/deck - φαμφάρες type shit#6. Traction]]
+- [ ] Customer interview (Validation Experiment): Επικοινωνία με 5 F&B Managers για παρουσίαση του "Fake MVP" (Zero-friction ordering & Direct Sales add-on) - Στόχος: 3/5 θετικές απαντήσεις. [[bot_questions.md#Στρατηγική Προϊόντος: Αντικατάσταση ή Ενσωμάτωση PDA;]]
 
 ### Ορισμοί Αγοράς (Market Definitions)
 - **Total market:** Όλοι όσοι έχουν το πρόβλημα που εμείς λύνουμε.
@@ -153,6 +154,7 @@ mindmap
 
 ### Implementation Logic: Phase 1 Sales (Acquiring First 10 Customers)
 - **Primary Method:** Direct Sales (Walking In).
+- **Product Strategy (Αντικατάσταση vs Ενσωμάτωση):** Δεν προσπαθούμε να αντικαταστήσουμε τα υπάρχοντα PDA των σερβιτόρων αμέσως. Λειτουργούμε ως **self-service layer** (add-on) που στέλνει παραγγελίες στο υπάρχον POS για να έχουμε το μικρότερο friction adoption.
 - **Target Profiles:** Self-service cafes, beach bar counters and festival/event bars with visible queues.
 - **Pitch Focus:** Time saved, queue reduction, more orders/revenue, fewer order mistakes and easier staff coordination.
 - **Conversion Strategy:** Provide a free, no-obligation "Fake MVP" demo directly on the venue owner's mobile device to demonstrate the zero-friction experience.

@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-04-18
+- **Βελτίωση:** Καθαρισμός του `active_investigations.md` και καταγραφή κρίσιμων αποφάσεων στο `decision-log.md` (Turso DB, Brand Name status, Direct Sales add-on).
+- **Εκκρεμότητες:** Ανοιχτά Validation Experiments με F&B Managers. Εκκρεμεί απόφαση για Branding.
