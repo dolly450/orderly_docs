@@ -111,3 +111,21 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-05-13 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Αρχειοθέτηση ερώτησης Database, προσθήκη νέας για myDATA API, διατήρηση 5 ενεργών. |
+| `meta/decision-log.md` | Καταγραφή απόφασης για Turso/libSQL και offline-first sync. |
+| `architecture/technical_stack.md` | Προσθήκη LLM-readable specs για Turso και SSE. |
+| `notes/Orderly's path to dominating Greek hospitality ordering - claude.md` | Εξαγωγή insights, προσθήκη 'Επιπτώσεις για την ομάδα' και tasks. |
+| `meta/knowledge-health.md` | Ενημέρωση health metrics για σήμερα. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις:** 1
+- **Νέα tasks (- [ ]):** 3
+- **Διπλότυπα κανονικοποιημένα:** 2
