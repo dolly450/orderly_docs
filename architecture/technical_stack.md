@@ -34,3 +34,21 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+## 5. Βάση Δεδομένων & Συγχρονισμός (Database Specs)
+
+- **Database Engine:** Turso / libSQL.
+- **ORM:** Drizzle ORM για type-safe queries και migrations στο SvelteKit.
+- **Offline/Local Strategy:** Χρήση Embedded Replicas. Τα reads γίνονται τοπικά (microsecond latency) και τα writes συγχρονίζονται με το Turso cloud.
+- **Realtime / SSE:** Δεν υπάρχει native realtime (όπως π.χ. στο Supabase). Υλοποίηση αυτόνομου SSE (Server-Sent Events) στο backend ή SvelteKit endpoint.
+- **Auth:** Δεν χρησιμοποιούμε built-in auth της DB, αλλά εξωτερικό πάροχο (π.χ. Better Auth ή custom JWT) περνώντας auth token στο libSQL driver.
+
+### Οπτικοποίηση
+
+```mermaid
+flowchart TD
+    A[Client] --> B[SvelteKit Backend]
+    B --> C[(Local Embedded Replica / libSQL)]
+    C -- Sync --> D[(Turso Cloud DB)]
+    B -- SSE --> A
+```

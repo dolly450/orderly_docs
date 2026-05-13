@@ -141,3 +141,13 @@ The ideas below are ranked by a composite of **impact** (revenue potential, diff
 ## Conclusion
 
 Orderly's opportunity sits at the intersection of three forces: a Greek market with **no capable local QR ordering platform**, incoming fiscal digitization mandates that raise the bar for compliance, and beach/festival venue types that global competitors completely ignore. The most defensible strategy is not to compete feature-for-feature with me&u or Toast but to build the **only platform purpose-built for Mediterranean outdoor hospitality** — zone-based operations, offline-first architecture, native Greek fiscal compliance, multilingual tourist UX, and weather-adaptive intelligence. The features competitors aren't building — predictive wait times, AI-generated specials from live inventory, smart staff routing across beach zones, round-based bar ordering, seasonal lifecycle management — aren't absent because they're technically hard. They're absent because no platform has focused on this venue type. That focus is Orderly's moat.
+
+## Επιπτώσεις για την ομάδα
+- **Compliance First:** Η ενσωμάτωση με το myDATA REST API και η δημιουργία order slips (τύπου 8.6) πρέπει να είναι προτεραιότητα και κύριο πλεονέκτημα πώλησης, ειδικά λόγω των ελέγχων (Theros audit campaign).
+- **Offline-First PWA:** Για τα beach bars, η λύση πρέπει να περιλαμβάνει service workers για caching του μενού και PWA ώστε να είναι αξιόπιστη ανεξαρτήτως σήματος internet.
+- **Έξυπνη Τιμολόγηση & Upselling:** Η αξιοποίηση δεδομένων για δυναμική τιμολόγηση (dynamic pricing/happy hours) και weather-adaptive forecasting μπορεί να αυξήσει τον μέσο όρο απόδειξης κατά 15%.
+
+## Επόμενες Ενέργειες
+- [ ] Σχεδιασμός αρχιτεκτονικής για ενσωμάτωση myDATA REST API (έκδοση παραστατικών τύπου 8.6).
+- [ ] Υλοποίηση Service Workers στο SvelteKit για PWA caching του μενού (εικόνες/τιμές).
+- [ ] Πειραματική προσθήκη "Weather-aware" recommendation engine.

@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-05-13 - Βάση Δεδομένων & Τοπικός Συγχρονισμός (Database & Local Sync)
+- **Απόφαση / Σύνοψη:** Επιλογή του Turso / libSQL (Developer tier) για την υποστήριξη embedded replicas και offline-first λειτουργικότητας με microsecond reads τοπικά.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Χρήση Drizzle ORM με libSQL client για SvelteKit. Δεν υπάρχει native realtime SSE, οπότε θα το υλοποιήσουμε αυτόνομα.

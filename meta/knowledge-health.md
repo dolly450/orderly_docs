@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-05-13
+- **Βελτίωση:** Εξαγωγή actionable insights από τις σημειώσεις του Claude για στρατηγική στην Ελλάδα.
+- **Εκκρεμότητες:** Ενσωμάτωση myDATA API και offline-first PWA architecture.

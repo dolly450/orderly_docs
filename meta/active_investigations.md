@@ -4,50 +4,6 @@
 
 ### Ερωτήσεις Σήμερα – 2026-04-09
 
-**1. Ερώτηση:** Ποια είναι η βέλτιστη λύση βάσης δεδομένων (Database) δεδομένου του Local-First requirement (τοπική αντιγραφή & fallback sync); (Η Supabase παραμένει υπό διερεύνηση, μαζί με λύσεις όπως το CockroachDB).
-**Γιατί είναι κρίσιμη:** Ο στόχος είναι τα αιτήματα του μαγαζιού να χτυπάνε πρώτα τοπικά (μέσω τοπικού WiFi / συσκευής) για ταχύτητα και ανθεκτικότητα σε πτώση internet, και έπειτα να γίνεται sync στο cloud.
-**Επίπεδο:** High
-**Πεδίο:** Development/Architecture
-**Απάντηση:** →
-
-```
-**Η καλύτερη λύση για το local-first QR ordering app σου (SvelteKit + Golang) είναι **Turso/libSQL** ή **PocketBase** (με SQLite/Turso backend).** Αυτές ταιριάζουν απόλυτα στο μοντέλο: ελαφριά εγκατάσταση σε container ή single binary, τρέχουν σε Raspberry Pi / παλιό laptop / Android (με Termux), ελάχιστοι πόροι, αυτόματο sync με cloud και fallback.
-
-### Γρήγορη αξιολόγηση Supabase & CockroachDB
-- **Supabase local/self-hosted**:  
-  Υποστηρίζεται πλήρως με Docker Compose (clone repo → `.env` → `docker compose up`). Έχει Postgres + PostgREST + Auth + Realtime + Storage + Edge Functions – ιδανικό αν θέλεις **ακριβώς** το ίδιο stack με το cloud Supabase.  
-  **Μειονεκτήματα για το μοντέλο σου**: Το stack είναι βαριά (πολλαπλά containers, συχνά >500MB-1GB+ RAM idle). Δεν είναι optimized για embedded/low-power συσκευές (Pi Zero / παλιό Android). Η εγκατάσταση είναι scriptable αλλά όχι «ένα αρχείο». Το hybrid local ↔ cloud sync **δεν** είναι built-in (χρειάζεσαι manual logical replication ή custom CDC). Το local dev CLI **δεν** προορίζεται για production/exposed traffic.  
-  → Κατάλληλο μόνο αν έχεις beefy laptop/Pi 5+ και δεν σε νοιάζει η πολυπλοκότητα.
-
-- **CockroachDB (single-node)**:  
-  Μπορεί να τρέξει σε Pi 4/5 (ARM64 binaries ή Docker). Είναι distributed SQL, Postgres-wire compatible, και υποστηρίζει native multi-node (local + cloud).  
-  **Μειονεκτήματα**: Πολύ πιο βαρύ από SQLite (Raft consensus, cache 25% RAM, συστάσεις 4+ vCPU / 4GB+). Idle CPU υψηλό σε tests. Εγκατάσταση πιο περίπλοκη για μη-τεχνικό ιδιοκτήτη. Δεν είναι «ελαφριά» για παλιό κινητό ή Pi Zero.  
-  → Απορρίπτεται για το συγκεκριμένο local-first requirement.
-
-### Ιδανικές ελαφριές distributed/edge λύσεις (2026)
-| Λύση                  | Εγκατάσταση (owner)              | Μέγεθος / Πόροι (Pi / low-end) | Cloud Sync / Fallback          | Go support / Distributed | Σχόλια για QR app |
-|-----------------------|----------------------------------|--------------------------------|--------------------------------|--------------------------|-------------------|
-| **Turso / libSQL** (Embedded Replicas) | Docker (`ghcr.io/tursodatabase/libsql-server`) ή single binary / embed σε Go app | ~10-50MB RAM, SQLite file | Built-in (local replica ↔ Turso cloud primary, auto-sync, offline-first) | Εξαιρετικό (libsql/client-go) + distributed edge | **Καλύτερη επιλογή** για exact μοντέλο σου |
-| **PocketBase**        | Single 15MB binary (curl → run) | <50MB RAM, τρέχει σε Pi 3/4 | Litestream (S3) ή Turso module | Native Go, extend με hooks | Απλότατο, έχει built-in Auth/Realtime/Storage |
-| **SQLite + Litestream** | Embed σε Go ή Docker + binary | Ελάχιστο (SQLite ~600KB) | Streaming WAL → S3 (disaster recovery + restore) | Pure Go driver | Ultra-minimal, zero-deps |
-| **rqlite / dqlite**   | Single binary (Raft)            | Πολύ ελαφρύ                    | Raft cluster (local + cloud nodes) | HTTP API / drivers | Καλή για full distributed αλλά πιο complex |
-| **Postgres Docker**   | `docker run postgres` + script  | ~200-400MB RAM                 | Logical replication → cloud Postgres | Πλήρες | Αν χρειάζεσαι Postgres features |
-
-#### 1. Turso / libSQL (top recommendation)
-- **Embedded Replicas**: Το local DB είναι απλό SQLite file (ή libSQL server) που συγχρονίζεται αυτόματα με το cloud Turso. Microsecond reads τοπικά, writes πηγαίνουν σε cloud + local.
-- Εγκατάσταση: Ένα Docker container ή `turso dev` / `sqld` binary. Το script που δίνεις στον ιδιοκτήτη μπορεί να είναι `curl -sSL https://get.turso.sh | sh && turso db ...`.
-- Τρέχει παντού: Pi, Android (Termux), ακόμα και mobile SDKs.
-- Cloud fallback: Το app σου (Go) χρησιμοποιεί `file:local.db?syncUrl=libsql://...` → αυτόματο.
-- Distributed edge: Ακριβώς αυτό που ζητάς.
-
-#### 2. PocketBase (πιο «plug & play»)
-- Ένα αρχείο `pocketbase` → `./pocketbase serve`. Έχει admin UI, collections (tables), Auth, Realtime (SSE), File storage – όλα σε SQLite.
-- Χρήστες το τρέχουν σε Raspberry Pi χωρίς πρόβλημα (ακόμα και Pi 3).
-- Για sync: Ενσωμάτωσε Litestream ή Turso module (υπάρχουν ready modules).
-- Ιδανικό για Golang (extend με Go hooks αν χρειάζεσαι custom logic).
-
-#### 3. SQLite + Litestream (minimalist)
-- Το Go app σου χρησιμοποιεί `database/sql` + `modernc.org/sqlite`.
 - Litestream τρέχει ως sidecar και στέλνει WAL σε S3 (ή MinIO local-to-cloud). Επαναφορά σε cloud instance σε δευτερόλεπτα.
 - Container: Ένα multi-stage Docker με Go binary + Litestream (~20-30MB image).
 
@@ -148,7 +104,7 @@
 
 ```
 
-**3. Ερώτηση:** Ποιο θα είναι το όνομα του startup μας;
+**Τίτλος Έρευνας:** Ποιο θα είναι το όνομα του startup μας;
 **Γιατί είναι κρίσιμη:** Έχουμε καταλήξει ότι το "Orderly" είναι πολύ safe και ότι χρειαζόμαστε κάτι που να εκπέμπει ταχύτητα και καλοκαίρι. Χωρίς brand name δυσκολευόμαστε να φτιάξουμε τα pitch decks.
 **Επίπεδο:** High
 **Πεδίο:** Branding
@@ -157,7 +113,7 @@
 **Prompt για AI έρευνα (copy-paste ready):**
 > Φτιάχνουμε ένα B2B2C startup για QR ordering σε beach bars, χωρίς app install (web). Ψάχνουμε για 1-3 συλλαβές brand names που να είναι "Airplane test approved" (να καταλαβαίνει κάποιος πώς γράφεται αν το ακούσει στο τηλέφωνο). Δώσε μου 5 επιλογές με διαθέσιμα .io ή .com domains.
 
-**4. Ερώτηση:** Πώς θα διαχειριστούμε την επιστροφή χρημάτων (refunds) και το payment routing;
+**Τίτλος Έρευνας:** Πώς θα διαχειριστούμε την επιστροφή χρημάτων (refunds) και το payment routing;
 **Γιατί είναι κρίσιμη:** Πώς θα διαχειριστούμε την επιστροφή χρημάτων (refunds) αν ο πελάτης ακυρώσει ή αν το προϊόν δεν υπάρχει, χωρίς να έχουμε εμείς την ευθύνη των χρημάτων (liability);
 **Επίπεδο:** High
 **Πεδίο:** Business/Finance
@@ -165,7 +121,7 @@
 
 **Prompt για AI έρευνα (copy-paste ready):**
 > Είμαστε ένα marketplace ordering platform όπου ο πελάτης πληρώνει μέσω κινητού. Ποιος είναι ο καλύτερος τρόπος να γίνει το payment routing (π.χ. Stripe Connect, Viva Wallet) ώστε τα χρήματα να πηγαίνουν απευθείας στο κατάστημα και οι ακυρώσεις να βαρύνουν εκείνο, κρατώντας εμείς μόνο ένα fee;
-**5. Ερώτηση:** Στρατηγική Προϊόντος: Αντικατάσταση ή Ενσωμάτωση PDA;
+**Τίτλος Έρευνας:** Στρατηγική Προϊόντος: Αντικατάσταση ή Ενσωμάτωση PDA;
 **Γιατί είναι κρίσιμη:** Αν προσπαθήσουμε να αντικαταστήσουμε τα υπάρχοντα PDA, μπαίνουμε σε ευθεία σύγκρουση με τους παρόχους POS. Αν ενσωματωθούμε, λειτουργούμε ως add-on. Αυτό καθορίζει το Phase 2 MVP.
 **Επίπεδο:** High
 **Πεδίο:** Marketing/Sales
@@ -175,7 +131,7 @@
 > Είμαστε startup παραγγελιοληψίας με QR. Στην ελληνική αγορά, είναι καλύτερο να προσπαθήσουμε να αντικαταστήσουμε τα υπάρχοντα PDA των σερβιτόρων με δικό μας interface (Staff Dashboard), ή να στέλνουμε τις παραγγελίες κατευθείαν στο υπάρχον POS (π.χ. Epsilon Net) και να λειτουργούμε μόνο ως self-service layer; Ποιο έχει το μικρότερο friction adoption;
 
 
-**6. Ερώτηση:** Διαχωρισμός χαρακτηριστικών στις βαθμίδες συνδρομής (Tiered Pricing Features)
+**Τίτλος Έρευνας:** Διαχωρισμός χαρακτηριστικών στις βαθμίδες συνδρομής (Tiered Pricing Features)
 **Γιατί είναι κρίσιμη:** Έχουμε ορίσει tiers (€0/€19/€39/€69) αλλά πρέπει να αποφασίσουμε ποια ακριβώς features μπαίνουν πού για να υπάρχει σωστό upselling motivation.
 **Επίπεδο:** Medium
 **Πεδίο:** Business
@@ -226,3 +182,13 @@ Insights / Επιπτώσεις: Ξεκινάμε με SvelteKit Cloud-only (V1)
 **Reference:**
 - `meta/decision-log.md`
 - `architecture/technical_stack.md`
+
+
+**Τίτλος Έρευνας:** Ενσωμάτωση myDATA API (ΦΗΜΑΣ)
+**Γιατί είναι κρίσιμη:** Τα ελληνικά beach bars υφίστανται αυστηρούς ελέγχους (Theros campaign). Αν η πλατφόρμα μας υποστηρίζει αυτόματη έκδοση παραστατικών τύπου 8.6 και MARK, αποκτάμε ένα τεράστιο ανταγωνιστικό πλεονέκτημα και μειώνουμε τον φόβο ελέγχου.
+**Επίπεδο:** High
+**Πεδίο:** Compliance/Development
+**Απάντηση:** →
+
+**Prompt για AI έρευνα (copy-paste ready):**
+> Σχεδιάζουμε ένα SvelteKit app παραγγελιοληψίας για ελληνικά beach bars. Πώς μπορούμε να ενσωματώσουμε το myDATA REST API της ΑΑΔΕ για να εκδίδουμε αυτόματα αποδείξεις (παραστατικά τύπου 8.6), να λαμβάνουμε MARK αριθμό και να παράγουμε QR codes για τις αποδείξεις; Ποιες είναι οι βασικές τεχνικές προκλήσεις και ποια είναι τα απαραίτητα B2B credentials;
