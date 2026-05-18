@@ -1,4 +1,4 @@
-# Business Model Canvas — Orderly
+# Business Model Canvas — Το προϊόν μας
 
 Πλήρες Business Model Canvas βάσει του τρέχοντος προϊόντος και του στρατηγικού πλάνου.
 
