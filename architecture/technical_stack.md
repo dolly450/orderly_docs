@@ -34,3 +34,6 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+### Local-First Database (Strategic Research)
+Επιλέχθηκε το Turso/libSQL για μελλοντικές local-first ανάγκες (embedded replicas) λόγω χαμηλών απαιτήσεων πόρων, ωστόσο το SvelteKit cloud-first stack παραμένει η τρέχουσα υλοποίηση.

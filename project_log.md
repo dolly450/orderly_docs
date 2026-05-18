@@ -111,3 +111,17 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-05-18 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+- `meta/active_investigations.md`: Αφαίρεση Q1 και Q5, προσθήκη νέας ερώτησης.
+- `architecture/technical_stack.md`: Ενημέρωση DB tech.
+- `business/market_strategy.md`: Ενημέρωση PDA strategy + Mermaid diagram.
+- `meta/decision-log.md`: Νέες εγγραφές.
+- `business/logo and branding.md`: Ελληνικά, formatting, new task.
+- `pitch/pitch_strategy.md`: Neutral naming.
+- `business/model.md`: Neutral naming.
+- `business/Questionnaire.md`: New task.
+- `meta/user-needs.canvas` & `meta/business-model.canvas`: Update dates.
+- `meta/knowledge-health.md`: Ενημέρωση metrics.

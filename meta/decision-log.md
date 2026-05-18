@@ -13,3 +13,13 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-05-18 - Επιλογή Local-First Database
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε το Turso/libSQL για μελλοντικές local-first ανάγκες (embedded replicas) λόγω χαμηλών απαιτήσεων πόρων, ωστόσο το SvelteKit cloud-first stack παραμένει η τρέχουσα υλοποίηση.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack]]
+- **Σημείωση για Implementation:** Χρήση Turso/libSQL για embedded replicas στο μέλλον.
+
+### 2026-05-18 - Στρατηγική Αντικατάστασης PDA
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε η στρατηγική direct sales ως add-on self-service layer και όχι η απευθείας αντικατάσταση PDAs, για αποφυγή σύγκρουσης με παρόχους POS.
+- **Αρχεία που ενημερώθηκαν:** [[business/market_strategy]]
+- **Σημείωση για Implementation:** Θα λειτουργούμε ως add-on, όχι ως αντικατάσταση του υπάρχοντος συστήματος POS.
