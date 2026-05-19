@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-05-19 - Στρατηγική Βάσης Δεδομένων (Database Strategy) & Fallback
+- **Απόφαση / Σύνοψη:** Επιλογή Turso (libSQL) cloud ως κύρια βάση δεδομένων με Drizzle ORM και custom Server-Sent Events (SSE). Αποτελεί τη βάση για μελλοντικά embedded replicas και local-first υλοποίηση με το Tauri V2.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[meta/active_investigations.md]]
+- **Σημείωση για Implementation:** Θα χρησιμοποιηθεί το Developer tier της Turso (database-per-tenant isolation χωρίς native RLS) και το Drizzle ORM στο SvelteKit Edge. Δεν έχει native realtime, οπότε θα υλοποιηθεί SSE λογική στο server.

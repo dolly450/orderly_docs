@@ -1,28 +1,28 @@
 # Σχεδιασμός Ροής Παραγγελίας (Ordering Flow Design)
 
-> ⚠️ **Αυτό το αρχείο χρειάζεται συμπλήρωση** — λείπει η λεπτομερής ροή παραγγελίας.
+Αυτό το αρχείο περιγράφει τη λεπτομερή τεχνική ροή μιας παραγγελίας, από τη στιγμή που ο πελάτης σκανάρει το QR code μέχρι την παράδοση.
 
 ### Οπτικοποίηση
 
 ```mermaid
 sequenceDiagram
-    participant C as Customer (PWA)
-    participant S as Server (SvelteKit)
-    participant K as Kitchen Display
-    participant P as POS / Fiscal
+    participant C as Πελάτης (Web App)
+    participant S as Διακομιστής (SvelteKit)
+    participant K as Οθόνη Κουζίνας (Kitchen Display)
+    participant P as Ταμειακό Σύστημα (POS / Fiscal)
 
-    C->>S: Scan QR & Fetch Menu
-    S-->>C: Return Menu (LLM/Google Translated Cached)
-    C->>S: Submit Order (Cart items)
-    S->>S: Create Order (Status: Pending)
-    S->>P: Send to POS / Tax Verification
-    P-->>S: Confirmed & Receipt URL
-    S->>K: Emit WebSocket: New Order
-    S-->>C: Order Success & Estimated Time
-    K->>S: Update Status (Preparing)
-    S-->>C: WebSocket/Poll: Preparing
-    K->>S: Update Status (Ready/Delivered)
-    S-->>C: WebSocket/Poll: Ready!
+    C->>S: Σκανάρισμα QR & Αίτημα Μενού (Scan QR & Fetch Menu)
+    S-->>C: Επιστροφή Μενού (Return Menu - Cached / Translated)
+    C->>S: Υποβολή Παραγγελίας (Submit Order)
+    S->>S: Δημιουργία Παραγγελίας (Create Order - Status: Pending)
+    S->>P: Αποστολή στο POS / Φορολογικός Έλεγχος (Tax Verification)
+    P-->>S: Επιβεβαίωση & URL Απόδειξης (Confirmed & Receipt URL)
+    S->>K: Εκπομπή SSE: Νέα Παραγγελία (Emit SSE: New Order)
+    S-->>C: Επιτυχία Παραγγελίας & Εκτιμώμενος Χρόνος (Order Success & Estimated Time)
+    K->>S: Ενημέρωση Κατάστασης (Update Status - Preparing)
+    S-->>C: SSE: Ετοιμάζεται (SSE: Preparing)
+    K->>S: Ενημέρωση Κατάστασης (Update Status - Ready)
+    S-->>C: SSE: Έτοιμο προς παράδοση (SSE: Ready!)
 ```
 
 ## Σχετικές Σημειώσεις
@@ -34,4 +34,5 @@ sequenceDiagram
 
 ## Επόμενες Ενέργειες
 
-- [ ] Σχεδιασμός λεπτομερούς ordering flow (από scan QR μέχρι παράδοση) με τεχνικές λεπτομέρειες API calls
+- [ ] Σχεδιασμός λεπτομερούς API specification (OpenAPI ή τύποι) για το πως γίνεται η υποβολή της παραγγελίας από το Web App στο SvelteKit.
+- [ ] Επιβεβαίωση χρόνων απόκρισης (latency) για το POS API integration.

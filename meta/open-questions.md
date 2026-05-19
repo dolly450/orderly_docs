@@ -41,4 +41,3 @@
 - Σε fundraising mentors: "Ποια traction metrics χρειάζονται για να έχει νόημα pre-seed ή accelerator;"
 - Σε product mentors: "Ποιο feature πρέπει να κόψουμε για να βγει MVP πιο γρήγορα χωρίς να χαθεί το value proposition;"
 - Σε hotel mentors: "Μπαίνουμε σε ξενοδοχεία μέσω pool bar/restaurant pilot ή μέσω κεντρικής συμφωνίας με όμιλο;"
-- Σε POS/Softone mentors: "Ποιο είναι το ελάχιστο integration που χρειάζεται για να μη μπλοκάρει πραγματικό κατάστημα;"
