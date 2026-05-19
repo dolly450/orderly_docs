@@ -111,3 +111,26 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-05-19 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `notes/introduction to fund raising.md` | Καθαρισμός, μετάφραση αγγλικών όρων, προσθήκη tasks και ενότητας "Επιπτώσεις για την ομάδα" |
+| `architecture/ordering-flow.md` | Βελτίωση και μετάφραση του Mermaid diagram, προσθήκη API/Latency validation tasks |
+| `business/Questionnaire.md` | Κανονικοποίηση όρων, διόρθωση μορφοποίησης και ενοποίηση των tasks |
+| `meta/active_investigations.md` | Αφαίρεση ερώτησης Database, προσθήκη νέας για POS integration (σύνολο 5) |
+| `architecture/technical_stack.md` | Εξαγωγή LLM-readable απόφασης για τη βάση δεδομένων (Turso/libSQL + SSE) |
+| `meta/decision-log.md` | Αρχειοθέτηση τεχνικής απόφασης Database |
+| `meta/open-questions.md` | Αφαίρεση ερώτησης POS integration |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας |
+
+### Στατιστικά σήμερα
+- **Ενημερωμένα αρχεία:** 9
+- **Νέες ερωτήσεις (bot_questions):** 1 (εξαγωγή από open-questions)
+- **Νέα tasks (- [ ]):** 4
+- **Διπλότυπα κανονικοποιημένα:** 0
+- **Νέα Mermaid diagrams:** 1 (ενημέρωση/βελτίωση)
+- **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)
