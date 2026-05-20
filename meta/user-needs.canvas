@@ -1,70 +1,533 @@
 {
-	"nodes":[
-		{"id":"title","type":"text","text":"# Χάρτης Αναγκών Χρηστών (User Needs Map) - Last Updated: 2026-04-18","x":-392,"y":-640,"width":1600,"height":80},
-		{"id":"56f4fe42b6271904","type":"text","text":"καταστηματάρχης (admin)","x":-850,"y":-460,"width":227,"height":60,"color":"6"},
-		{"id":"2b383ac329fa3bda","type":"text","text":"να παραγγείλει ανά πάσα στιγμή","x":-671,"y":-220,"width":270,"height":60},
-		{"id":"528eb3576c8133e1","type":"text","text":"να βλέπει το μενού","x":-482,"y":-110,"width":172,"height":60},
-		{"id":"314d6da52311d59a","type":"text","text":"**χρήστης (πελάτης του πελάτη)**","x":-392,"y":-469,"width":280,"height":60,"color":"6"},
-		{"id":"091d929a7c02a5e7","type":"text","text":"σερβιτόρος","x":190,"y":-529,"width":118,"height":60,"color":"6"},
-		{"id":"aef23e9b99220d48","type":"text","text":"να ξέρει ποιος χρειάζεται εξυπηρέτηση","x":60,"y":-341,"width":210,"height":60},
-		{"id":"f73c2afd24b0272c","type":"text","text":"να βλέπει την κατάσταση των τραπεζιών γρήγορα","x":100,"y":-250,"width":218,"height":60},
-		{"id":"1fbbd0feca262cda","type":"text","text":"να μπορεί να επεξεργάζεται το τράπεζι (λογαριασμό)","x":190,"y":-140,"width":235,"height":60},
-		{"id":"90c1fcf98501ab79","type":"text","text":"να κρατά σημειώσεις για τους συναδέλφους","x":331,"y":-41,"width":195,"height":60},
-		{"id":"2ddad24fcdf18156","type":"text","text":"να έχει δίκαιο φόρτο σε σχέση με τους συναδέλφους","x":457,"y":89,"width":239,"height":60},
-		{"id":"a107d57f222c4496","type":"text","text":"διαχείριση κρατήσεων","x":378,"y":-252,"width":196,"height":60},
-		{"id":"persona1","type":"text","text":"## 🏖️ Persona 1: Ιδιοκτήτης Beach Bar\n\n**Προφίλ:** Γιάννης, 42, διαχειρίζεται beach bar 80 τραπεζιών σε νησί.\n**Πόνοι:** Ουρές, γλωσσικό φράγμα με τουρίστες, αργή πληρωμή, έλλειψη internet τις ώρες αιχμής.\n**Στόχοι:** Ταχύτερη εξυπηρέτηση, λιγότερο προσωπικό, αύξηση τζίρου.\n→ [[market_strategy]] [[v1_scope]]","x":1400,"y":-390,"width":400,"height":280,"color":"1"},
-		{"id":"persona2","type":"text","text":"## 🎪 Persona 2: Διοργανωτής Festival\n\n**Προφίλ:** Μαρία, 35, διοργανώνει food festivals 2-3 φορές/χρόνο.\n**Πόνοι:** Τεράστιες ουρές, χάος παραγγελιών, αδυναμία tracking πωλήσεων.\n**Στόχοι:** Self-service ordering, batch prep ώστε να εξυπηρετεί 500+ πελάτες/ώρα.\n→ [[staff_workflow]] [[Questionnaire]]","x":1400,"y":-10,"width":400,"height":300,"color":"4"},
-		{"id":"needs1","type":"text","text":"## Ανάγκες Beach Bar\n\n1. **Πολυγλωσσικό μενού** — 80% πελατών τουρίστες\n2. **Offline λειτουργία** — κακό σήμα στο νησί\n3. **Γρήγορη πληρωμή** — χωρίς αναμονή ταμείου\n4. **Ειδοποιήσεις πελατών** — status παραγγελίας\n5. **Εποχιακή τιμολόγηση** — pause χειμώνα\n→ [[features]] [[pricing_model#3. Εποχιακή Στρατηγική]]","x":1830,"y":-428,"width":300,"height":378,"color":"6"},
-		{"id":"needs2","type":"text","text":"## Ανάγκες Festival\n\n1. **Self-service ordering** — χωρίς σερβιτόρους\n2. **Queue management** — μείωση ουρών\n3. **Batch preparation** — ομαδική ετοιμασία\n4. **Προσωρινό setup** — plug & play\n5. **Analytics σε πραγματικό χρόνο** — live πωλήσεις\n→ [[staff_workflow]] [[v1_scope]]","x":1830,"y":-10,"width":300,"height":330,"color":"6"},
-		{"id":"solutions","type":"text","text":"## 🔧 Υποψήφιες Λύσεις\n\n| Λύση | MVP | Metric Επιτυχίας |\n|---|---|---|\n| QR Digital Menu | ✅ Ναι | >70% scan rate |\n| Ordering & Cart | ✅ Ναι | >50% conversion |\n| Order Status | ✅ Ναι | <2 ερωτήσεις/ώρα |\n| Multilingual Menu | ✅ Ναι | 80% γλωσσών |\n| Offline Mode | ✅ Ναι | 99% uptime |\n| Batch Prep Logic | ✅ Ναι | +30% throughput |\n| Call Button | ✅ Ναι | <3s response |\n| Online Payment | ❌ Phase 2 | — |\n| AI Chatbot | ❌ Phase 3+ | — |\n| Booking System | ❌ Phase 2 | — |\n| Live Capacity | ❌ Phase 3+ | — |\n→ [[v1_scope]] [[roadmap]]","x":2140,"y":-390,"width":440,"height":710,"color":"5"},
-		{"id":"3c2714dd98248c5e","type":"text","text":"να ξέρει πότε θα έρθει το φαγητό του","x":-480,"y":19,"width":181,"height":60},
-		{"id":"393df4c495d46be5","type":"text","text":"να μη περιμένει σε ουρά (self service)","x":-323,"y":119,"width":170,"height":60},
-		{"id":"7d4223f6d6f66f30","type":"text","text":"να βλέπει το μενού στη γλώσσα του","x":-284,"y":-140,"width":172,"height":60},
-		{"id":"a8f955bb79ddabe6","type":"text","text":"να ξέρει τι είναι διαθέσιμο (απόθεμα)","x":-198,"y":-270,"width":186,"height":60},
-		{"id":"977c085c6db85065","type":"text","text":"να καλεί σερβιτόρο","x":-600,"y":-330,"width":204,"height":50},
-		{"id":"8fdf2241881b59a3","type":"text","text":"να ενημερώνει συναδέλφους για την παραγγελία","x":707,"y":-170,"width":242,"height":90},
-		{"id":"f0742f612141181b","type":"text","text":"να ξέρει απόθεμα live","x":842,"y":-300,"width":189,"height":60},
-		{"id":"6079c4498872ba95","type":"text","text":"κουζίνα / μπαρίστας","x":707,"y":-519,"width":179,"height":59,"color":"6"},
-		{"id":"6397ebf8c9407a3e","type":"text","text":"να καλούν σερβιτόρο ή runner","x":582,"y":-331,"width":187,"height":50},
-		{"id":"2a5351ce931717df","type":"text","text":"να μπορεί να κάνει split το λογαριασμό","x":-99,"y":29,"width":175,"height":60},
-		{"id":"275475f7c5650282","type":"text","text":"να ξέρει απόθεμα live","x":-1160,"y":-390,"width":189,"height":60},
-		{"id":"eae7c5122b8afc65","type":"text","text":"σετάρει μενού","x":-1035,"y":-170,"width":155,"height":60},
-		{"id":"e3c5c72c54d375e4","type":"text","text":"διαχείριση κρατήσεων","x":-1035,"y":-80,"width":196,"height":60},
-		{"id":"2eba8ce094a74868","type":"text","text":"ρυθμίζει τραπέζια και ζώνες","x":-975,"y":19,"width":235,"height":60},
-		{"id":"7c5c31eda6213c82","type":"text","text":"διαχείριση προσωπικού","x":-1160,"y":-520,"width":250,"height":60},
-		{"id":"3844e7c39dad962c","type":"text","text":"παραμετροποίηση  καταστήματος","x":-823,"y":129,"width":196,"height":50},
-		{"id":"c1bf365346013b60","type":"text","text":"analytics παραγγελιών, προσωπικού","x":-1122,"y":-281,"width":212,"height":59},
-		{"id":"43c23d1d5a3ce2a9","x":-776,"y":243,"width":250,"height":60,"type":"text","text":"marketing στρατηγικές για να αυξήσει το πελατολόγιο"}
+	"nodes": [
+		{
+			"id": "title",
+			"type": "text",
+			"text": "# Χάρτης Αναγκών Χρηστών (User Needs Map) - Last Updated: 2026-04-26",
+			"x": -392,
+			"y": -640,
+			"width": 1600,
+			"height": 80
+		},
+		{
+			"id": "56f4fe42b6271904",
+			"type": "text",
+			"text": "καταστηματάρχης (admin)",
+			"x": -850,
+			"y": -460,
+			"width": 227,
+			"height": 60,
+			"color": "6"
+		},
+		{
+			"id": "2b383ac329fa3bda",
+			"type": "text",
+			"text": "να παραγγείλει ανά πάσα στιγμή",
+			"x": -671,
+			"y": -220,
+			"width": 270,
+			"height": 60
+		},
+		{
+			"id": "528eb3576c8133e1",
+			"type": "text",
+			"text": "να βλέπει το μενού",
+			"x": -482,
+			"y": -110,
+			"width": 172,
+			"height": 60
+		},
+		{
+			"id": "314d6da52311d59a",
+			"type": "text",
+			"text": "**χρήστης (πελάτης του πελάτη)**",
+			"x": -392,
+			"y": -469,
+			"width": 280,
+			"height": 60,
+			"color": "6"
+		},
+		{
+			"id": "091d929a7c02a5e7",
+			"type": "text",
+			"text": "σερβιτόρος",
+			"x": 190,
+			"y": -529,
+			"width": 118,
+			"height": 60,
+			"color": "6"
+		},
+		{
+			"id": "aef23e9b99220d48",
+			"type": "text",
+			"text": "να ξέρει ποιος χρειάζεται εξυπηρέτηση",
+			"x": 60,
+			"y": -341,
+			"width": 210,
+			"height": 60
+		},
+		{
+			"id": "f73c2afd24b0272c",
+			"type": "text",
+			"text": "να βλέπει την κατάσταση των τραπεζιών γρήγορα",
+			"x": 100,
+			"y": -250,
+			"width": 218,
+			"height": 60
+		},
+		{
+			"id": "1fbbd0feca262cda",
+			"type": "text",
+			"text": "να μπορεί να επεξεργάζεται το τράπεζι (λογαριασμό)",
+			"x": 190,
+			"y": -140,
+			"width": 235,
+			"height": 60
+		},
+		{
+			"id": "90c1fcf98501ab79",
+			"type": "text",
+			"text": "να κρατά σημειώσεις για τους συναδέλφους",
+			"x": 331,
+			"y": -41,
+			"width": 195,
+			"height": 60
+		},
+		{
+			"id": "2ddad24fcdf18156",
+			"type": "text",
+			"text": "να έχει δίκαιο φόρτο σε σχέση με τους συναδέλφους",
+			"x": 457,
+			"y": 89,
+			"width": 239,
+			"height": 60
+		},
+		{
+			"id": "a107d57f222c4496",
+			"type": "text",
+			"text": "διαχείριση κρατήσεων",
+			"x": 378,
+			"y": -252,
+			"width": 196,
+			"height": 60
+		},
+		{
+			"id": "persona1",
+			"type": "text",
+			"text": "## 🏖️ Persona 1: Ιδιοκτήτης Beach Bar\n\n**Προφίλ:** Γιάννης, 42, διαχειρίζεται beach bar 80 τραπεζιών σε νησί.\n**Πόνοι:** Ουρές, γλωσσικό φράγμα με τουρίστες, αργή πληρωμή, έλλειψη internet τις ώρες αιχμής.\n**Στόχοι:** Ταχύτερη εξυπηρέτηση, λιγότερο προσωπικό, αύξηση τζίρου.\n→ [[market_strategy]] [[v1_scope]]",
+			"x": 1400,
+			"y": -390,
+			"width": 400,
+			"height": 280,
+			"color": "1"
+		},
+		{
+			"id": "persona2",
+			"type": "text",
+			"text": "## 🎪 Persona 2: Διοργανωτής Festival\n\n**Προφίλ:** Μαρία, 35, διοργανώνει food festivals 2-3 φορές/χρόνο.\n**Πόνοι:** Τεράστιες ουρές, χάος παραγγελιών, αδυναμία tracking πωλήσεων.\n**Στόχοι:** Self-service ordering, batch prep ώστε να εξυπηρετεί 500+ πελάτες/ώρα.\n→ [[staff_workflow]] [[Questionnaire]]",
+			"x": 1400,
+			"y": -10,
+			"width": 400,
+			"height": 300,
+			"color": "4"
+		},
+		{
+			"id": "needs1",
+			"type": "text",
+			"text": "## Ανάγκες Beach Bar\n\n1. **Πολυγλωσσικό μενού** — 80% πελατών τουρίστες\n2. **Offline λειτουργία** — κακό σήμα στο νησί\n3. **Γρήγορη πληρωμή** — χωρίς αναμονή ταμείου\n4. **Ειδοποιήσεις πελατών** — status παραγγελίας\n5. **Εποχιακή τιμολόγηση** — pause χειμώνα\n→ [[features]] [[pricing_model#3. Εποχιακή Στρατηγική]]",
+			"x": 1830,
+			"y": -428,
+			"width": 300,
+			"height": 378,
+			"color": "6"
+		},
+		{
+			"id": "needs2",
+			"type": "text",
+			"text": "## Ανάγκες Festival\n\n1. **Self-service ordering** — χωρίς σερβιτόρους\n2. **Queue management** — μείωση ουρών\n3. **Batch preparation** — ομαδική ετοιμασία\n4. **Προσωρινό setup** — plug & play\n5. **Analytics σε πραγματικό χρόνο** — live πωλήσεις\n→ [[staff_workflow]] [[v1_scope]]",
+			"x": 1830,
+			"y": -10,
+			"width": 300,
+			"height": 330,
+			"color": "6"
+		},
+		{
+			"id": "solutions",
+			"type": "text",
+			"text": "## 🔧 Υποψήφιες Λύσεις\n\n| Λύση | MVP | Metric Επιτυχίας |\n|---|---|---|\n| QR Digital Menu | ✅ Ναι | >70% scan rate |\n| Ordering & Cart | ✅ Ναι | >50% conversion |\n| Order Status | ✅ Ναι | <2 ερωτήσεις/ώρα |\n| Multilingual Menu | ✅ Ναι | 80% γλωσσών |\n| Offline Mode | ✅ Ναι | 99% uptime |\n| Batch Prep Logic | ✅ Ναι | +30% throughput |\n| Call Button | ✅ Ναι | <3s response |\n| Online Payment | ❌ Phase 2 | — |\n| AI Chatbot | ❌ Phase 3+ | — |\n| Booking System | ❌ Phase 2 | — |\n| Live Capacity | ❌ Phase 3+ | — |\n→ [[v1_scope]] [[roadmap]]",
+			"x": 2140,
+			"y": -390,
+			"width": 440,
+			"height": 710,
+			"color": "5"
+		},
+		{
+			"id": "3c2714dd98248c5e",
+			"type": "text",
+			"text": "να ξέρει πότε θα έρθει το φαγητό του",
+			"x": -480,
+			"y": 19,
+			"width": 181,
+			"height": 60
+		},
+		{
+			"id": "393df4c495d46be5",
+			"type": "text",
+			"text": "να μη περιμένει σε ουρά (self service)",
+			"x": -323,
+			"y": 119,
+			"width": 170,
+			"height": 60
+		},
+		{
+			"id": "7d4223f6d6f66f30",
+			"type": "text",
+			"text": "να βλέπει το μενού στη γλώσσα του",
+			"x": -284,
+			"y": -140,
+			"width": 172,
+			"height": 60
+		},
+		{
+			"id": "a8f955bb79ddabe6",
+			"type": "text",
+			"text": "να ξέρει τι είναι διαθέσιμο (απόθεμα)",
+			"x": -198,
+			"y": -270,
+			"width": 186,
+			"height": 60
+		},
+		{
+			"id": "977c085c6db85065",
+			"type": "text",
+			"text": "να καλεί σερβιτόρο",
+			"x": -600,
+			"y": -330,
+			"width": 204,
+			"height": 50
+		},
+		{
+			"id": "8fdf2241881b59a3",
+			"type": "text",
+			"text": "να ενημερώνει συναδέλφους για την παραγγελία",
+			"x": 707,
+			"y": -170,
+			"width": 242,
+			"height": 90
+		},
+		{
+			"id": "f0742f612141181b",
+			"type": "text",
+			"text": "να ξέρει απόθεμα live",
+			"x": 842,
+			"y": -300,
+			"width": 189,
+			"height": 60
+		},
+		{
+			"id": "6079c4498872ba95",
+			"type": "text",
+			"text": "κουζίνα / μπαρίστας",
+			"x": 707,
+			"y": -519,
+			"width": 179,
+			"height": 59,
+			"color": "6"
+		},
+		{
+			"id": "6397ebf8c9407a3e",
+			"type": "text",
+			"text": "να καλούν σερβιτόρο ή runner",
+			"x": 582,
+			"y": -331,
+			"width": 187,
+			"height": 50
+		},
+		{
+			"id": "2a5351ce931717df",
+			"type": "text",
+			"text": "να μπορεί να κάνει split το λογαριασμό",
+			"x": -99,
+			"y": 29,
+			"width": 175,
+			"height": 60
+		},
+		{
+			"id": "275475f7c5650282",
+			"type": "text",
+			"text": "να ξέρει απόθεμα live",
+			"x": -1160,
+			"y": -390,
+			"width": 189,
+			"height": 60
+		},
+		{
+			"id": "eae7c5122b8afc65",
+			"type": "text",
+			"text": "σετάρει μενού",
+			"x": -1035,
+			"y": -170,
+			"width": 155,
+			"height": 60
+		},
+		{
+			"id": "e3c5c72c54d375e4",
+			"type": "text",
+			"text": "διαχείριση κρατήσεων",
+			"x": -1035,
+			"y": -80,
+			"width": 196,
+			"height": 60
+		},
+		{
+			"id": "2eba8ce094a74868",
+			"type": "text",
+			"text": "ρυθμίζει τραπέζια και ζώνες",
+			"x": -975,
+			"y": 19,
+			"width": 235,
+			"height": 60
+		},
+		{
+			"id": "7c5c31eda6213c82",
+			"type": "text",
+			"text": "διαχείριση προσωπικού",
+			"x": -1160,
+			"y": -520,
+			"width": 250,
+			"height": 60
+		},
+		{
+			"id": "3844e7c39dad962c",
+			"type": "text",
+			"text": "παραμετροποίηση  καταστήματος",
+			"x": -823,
+			"y": 129,
+			"width": 196,
+			"height": 50
+		},
+		{
+			"id": "c1bf365346013b60",
+			"type": "text",
+			"text": "analytics παραγγελιών, προσωπικού",
+			"x": -1122,
+			"y": -281,
+			"width": 212,
+			"height": 59
+		},
+		{
+			"id": "43c23d1d5a3ce2a9",
+			"x": -776,
+			"y": 243,
+			"width": 250,
+			"height": 60,
+			"type": "text",
+			"text": "marketing στρατηγικές για να αυξήσει το πελατολόγιο"
+		}
 	],
-	"edges":[
-		{"id":"e1","fromNode":"persona1","fromSide":"right","toNode":"needs1","toSide":"left"},
-		{"id":"e2","fromNode":"persona2","fromSide":"right","toNode":"needs2","toSide":"left"},
-		{"id":"e3","fromNode":"needs1","fromSide":"right","toNode":"solutions","toSide":"left"},
-		{"id":"e4","fromNode":"needs2","fromSide":"right","toNode":"solutions","toSide":"left"},
-		{"id":"4419296ff09ab76c","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"8fdf2241881b59a3","toSide":"top"},
-		{"id":"a6ef04175014571a","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"aef23e9b99220d48","toSide":"top"},
-		{"id":"1c6c6ca1bfcba115","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"2b383ac329fa3bda","toSide":"top"},
-		{"id":"ac97e26f465364bc","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"528eb3576c8133e1","toSide":"top"},
-		{"id":"e6b86e637017a958","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"3c2714dd98248c5e","toSide":"top"},
-		{"id":"19c23c2151a5f01e","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"393df4c495d46be5","toSide":"top"},
-		{"id":"cc54ec3b0e071943","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"7d4223f6d6f66f30","toSide":"top"},
-		{"id":"069dd58c477b4fe3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"f73c2afd24b0272c","toSide":"top"},
-		{"id":"9c1d4e6559ab04da","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"1fbbd0feca262cda","toSide":"top"},
-		{"id":"7ecd9889530001b3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"90c1fcf98501ab79","toSide":"top"},
-		{"id":"de0223795424ef21","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"f0742f612141181b","toSide":"top"},
-		{"id":"c77c049f77a14a02","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"2ddad24fcdf18156","toSide":"top"},
-		{"id":"35920c7cbd0c82c3","fromNode":"091d929a7c02a5e7","fromSide":"bottom","toNode":"a107d57f222c4496","toSide":"top"},
-		{"id":"6c7767285fe5ef5d","fromNode":"56f4fe42b6271904","fromSide":"left","toNode":"275475f7c5650282","toSide":"top"},
-		{"id":"56a71d4e31c8ec45","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"a8f955bb79ddabe6","toSide":"top"},
-		{"id":"1054050d877e34ed","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"977c085c6db85065","toSide":"top"},
-		{"id":"a92f8d68bd25a7cb","fromNode":"6079c4498872ba95","fromSide":"bottom","toNode":"6397ebf8c9407a3e","toSide":"top"},
-		{"id":"02f26623fdc6f1e7","fromNode":"314d6da52311d59a","fromSide":"bottom","toNode":"2a5351ce931717df","toSide":"top"},
-		{"id":"83f54f2bc71cdcac","fromNode":"56f4fe42b6271904","fromSide":"bottom","toNode":"c1bf365346013b60","toSide":"top"},
-		{"id":"bd61ed85c5c430ae","fromNode":"56f4fe42b6271904","fromSide":"bottom","toNode":"eae7c5122b8afc65","toSide":"top"},
-		{"id":"64e3b92f56a2d4dc","fromNode":"56f4fe42b6271904","fromSide":"bottom","toNode":"e3c5c72c54d375e4","toSide":"top"},
-		{"id":"7936083aa4c3c6b7","fromNode":"56f4fe42b6271904","fromSide":"bottom","toNode":"2eba8ce094a74868","toSide":"top"},
-		{"id":"d8efffcb186b96de","fromNode":"56f4fe42b6271904","fromSide":"top","toNode":"7c5c31eda6213c82","toSide":"top"},
-		{"id":"74f10118502c9d62","fromNode":"56f4fe42b6271904","fromSide":"bottom","toNode":"3844e7c39dad962c","toSide":"top"},
-		{"id":"430f18e3a66f98bb","fromNode":"56f4fe42b6271904","fromSide":"bottom","toNode":"43c23d1d5a3ce2a9","toSide":"top"}
+	"edges": [
+		{
+			"id": "e1",
+			"fromNode": "persona1",
+			"fromSide": "right",
+			"toNode": "needs1",
+			"toSide": "left"
+		},
+		{
+			"id": "e2",
+			"fromNode": "persona2",
+			"fromSide": "right",
+			"toNode": "needs2",
+			"toSide": "left"
+		},
+		{
+			"id": "e3",
+			"fromNode": "needs1",
+			"fromSide": "right",
+			"toNode": "solutions",
+			"toSide": "left"
+		},
+		{
+			"id": "e4",
+			"fromNode": "needs2",
+			"fromSide": "right",
+			"toNode": "solutions",
+			"toSide": "left"
+		},
+		{
+			"id": "4419296ff09ab76c",
+			"fromNode": "6079c4498872ba95",
+			"fromSide": "bottom",
+			"toNode": "8fdf2241881b59a3",
+			"toSide": "top"
+		},
+		{
+			"id": "a6ef04175014571a",
+			"fromNode": "091d929a7c02a5e7",
+			"fromSide": "bottom",
+			"toNode": "aef23e9b99220d48",
+			"toSide": "top"
+		},
+		{
+			"id": "1c6c6ca1bfcba115",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "2b383ac329fa3bda",
+			"toSide": "top"
+		},
+		{
+			"id": "ac97e26f465364bc",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "528eb3576c8133e1",
+			"toSide": "top"
+		},
+		{
+			"id": "e6b86e637017a958",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "3c2714dd98248c5e",
+			"toSide": "top"
+		},
+		{
+			"id": "19c23c2151a5f01e",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "393df4c495d46be5",
+			"toSide": "top"
+		},
+		{
+			"id": "cc54ec3b0e071943",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "7d4223f6d6f66f30",
+			"toSide": "top"
+		},
+		{
+			"id": "069dd58c477b4fe3",
+			"fromNode": "091d929a7c02a5e7",
+			"fromSide": "bottom",
+			"toNode": "f73c2afd24b0272c",
+			"toSide": "top"
+		},
+		{
+			"id": "9c1d4e6559ab04da",
+			"fromNode": "091d929a7c02a5e7",
+			"fromSide": "bottom",
+			"toNode": "1fbbd0feca262cda",
+			"toSide": "top"
+		},
+		{
+			"id": "7ecd9889530001b3",
+			"fromNode": "091d929a7c02a5e7",
+			"fromSide": "bottom",
+			"toNode": "90c1fcf98501ab79",
+			"toSide": "top"
+		},
+		{
+			"id": "de0223795424ef21",
+			"fromNode": "6079c4498872ba95",
+			"fromSide": "bottom",
+			"toNode": "f0742f612141181b",
+			"toSide": "top"
+		},
+		{
+			"id": "c77c049f77a14a02",
+			"fromNode": "091d929a7c02a5e7",
+			"fromSide": "bottom",
+			"toNode": "2ddad24fcdf18156",
+			"toSide": "top"
+		},
+		{
+			"id": "35920c7cbd0c82c3",
+			"fromNode": "091d929a7c02a5e7",
+			"fromSide": "bottom",
+			"toNode": "a107d57f222c4496",
+			"toSide": "top"
+		},
+		{
+			"id": "6c7767285fe5ef5d",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "left",
+			"toNode": "275475f7c5650282",
+			"toSide": "top"
+		},
+		{
+			"id": "56a71d4e31c8ec45",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "a8f955bb79ddabe6",
+			"toSide": "top"
+		},
+		{
+			"id": "1054050d877e34ed",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "977c085c6db85065",
+			"toSide": "top"
+		},
+		{
+			"id": "a92f8d68bd25a7cb",
+			"fromNode": "6079c4498872ba95",
+			"fromSide": "bottom",
+			"toNode": "6397ebf8c9407a3e",
+			"toSide": "top"
+		},
+		{
+			"id": "02f26623fdc6f1e7",
+			"fromNode": "314d6da52311d59a",
+			"fromSide": "bottom",
+			"toNode": "2a5351ce931717df",
+			"toSide": "top"
+		},
+		{
+			"id": "83f54f2bc71cdcac",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "bottom",
+			"toNode": "c1bf365346013b60",
+			"toSide": "top"
+		},
+		{
+			"id": "bd61ed85c5c430ae",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "bottom",
+			"toNode": "eae7c5122b8afc65",
+			"toSide": "top"
+		},
+		{
+			"id": "64e3b92f56a2d4dc",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "bottom",
+			"toNode": "e3c5c72c54d375e4",
+			"toSide": "top"
+		},
+		{
+			"id": "7936083aa4c3c6b7",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "bottom",
+			"toNode": "2eba8ce094a74868",
+			"toSide": "top"
+		},
+		{
+			"id": "d8efffcb186b96de",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "top",
+			"toNode": "7c5c31eda6213c82",
+			"toSide": "top"
+		},
+		{
+			"id": "74f10118502c9d62",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "bottom",
+			"toNode": "3844e7c39dad962c",
+			"toSide": "top"
+		},
+		{
+			"id": "430f18e3a66f98bb",
+			"fromNode": "56f4fe42b6271904",
+			"fromSide": "bottom",
+			"toNode": "43c23d1d5a3ce2a9",
+			"toSide": "top"
+		}
 	]
 }

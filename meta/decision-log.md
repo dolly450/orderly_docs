@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-26 - Στρατηγική Προϊόντος (Phase 2 MVP): Αντικατάσταση ή Ενσωμάτωση PDA
+- **Απόφαση / Σύνοψη:** Direct sales. Πάμε για απευθείας πωλήσεις/αντικατάσταση παρά για ενσωμάτωση στα υπάρχοντα POS (τουλάχιστον στη φάση 1).
+- **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]], [[design/v1_scope.md]]
+- **Σημείωση για Implementation:** Δεν περιπλέκουμε το MVP με POS integrations στην αρχή, πάμε ως αυτόνομο self-service layer / Staff Dashboard.

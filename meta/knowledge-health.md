@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-04-26
+- **Βελτίωση:** Καθαρισμός του `active_investigations.md` και αρχειοθέτηση αποφάσεων στο `decision-log.md`. Προσθήκη Mermaid charts για product strategy.
+- **Εκκρεμότητες:** Validation tasks σε beach bars, επιλογή Brand Name.
