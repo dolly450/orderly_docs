@@ -2,13 +2,13 @@ https://drive.google.com/file/d/1PdhPwBNBAzjzk6av4FKMecvBdI2eclS3/view?usp=shari
 
 [[business/market_strategy.md]]
 
-USP - Unique Selling Points
-- γιατι το προιον μου ειναι καλυτερο απο τον ανταγωνισμο, ειτε αμεσα ειτε εμμεσα
-- πώς λυνω το προβλημα ή εξυπηρετω τους πελατες με καλύτερο τρόπο
+### USP - Unique Selling Points (Μοναδικά Πλεονεκτήματα Πώλησης)
+- γιατί το προϊόν μου είναι καλύτερο από τον ανταγωνισμό, είτε άμεσα είτε έμμεσα
+- πώς λύνω το πρόβλημα ή εξυπηρετώ τους πελάτες με καλύτερο τρόπο
 
-product: business + tech + ux (design)
+Προϊόν (Product): Business + Tech + UX (Design)
 
-## Stages of Product and Growth
+## Στάδια Προϊόντος και Ανάπτυξης (Stages of Product and Growth)
 ![Stages of Product and Growth](../images/Stages%20of%20Product%20and%20Growth.png)
 Η εικόνα είναι ένα γράφημα που αναλύει τα στάδια ανάπτυξης ενός προϊόντος («Stages of Product & Growth»). Απεικονίζει μια καμπύλη ανάπτυξης (Growth) που χωρίζεται σε τρεις βασικές περιόδους:
 1. **Product-first period:** * Ξεκινά με την αναζήτηση ταύτισης προβλήματος-λύσης και τη δημιουργία του **MVP** (Minimum Viable Product).
@@ -17,7 +17,7 @@ product: business + tech + ux (design)
 3. **Growth (money first):** * Ξεκινά η ραγδαία ανάπτυξη με επένδυση πόρων.
     - Καταλήγει στο στάδιο της ωριμότητας (**Maturity**), όπου η ανάπτυξη συνεχίζεται μέσω εξαγορών και διεθνούς επέκτασης.
 
-## product market fit questions
+## Ερωτήσεις Product Market Fit
 1) how likely it is that you would suggest this product or service to a colleague or friends? (1 -10) "NPS" (Net Promoter Score) από -100% έως 100%. Θέλουμε τουλάχιστον +30% για να πούμε ότι έχουμε fit.
 2) How dissapointed would you be if you could no longer use this product?
    a) very dissapointed (>75%)
@@ -25,7 +25,7 @@ product: business + tech + ux (design)
    c) Not dissapointed, it really isn't that useful
    d) N/A - I no longer use this product
 
-## the right product:
+## Το Σωστό Προϊόν (The Right Product)
 ![the Right product](../images/the%20Right%20product.png)
 Αυτή η εικόνα δείχνει ένα απλό διάγραμμα Venn που ορίζει τι αποτελεί «Το ΣΩΣΤΟ προϊόν» (**The RIGHT product**).
 Συγκεκριμένα, αποτελείται από δύο κύκλους που τέμνονται:
@@ -60,11 +60,24 @@ product: business + tech + ux (design)
 
 Έχοντας στο μυαλό τη λογική του "Build-Measure-Learn", ποιο είναι το **ένα και μοναδικό metric** (π.χ. χρόνος ολοκλήρωσης παραγγελίας, ποσοστό μετατροπής) που αν το πιάσετε στα 5 πιλοτικά σας τον Ιούνιο, θα σας πείσει 100% ότι το προϊόν σας έχει πετύχει;
 
+### Οπτικοποίηση
+
+```mermaid
+flowchart TD
+    A[Fake MVP] -->|Launch| B[Συλλογή Δεδομένων]
+    B -->|Analytics (PostHog)| C[Μέτρηση Συμπεριφοράς]
+    C --> D{Επιτυχία Metric;}
+    D -- Ναι --> E[Scale/Ανάπτυξη]
+    D -- Όχι --> F[Βελτίωση Προϊόντος (Learn)]
+    F --> A
+```
+
 ## Επιπτώσεις για την ομάδα (Impact for the team)
 Πρέπει να μετατοπίσουμε την εστίασή μας από το "πώς θα χτίσουμε το τέλειο σύστημα τεχνικά" στο "πώς θα μετρήσουμε γρήγορα την αλληλεπίδραση των χρηστών". Η προτεραιότητα είναι η επικύρωση των υποθέσεών μας (Build-Measure-Learn loop).
 
 ## Επόμενες Ενέργειες
 - [ ] Ρύθμιση tracking (π.χ. PostHog/Mixpanel) για το scan-to-order conversion rate στο Fake MVP.
+- [ ] Δημιουργία Fake MVP UI και δοκιμή σε 1 beach bar για επικύρωση της αρχικής υπόθεσης.
 
 ## Σχετικές Σημειώσεις
 - [[v1_scope]]
