@@ -111,3 +111,20 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-27 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Αφαίρεση της απόφασης Local-First Database και προσθήκη έρευνας για Traction Metrics |
+| `meta/decision-log.md` | Καταγραφή της απόφασης για χρήση Turso/libSQL |
+| `architecture/technical_stack.md` | Προσθήκη Local-first Database Technical Details |
+| `architecture/ordering-flow.md` | Ενημέρωση Mermaid diagram, προσθήκη Team Impact, και νέου Validation Experiment task |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** 1 (σύνολο 5)
+- **Νέα tasks (- [ ]):** 1
+- **Νέα Mermaid diagrams:** 1 (ενημερωμένο)
