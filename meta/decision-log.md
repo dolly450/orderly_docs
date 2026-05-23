@@ -1,5 +1,10 @@
 # Ημερολόγιο Αποφάσεων (Decision Log)
 
+### 2026-04-27 - Local-First Database Choice
+- **Απόφαση / Σύνοψη:** Επιλογή Turso/libSQL με embedded replicas για την τοπική λειτουργία (όταν ενεργοποιηθεί), λόγω χαμηλών απαιτήσεων σε πόρους και ενσωματωμένου offline-sync.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Χρήση database-per-tenant isolation (αφού δεν έχει RLS) και custom SSE API/Polling.
+
 ### 2026-04-10 - Αρχιτεκτονική MVP (Cloud-first Web App)
 - **Απόφαση / Σύνοψη:** Το τρέχον baseline του προϊόντος είναι cloud-first web εφαρμογή σε SvelteKit. Η local-first / Tauri κατεύθυνση παραμένει ερευνητική επιλογή για μελλοντική φάση, όχι το shipped μοντέλο.
 - **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]], [[meta/active_investigations.md]]

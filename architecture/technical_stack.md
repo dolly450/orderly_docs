@@ -16,6 +16,12 @@
 ## 2. Τι δεν είναι baseline ακόμα
 
 - Local-first packaging με Tauri v2+ δεν είναι το τρέχον shipping model.
+
+### Local-first Database Technical Details
+- **Επιλογή:** Turso/libSQL cloud με embedded replicas τοπικά.
+- **Πλεονεκτήματα:** Ελαφριά εγκατάσταση, ελάχιστοι πόροι (10-50MB RAM), αυτόματο sync.
+- **SDKs:** `@libsql/client-go` για Go, `@libsql/client` (TypeScript) ιδανικό για SvelteKit.
+- **Περιορισμοί:** Το real-time/SSE δεν είναι built-in (χρειάζεται Golang implementation) και δεν υπάρχει native RLS (προτείνεται 1 DB ανά tenant).
 - Embedded replicas / local gateway είναι future-phase κατεύθυνση, όχι baseline που στηρίζεται το repo σήμερα.
 - Offline sync και local device routing παραμένουν strategic research, όχι production default.
 
