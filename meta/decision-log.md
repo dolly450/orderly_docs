@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-05-26 - Λύση Βάσης Δεδομένων (Database) για Local-First
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε η Turso/libSQL (Embedded Replicas) ως η βέλτιστη λύση. Προσφέρει local-first capabilities, μηδενικό network roundtrip και background sync.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]]
+- **Σημείωση για Implementation:** Θα ξεκινήσουμε με το Turso Cloud (Developer tier) και αν υπάρχει ανάγκη scaling στο μέλλον, θα εξεταστεί η self-hosted λύση (libsql-server).

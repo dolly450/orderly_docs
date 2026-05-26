@@ -2,30 +2,30 @@ https://drive.google.com/file/d/1PdhPwBNBAzjzk6av4FKMecvBdI2eclS3/view?usp=shari
 
 [[business/market_strategy.md]]
 
-USP - Unique Selling Points
-- γιατι το προιον μου ειναι καλυτερο απο τον ανταγωνισμο, ειτε αμεσα ειτε εμμεσα
-- πώς λυνω το προβλημα ή εξυπηρετω τους πελατες με καλύτερο τρόπο
+USP (Unique Selling Points - Μοναδικά Σημεία Πώλησης)
+- γιατί το προϊόν μου είναι καλύτερο από τον ανταγωνισμό, είτε άμεσα είτε έμμεσα
+- πώς λύνω το πρόβλημα ή εξυπηρετώ τους πελάτες με καλύτερο τρόπο
 
-product: business + tech + ux (design)
+Προϊόν (Product): επιχείρηση (business) + τεχνολογία (tech) + εμπειρία χρήστη (UX/design)
 
-## Stages of Product and Growth
+## Στάδια Προϊόντος και Ανάπτυξης (Stages of Product and Growth)
 ![Stages of Product and Growth](../images/Stages%20of%20Product%20and%20Growth.png)
 Η εικόνα είναι ένα γράφημα που αναλύει τα στάδια ανάπτυξης ενός προϊόντος («Stages of Product & Growth»). Απεικονίζει μια καμπύλη ανάπτυξης (Growth) που χωρίζεται σε τρεις βασικές περιόδους:
-1. **Product-first period:** * Ξεκινά με την αναζήτηση ταύτισης προβλήματος-λύσης και τη δημιουργία του **MVP** (Minimum Viable Product).
-    - Οδηγεί στο **Product/Market Fit**, όπου αναζητείται η ταύτιση προϊόντος-αγοράς και γλώσσας-αγοράς.    
-2. **Marketing-first period:** * Εστιάζει στη βελτιστοποίηση της διαδικασίας (funnel) και καταλήγει στο **Channel/Product Fit** (ταύτιση καναλιού-προϊόντος).
-3. **Growth (money first):** * Ξεκινά η ραγδαία ανάπτυξη με επένδυση πόρων.
+1. **Περίοδος εστίασης στο Προϊόν (Product-first period):** * Ξεκινά με την αναζήτηση ταύτισης προβλήματος-λύσης και τη δημιουργία του **MVP (Minimum Viable Product - Ελάχιστο Βιώσιμο Προϊόν)**.
+    - Οδηγεί στο **Product/Market Fit (Ταύτιση Προϊόντος/Αγοράς)**, όπου αναζητείται η ταύτιση προϊόντος-αγοράς και μηνύματος-αγοράς.
+2. **Περίοδος εστίασης στο Μάρκετινγκ (Marketing-first period):** * Εστιάζει στη βελτιστοποίηση της διαδικασίας (funnel) και καταλήγει στο **Channel/Product Fit (Ταύτιση Καναλιού/Προϊόντος)**.
+3. **Ανάπτυξη (Growth - money first):** * Ξεκινά η ραγδαία ανάπτυξη με επένδυση πόρων.
     - Καταλήγει στο στάδιο της ωριμότητας (**Maturity**), όπου η ανάπτυξη συνεχίζεται μέσω εξαγορών και διεθνούς επέκτασης.
 
-## product market fit questions
-1) how likely it is that you would suggest this product or service to a colleague or friends? (1 -10) "NPS" (Net Promoter Score) από -100% έως 100%. Θέλουμε τουλάχιστον +30% για να πούμε ότι έχουμε fit.
-2) How dissapointed would you be if you could no longer use this product?
-   a) very dissapointed (>75%)
-   b) Somewhat dissapointed
-   c) Not dissapointed, it really isn't that useful
-   d) N/A - I no longer use this product
+## Ερωτήσεις για Ταύτιση Προϊόντος/Αγοράς (Product Market Fit Questions)
+1) Πόσο πιθανό είναι να προτείνατε αυτό το προϊόν ή την υπηρεσία σε έναν συνάδελφο ή φίλο; (1 -10) "NPS" (Net Promoter Score - Δείκτης Καθαρής Σύστασης) από -100% έως 100%. Θέλουμε τουλάχιστον +30% για να πούμε ότι έχουμε ταύτιση (fit).
+2) Πόσο απογοητευμένοι θα ήσασταν αν δεν μπορούσατε πλέον να χρησιμοποιείτε αυτό το προϊόν;
+   α) πολύ απογοητευμένος (>75%)
+   β) Κάπως απογοητευμένος
+   γ) Καθόλου απογοητευμένος, πραγματικά δεν είναι τόσο χρήσιμο
+   δ) Δ/Α - Δεν χρησιμοποιώ πλέον αυτό το προϊόν
 
-## the right product:
+## Το σωστό προϊόν (The right product):
 ![the Right product](../images/the%20Right%20product.png)
 Αυτή η εικόνα δείχνει ένα απλό διάγραμμα Venn που ορίζει τι αποτελεί «Το ΣΩΣΤΟ προϊόν» (**The RIGHT product**).
 Συγκεκριμένα, αποτελείται από δύο κύκλους που τέμνονται:
@@ -65,6 +65,7 @@ product: business + tech + ux (design)
 
 ## Επόμενες Ενέργειες
 - [ ] Ρύθμιση tracking (π.χ. PostHog/Mixpanel) για το scan-to-order conversion rate στο Fake MVP.
+- [ ] Validation: Δοκιμή "Fake MVP" σε 5 beach bars για μέτρηση του scan-to-order conversion rate μέσω εργαλείων όπως PostHog.
 
 ## Σχετικές Σημειώσεις
 - [[v1_scope]]

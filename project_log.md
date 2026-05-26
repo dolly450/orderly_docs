@@ -111,3 +111,24 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-05-26 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `notes/Product Design.md` | Κανονικοποίηση, μετάφραση σε Ελληνικά, προσθήκη εξήγησης όρων (π.χ. MVP), και προσθήκη task Validation (- [ ]). |
+| `notes/Revolutionary ideas - Claude.md` | Εξαγωγή λειτουργιών (zone-based batching κ.λπ.) στο "Επιπτώσεις για την ομάδα", προσθήκη tasks, και δημιουργία Mermaid flow. Σύνδεση με architecture/features. |
+| `design/v1_scope.md` | Προσθήκη Zone-based batching και Order throttling στα Stretch Goals. |
+| `architecture/system_architecture.md` | Προσθήκη σημείωσης για offline-first / local-first (Turso + SSE) στο section "Τι σημαίνει πρακτικά". |
+| `meta/active_investigations.md` | Αρχειοθέτηση ερώτησης Database και προσθήκη νέας ερώτησης για Zone-based batching. |
+| `meta/decision-log.md` | Καταγραφή απόφασης για Turso/libSQL cloud-first (με fallback options). |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας σε 2026-05-26. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας σε 2026-05-26. |
+| `meta/knowledge-health.md` | Ενημέρωση μετρήσεων. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** 1
+- **Νέα tasks (- [ ]):** 3
+- **Διπλότυπα κανονικοποιημένα:** 2
+- **Νέα Mermaid diagrams:** 1
