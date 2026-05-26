@@ -93,3 +93,29 @@ The strategic play beyond features is **regional density**. Orderly should aim t
 ## Conclusion
 
 The ideas with the highest impact-to-effort ratio cluster around three themes. First, **the offline-first, auto-compliant architecture** (Turso replicas + PWA + myDATA) isn't just a feature — it's the entire go-to-market wedge. Greek beach bar owners fear ΑΑΔΕ fines more than they desire fancy features; lead with "automatic compliance" and everything else becomes an upsell. Second, **zone-based batching and visual KDS** solve the operational reality that beach bars are not restaurants — they're distributed drink-delivery operations across sand, and workflow tools must reflect that geometry. Third, **weather-driven intelligence** (demand forecasting, dynamic menus, prep recommendations) addresses the single largest variable in beach bar economics with data instead of guesswork. Together, these create a platform that no horizontal restaurant tech company can match without rebuilding from scratch for the specific constraints of Greek coastal hospitality.
+
+### Επιπτώσεις για την Ομάδα (Impact for the team)
+- **Zone-based smart batching:** Πρέπει να σχεδιάσουμε ομαδοποίηση παραγγελιών ανά ζώνη (π.χ. ανά 3-5 λεπτά) για αύξηση της αποδοτικότητας του προσωπικού (runners).
+- **Visual KDS για εποχιακό προσωπικό:** Αντικατάσταση των λεκτικών παραγγελιών με οπτικά εικονίδια (π.χ. εικονίδιο mojito + αριθμός ξαπλώστρας) για μείωση του χρόνου εκπαίδευσης.
+- **Order throttling (Έλεγχος ροής):** Αυτόματη προσαρμογή του εκτιμώμενου χρόνου και εμφάνιση "express μενού" κατά τις ώρες αιχμής για αποφυγή υπερφόρτωσης της κουζίνας/μπαρ.
+- **Αμφίδρομη επικοινωνία (Two-way messaging):** Δυνατότητα απευθείας μηνυμάτων μεταξύ κουζίνας και πελάτη (π.χ. "λείπει το δυόσμο, θέλετε κάτι άλλο;") μέσω SSE.
+
+### Οπτικοποίηση (Mermaid Diagram)
+
+```mermaid
+flowchart TD
+    Guest[Guest Phone\nPWA + cached menu] -->|POST order| LocalServer[Local SvelteKit Server]
+    LocalServer -->|Write instant| LocalDB[(Embedded libSQL replica)]
+    LocalServer -->|SSE Push| KDS[Kitchen Display System]
+    LocalServer -->|Background sync| TursoCloud[(Turso Cloud)]
+    TursoCloud --> AADE[myDATA fiscal queue]
+    TursoCloud --> Admin[Owner Dashboard]
+```
+
+### Επόμενες Ενέργειες
+- [ ] Validation: Έλεγχος αποδοχής του "Zone-based smart batching" με 3 managers.
+- [ ] Validation: Σχεδιασμός πρωτοτύπου Visual KDS και δοκιμή κατανόησης από ανειδίκευτο προσωπικό.
+
+### Σχετικές Σημειώσεις
+- [[design/features]]
+- [[architecture/system_architecture]]

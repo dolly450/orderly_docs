@@ -69,6 +69,8 @@
 
 ## Stretch Goals (Μελλοντικοί Στόχοι)
 
+- Zone-based batching (Ομαδοποίηση παραγγελιών ανά ζώνη) για γρήγορη εξυπηρέτηση σε μεγάλους χώρους (π.χ. beach bars)
+- Order throttling (Έλεγχος ροής) με "express μενού" στις ώρες αιχμής
 - Μαζική εκτύπωση QR codes σε σελίδα A4 (QR Code Mass Print)
 - Επιλογή checkout ως επισκέπτης / αυθεντικοποίηση / έλεγχος μέσω SMS — μέτρα ασφαλείας
 - Configurable καλάθι (Cart)

@@ -1,6 +1,6 @@
 # Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
 
-## Ημερήσια Αναφορά: 2026-04-10
+## Ημερήσια Αναφορά: 2026-05-26
 
 ### Μετρήσεις Υγείας (Health Metrics)
 
@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-05-26
+- **Βελτίωση:** Επεξεργασία των `notes/Product Design.md` και `notes/Revolutionary ideas - Claude.md`, μετατροπή σε Ελληνικά, προσθήκη validation tasks και Mermaid diagrams.
+- **Εκκρεμότητες:** Δοκιμή "Fake MVP" για scan-to-order metrics και επικύρωση του zone-based batching.

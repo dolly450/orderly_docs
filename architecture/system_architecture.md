@@ -33,8 +33,9 @@ graph LR
 ## Τι σημαίνει πρακτικά
 
 - Οι ρόλοι και τα δικαιώματα ελέγχονται server-side.
-- Τα realtime updates για orders, waiter calls, reservations και tabs περνάνε από SSE.
+- Τα realtime updates για orders, waiter calls, reservations και tabs περνάνε από SSE. Το SSE είναι ιδανικό για unidirectional updates (π.χ. KDS) και λειτουργεί αξιόπιστα πίσω από proxies χωρίς προβλήματα σύνδεσης.
 - Τα features είναι δεμένα σε συγκεκριμένα page slots, όχι σε ad-hoc οθόνες.
+- **Μελλοντική offline-first αρχιτεκτονική (Local-first):** Προβλέπεται η χρήση Turso embedded replicas (local libSQL) για μηδενικό network roundtrip και άμεση απόκριση. Σε περίπτωση πτώσης του δικτύου (π.χ. σε beach bars), τα orders θα αποθηκεύονται τοπικά, το KDS θα ενημερώνεται μέσω local SSE, και το sync με το Turso Cloud θα γίνεται στο background όταν επανέλθει η σύνδεση.
 
 ## Σχετικές Σημειώσεις
 
