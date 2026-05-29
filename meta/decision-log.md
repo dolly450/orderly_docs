@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-18 - Επιλογή Local-First Database
+- **Απόφαση / Σύνοψη:** Επιλογή του Turso / libSQL (με embedded replicas) ως η βέλτιστη λύση για το local-first setup (και εναλλακτικά το PocketBase), προσφέροντας microsecond reads τοπικά και αυτόματο fallback sync στο cloud.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[design/features.md]]
+- **Σημείωση για Implementation:** Όταν προχωρήσουμε στο phase 2 local-first με Tauri/Golang, η database να χτυπάει πρώτα τοπικά `file:local.db?syncUrl=libsql://...` και η εγκατάσταση σε μαγαζιά να γίνεται με 1-Click script (Docker/Podman).
