@@ -1,16 +1,25 @@
-- **skipq.menu**
+# Logo & Branding
 
-- [ ] έχουμε θέμα με το trademark????
-επιλαχόντα:
-- ordersnap
-ordrsnap
+## Προτεινόμενα Ονόματα (Proposed Names)
+Έχουμε εστιάσει σε 1-3 συλλαβές που περνούν το "Airplane Test" (εύκολα στην προφορά και γραφή).
+- **EasyTab** / **EasySnap**
+- **TapServe**
+- **Breeze**
+- **Velo**
+- **Kima**
+- **Lio**
+- **Zeno**
+- **QResto**
 
-pithano name:
+*Παλαιότερες ιδέες / Brainstorming:*
+- skipq.menu
 - waitease
 - piase.menu
-- easy + q / quick / snap q
 - zeroq
 - 0wait
+- menqr
+- ordersnap (Πιθανό θέμα με εμπορικό σήμα / trademark)
 
-
-menqr
+## Επόμενες Ενέργειες
+- [ ] Ερωτηματολόγιο / Ψηφοφορία ομάδας για οριστικοποίηση του Brand Name (>50% πλειοψηφία). Σχετικό με [[bot_questions.md#Ποιο θα είναι το όνομα του startup μας;]]
+- [ ] Έλεγχος διαθεσιμότητας domain (.io ή .com) και trademark για το τελικό όνομα.

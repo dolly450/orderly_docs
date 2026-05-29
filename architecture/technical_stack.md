@@ -34,3 +34,11 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+## 5. Phase 2 (Local-First Database Strategy)
+
+Για το μελλοντικό local-first deployment, η βέλτιστη επιλογή είναι το **Turso / libSQL**:
+- **Embedded Replicas:** Χρήση απλών SQLite αρχείων / libSQL server (π.χ. μέσω `ghcr.io/tursodatabase/libsql-server`) τοπικά στο κατάστημα.
+- **Microsecond Reads:** Όλα τα requests του SvelteKit θα εξυπηρετούνται πρώτα από τη local DB (μεσω local WiFi).
+- **Auto-sync & Offline Fallback:** Συγχρονισμός στο background με την Turso Cloud primary DB, διασφαλίζοντας offline availability.
+- **Εναλλακτική:** Το **PocketBase** (ως single-binary) είναι μια viable εναλλακτική για ευκολότερη διαχείριση και plug&play λύσεις.

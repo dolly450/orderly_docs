@@ -26,14 +26,14 @@
 1. **Εύκολη Εγκατάσταση:** Ο καταστηματάρχης κατεβάζει ένα αρχείο/script (π.χ. .exe ή αυτοματοποιημένη εντολή) το οποίο εγκαθιστά μια ελαφριά τοπική βάση δεδομένων (σαν container) σε μια συσκευή του μαγαζιού (Laptop, Raspberry Pi, ή ακόμα και παλιό Android/iOS κινητό).
 2. **Network Routing:** Η τοπική συσκευή εντοπίζει το τοπικό IP της και το στέλνει στον Cloud Server μας.
 3. **Ταχύτητα:** Όταν οι χρήστες (σερβιτόροι, πελάτες) βρίσκονται στο τοπικό WiFi, τα αιτήματα δρομολογούνται **πρώτα τοπικά** στην εγκατάσταση της συσκευής, εξασφαλίζοντας μέγιστη ταχύτητα.
-4. **Cloud Sync:** Παράλληλα, η τοπική βάση συγχρονίζει ασύγχρονα με το Cloud DB (όπου εξετάζονται Supabase, CockroachDB κ.λπ.). Αν κοπεί το internet, το μαγαζί συνεχίζει να δουλεύει 100% από την τοπική βάση, και κάνει sync όταν η σύνδεση επανέλθει.
+4. **Cloud Sync:** Παράλληλα, η τοπική βάση συγχρονίζει ασύγχρονα με το Cloud DB (όπου εξετάζονται Turso/libSQL κ.λπ.). Αν κοπεί το internet, το μαγαζί συνεχίζει να δουλεύει 100% από την τοπική βάση, και κάνει sync όταν η σύνδεση επανέλθει.
 
 ```mermaid
 flowchart TD
     A[Συσκευή Καταστήματος\n(Laptop / Mobile / RPi)] -->|1-Click Setup| B[Local Database Running]
     B -->|Ping IP| C[Cloud Server]
     D[Χρήστης στο Local WiFi] -->|Primary Route| B
-    B -.->|Background Sync| E[Cloud Database\n(Supabase/CockroachDB/etc)]
+    B -.->|Background Sync| E[Cloud Database\n(Turso/libSQL)]
     D -.->|Fallback Route\n(Αν δεν είναι στο WiFi)| E
 ```
 
