@@ -13,3 +13,18 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-05-31 - Brand Name
+- **Απόφαση / Σύνοψη:** Εδραίωση του ονόματος "SkipQ" ως την τελική επιλογή (πρώην Orderly).
+- **Αρχεία που ενημερώθηκαν:** [[business/logo and branding.md]], [[pitch/deck - φαμφάρες type shit.md]]
+- **Σημείωση για Implementation:** Θα πρέπει σταδιακά να ενημερωθούν όλα τα assets (canvases, codebase) με το νέο όνομα.
+
+### 2026-05-31 - Στρατηγική Προϊόντος (Αντικατάσταση vs Ενσωμάτωση PDA)
+- **Απόφαση / Σύνοψη:** Η πλατφόρμα θα λειτουργήσει αρχικά ως self-service layer (Direct Sales) χωρίς να αντικαταστήσει τα υπάρχοντα PDA.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/pos_compliance.md]], [[business/market_strategy.md]]
+- **Σημείωση για Implementation:** Η ροή (Phase 1 MVP) στέλνει την παραγγελία στο δικό μας Staff Dashboard, ανεξάρτητα από τα POS, για γρήγορο deployment.
+
+### 2026-05-31 - Στρατηγική Αποθήκευσης Δεδομένων (Database: Turso vs Supabase)
+- **Απόφαση / Σύνοψη:** Επιλογή του Turso (libSQL) αντί του Supabase, χρησιμοποιώντας το μοντέλο database-per-tenant, με Drizzle ORM και custom Better Auth/SSE.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/data_layer_tech.md]]
+- **Σημείωση για Implementation:** Το Turso επιλέχθηκε λόγω κόστους σε scale και των embedded replicas. Το Auth (Better Auth) και το Realtime (SSE) θα πρέπει να υλοποιηθούν custom, καθώς δεν παρέχονται out-of-the-box όπως στο Supabase.

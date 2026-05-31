@@ -111,3 +111,27 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-05-31 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Εδραίωση "SkipQ", μετατροπή σε σωστά Ελληνικά, προσθήκη trademark validation task |
+| `architecture/ordering-flow.md` | Προσθήκη πλήρους Mermaid sequenceDiagram, προσθήκη task για API latency |
+| `meta/decision-log.md` | Αρχειοθέτηση αποφάσεων για Brand Name ("SkipQ") και GTM Στρατηγική (Direct Sales/Self-service layer) |
+| `meta/active_investigations.md` | Καθαρισμός και διατήρηση αυστηρά 5 κρίσιμων AI prompts |
+| `pitch/deck - φαμφάρες type shit.md` | Πλήρης μετάφραση σε σωστά Ελληνικά με αγγλικούς όρους, δομική βελτίωση |
+| `notes/Business Model Canvas Initial Plan.md` | Κανονικοποίηση (Deduplication) ονοματολογίας, προσθήκη Impact section |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας, αλλαγή ονόματος σε "SkipQ" |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας, αλλαγή ονόματος σε "SkipQ" |
+| `meta/knowledge-health.md` | Προσθήκη ημερήσιας αναφοράς, επικαιροποίηση health metrics |
+| `project_log.md` | Προσθήκη ενότητας σημερινής αναφοράς |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** 0 νέες (5 ενεργές)
+- **Νέα tasks (- [ ]):** 3
+- **Νέα backlinks:** ~5
+- **Διπλότυπα κανονικοποιημένα:** 1
+- **Νέα Mermaid diagrams:** 1
+- **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)

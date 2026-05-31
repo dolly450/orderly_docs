@@ -1,13 +1,13 @@
 # Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
 
-## Ημερήσια Αναφορά: 2026-04-10
+## Ημερήσια Αναφορά: 2026-05-31
 
 ### Μετρήσεις Υγείας (Health Metrics)
 
 | Μέτρηση                                 | Τιμή                                                        |
 | --------------------------------------- | ----------------------------------------------------------- |
-| **Νέα backlinks σήμερα**                | 16                                                          |
-| **Ερωτήσεις χωρίς απάντηση**            | 3 (active investigations) + 11 (open-questions)             |
+| **Νέα backlinks σήμερα**                | ~5                                                          |
+| **Ερωτήσεις χωρίς απάντηση**            | 5 (active investigations) + 11 (open-questions)             |
 | **Stale notes (>14 ημέρες χωρίς edit)** | 0                                                           |
 | **Orphaned notes (χωρίς σύνδεση)**      | 1 (meta/test-topic.md)                                      |
 | **Κενά / ελλιπή αρχεία**                | 0                                                           |
@@ -17,7 +17,7 @@
 
 1. **Ερωτηματολόγιο σε draft** — δεν έχει σταλεί ακόμα σε κανέναν → [[Questionnaire]]
 2. **COGS ακριβή νούμερα λείπουν** — δεν μπορούμε να υπολογίσουμε margins χωρίς αυτά → [[COGS, CACs, overheads]]
-3. **Brand name ακόμα ανοιχτό** → [[open-questions#Branding & Ταυτότητα]]
+3. **Trademark Check** — Πρέπει να ελεγχθεί αν το όνομα "SkipQ" έχει θέματα trademark. → [[logo and branding]]
 
 ### Validation Experiments (Πειράματα Επικύρωσης)
 
@@ -26,6 +26,7 @@
 | Οι πελάτες εστίασης θέλουν QR ordering | Ερωτηματολόγιο σε 100+ πελάτες | >60% «θα χρησιμοποιούσα» | ⏳ Αναμονή |
 | Τα beach bars θα πληρώσουν | Walking-in σε 5 venues με demo (Fake MVP) | ≥3 από 5 λένε ΝΑΙ | ⏳ Αναμονή |
 | Το Value Proposition "Λειτουργική Ηρεμία" επικρατεί | A/B Testing κατά τη διάρκεια Demo | Μεγαλύτερο ενδιαφέρον | ⏳ Αναμονή |
+| Το API Latency είναι επαρκές σε 3G/4G | Mock API testing σε συνθήκες νησιού | <500ms για Submit Order | ⏳ Αναμονή |
 
 ---
 
