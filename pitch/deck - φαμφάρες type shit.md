@@ -1,144 +1,114 @@
-# SkipQ pitch deck draft
+# SkipQ Pitch Deck Draft
 
-Near-final slide copy aligned to the current 14-slide `.pptx`, rewritten to sound more direct and less synthetic.
+Προσχέδιο παρουσίασης προσαρμοσμένο στις 14 διαφάνειες (.pptx), γραμμένο άμεσα και κατανοητά.
 
-## Slide 1 - Cover
+## Διαφάνεια 1 - Εξώφυλλο (Cover)
 
-- SkipQ
-- Commission-free QR ordering for busy hospitality venues in Southern Europe
+- **SkipQ**
+- QR παραγγελιοληψία χωρίς προμήθειες, για πολυσύχναστα καταστήματα εστίασης (Hospitality Venues) στη Νότια Ευρώπη.
 - CapsuleT Accelerator pitch - 2026
 
-## Slide 2 - The problem
+## Διαφάνεια 2 - Το Πρόβλημα (The Problem)
 
-- Customers wait too long in busy cafes, beach bars, bars, and casual restaurants.
-- When service slows down, people get annoyed, order less, or leave.
-- Venues feel that immediately: fewer orders, slower turnover, stressed staff, and a floor that gets harder to manage.
-- The point is simple. Waiting is not just annoying. It costs money.
+- Οι πελάτες περιμένουν υπερβολικά σε πολυσύχναστα καφέ, beach bars και casual εστιατόρια.
+- Όταν η εξυπηρέτηση (Service) καθυστερεί, οι πελάτες εκνευρίζονται, παραγγέλνουν λιγότερο ή αποχωρούν.
+- Το κατάστημα (Venue) το νιώθει άμεσα: λιγότερες παραγγελίες, αργή εναλλαγή τραπεζιών (Turnover), αγχωμένο προσωπικό (Staff) και χάος στο σέρβις.
+- **Συμπέρασμα:** Η αναμονή δεν είναι απλώς ενοχλητική. Κοστίζει χρήματα.
 
-## Slide 3 - Proof of problem
+## Διαφάνεια 3 - Απόδειξη του Προβλήματος (Proof of Problem)
 
-- Long waits hurt both revenue and repeat business.
-- The current deck already has external stats. Keep the strongest ones, but fact-check every source before the final PPTX.
-- Over time, replace generic market proof with proof from the field: operator interviews, customer survey results, and pilot data on queue reduction, order speed, scan-to-order conversion, and staff feedback.
-- The message here should be clear: when service slows down, venues lose orders and lose control of the floor.
+- Οι μεγάλες αναμονές μειώνουν τα έσοδα (Revenue) και την επιστροφή πελατών (Repeat Business).
+- *Σημείωση:* Κρατήστε τα πιο δυνατά στατιστικά. Αντικαταστήστε σταδιακά τα γενικά δεδομένα με πραγματικά νούμερα από πιλοτικές δοκιμές (Pilots): χρόνος αναμονής (Wait time), ποσοστό σάρωσης προς παραγγελία (Scan-to-order conversion) και σχόλια προσωπικού.
+- **Κεντρικό μήνυμα:** Όταν το σέρβις επιβραδύνεται, χάνονται παραγγελίες και ο έλεγχος.
 
-## Slide 4 - Solution
+## Διαφάνεια 4 - Η Λύση (Solution)
 
-- SkipQ lets customers order while they are still willing to order.
-- They scan a QR code, open the menu in the browser, order in a few taps, and follow the order without downloading an app.
-- On the customer side, the product needs to feel easy: a clear menu, photos, allergens, language support, and visible order status.
-- On the venue side, it needs to reduce chaos: direct order flow to staff and kitchen, clearer status handling, visible workload, and a payment signal that tells staff whether to collect now or add it to a tab.
-- If this works, the outcome is straightforward: fewer abandoned orders, faster service, and a calmer shift.
+- Το SkipQ επιτρέπει στους πελάτες να παραγγέλνουν την ώρα που πραγματικά το θέλουν, χωρίς τριβή (Zero-friction).
+- **Διαδικασία:** Σκανάρουν το QR (Scan QR), ανοίγουν το μενού στον browser, παραγγέλνουν με λίγα tap και παρακολουθούν την κατάσταση (Order Status) — όλα χωρίς εγκατάσταση εφαρμογής (No App Install).
+- Για τον πελάτη (Customer), είναι πανεύκολο: καθαρό μενού (Clear Menu), φωτογραφίες, αλλεργιογόνα και υποστήριξη γλωσσών (Multilingual).
+- Για το κατάστημα (Venue), μειώνει το χάος: απευθείας ροή παραγγελιών (Order Flow) σε προσωπικό/κουζίνα, σαφής φόρτος εργασίας (Workload Visibility) και πρόθεση πληρωμής (Payment Intent) (μετρητά ή χρέωση σε λογαριασμό/tab).
 
-## Slide 5 - Market size
+## Διαφάνεια 5 - Μέγεθος Αγοράς (Market Size)
 
-- The market story should start with a narrow wedge, not a grand theory.
-- Go after tourism-heavy hospitality markets where service friction is obvious and venues still run in a fragmented way.
-- Greece is the best opening market: high hospitality density, heavy seasonality, large tourist flows, and plenty of room for operational digitization.
-- Keep the slide in the usual TAM / SAM / SOM format:
-- TAM: European F&B venue base
-- SAM: Southern Europe and nearby tourist-heavy markets
-- SOM: a focused three-year capture based on a niche-first rollout
-- The Greek placeholder notes in the current PPTX need to go.
+- Ξεκινάμε εστιασμένα (Narrow Wedge), όχι με θεωρίες.
+- Στοχεύουμε τουριστικές αγορές με υψηλό φόρτο, όπου η ψηφιοποίηση υστερεί.
+- **Ελλάδα (Opening Market):** Υψηλή πυκνότητα εστίασης, έντονη εποχικότητα (Seasonality), 40M+ τουρίστες.
+- **TAM:** Ευρωπαϊκή αγορά εστίασης (European F&B).
+- **SAM:** Νότια Ευρώπη (Southern Europe).
+- **SOM:** Στοχευμένη κατάληψη μεριδίου (Market Capture) σε 3 χρόνια, ξεκινώντας από niche αγορές.
 
-## Slide 6 - Target customer
+## Διαφάνεια 6 - Πελάτης Στόχος (Target Customer / ICP)
 
-- SkipQ fits venues where service friction is a cost, not venues where high-touch service is the product.
-- Best-fit segments: cafes, beach bars, bars and pubs, casual restaurants, fast casual and self-service venues, and seasonal or event venues.
-- Not the first target: fine dining, upscale hotel restaurants, and high-end cocktail bars.
-- The ICP is pretty clear: high-volume venues, visible queue pressure, and owners who can feel the pain in time, mistakes, and missed throughput.
+- Το SkipQ ταιριάζει εκεί όπου η τριβή στην εξυπηρέτηση κοστίζει, ΟΧΙ σε χώρους που πωλούν πολυτέλεια/service.
+- **Ιδανικά:** Καφέ (Cafes), Beach bars, Casual εστιατόρια, Fast casual / Self-service, Εκδηλώσεις/Φεστιβάλ (Festivals).
+- **Αποφυγή:** Fine dining, εστιατόρια πολυτελών ξενοδοχείων (Upscale Hotels).
+- **ICP:** Καταστήματα υψηλού όγκου (High-volume), ορατή ουρά αναμονής, και ιδιοκτήτες που «πονάνε» από τα λάθη και τις χαμένες παραγγελίες.
 
-## Slide 7 - Product
+## Διαφάνεια 7 - Προϊόν (Product)
 
-- The product should look like it was built for a busy floor, not for a software demo.
-- Core pieces: QR ordering, a live menu, a service signal, order tracking, and one shared dashboard for staff and kitchen.
-- Underneath that, the real product story is operational visibility and staff coordination.
-- The strongest differentiator is still workload visibility and staff allocation. That is the part that makes this more than another QR menu.
+- Σχεδιασμένο για την πραγματική δράση (Busy Floor), όχι απλώς για όμορφο demo.
+- **Core Features:** Παραγγελία μέσω QR (QR Ordering), Ζωντανό Μενού (Live Menu), Ειδοποιήσεις Service, Παρακολούθηση (Order Tracking), Κοινό Dashboard για Staff/Κουζίνα.
+- Ο πραγματικός πυρήνας: Ορατότητα (Operational Visibility) και συντονισμός προσωπικού (Staff Coordination). **Δεν είναι απλά άλλο ένα QR μενού.**
 
-## Slide 8 - Business model
+## Διαφάνεια 8 - Επιχειρηματικό Μοντέλο (Business Model)
 
-- Keep this slide clean.
-- Basic - EUR29/month
-- Standard - EUR59/month
-- Premium - EUR119/month
-- The commercial message is simple: no commission, no setup fee, and simple monthly pricing.
-- In practice, the first deals may still come through pilots, free demos, or trial periods. That is fine. The slide itself does not need to explain every edge case.
+- Μηνιαία Συνδρομή (Monthly SaaS Subscription), χωρίς προμήθειες (No Commission), χωρίς κόστος εγκατάστασης (No Setup Fee).
+- **Basic:** €29/μήνα
+- **Standard:** €59/μήνα
+- **Premium:** €119/μήνα
+- *Σημείωση:* Τα πρώτα deals θα έρθουν μέσω δωρεάν pilots. Η διαφάνεια δείχνει τον τελικό στόχο.
 
-## Slide 9 - Traction
+## Διαφάνεια 9 - Πρόοδος (Traction)
 
-- For now, this is still a pre-launch slide.
-- Use it to show movement, not to fake maturity.
-- Current buckets: operator conversations, partnership discussions, and a pilot list in progress.
-- Once real traction exists, this slide should get sharper: real venue conversations, live demos, early pilot metrics, and one plain-English ROI story about time saved, fewer lost orders, and smoother service.
-- The ideal progression is easy to follow: conversations, pilots, measured results, then conversions.
+- Χρήση για επίδειξη δυναμικής (Momentum), όχι για φούσκωμα αριθμών.
+- **Τρέχουσα φάση:** Συζητήσεις με ιδιοκτήτες (Operator Conversations), συνεργασίες, λίστα για Pilots.
+- Όταν υπάρξουν μετρήσεις (Metrics): Μετατροπή σε πραγματικά ROI stories (Εξοικονόμηση χρόνου, περισσότερες παραγγελίες).
+- **Στόχος (Pipeline):** Συζητήσεις -> Pilots -> Μετρήσεις -> Πωλήσεις.
 
-## Slide 10 - Competitive landscape
+## Διαφάνεια 10 - Ανταγωνισμός (Competitive Landscape)
 
-- The competition slide should not try to prove that nobody else exists. It should show where SkipQ fits.
-- Compare against Greek QR or POS-adjacent tools, international ordering platforms, and heavier enterprise systems that do too much for the first target segment.
-- SkipQ wins on a clearer angle: no commission, no hard lock-in, a casual hospitality focus, and a stronger operations layer.
-- The shortest honest version is this: it is not just a QR menu, and it is not just a POS add-on.
+- Το SkipQ τοποθετείται στρατηγικά (Competitive Positioning). Δεν λέμε ότι είμαστε μόνοι.
+- Σε σύγκριση με τα τοπικά QR tools και τα μεγάλα POS (π.χ. BringFood, Butler):
+- Επικρατούμε λόγω της απουσίας προμηθειών (No Commission), έλλειψης lock-in με βαρύ hardware, και της εστίασης στα operations και τη ροή του προσωπικού (Operations Layer).
+- **"Δεν είναι απλά ένα PDF QR, και δεν είναι ένα βαρύ POS."**
 
-## Slide 11 - Team
+## Διαφάνεια 11 - Η Ομάδα (Team)
 
-- We are building SkipQ with a team that can ship fast, validate in the field, and sell directly to real venues.
-- Angelos Papamichail - Founder / Product & Engineering
-- Antonis Freris - Project Manager / IT Operations
-- Mario Liassidis - Business Strategy & Go-to-Market
-- Nikos Tsaatazoglou - Business Development & Sales
-- Keep any post-raise hiring note secondary. This slide should prove execution, not headcount ambition.
+- Ομάδα που μπορεί να δημιουργήσει άμεσα το προϊόν (Ship Fast), να το δοκιμάσει (Validate) και να πουλήσει απευθείας (Direct Sales).
+- Άγγελος Παπαμιχαήλ - Founder / Product & Engineering
+- Αντώνης Φρέρης - Project Manager / IT Operations
+- Μάριος Λιασίδης - Business Strategy & Go-to-Market
+- Νίκος Τσατάζογλου - Business Development & Sales
 
-## Slide 12 - Financials
+## Διαφάνεια 12 - Οικονομικά Στοιχεία (Financials)
 
-- Keep this slide simple and credible.
-- Year 1: validate the product in Greece, run pilots, and convert the first venues.
-- Year 2: improve onboarding, pricing, and repeatability, then expand into nearby markets.
-- Year 3: scale only after the model is working and the first pilots show clear ROI.
-- If you keep numbers on the slide, frame them as working targets, not promises.
-- The point of this slide is execution: prove the model locally, tighten the playbook, then grow.
+- **Έτος 1:** Επικύρωση προϊόντος (Validate Product) στην Ελλάδα, πιλοτικές δοκιμές (Pilots), πρώτες μετατροπές πελατών (Conversions).
+- **Έτος 2:** Βελτίωση διαδικασίας ένταξης (Onboarding), σταθεροποίηση εσόδων (Repeatability), επέκταση σε γειτονικές αγορές (Expansion).
+- **Έτος 3:** Κλιμάκωση (Scale) μόνο εφόσον το μοντέλο αποδείξει σαφές ROI.
+- Αποδεικνύουμε το μοντέλο τοπικά, φτιάχνουμε το "Playbook", και μετά μεγαλώνουμε.
 
-## Slide 13 - The ask
+## Διαφάνεια 13 - Το Αίτημα (The Ask)
 
-- The ask should match the proof.
-- Right now, the strongest ask is practical:
-- pilot venues for summer
-- introductions to hospitality owners and operators
-- mentors and partners who can help us validate the first 5-10 deployments
-- We should still keep a capital line in the deck, but secondary:
-- once pilots prove ROI, we will be in a much stronger position to raise for product, sales, onboarding, and expansion
-- That keeps the ask serious without pretending we are already at the scale stage.
+- Τι ζητάμε:
+  - Πιλοτικά καταστήματα (Pilot Venues) για το καλοκαίρι.
+  - Γνωριμίες (Introductions) με ιδιοκτήτες εστίασης (Hospitality Owners).
+  - Μέντορες και συνεργάτες (Mentors/Partners) για την επικύρωση (Validation) των 5-10 πρώτων εγκαταστάσεων.
+- Όσον αφορά τη χρηματοδότηση (Funding): Όταν τα pilots αποδείξουν ROI (Επιστροφή Επένδυσης), θα αναζητήσουμε κεφάλαια για Product, Sales και Expansion. (Δείχνει ρεαλισμό).
 
-## Slide 14 - Final slide
+## Διαφάνεια 14 - Κλείσιμο (Final Slide)
 
-- Less waiting. More orders. Less pressure on staff.
+- Λιγότερη αναμονή. Περισσότερες παραγγελίες. Λιγότερη πίεση στο προσωπικό.
+- (Less waiting. More orders. Less pressure on staff.)
 - CapsuleT Accelerator - 2026
 - [Email / Phone / QR / Website]
 
-## What else should be added later to the PPTX
+---
 
-- Show the flow.
-- A tiny demo or a few screenshots will do more work than another paragraph of explanation.
+## Σημειώσεις για την Προσθήκη Υλικού
 
-- Add one ROI slide once pilots exist.
-- That is the moment the story stops being theoretical.
-
-- Explain payment intent more clearly.
-- It is one of the best product insights in the knowledge base and shows that this is an operations tool, not just a checkout layer.
-
-- Tighten the ICP even more.
-- The deck gets stronger when it clearly picks high-volume, high-friction venues first.
-
-- Keep hotels as a later expansion path.
-- They make sense, but too much hotel language too early makes the story feel unfocused.
-
-- Show the traction ladder.
-- Conversations to pilots to measured results is much more believable than vague pipeline language.
-
-- Keep the future roadmap disciplined.
-- AI helper, speech-to-text, dynamic menus, loyalty, and analytics are useful later, but they should not crowd the MVP story.
-
-- Clean up every market and problem source.
-- If the stats feel shaky, the whole deck feels shaky.
-
-
-![](../images/Pasted%20image%2020260424132245.png)
+- **Προσθήκη Mockups (UI/UX Screenshots):** Ένα μικρό demo δείχνει περισσότερα από 1000 λέξεις.
+- **Προσθήκη ROI Slide:** Μόλις έχουμε δεδομένα από τα Pilots (μετρήσιμη απόδοση).
+- **Πρόθεση Πληρωμής (Payment Intent):** Επεξήγηση του "πληρώνω τώρα / βάλτο στο tab" ως επιχειρησιακό εργαλείο (Operational Signal), όχι απλά checkout.
+- **Ξενοδοχεία (Hotels):** Αφήστε τα για Phase 2, για να μη χαθεί η εστίαση.
+- **Traction Ladder:** Ξεκάθαρα βήματα: Συζητήσεις (Conversations) -> Pilots -> Μετρήσιμα αποτελέσματα (Measured Results).
+- **Μελλοντικά AI Features:** Speech-to-text, LLM menus, Analytics είναι στο Roadmap, αλλά ΔΕΝ αντικαθιστούν το βασικό MVP "Scan-to-order".
