@@ -111,3 +111,20 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-06-01 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Αφαίρεση της απάντησης για Έρευνα Τοπικής Βάσης Δεδομένων (Local-First Database), αρχειοθέτηση. |
+| `meta/decision-log.md` | Καταγραφή της απόφασης για χρήση Turso/libSQL στο μέλλον. |
+| `architecture/technical_stack.md` | Ενσωμάτωση περίληψης της έρευνας για Τοπική Βάση Δεδομένων (Local-First Database). |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/knowledge-health.md` | Ενημέρωση μετρήσεων. |
+
+### Στατιστικά σήμερα
+- **Ενημερωμένα Αρχεία:** 6
+- **Νέες αρχειοθετήσεις αποφάσεων:** 1
+- **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)

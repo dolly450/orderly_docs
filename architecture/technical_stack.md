@@ -34,3 +34,10 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+
+## 5. Έρευνα για Τοπική Βάση Δεδομένων (Local-First Database Research) - Ιστορικό / Μελλοντική Φάση (Future Phase)
+- **Έρευνα για Local-first DB:** Η καλύτερη λύση για την τοπική (local-first) εφαρμογή παραγγελιών QR (QR ordering app) με SvelteKit + Go στο μέλλον είναι το **Turso/libSQL** ή το **PocketBase**. Το Turso/libSQL είναι η κορυφαία επιλογή λόγω των **Ενσωματωμένων Αντιγράφων (Embedded Replicas)** που συγχρονίζονται (sync) αυτόματα (εξαιρετικά γρήγορες αναγνώσεις τοπικά, εγγραφές στο σύννεφο και τοπικά - microsecond reads τοπικά, writes σε cloud + local).
+- **Γιατί απορρίφθηκαν τα Supabase/CockroachDB:** Είναι πολύ βαριά για εξοπλισμό χαμηλών επιδόσεων (low-end hardware, π.χ. Raspberry Pi / παλιό κινητό) και δεν έχουν ενσωματωμένο (built-in) το μοντέλο εναλλακτικής λύσης από τοπικό σε σύννεφο (local<->cloud fallback) με την ίδια ευκολία.
+- **Κόστος:** Το Turso Cloud (επίπεδο προγραμματιστή - Developer tier στα $4.99) επιτρέπει 500 ενεργές βάσεις (Active DBs), ενώ τα ενσωματωμένα αντίγραφα (Embedded Replicas) είναι δωρεάν, καθιστώντας το πολύ αποδοτικό για επέκταση (scale).
+- **Εναλλακτική:** Το PocketBase προσφέρει μια εμπειρία ενός εκτελέσιμου (single-binary experience - εξαιρετικά απλό) που ίσως εξυπηρετεί καλύτερα συγκεκριμένα σενάρια εγκατάστασης (deployment scenarios, π.χ. Android μέσω Termux).
