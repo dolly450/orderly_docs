@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-06-01 - Έρευνα Τοπικής Βάσης Δεδομένων (Local-First Database Research)
+- **Απόφαση / Σύνοψη:** Επιλογή Turso/libSQL (ή PocketBase) για τη μελλοντική φάση της τοπικής (local-first) αρχιτεκτονικής. Απορρίφθηκαν βαριές λύσεις όπως Supabase/CockroachDB.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Το τρέχον implementation παραμένει βασισμένο στο σύννεφο (cloud-first). Η υλοποίηση με Turso/libSQL ενσωματωμένα αντίγραφα (embedded replicas) θα γίνει στο μέλλον, σε συσκευές με χαμηλούς πόρους.
