@@ -111,3 +111,19 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-18 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Μετατροπή σε σωστά Ελληνικά, προσθήκη validation tasks (- [ ]) και δημιουργία Mermaid mindmap για υποψήφια Brand Names. |
+| `pitch/deck - φαμφάρες type shit.md` | Πλήρης μετάφραση και μορφοποίηση στα Ελληνικά με χρήση ουδέτερης ονομασίας ("[Η Εφαρμογή]"). Προσθήκη validation tasks στο τέλος. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας σε 2026-04-18 και χρήση ουδέτερης ονομασίας. |
+| `meta/user-needs.canvas` | Η ημερομηνία ήταν ήδη ενημερωμένη σε 2026-04-18. |
+| `meta/knowledge-health.md` | Ενημέρωση των metrics υγείας του vault. |
+
+### Στατιστικά σήμερα
+- **Νέα tasks (- [ ]):** 6
+- **Νέα Mermaid diagrams:** 1
+- **Canvases ενημερωμένα:** 2/2 (business-model.canvas ενημερώθηκε, user-needs.canvas είχε ήδη τη σωστή ημερομηνία)
