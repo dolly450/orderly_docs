@@ -2,7 +2,7 @@
 
 Η τρέχουσα υλοποίηση είναι web-first και βελτιστοποιημένη για γρήγορη ανάπτυξη, καθαρό domain separation και εύκολη επέκταση ανά feature.
 
-## 1. Τρέχον MVP Stack
+## 1. Τρέχον MVP (Minimum Viable Product - Ελάχιστο Βιώσιμο Προϊόν) Stack
 
 - **Frontend:** SvelteKit 2, Svelte 5, Tailwind CSS 4
 - **Routing / App Shell:** route groups για customer, staff, kitchen και admin
@@ -34,3 +34,26 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+### Υλοποίηση Βάσης Δεδομένων (Database Implementation)
+
+*   **Επιλογή:** Turso / libSQL (με SQLite) έναντι Supabase / CockroachDB.
+*   **Γιατί:** Ιδανικό για local-first QR ordering (μελλοντική φάση με Tauri v2+). Επιτρέπει embedded replicas, τοπικά reads (microsecond) και αυτόματο cloud sync. Ελαφρύ (low resources) για Raspberry Pi / Android.
+*   **Κόστος & Scaling:** Developer tier καλύπτει άνετα. Το storage είναι φθηνό. Το limit είναι τα active databases, όχι το συνολικό πλήθος. Μπορεί να επεκταθεί (scale) με database-per-tenant.
+*   **Περιορισμοί & Workarounds:**
+    *   *Realtime / SSE:* Υλοποίηση SSE χειροκίνητα στο backend (δεν υπάρχει native).
+    *   *RLS (Row Level Security):* Χρήση database-per-tenant ή application-level ελέγχους, καθώς δεν υπάρχει native RLS.
+    *   *Auth:* Χρήση εξωτερικού provider (Better Auth) με JWT.
+*   **Εναλλακτική:** Self-hosted `libsql-server` (VPS) για εξοικονόμηση κόστους σε 1000+ καταστήματα.
+
+### Οπτικοποίηση: Turso DB Flow (Μελλοντική Φάση Local-first)
+
+```mermaid
+flowchart TD
+    subgraph Τοπικό Δίκτυο (Local Network)
+        Client[Κινητό / Tablet] -->|Reads / Writes| LocalDB[(Embedded Replica - SQLite)]
+    end
+    subgraph Cloud
+        LocalDB -.->|Sync| Turso[(Turso Cloud / libsql-server)]
+    end
+```

@@ -11,12 +11,12 @@
 
 **Υπόθεση (Assumption):** Η Τεχνητή Νοημοσύνη (AI — πρόβλεψη παραγγελιών, δυναμικά μενού, upselling) και η τιμολόγηση βάσει προμήθειας (Commission Pricing) δίνουν ξεκάθαρη, μετρήσιμη αξία (Measurable Value) στον καταστηματάρχη.
 
-> ⚠️ **Αυτή η υπόθεση δεν έχει τεκμηριωθεί ακόμα (Unvalidated Assumption)** — απαιτεί επικύρωση μέσω πιλοτικών (Pilot Validation).
+> ⚠️ **Αυτή η υπόθεση δεν έχει τεκμηριωθεί ακόμα (Unvalidated Assumption)** — απαιτεί επικύρωση μέσω πιλοτικών (Pilot Validation). **Πείραμα Επικύρωσης:** Πιλοτική δοκιμή σε 2 beach bars με A/B testing στο commission pricing. **Μετρήσιμο Κριτήριο:** Επιλογή του AI/Commission tier από τουλάχιστον το 1 από τα 2 καταστήματα.
 
 **Positioning Update από mentorships:** Το αρχικό μήνυμα δεν είναι "QR ordering" ή "καλύτερη εμπειρία". Είναι **revenue/operations tool**: λιγότερη αναμονή, περισσότερος τζίρος, λιγότερο κόστος προσωπικού και λιγότερα λάθη.
 
 > **Επιπτώσεις για την Ομάδα:**
-> Πρέπει να μετατοπίσουμε την προσοχή μας από το «πώς θα το χτίσουμε τέλεια» στο «πώς θα μάθουμε γρήγορα». Το κλειδί είναι η λογική Build-Measure-Learn. Εφόσον στοχεύουμε σε zero-friction (χωρίς login), χρειαζόμαστε άμεσα εργαλεία analytics (PostHog/Mixpanel) για να μετράμε το scan-to-order conversion rate και τα drop-offs. → [[Product Design]]
+> Πρέπει να μετατοπίσουμε την προσοχή μας από το «πώς θα το χτίσουμε τέλεια» στο «πώς θα μάθουμε γρήγορα». Το κλειδί είναι η λογική Χτίζω-Μετράω-Μαθαίνω (Build-Measure-Learn). Εφόσον στοχεύουμε σε zero-friction (χωρίς login), χρειαζόμαστε άμεσα εργαλεία analytics (PostHog/Mixpanel) για να μετράμε το scan-to-order conversion rate και τα drop-offs. → [[Product Design]]
 
 ### Οπτικοποίηση
 
@@ -167,3 +167,10 @@ mindmap
 - Τα integrations με PMS/POS/channel managers μπαίνουν μόνο αν αποδειχθεί ότι είναι blocker για pilot ή για enterprise deal.
 - Δεν πάμε multi-country early, γιατί κάθε χώρα έχει διαφορετικούς dominant POS/PMS vendors. Πρώτα μία αγορά, μετά expansion.
 - Για να μπει φέτος σε hotel, το offer πρέπει να είναι απλό, άμεσο, γρήγορο σε implementation και low friction. Αλλιώς η απάντηση θα είναι "ελάτε του χρόνου".
+
+### Στρατηγική Πωλήσεων (Sales Strategy)
+
+- **Στρατηγική Προϊόντος (PDA):** Αντί να αντικαταστήσουμε τα υπάρχοντα PDA των σερβιτόρων (που θα έφερνε ευθεία σύγκρουση με τους παρόχους POS), θα λειτουργούμε ως self-service layer στέλνοντας τις παραγγελίες κατευθείαν στο υπάρχον POS (π.χ. Epsilon Net).
+- **Μέθοδος Πώλησης (Direct Sales):** Η προσέγγιση θα είναι "Direct sales (walking in)" με ένα "Fake MVP" (Ελάχιστο Βιώσιμο Προϊόν - Πρωτότυπο) demo.
+
+- [ ] Πιλοτική Δοκιμή (Pilot Testing): Πιλοτική δοκιμή σε 2 beach bars με A/B testing στο commission pricing για να δούμε αν προτιμούν AI features.

@@ -13,3 +13,13 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-18 - Επιλογή Βάσης Δεδομένων (Database)
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε η Turso / libSQL για την υποστήριξη του future local-first setup με embedded replicas και φθηνό active DB scaling.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Θα χρειαστεί custom υλοποίηση SSE για realtime updates και χειρισμός RLS σε επίπεδο εφαρμογής ή μέσω database-per-tenant.
+
+### 2026-04-18 - Στρατηγική Πωλήσεων (Phase 2 MVP Sales)
+- **Απόφαση / Σύνοψη:** Δεν θα αντικαταστήσουμε τα υπάρχοντα PDA. Θα λειτουργούμε ως self-service layer στέλνοντας τις παραγγελίες κατευθείαν στο POS, προωθώντας την εφαρμογή μέσω "Direct sales (walking in)".
+- **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
+- **Σημείωση για Implementation:** Το sales pitch πρέπει να εστιάζει στη λειτουργική ηρεμία και την αύξηση τζίρου χωρίς να διαταράσσει το υφιστάμενο σύστημα.

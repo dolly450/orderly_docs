@@ -1,13 +1,13 @@
 # Επισκόπηση Αρχιτεκτονικής (Architecture Overview)
 
-Η τρέχουσα αρχιτεκτονική του Orderly είναι **cloud-first και web-first**. Το βασικό προϊόν είναι ένα SvelteKit 2 / Svelte 5 app με ρητό διαχωρισμό ανά ρόλο και domain, ενώ το feature registry λειτουργεί ως η κύρια στρώση σύνθεσης του UI.
+Η τρέχουσα αρχιτεκτονική της εφαρμογής είναι **cloud-first (πρώτα στο σύννεφο) και web-first (πρώτα στον ιστό)**. Το βασικό προϊόν είναι ένα SvelteKit 2 / Svelte 5 app με ρητό διαχωρισμό ανά ρόλο και domain, ενώ το μητρώο χαρακτηριστικών (feature registry) λειτουργεί ως η κύρια στρώση σύνθεσης του UI.
 
 ## Βασικοί Πυλώνες
 
-1. **Browser / Client Layer:** Ο πελάτης, το staff, η κουζίνα και ο admin χρησιμοποιούν το ίδιο web app με διαφορετικά route groups και δικαιώματα.
-2. **Application Layer:** Τα features είναι μεμονωμένα Svelte components που δηλώνονται στο `featureRegistry` και τοποθετούνται σε συγκεκριμένα page slots μέσω του `feature-config`.
+1. **Browser / Client Layer:** Ο πελάτης, το staff, η κουζίνα και ο admin χρησιμοποιούν το ίδιο web app με διαφορετικά ομάδες διαδρομών (route groups) και δικαιώματα.
+2. **Application Layer:** Τα features είναι μεμονωμένα Svelte components που δηλώνονται στο `featureRegistry` και τοποθετούνται σε συγκεκριμένα θέσεις σελίδας (page slots) μέσω του `feature-config`.
 3. **Server / API Layer:** Better Auth για αυθεντικοποίηση, Drizzle/libSQL για δεδομένα, SSE για realtime updates και route handlers για το domain logic.
-4. **Data Layer:** Η εφαρμογή γράφει στην τρέχουσα cloud-first βάση και στους βοηθητικούς πίνακες/helpers που στηρίζουν orders, reservations, tabs, staff claims και localization.
+4. **Data Layer:** Η εφαρμογή γράφει στην τρέχουσα cloud-first (πρώτα στο σύννεφο) βάση δεδομένων και στους βοηθητικούς πίνακες/helpers που στηρίζουν orders, reservations, tabs, staff claims και localization.
 
 ## Τρέχον vs Μελλοντικό
 
