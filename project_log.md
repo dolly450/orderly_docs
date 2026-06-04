@@ -111,3 +111,25 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-18 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `architecture/technical_stack.md` | Προσθήκη τεκμηρίωσης για απόφαση Turso/libSQL και Mermaid flow. Αντικατάσταση ονόματος. |
+| `business/market_strategy.md` | Προσθήκη απόφασης Direct Sales, αντικατάσταση ονόματος, μετάφραση, task επικύρωσης. |
+| `meta/decision-log.md` | Καταγραφή αποφάσεων για Database και Sales Strategy. |
+| `meta/active_investigations.md` | Διαγραφή λυμένων ερωτήσεων. Προσθήκη νέων (Pain point, MVP AI) για διατήρηση 5 ανοιχτών. |
+| `notes/Product Design.md` | Μετάφραση, αντικατάσταση ονόματος, προσθήκη actionable task. |
+| `architecture/overview.md` | Καθαρισμός, αντικατάσταση ονόματος, μεταφράσεις (cloud-first). |
+| `meta/user-needs.canvas` | Προσθήκη sales approach στην persona 1. |
+| `meta/business-model.canvas` | Ενημέρωση Cost Structure με Turso/libSQL και αλλαγή ημερομηνίας. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (bot_questions):** 2 (συνολικά 5 ανοιχτές)
+- **Νέα tasks (- [ ]):** 2
+- **Νέα backlinks:** ~4
+- **Διπλότυπα κανονικοποιημένα:** 0
+- **Canvases ενημερωμένα:** 2/2
+- **Νέα Mermaid diagrams:** 1
