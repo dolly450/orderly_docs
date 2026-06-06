@@ -2,11 +2,11 @@ https://drive.google.com/file/d/1PdhPwBNBAzjzk6av4FKMecvBdI2eclS3/view?usp=shari
 
 [[business/market_strategy.md]]
 
-USP - Unique Selling Points
+### USP (Unique Selling Points - Μοναδικά Πλεονεκτήματα Πώλησης)
 - γιατι το προιον μου ειναι καλυτερο απο τον ανταγωνισμο, ειτε αμεσα ειτε εμμεσα
 - πώς λυνω το προβλημα ή εξυπηρετω τους πελατες με καλύτερο τρόπο
 
-product: business + tech + ux (design)
+Προϊόν (Product) = Επιχειρηματικότητα (Business) + Τεχνολογία (Tech) + Εμπειρία Χρήστη (UX Design)
 
 ## Stages of Product and Growth
 ![Stages of Product and Growth](../images/Stages%20of%20Product%20and%20Growth.png)
@@ -17,7 +17,7 @@ product: business + tech + ux (design)
 3. **Growth (money first):** * Ξεκινά η ραγδαία ανάπτυξη με επένδυση πόρων.
     - Καταλήγει στο στάδιο της ωριμότητας (**Maturity**), όπου η ανάπτυξη συνεχίζεται μέσω εξαγορών και διεθνούς επέκτασης.
 
-## product market fit questions
+### Ερωτήσεις για το Product/Market Fit (Ταύτιση Προϊόντος-Αγοράς)
 1) how likely it is that you would suggest this product or service to a colleague or friends? (1 -10) "NPS" (Net Promoter Score) από -100% έως 100%. Θέλουμε τουλάχιστον +30% για να πούμε ότι έχουμε fit.
 2) How dissapointed would you be if you could no longer use this product?
    a) very dissapointed (>75%)
@@ -25,7 +25,7 @@ product: business + tech + ux (design)
    c) Not dissapointed, it really isn't that useful
    d) N/A - I no longer use this product
 
-## the right product:
+### Το Σωστό Προϊόν (The Right Product)
 ![the Right product](../images/the%20Right%20product.png)
 Αυτή η εικόνα δείχνει ένα απλό διάγραμμα Venn που ορίζει τι αποτελεί «Το ΣΩΣΤΟ προϊόν» (**The RIGHT product**).
 Συγκεκριμένα, αποτελείται από δύο κύκλους που τέμνονται:
@@ -37,21 +37,21 @@ product: business + tech + ux (design)
 
 - **Τι λέει το workshop:** Μιλάει για δημιουργία MVP σε 4 μέρες, "Fake MVPs" και χρήση εργαλείων (όπως v0/bolt.new για κώδικα ή low-code λύσεις) για να βγει το προϊόν γρήγορα.
     
-- **Εφαρμογή στην Orderly:** Στο Roadmap σας έχετε υπολογίσει ~80 μέρες μέχρι το πιλοτικό (Απρίλιος - Ιούνιος). Η πρόκληση εδώ είναι: _Μπορείτε να τεστάρετε το βασικό σας assumption γρηγορότερα;_ Για παράδειγμα, πριν στηθεί όλο το backend, θα μπορούσατε να πάτε σε ένα beach bar με ένα "σχεδόν ψεύτικο" (mocked) UI στο κινητό σας, απλά για να δείτε αν ο ιδιοκτήτης θα έλεγε «Ναι, το θέλω, πού υπογράφω;».
+- **Εφαρμογή στο προϊόν μας:** Στο Roadmap σας έχετε υπολογίσει ~80 μέρες μέχρι το πιλοτικό (Απρίλιος - Ιούνιος). Η πρόκληση εδώ είναι: _Μπορείτε να τεστάρετε το βασικό σας assumption γρηγορότερα;_ Για παράδειγμα, πριν στηθεί όλο το backend, θα μπορούσατε να πάτε σε ένα beach bar με ένα "σχεδόν ψεύτικο" (mocked) UI στο κινητό σας, απλά για να δείτε αν ο ιδιοκτήτης θα έλεγε «Ναι, το θέλω, πού υπογράφω;».
     
 
 ### 2. Analytics & The "Build-Measure-Learn" Loop
 
 - **Τι λέει το workshop:** Αναφέρει εργαλεία μέτρησης (όπως PostHog, Mixpanel) και βιβλία-σταθμούς όπως το _The Lean Startup_.
     
-- **Εφαρμογή στην Orderly:** Επειδή είστε "zero-friction" (χωρίς login/app), η μέτρηση της συμπεριφοράς είναι το παν. Πρέπει να ξέρετε ακριβώς πού "κολλάει" ο τουρίστας. Στο MVP σας πρέπει να ενσωματώσετε analytics από την Day 1: Πόσοι σκάναραν το QR; Πόσοι έβαλαν κάτι στο καλάθι; Πόσοι εγκατέλειψαν στην οθόνη της πληρωμής (drop-off rate);
+- **Εφαρμογή στο προϊόν μας:** Επειδή είστε "zero-friction" (χωρίς login/app), η μέτρηση της συμπεριφοράς είναι το παν. Πρέπει να ξέρετε ακριβώς πού "κολλάει" ο τουρίστας. Στο MVP σας πρέπει να ενσωματώσετε analytics από την Day 1: Πόσοι σκάναραν το QR; Πόσοι έβαλαν κάτι στο καλάθι; Πόσοι εγκατέλειψαν στην οθόνη της πληρωμής (drop-off rate);
     
 
 ### 3. Το Μοντέλο "Hooked"
 
 - **Τι λέει το workshop:** Προτείνει το βιβλίο _Hooked_ (πώς να φτιάχνεις προϊόντα που γίνονται συνήθεια).
     
-- **Εφαρμογή στην Orderly:** Στο B2B κομμάτι σας (τα venues), το KDS (Kitchen Display System) ή το admin dashboard που θα φτιάξετε στην Φάση 2 πρέπει να είναι τόσο εθιστικά απλό που ο σερβιτόρος ή ο μάγειρας να μην θέλει να ξαναδεί χαρτάκι παραγγελίας ποτέ στη ζωή του.
+- **Εφαρμογή στο προϊόν μας:** Στο B2B κομμάτι σας (τα venues), το KDS (Kitchen Display System) ή το admin dashboard που θα φτιάξετε στην Φάση 2 πρέπει να είναι τόσο εθιστικά απλό που ο σερβιτόρος ή ο μάγειρας να μην θέλει να ξαναδεί χαρτάκι παραγγελίας ποτέ στη ζωή του.
     
 
 ---
@@ -64,6 +64,7 @@ product: business + tech + ux (design)
 Πρέπει να μετατοπίσουμε την εστίασή μας από το "πώς θα χτίσουμε το τέλειο σύστημα τεχνικά" στο "πώς θα μετρήσουμε γρήγορα την αλληλεπίδραση των χρηστών". Η προτεραιότητα είναι η επικύρωση των υποθέσεών μας (Build-Measure-Learn loop).
 
 ## Επόμενες Ενέργειες
+- [ ] Δημιουργία και εκτέλεση "Fake MVP" test (δείγμα UI σε κινητό) σε 3-5 beach bars για μέτρηση άμεσου ενδιαφέροντος.
 - [ ] Ρύθμιση tracking (π.χ. PostHog/Mixpanel) για το scan-to-order conversion rate στο Fake MVP.
 
 ## Σχετικές Σημειώσεις

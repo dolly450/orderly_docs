@@ -44,3 +44,8 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-04-27
+- **Βελτίωση:** Καταγραφή τεχνικής απόφασης Database στο MVP (Turso), καθαρισμός `active_investigations.md` (διατηρούνται ακριβώς 5).
+- **Οπτικοποίηση:** Ενσωμάτωση νέων Mermaid διαγραμμάτων (tech stack & order flow).
+- **Εκκρεμότητες (Tasks):** Προτάθηκαν πειράματα validation για Offline PWA caching, Fake MVP demo και Split Tab integration.

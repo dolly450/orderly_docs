@@ -111,3 +111,25 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-04-27 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Αρχειοθέτηση ερώτησης #1 για τη Βάση Δεδομένων (Turso). Διατήρηση 5 ενεργών ερωτήσεων. |
+| `meta/decision-log.md` | Καταγραφή απόφασης για χρήση Turso/libSQL ως Local-First Baseline. |
+| `architecture/technical_stack.md` | Προσθήκη απόφασης DB, προσθήκη Mermaid flowchart (Οπτικοποίηση Tech Stack). |
+| `architecture/data_model.md` | Ενημέρωση με implementation notes για Turso/Drizzle. |
+| `notes/Product Design.md` | Εξαγωγή actionable insights, normalization του branding, προσθήκη tasks/impact. |
+| `notes/Orderly's path...` | Εξαγωγή actionable insights (Offline PWA, Split tab), προσθήκη tasks/impact. |
+| `design/v1_scope.md` | Διόρθωση ορολογίας, προσθήκη Mermaid flowchart (Οπτικοποίηση ροής παραγγελίας). |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις:** 0
+- **Νέα tasks (- [ ]):** 4
+- **Διπλότυπα κανονικοποιημένα / Μεταφρασμένα:** 2
+- **Νέα Mermaid diagrams:** 2
+- **Canvases ενημερωμένα:** Ναι

@@ -58,3 +58,8 @@ erDiagram
     PRODUCT ||--o{ ORDER_ITEM : ordered_as
     PRODUCT ||--|| INVENTORY : tracked_by
 ```
+
+
+### Τεχνικές Σημειώσεις Υλοποίησης (Implementation Notes)
+- **Database Engine**: Χρησιμοποιείται libSQL (Turso) με αρχιτεκτονική "database-per-tenant" (ένα DB ανά κατάστημα / Canteen) για απομόνωση των δεδομένων χωρίς να απαιτείται Row Level Security (RLS).
+- **ORM**: Η διαχείριση του σχήματος και τα migrations γίνονται μέσω Drizzle ORM (Type-safe).

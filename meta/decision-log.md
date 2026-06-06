@@ -13,3 +13,9 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+
+### [2026-04-27] - Επιλογή Βάσης Δεδομένων (Database) για Local-First Requirement
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε το Turso/libSQL λόγω της εγγενούς υποστήριξης embedded replicas (SQLite) για offline λειτουργία, μικρού footprint για edge devices, και άψογης συμβατότητας με SvelteKit/Drizzle. Το Supabase/CockroachDB απορρίφθηκαν ως πολύ "βαριά" για low-end hardware.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/data_model.md]]
+- **Σημείωση για Implementation:** Χρησιμοποιούμε "database-per-tenant" model (1 DB/κατάστημα) για data isolation, καθώς η libSQL δεν έχει native RLS. Τα reads είναι τοπικά, τα writes πάνε cloud+local sync. Drizzle ORM για TS support.
