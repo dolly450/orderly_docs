@@ -111,3 +111,23 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-06-07 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Μετατροπή greeklish → Ελληνικά, σύνθεση λίστας ονομάτων, προσθήκη validation task |
+| `business/Questionnaire.md` | Normalization, διόρθωση format και προσθήκη μετρήσιμων metrics στα validation tasks |
+| `meta/active_investigations.md` | Διαγραφή της ερώτησης για την Database, διαμόρφωση του format (Τίτλος/Γιατί/AI/Απάντηση), και προσθήκη 2 νέων ερωτήσεων από το `open-questions.md` |
+| `architecture/technical_stack.md` | Προσθήκη κεφαλαίου `Βάση Δεδομένων & Τοπικός Συγχρονισμός` με τα insights για το Turso/libSQL |
+| `meta/decision-log.md` | Καταγραφή της απόφασης για τη Database |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/knowledge-health.md` | Ενημέρωση metrics |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** 2
+- **Νέα tasks (- [ ]):** 2 (Branding Poll, Questionnaire Analysis)
+- **Αποφάσεις αρχειοθετήθηκαν:** 1 (Turso DB)
+- **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)
