@@ -1,13 +1,13 @@
 # Ιχνηλασιμότητα Γνώσης & Υγεία Vault (Knowledge Health)
 
-## Ημερήσια Αναφορά: 2026-04-10
+## Ημερήσια Αναφορά: 2026-06-07
 
 ### Μετρήσεις Υγείας (Health Metrics)
 
 | Μέτρηση                                 | Τιμή                                                        |
 | --------------------------------------- | ----------------------------------------------------------- |
-| **Νέα backlinks σήμερα**                | 16                                                          |
-| **Ερωτήσεις χωρίς απάντηση**            | 3 (active investigations) + 11 (open-questions)             |
+| **Νέα backlinks σήμερα**                | 3                                                           |
+| **Ερωτήσεις χωρίς απάντηση**            | 5 (active investigations) + 9 (open-questions)              |
 | **Stale notes (>14 ημέρες χωρίς edit)** | 0                                                           |
 | **Orphaned notes (χωρίς σύνδεση)**      | 1 (meta/test-topic.md)                                      |
 | **Κενά / ελλιπή αρχεία**                | 0                                                           |
@@ -15,9 +15,8 @@
 
 ### Λόγοι «Needs Attention»
 
-1. **Ερωτηματολόγιο σε draft** — δεν έχει σταλεί ακόμα σε κανέναν → [[Questionnaire]]
-2. **COGS ακριβή νούμερα λείπουν** — δεν μπορούμε να υπολογίσουμε margins χωρίς αυτά → [[COGS, CACs, overheads]]
-3. **Brand name ακόμα ανοιχτό** → [[open-questions#Branding & Ταυτότητα]]
+1. **Ερωτηματολόγιο** — Έχει οριστικοποιηθεί το format, αναμένεται αποστολή και ανάλυση (στόχος >60%).
+2. **Brand name** — Στημένο το poll για την τελική επιλογή.
 
 ### Validation Experiments (Πειράματα Επικύρωσης)
 
@@ -26,6 +25,7 @@
 | Οι πελάτες εστίασης θέλουν QR ordering | Ερωτηματολόγιο σε 100+ πελάτες | >60% «θα χρησιμοποιούσα» | ⏳ Αναμονή |
 | Τα beach bars θα πληρώσουν | Walking-in σε 5 venues με demo (Fake MVP) | ≥3 από 5 λένε ΝΑΙ | ⏳ Αναμονή |
 | Το Value Proposition "Λειτουργική Ηρεμία" επικρατεί | A/B Testing κατά τη διάρκεια Demo | Μεγαλύτερο ενδιαφέρον | ⏳ Αναμονή |
+| Brand Name Selection | 20 user poll (Airplane test) | Μία επιλογή >60% | ⏳ Αναμονή |
 
 ---
 
@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-06-07
+- **Βελτίωση:** Turso DB απόφαση μπήκε στο tech stack, μεταφράστηκαν Greeklish (Branding/Questionnaire), έγιναν normalization actions.
+- **Εκκρεμότητες:** Πρέπει να εκτελεστούν τα tasks validation experiments που προστέθηκαν (Branding Poll, Ερωτηματολόγιο).

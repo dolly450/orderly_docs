@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-06-07 - Επιλογή Βάσης Δεδομένων (Database Selection)
+- **Απόφαση / Σύνοψη:** Επιλογή του Turso (libSQL) στο Developer tier. Υποστηρίζει embedded replicas για local-first requirements, έχει πολύ χαμηλό κόστος και Drizzle ORM integration.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[meta/active_investigations.md]]
+- **Σημείωση για Implementation:** Το libSQL δεν έχει native Realtime ή Auth, τα οποία θα αντιμετωπιστούν στο application layer με SSE και Better Auth. Εύκολη μετάβαση σε self-hosted (libsql-server) αν απαιτηθεί στο μέλλον.

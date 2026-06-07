@@ -1,16 +1,22 @@
+# Ονομασία και Ταυτότητα (Logo and Branding)
+
+## Πιθανά Ονόματα (Candidate Names)
+
 - **skipq.menu**
+- **ordersnap** / **ordrsnap**
+- **waitease**
+- **piase.menu**
+- **easy + q** / **quick** / **snap q**
+- **zeroq**
+- **0wait**
+- **menqr**
 
-- [ ] έχουμε θέμα με το trademark????
-επιλαχόντα:
-- ordersnap
-ordrsnap
+## Σχετικές Σημειώσεις
 
-pithano name:
-- waitease
-- piase.menu
-- easy + q / quick / snap q
-- zeroq
-- 0wait
+- Έχουμε θέμα με το εμπορικό σήμα (Trademark) για κάποια από αυτά; Χρειάζεται έρευνα πριν την τελική επιλογή.
+- Το brand name "Orderly" είναι safe αλλά λείπει ίσως το συναίσθημα της ταχύτητας και του καλοκαιριού. Χρειαζόμαστε 1-3 συλλαβές που να περνούν το "Airplane test". → [[bot_questions]]
 
+## Επόμενες Ενέργειες
 
-menqr
+- [ ] Διεξαγωγή ψηφοφορίας (Poll) εντός της ομάδας ή σε 20 δυνητικούς πελάτες με τις επικρατέστερες 3 επιλογές. Μετρήσιμο κριτήριο: Μία επιλογή να συγκεντρώσει >60% προτίμηση βάσει του "Airplane test".
+- [ ] Έλεγχος διαθεσιμότητας domains (.com / .io / .gr) και εμπορικών σημάτων (Trademarks) για το τελικό όνομα.
