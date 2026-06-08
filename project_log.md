@@ -111,3 +111,6 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+# Project Log Update
+## 📝 Ημερήσια Ενημέρωση — 2026-04-18 (Daily Operation)
+- Ενημερώθηκαν tags, cleanups, tasks και deduplications.

@@ -13,3 +13,13 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-18 - Επιλογή Ονόματος (Brand Name)
+- **Απόφαση / Σύνοψη:** Χρειαζόμαστε τελική επιλογή μέσω ψηφοφορίας (TapServe, EasyTab, QResto, Breeze, Velo, Kima, Lio, Zeno).
+- **Αρχεία που ενημερώθηκαν:** [[business/logo and branding.md]]
+- **Σημείωση για Implementation:** Αναμένεται ψηφοφορία ομάδας.
+
+### 2026-04-18 - Στρατηγική Αντικατάστασης PDA
+- **Απόφαση / Σύνοψη:** Direct sales ως self-service layer, όχι αντικατάσταση PDA.
+- **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
+- **Σημείωση για Implementation:** Θα εστιάσουμε σε B2B2C self-service.
