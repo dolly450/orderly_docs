@@ -167,3 +167,13 @@ mindmap
 - Τα integrations με PMS/POS/channel managers μπαίνουν μόνο αν αποδειχθεί ότι είναι blocker για pilot ή για enterprise deal.
 - Δεν πάμε multi-country early, γιατί κάθε χώρα έχει διαφορετικούς dominant POS/PMS vendors. Πρώτα μία αγορά, μετά expansion.
 - Για να μπει φέτος σε hotel, το offer πρέπει να είναι απλό, άμεσο, γρήγορο σε implementation και low friction. Αλλιώς η απάντηση θα είναι "ελάτε του χρόνου".
+
+- [ ] Validation Experiment (Customer Interview ή Survey) για επιβεβαίωση της υπόθεσης της τιμολόγησης AI/Commission (απαιτείται μετρήσιμο κριτήριο επιτυχίας).
+
+## Στρατηγική Προϊόντος (Από Έρευνα 2026-04-18)
+
+### Technical Specs & Implementation Logic
+- **Στόχος:** Λειτουργία αποκλειστικά ως self-service layer (add-on).
+- **Προσέγγιση:** Direct sales (Direct sales) στρατηγική. **Δεν** προσπαθούμε να αντικαταστήσουμε τα υπάρχοντα PDA των σερβιτόρων για να αποφύγουμε την ευθεία σύγκρουση με τους παρόχους POS (Point of Sale - Σημείο Πώλησης).
+- **Ενσωμάτωση:** Στέλνουμε τις παραγγελίες κατευθείαν στο υπάρχον POS ή λειτουργούμε παράλληλα (standalone app) για το μικρότερο δυνατό friction adoption.
+- **Επόμενη Φάση (Phase 2):** Η στρατηγική αυτή καθορίζει ξεκάθαρα τον σχεδιασμό του Phase 2 MVP.
