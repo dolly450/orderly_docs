@@ -153,6 +153,7 @@ mindmap
 
 ### Implementation Logic: Phase 1 Sales (Acquiring First 10 Customers)
 - **Primary Method:** Direct Sales (Walking In).
+- **Product Strategy:** Λειτουργούμε ως self-service layer (add-on) και **όχι** ως αντικαταστάτης των υπαρχόντων PDA, προκειμένου να ελαχιστοποιήσουμε το friction adoption και να μην έχουμε άμεση σύγκρουση με τους παρόχους POS.
 - **Target Profiles:** Self-service cafes, beach bar counters and festival/event bars with visible queues.
 - **Pitch Focus:** Time saved, queue reduction, more orders/revenue, fewer order mistakes and easier staff coordination.
 - **Conversion Strategy:** Provide a free, no-obligation "Fake MVP" demo directly on the venue owner's mobile device to demonstrate the zero-friction experience.
