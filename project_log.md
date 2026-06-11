@@ -111,3 +111,21 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — Σήμερα (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Μορφοποίηση, αφαίρεση greeklish, προσθήκη task ψηφοφορίας. |
+| `business/Questionnaire.md` | Προσθήκη Mermaid flowchart. |
+| `meta/active_investigations.md` | Αφαίρεση ερώτησης 5 (Product Strategy PDA). |
+| `meta/decision-log.md` | Προσθήκη απόφασης για Direct Sales & Add-on (Αρχειοθέτηση ερώτησης 5). |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/knowledge-health.md` | Ενημέρωση metrics. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** -1 (αρχειοθετήθηκε 1)
+- **Νέα tasks (- [ ]):** 2
+- **Διπλότυπα κανονικοποιημένα:** 1

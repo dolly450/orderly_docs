@@ -1,5 +1,10 @@
 # Ημερολόγιο Αποφάσεων (Decision Log)
 
+### Σήμερα - Στρατηγική Προϊόντος: Αντικατάσταση ή Ενσωμάτωση PDA
+- **Απόφαση / Σύνοψη:** Η στρατηγική θα εστιάσει σε Direct Sales. Δεν αντικαθιστούμε τα PDA, αλλά λειτουργούμε ως self-service layer (add-on) για ταχύτερο friction adoption.
+- **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
+- **Σημείωση για Implementation:** Θα προωθούμε τη λύση παράλληλα με το POS, χωρίς να δημιουργούμε ευθεία σύγκρουση.
+
 ### 2026-04-10 - Αρχιτεκτονική MVP (Cloud-first Web App)
 - **Απόφαση / Σύνοψη:** Το τρέχον baseline του προϊόντος είναι cloud-first web εφαρμογή σε SvelteKit. Η local-first / Tauri κατεύθυνση παραμένει ερευνητική επιλογή για μελλοντική φάση, όχι το shipped μοντέλο.
 - **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]], [[meta/active_investigations.md]]
