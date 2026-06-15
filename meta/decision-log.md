@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-04-18 - Επιλογή Βάσης Δεδομένων (Database) για Local-First
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε η χρήση Turso/libSQL αντί για Supabase για την υποστήριξη της local-first (τοπική πρώτα) λειτουργίας, λόγω της υποστήριξης για embedded replicas, χαμηλού overhead και ευκολίας εγκατάστασης σε τοπικές συσκευές. Η Supabase απορρίφθηκε ως πολύ "βαριά".
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Χρησιμοποιούμε Drizzle ORM με libSQL για type-safe queries στο SvelteKit και custom SSE implementation στο Golang backend αν χρειαστεί. Τα embedded replicas είναι δωρεάν και τοπικά τα reads έχουν microsecond latency.

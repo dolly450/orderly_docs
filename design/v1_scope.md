@@ -31,6 +31,16 @@
 
 > **Σημείωση:** Απλό και εύκολο στη χρήση (Simple and easy to use) — αυτό αναφέρεται και ως θετικό του [[competitive_analysis|Butler]].
 
+
+### Οπτικοποίηση
+
+```mermaid
+flowchart TD
+    A[Πελάτης] -->|Σκανάρει QR| B[Μενού Καταστήματος]
+    B -->|Επιλέγει & Πληρώνει| C[Ειδοποίηση Staff/KDS]
+    C -->|Προετοιμασία| D[Ολοκλήρωση & Παράδοση]
+```
+
 ## Εκτός v1 / Να μην μπερδέψουν το αρχικό pitch
 
 - Full payments/commission product και πολύπλοκα payment integrations
@@ -98,3 +108,6 @@
 - [ ] Δημιουργία wireframes για τις 3 βασικές σελίδες (Πελάτης, Staff/KDS, Admin)
 - [ ] Δοκιμή "Fake MVP": Πριν χτιστεί πλήρως το backend, δημιουργία mockup στο κινητό για demo/walk-in σε beach bars. Στόχος: μέτρηση άμεσου ενδιαφέροντος (Ναι/Όχι).
 - [ ] Επιλογή ενός πρώτου narrow use case για pilot, πριν προστεθούν hotel/POS/AI-heavy flows.
+
+
+- [ ] Έρευνα: A/B test demo σε 5 beach bars για να ελέγξουμε την αποδοχή της ροής πληρωμής. Μετρήσιμο: 3/5 να πουν ΝΑΙ σε δοκιμή.

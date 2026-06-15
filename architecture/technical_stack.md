@@ -34,3 +34,10 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+## 5. Βάση Δεδομένων (Database) - Local-First (Μελλοντική Φάση)
+
+- **Απόφαση:** Επιλέχθηκε Turso/libSQL λόγω χαμηλού overhead, υποστήριξης embedded replicas (τοπικά αντίγραφα) και εύκολου scaling. Η Supabase απορρίφθηκε ως "βαριά" για low-power συσκευές καταστημάτων.
+- **ORM:** Drizzle ORM για type-safe (ασφαλή ως προς τους τύπους) ερωτήματα, ειδικά στο SvelteKit.
+- **Sync:** Τα δεδομένα γράφονται στο cloud και συγχρονίζονται τοπικά, επιτρέποντας στο μαγαζί να δουλεύει 100% offline με microsecond latency στα reads (αναγνώσεις).
+- **Περιορισμοί:** Το libSQL δεν έχει native RLS (Row Level Security - Ασφάλεια επιπέδου γραμμής) ή SSE (Server-Sent Events). Αν χρειαστεί RLS, θα υλοποιηθεί στο application layer. Το SSE υλοποιείται μέσω custom Go backend.

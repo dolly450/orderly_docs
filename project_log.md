@@ -1,5 +1,27 @@
 # Project Orderly: Log & Progress
 
+
+## 📝 Ημερήσια Ενημέρωση — 2026-06-15 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/bot_questions.md` | Προστέθηκε επείγουσα επισήμανση για git conflict markers. |
+| `meta/active_investigations.md` | Διαγράφηκε η έρευνα Local-first DB, μορφοποιήθηκαν 5 αυστηρές έρευνες. |
+| `meta/decision-log.md` | Καταγράφηκε η απόφαση για Turso/libSQL vs Supabase. |
+| `architecture/technical_stack.md` | Ενημερώθηκε το tech stack με την επιλογή Local-first DB. |
+| `design/v1_scope.md` | Προσθήκη Mermaid diagram, normalization, προσθήκη validation task. |
+| `design/features.md` | Διόρθωση όρων, αφαίρεση διπλότυπων backlinks, προσθήκη validation task. |
+| `architecture/overview.md` | Μετάφραση όρων στα Ελληνικά, προσθήκη validation task. |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας. |
+| `meta/knowledge-health.md` | Ενημέρωση στατιστικών υγείας Knowledge Base. |
+
+### Στατιστικά σήμερα
+- **Νέα tasks (- [ ]):** 3
+- **Canvases ενημερωμένα:** 2/2 (user-needs + business-model)
+- **Mermaid diagrams προστεθέντα/ενημερωμένα:** 1
+
 ## 🚀 Accomplishments (Phase 1)
 - [2026-03-26] **Initial Setup:** Created GitHub repo `dolly450/orderly_docs`.
 - [2026-03-26] **Obsidian Vault:** Set up folder structure (architecture, design, business, pitch, meta).
