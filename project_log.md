@@ -111,3 +111,22 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+
+## 📝 Ημερήσια Ενημέρωση — 2026-06-16 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/logo and branding.md` | Κανονικοποίηση greeklish, προσθήκη task ψηφοφορίας |
+| `meta/active_investigations.md` | Αφαίρεση ερώτησης brand name, προσθήκη ερώτησης Fake MVP metrics |
+| `meta/decision-log.md` | Καταγραφή απόφασης για ψηφοφορία brand name |
+| `notes/Business Model Canvas Initial Plan.md` | Προσθήκη impact, backlinks |
+| `notes/Relevance Branding Workshop.md` | Προσθήκη impact |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (active investigations):** 1 (σύνολο 5)
+- **Νέα tasks (- [ ]):** 1
+- **Canvases ενημερωμένα:** 2/2

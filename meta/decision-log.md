@@ -1,5 +1,11 @@
 # Ημερολόγιο Αποφάσεων (Decision Log)
 
+
+### 2026-06-16 - Επιλογή Brand Name
+- **Απόφαση / Σύνοψη:** Δεν καταλήξαμε σε ένα, προκρίθηκε η επιλογή μέσα από ψηφοφορία ομάδας (shortlist: TapServe, EasyTab, QResto, Breeze, Velo, Kima, Lio, Zeno).
+- **Αρχεία που ενημερώθηκαν:** [[business/logo and branding.md]], [[notes/Business Model Canvas Initial Plan.md]]
+- **Σημείωση για Implementation:** Χρήση ουδέτερης ονομασίας ("το προϊόν", "η εφαρμογή") στον κώδικα/κείμενα μέχρι την τελική επιλογή.
+
 ### 2026-04-10 - Αρχιτεκτονική MVP (Cloud-first Web App)
 - **Απόφαση / Σύνοψη:** Το τρέχον baseline του προϊόντος είναι cloud-first web εφαρμογή σε SvelteKit. Η local-first / Tauri κατεύθυνση παραμένει ερευνητική επιλογή για μελλοντική φάση, όχι το shipped μοντέλο.
 - **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/system_architecture.md]], [[meta/active_investigations.md]]
