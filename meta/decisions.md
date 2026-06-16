@@ -1,1 +1,7 @@
-- [Ethniki Fasoladoula] Approved Poll: πράσινο χρώμα logo
+# Decisions Log
+
+- Εγκεκριμένη Ψηφοφορία (Approved Poll): πράσινο χρώμα logo
+
+## Επόμενες Ενέργειες
+- [ ] Οριστικοποίηση τελικού logo και χρωματικής παλέτας.
+- [ ] Κατοχύρωση domain name για το τελικό brand name.

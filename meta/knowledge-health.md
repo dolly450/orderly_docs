@@ -44,3 +44,7 @@
 ### 2026-04-10
 - **Βελτίωση:** Εισαγωγή Decision Log και μεταφορά προτάσεων σε active investigations. Κανονικοποίηση σημειώσεων Product Design.
 - **Εκκρεμότητες:** Δημιουργία και αποστολή του ερωτηματολογίου (Validation Questionnaire) για εξαγωγή Metrics.
+
+### 2026-04-25
+- **Βελτίωση:** Κανονικοποίηση brand names στο logo and branding.md, προσθήκη tasks και diagrams.
+- **Εκκρεμότητες:** Εκτέλεση validation pilot pitches, επιλογή τελικού brand name.

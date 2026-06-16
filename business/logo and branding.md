@@ -1,16 +1,24 @@
-- **skipq.menu**
+# Brand Name & Logo Ideas
 
-- [ ] έχουμε θέμα με το trademark????
-επιλαχόντα:
+## Πιθανά Ονόματα:
+- TapServe
+- QResto
+- Breeze
+- Kima (ή Kyma)
+- skipq.menu
 - ordersnap
-ordrsnap
-
-pithano name:
+- ordrsnap
 - waitease
 - piase.menu
 - easy + q / quick / snap q
 - zeroq
 - 0wait
+- menqr
 
+## Σχετικές Σημειώσεις
+- [[open-questions]]
+- [[Business Model Canvas Initial Plan]]
 
-menqr
+## Επόμενες Ενέργειες
+- [ ] Επιλογή τελικού brand name με ψηφοφορία ομάδας.
+- [ ] έχουμε θέμα με το trademark????
