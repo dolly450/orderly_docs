@@ -148,15 +148,6 @@
 
 ```
 
-**3. Ερώτηση:** Ποιο θα είναι το όνομα του startup μας;
-**Γιατί είναι κρίσιμη:** Έχουμε καταλήξει ότι το "Orderly" είναι πολύ safe και ότι χρειαζόμαστε κάτι που να εκπέμπει ταχύτητα και καλοκαίρι. Χωρίς brand name δυσκολευόμαστε να φτιάξουμε τα pitch decks.
-**Επίπεδο:** High
-**Πεδίο:** Branding
-**Απάντηση:** Ο χρήστης δεν θυμάται ακριβώς, αλλά έχει σημειώσει προηγουμένως ιδέες (TapServe, EasyTab, QResto, Breeze, Velo, Kima, Lio, Zeno). Χρειάζεται τελική επιλογή (π.χ. με ψηφοφορία στην ομάδα).
-
-**Prompt για AI έρευνα (copy-paste ready):**
-> Φτιάχνουμε ένα B2B2C startup για QR ordering σε beach bars, χωρίς app install (web). Ψάχνουμε για 1-3 συλλαβές brand names που να είναι "Airplane test approved" (να καταλαβαίνει κάποιος πώς γράφεται αν το ακούσει στο τηλέφωνο). Δώσε μου 5 επιλογές με διαθέσιμα .io ή .com domains.
-
 **4. Ερώτηση:** Πώς θα διαχειριστούμε την επιστροφή χρημάτων (refunds) και το payment routing;
 **Γιατί είναι κρίσιμη:** Πώς θα διαχειριστούμε την επιστροφή χρημάτων (refunds) αν ο πελάτης ακυρώσει ή αν το προϊόν δεν υπάρχει, χωρίς να έχουμε εμείς την ευθύνη των χρημάτων (liability);
 **Επίπεδο:** High
@@ -183,6 +174,15 @@
 
 **Prompt για AI έρευνα (copy-paste ready):**
 > Για ένα B2B SaaS εστίασης με QR ordering, πρότεινε έναν διαχωρισμό χαρακτηριστικών (features) για 4 tiers (Free, Basic, Pro, Enterprise). Λάβε υπόψη features όπως: Digital Menu, Ordering, POS Integration, Analytics, Multi-location, Staff Accounts, Custom Branding.
+
+**7. Ερώτηση:** Metrics για Fake MVP
+**Γιατί είναι κρίσιμη:** Πρέπει να ορίσουμε το core OMTM για το Fake MVP πριν πάμε στα beach bars.
+**Επίπεδο:** High
+**Πεδίο:** Analytics
+**Απάντηση:** →
+
+**Prompt για AI έρευνα (copy-paste ready):**
+> Ποιο είναι το One Metric That Matters (OMTM) που πρέπει να μετρήσουμε σε ένα Fake MVP για ένα QR ordering app σε beach bars (π.χ. conversion rate, time-to-order);
 
 ---
 ### Αρχειοθετημένες Ερωτήσεις & Απαντήσεις

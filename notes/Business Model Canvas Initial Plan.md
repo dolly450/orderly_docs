@@ -16,6 +16,7 @@ https://drive.google.com/file/d/18NjHjX3JWkfjrN6kAd7IZCSFYCVN3jq3/view?usp=shari
 ---
 
 ## 2. Brainstorming για το Brand Name
+- [[business/logo and branding.md]]
 
 Το όνομα "Orderly" είναι ασφαλές και περιγραφικό, αλλά ίσως του λείπει λίγο συναίσθημα. Με βάση τις οδηγίες του workshop, ιδανικά ψάχνουμε ένα όνομα με **1-3 συλλαβές** , που να περνάει το **"Airplane Test"** (αν το πείτε σε κάποιον σε μια πτήση, να μπορεί να το γράψει/θυμηθεί εύκολα).
 
@@ -58,3 +59,6 @@ https://drive.google.com/file/d/18NjHjX3JWkfjrN6kAd7IZCSFYCVN3jq3/view?usp=shari
 - [[Relevance Branding Workshop]]
 
 - [ ] Κατοχύρωση domain name για το επιλεγμένο Brand Name (π.χ. Kima, Velo).
+
+## Επιπτώσεις για την ομάδα
+Η επιλογή ονόματος θα γίνει με ψηφοφορία. Το όνομα πρέπει να είναι 1-3 συλλαβές και να περνάει το Airplane Test.

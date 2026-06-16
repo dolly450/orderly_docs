@@ -1,11 +1,11 @@
 - **skipq.menu**
 
 - [ ] έχουμε θέμα με το trademark????
-επιλαχόντα:
+Επιλαχόντα:
 - ordersnap
 ordrsnap
 
-pithano name:
+Πιθανό όνομα:
 - waitease
 - piase.menu
 - easy + q / quick / snap q
@@ -14,3 +14,7 @@ pithano name:
 
 
 menqr
+## Σχετικές Σημειώσεις
+- [[Business Model Canvas Initial Plan]]
+
+- [ ] Ολοκλήρωση ψηφοφορίας για την τελική επιλογή του Brand Name (shortlist: TapServe, EasyTab, QResto, Breeze, Velo, Kima, Lio, Zeno).
