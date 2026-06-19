@@ -13,3 +13,13 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-06-19 - Local-First Database Choice
+- **Απόφαση / Σύνοψη:** Επιλογή Turso/libSQL με embedded replicas για local-first λειτουργία. Το PocketBase λειτουργεί ως alternative plug & play επιλογή.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]]
+- **Σημείωση για Implementation:** Θα χρησιμοποιηθούν official SDKs (@libsql/client) και Drizzle ORM. Custom implementation για SSE.
+
+### 2026-06-19 - Στρατηγική Ενσωμάτωσης POS (PDA vs Add-on)
+- **Απόφαση / Σύνοψη:** Η εφαρμογή θα λειτουργήσει ως add-on/self-service layer και δεν θα αντικαταστήσει τα υπάρχοντα PDA των σερβιτόρων για να μειώσει το friction adoption.
+- **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
+- **Σημείωση για Implementation:** Η προσέγγιση θα είναι direct sales παρουσιάζοντας zero-friction self-service.

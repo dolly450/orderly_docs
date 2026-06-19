@@ -63,6 +63,13 @@ flowchart TD
 Αυτό το ερώτημα πρέπει να επικυρωθεί με A/B testing στο Value Proposition.
 → Δες σχετικά [[model]], [[Questionnaire]], [[COGS, CACs, overheads#Ενδιαφέροντες Παράγοντες]].
 
+
+
+## 7. Βελτιστοποίηση Εξωτερικού Χώρου (Outdoor UX) & Τοποθεσίας (Location)
+
+- **High-contrast outdoor mode:** Σχεδιασμός με υψηλή αντίθεση, μεγάλα κουμπιά και lazy-loaded συμπιεσμένες εικόνες WebP για εύκολη ανάγνωση υπό έντονο ήλιο (παραλίες).
+- **Location-aware ordering:** Δυνατότητα ο λογαριασμός (tab) να «ακολουθεί» τον χρήστη, π.χ. αν μετακινηθεί από την ξαπλώστρα στο bar.
+
 ## Σχετικές Σημειώσεις
 
 - [[v1_scope]] — Εύρος MVP
@@ -75,3 +82,5 @@ flowchart TD
 
 - [ ] Έρευνα κόστους LLM APIs vs Google Translate API για αυτόματη μετάφραση μενού
 - [ ] Τεστ offline mode σε πραγματικές συνθήκες (χωρίς Wi-Fi) πριν τα πιλοτικά, όταν ενεργοποιηθεί η future-phase local-first κατεύθυνση
+
+- [ ] Validation experiment: Customer interview (συνέντευξη πελάτη) για να δούμε αν η λειτουργία Location-aware ordering προσθέτει πραγματική αξία (measurable metric: >70% θετική ανταπόκριση).

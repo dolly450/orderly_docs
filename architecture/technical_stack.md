@@ -34,3 +34,6 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+### Local-First Database (Future Phase)
+Επιλέχθηκε το Turso/libSQL με embedded replicas επειδή δίνει τη δυνατότητα τοπικής αντιγραφής δεδομένων και ασύγχρονου συγχρονισμού (asynchronous sync) με το cloud.
