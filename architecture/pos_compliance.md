@@ -8,9 +8,13 @@
 *   Κάθε απόδειξη πρέπει να φέρει **QR Code επαλήθευσης**.
 
 ## 2. Στρατηγική MVP vs Production
-*   **Phase 1 (MVP):** Η Orderly λειτουργεί ως **Ordering Layer μόνο**. Η πληρωμή γίνεται στο ταμείο με τους υπάρχοντες μηχανισμούς της επιχείρησης. Έτσι αποφεύγεται η πολυπλοκότητα των ΦΗΜΑΣ.
+*   **Phase 1 (MVP):** Η Το προϊόν λειτουργεί ως **Ordering Layer μόνο**. Η πληρωμή γίνεται στο ταμείο με τους υπάρχοντες μηχανισμούς της επιχείρησης. Έτσι αποφεύγεται η πολυπλοκότητα των ΦΗΜΑΣ.
 *   **Phase 2:** Διασύνδεση με το **Unified POS REST API της SBZ Systems**. Διαχειρίζονται κεντρικά την πολυπλοκότητα των POS APIs.
 *   **Phase 3:** Συνεργασία με Παρόχους (π.χ. Oxygen, Epsilon Net).
+
+
+### Επιπτώσεις για την ομάδα
+Η ενσωμάτωση του myDATA REST API (Document type 8.6, MARK number) είναι κρίσιμο διαφοροποιητικό στοιχείο σε σχέση με τους διεθνείς ανταγωνιστές.
 
 ## 3. Κυρίαρχα Συστήματα POS στην Ελλάδα
 1.  **Epsilon Net:** Ηγέτης της αγοράς.
@@ -20,7 +24,7 @@
 
 ```mermaid
 flowchart LR
-    Orderly[Orderly System] -->|JSON API| SBZ[SBZ Systems / POS]
+    Το προϊόν[Το προϊόν System] -->|JSON API| SBZ[SBZ Systems / POS]
     SBZ -->|Reporting| MyDATA[ΑΑΔΕ myDATA]
     SBZ -->|Fiscal Sign| FIMAS[ΦΗΜΑΣ / Πάροχος]
 ```

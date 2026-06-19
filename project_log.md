@@ -61,6 +61,29 @@
 - **Διπλότυπα κανονικοποιημένα:** 1
 - **Νέα Mermaid diagrams:** 2
 
+
+## 📝 Ημερήσια Ενημέρωση — 2026-06-19 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `business/competitive_analysis.md` | Αφαίρεση του "Orderly" και αντικατάστασή του με neutral brand terms |
+| `design/features.md` | Προσθήκη AI extracted notes (location-aware, outdoor UX) και "- [ ]" validation task |
+| `architecture/pos_compliance.md` | Προσθήκη impact for team από AI notes |
+| `meta/decision-log.md` | Αρχειοθέτηση απόφασης για Database (Turso/libSQL) και POS strategy (Add-on) |
+| `architecture/technical_stack.md` | Προσθήκη future-phase DB details |
+| `business/market_strategy.md` | Προσθήκη self-service layer insights |
+| `meta/active_investigations.md` | Αφαίρεση 2 απαντημένων ερωτήσεων και προσθήκη 2 νέων |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας και αφαίρεση Orderly |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας και αφαίρεση Orderly |
+| `meta/knowledge-health.md` | Ενημέρωση metrics |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (bot_questions):** 2
+- **Νέα tasks (- [ ]):** 1
+- **Διπλότυπα κανονικοποιημένα:** 2
+- **Canvases ενημερωμένα:** Ναι
+
 ## 💡 Active Ideas
 - WiFi access for customers (redirect to page).
 - QR Codes on tables for ordering.

@@ -22,11 +22,11 @@ quadrantChart
     title Ανάλυση Ανταγωνισμού QR Ordering (Ελλάδα)
     x-axis "Χαμηλή Εξειδίκευση" --> "Υψηλή Εξειδίκευση (Beach/Festival)"
     y-axis "Βασικό Menu" --> "Πλήρης Παραγγελιοληψία/POS"
-    quadrant-1 "Ευκαιρία Orderly"
+    quadrant-1 "Ευκαιρία Προϊόντος"
     quadrant-2 "Κυρίαρχοι POS (BringFood)"
     quadrant-3 "Απλά Εργαλεία (DigiApp)"
     quadrant-4 "Εξειδικευμένοι (Butler)"
-    "Orderly": [0.85, 0.9]
+    "Το προϊόν": [0.85, 0.9]
     "Butler.gr": [0.7, 0.85]
     "BringFood": [0.3, 0.8]
     "DigiApp": [0.4, 0.5]
