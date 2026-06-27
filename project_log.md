@@ -111,3 +111,22 @@
 
 ### Σημείωση
 - Το `design/v1_scope.md` έμεινε όπως ήταν, κατόπιν ρητής οδηγίας.
+
+## 📝 Ημερήσια Ενημέρωση — 2026-06-27 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Προσθήκη urgent banner για git conflict markers. Αρχειοθέτηση ερώτησης 5. |
+| `notes/Product Design.md` | Προσθήκη Greek μετάφρασης και validation metric (ενεργό dashboard). |
+| `notes/Relevance Branding Workshop.md` | Προσθήκη task με metric ψηφοφορίας & "Επιπτώσεις για την ομάδα". |
+| `business/market_strategy.md` | Μετάφραση ορισμών. Προσθήκη Mermaid flowchart για GTM Phase 1. |
+| `architecture/pos_compliance.md` | Ορισμός ως Self-service layer (Phase 1). |
+| `meta/decision-log.md` | Καταγραφή απόφασης για PDA replacement. |
+| `meta/business-model.canvas` | Ενημέρωση ημερομηνίας last updated. |
+| `meta/user-needs.canvas` | Ενημέρωση ημερομηνίας last updated. |
+
+### Στατιστικά σήμερα
+- **Διπλότυπα κανονικοποιημένα:** 1
+- **Νέα Mermaid diagrams:** 1
+- **Canvases ενημερωμένα:** Ναι

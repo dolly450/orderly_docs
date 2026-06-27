@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-06-27 - Αντικατάσταση ή Ενσωμάτωση PDA
+- **Απόφαση / Σύνοψη:** Δεν προσπαθούμε να αντικαταστήσουμε τα υπάρχοντα PDA. Λειτουργούμε ως self-service layer (Direct sales).
+- **Αρχεία που ενημερώθηκαν:** [[architecture/pos_compliance.md]]
+- **Σημείωση για Implementation:** Το σύστημα λειτουργεί ως ordering layer μόνο, αποφεύγοντας συγκρούσεις με παρόχους POS στην πρώτη φάση (Phase 1).
