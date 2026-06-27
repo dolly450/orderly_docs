@@ -147,9 +147,9 @@ mindmap
 - [ ] Pitch σε μαγαζιά πιλοτικά (στην αρχή ως δωρεάν service) + για traction (**Προϋπόθεση:** να γίνει πρώτα το demo και το ερωτηματολόγιο, ώστε να έχουμε πιο πειστικό approach) → [[../pitch/deck - φαμφάρες type shit#6. Traction]]
 
 ### Ορισμοί Αγοράς (Market Definitions)
-- **Total market:** Όλοι όσοι έχουν το πρόβλημα που εμείς λύνουμε.
-- **Addressable market:** Όλοι όσοι θα μπορούσαν να χρησιμοποιήσουν το προϊόν μας για να λύσουν το πρόβλημα.
-- **Target market:** Εκεί που κάνουμε launch (κάπου συγκεκριμένα, π.χ. στο Παγκράτι).
+- **Total market (Συνολική αγορά):** Όλοι όσοι έχουν το πρόβλημα που εμείς λύνουμε.
+- **Addressable market (Απευθυνόμενη αγορά):** Όλοι όσοι θα μπορούσαν να χρησιμοποιήσουν το προϊόν μας για να λύσουν το πρόβλημα.
+- **Target market (Στοχευόμενη αγορά):** Εκεί που κάνουμε launch (κάπου συγκεκριμένα, π.χ. στο Παγκράτι).
 
 ### Implementation Logic: Phase 1 Sales (Acquiring First 10 Customers)
 - **Primary Method:** Direct Sales (Walking In).
@@ -167,3 +167,10 @@ mindmap
 - Τα integrations με PMS/POS/channel managers μπαίνουν μόνο αν αποδειχθεί ότι είναι blocker για pilot ή για enterprise deal.
 - Δεν πάμε multi-country early, γιατί κάθε χώρα έχει διαφορετικούς dominant POS/PMS vendors. Πρώτα μία αγορά, μετά expansion.
 - Για να μπει φέτος σε hotel, το offer πρέπει να είναι απλό, άμεσο, γρήγορο σε implementation και low friction. Αλλιώς η απάντηση θα είναι "ελάτε του χρόνου".
+
+### Οπτικοποίηση
+```mermaid
+flowchart TD
+  A[GTM Phase 1] --> B[Direct Sales]
+  B --> C[Fake MVP Demo]
+```
