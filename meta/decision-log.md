@@ -1,4 +1,10 @@
 # Ημερολόγιο Αποφάσεων (Decision Log)
+### 2026-07-03 - Επιλογή Βάσης Δεδομένων για Local-First (Turso/libSQL)
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε η αρχιτεκτονική Turso/libSQL (ή PocketBase) αντί για Supabase/CockroachDB για τη λειτουργία local-first, χάρη στην υποστήριξη embedded replicas που προσφέρει αυτόματο sync και χαμηλό αποτύπωμα σε edge συσκευές.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/data_model.md]]
+- **Σημείωση για Implementation:** Χρήση Docker container (`ghcr.io/tursodatabase/libsql-server`) ή embedded σε Go app. Το Turso Cloud Developer tier καλύπτει άνετα το ξεκίνημα (έως 500 DBs).
+
+
 
 ### 2026-04-10 - Αρχιτεκτονική MVP (Cloud-first Web App)
 - **Απόφαση / Σύνοψη:** Το τρέχον baseline του προϊόντος είναι cloud-first web εφαρμογή σε SvelteKit. Η local-first / Tauri κατεύθυνση παραμένει ερευνητική επιλογή για μελλοντική φάση, όχι το shipped μοντέλο.

@@ -14,6 +14,12 @@
 - [2026-03-31] **Cleanup & Insights:** Cleaned up questions and ideas; added insights and commission model from Fasoladoula discussion.
 - [2026-03-31] **Mentors Evaluation:** Δημιουργήθηκε το `meta/mentors.md` για την αξιολόγηση και επιλογή 12 time slots με μέντορες, εστιάζοντας σε B2B Πωλήσεις, MVP Scaling και Fundraising.
 
+## 2026-07-03
+- **Κανονικοποίηση / Μορφοποίηση:** Βελτίωση Product Design και introduction to fund raising notes (ελληνικοί όροι, backlinks, Mermaid mindmap).
+- **Αρχιτεκτονική (Architecture):** Καταγραφή απόφασης για χρήση Turso/libSQL στο local-first MVP (`technical_stack.md`, `data_model.md`).
+- **Έρευνες (Investigations):** Ενημέρωση `meta/decision-log.md` και αφαίρεση ολοκληρωμένης ερώτησης (Database) από `meta/active_investigations.md`.
+- **Canvas / Υγεία Γνώσης:** Ενημερώθηκαν τα timestamps στα canvas.
+
 ## 📝 Ημερήσια Ενημέρωση — 2026-04-08
 
 ### Αρχεία που ενημερώθηκαν

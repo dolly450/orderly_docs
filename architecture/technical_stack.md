@@ -17,6 +17,7 @@
 
 - Local-first packaging με Tauri v2+ δεν είναι το τρέχον shipping model.
 - Embedded replicas / local gateway είναι future-phase κατεύθυνση, όχι baseline που στηρίζεται το repo σήμερα.
+  - **Απόφαση Έρευνας:** Για την υλοποίηση του local-first (όταν απαιτηθεί), επιλέχθηκε το Turso/libSQL λόγω της εγγενούς υποστήριξης embedded replicas (αυτόματο sync, local SQLite DBs) και του χαμηλού memory footprint, που το καθιστά ιδανικό για Raspberry Pi ή παλιά Android.
 - Offline sync και local device routing παραμένουν strategic research, όχι production default.
 
 ## 3. Analytics & Tracking
