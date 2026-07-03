@@ -58,3 +58,6 @@ erDiagram
     PRODUCT ||--o{ ORDER_ITEM : ordered_as
     PRODUCT ||--|| INVENTORY : tracked_by
 ```
+
+## Επιλογή Βάσης Δεδομένων (Database Decision)
+- Για μελλοντική υλοποίηση local-first, επιλέχθηκε η αρχιτεκτονική **Turso/libSQL** με embedded replicas (αντί για Supabase ή CockroachDB). Αυτό εξασφαλίζει μικρό μέγεθος εγκατάστασης σε συσκευές edge (π.χ. Raspberry Pi) και αυτόματο συγχρονισμό στο cloud.

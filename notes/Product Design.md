@@ -2,11 +2,11 @@ https://drive.google.com/file/d/1PdhPwBNBAzjzk6av4FKMecvBdI2eclS3/view?usp=shari
 
 [[business/market_strategy.md]]
 
-USP - Unique Selling Points
-- γιατι το προιον μου ειναι καλυτερο απο τον ανταγωνισμο, ειτε αμεσα ειτε εμμεσα
-- πώς λυνω το προβλημα ή εξυπηρετω τους πελατες με καλύτερο τρόπο
+USP (Unique Selling Points - Μοναδικά Πλεονεκτήματα Πώλησης)
+- γιατί το προϊόν μου είναι καλύτερο από τον ανταγωνισμό, είτε άμεσα είτε έμμεσα
+- πώς λύνω το πρόβλημα ή εξυπηρετώ τους πελάτες με καλύτερο τρόπο
 
-product: business + tech + ux (design)
+Product (Προϊόν): Business (Επιχείρηση) + Tech (Τεχνολογία) + UX (Design - Σχεδιασμός Εμπειρίας Χρήστη)
 
 ## Stages of Product and Growth
 ![Stages of Product and Growth](../images/Stages%20of%20Product%20and%20Growth.png)
@@ -17,17 +17,26 @@ product: business + tech + ux (design)
 3. **Growth (money first):** * Ξεκινά η ραγδαία ανάπτυξη με επένδυση πόρων.
     - Καταλήγει στο στάδιο της ωριμότητας (**Maturity**), όπου η ανάπτυξη συνεχίζεται μέσω εξαγορών και διεθνούς επέκτασης.
 
-## product market fit questions
-1) how likely it is that you would suggest this product or service to a colleague or friends? (1 -10) "NPS" (Net Promoter Score) από -100% έως 100%. Θέλουμε τουλάχιστον +30% για να πούμε ότι έχουμε fit.
-2) How dissapointed would you be if you could no longer use this product?
-   a) very dissapointed (>75%)
-   b) Somewhat dissapointed
-   c) Not dissapointed, it really isn't that useful
-   d) N/A - I no longer use this product
+## Ερωτήσεις για Product/Market Fit (Ταύτιση Προϊόντος-Αγοράς)
+1) Πόσο πιθανό είναι να προτείνετε αυτό το προϊόν ή την υπηρεσία σε έναν συνάδελφο ή φίλους; (1 - 10) "NPS" (Net Promoter Score - Δείκτης Καθαρής Σύστασης) από -100% έως 100%. Θέλουμε τουλάχιστον +30% για να πούμε ότι έχουμε fit.
+2) Πόσο απογοητευμένοι θα ήσασταν αν δεν μπορούσατε πλέον να χρησιμοποιήσετε αυτό το προϊόν;
+   a) Πολύ απογοητευμένος (>75%)
+   b) Κάπως απογοητευμένος
+   c) Καθόλου απογοητευμένος, δεν είναι πραγματικά τόσο χρήσιμο
+   d) Δ/Υ - Δεν χρησιμοποιώ πλέον αυτό το προϊόν
 
-## the right product:
+## Το Σωστό Προϊόν (The Right Product):
 ![the Right product](../images/the%20Right%20product.png)
 Αυτή η εικόνα δείχνει ένα απλό διάγραμμα Venn που ορίζει τι αποτελεί «Το ΣΩΣΤΟ προϊόν» (**The RIGHT product**).
+
+### Οπτικοποίηση
+
+```mermaid
+mindmap
+  root((The RIGHT Product))
+    Customers need it
+    Grows the business
+```
 Συγκεκριμένα, αποτελείται από δύο κύκλους που τέμνονται:
 - **Αριστερός κύκλος:** Προϊόντα που «Οι πελάτες τα χρειάζονται» (**Customers need it**). 
 - **Δεξιός κύκλος:** Προϊόντα που «Αναπτύσσουν την επιχείρηση» (**Grows the business**).
@@ -70,3 +79,5 @@ product: business + tech + ux (design)
 - [[v1_scope]]
 - [[market_strategy]]
 - [[roadmap]]
+
+- [ ] Δημιουργία πλάνου A/B testing για conversion rate στο Fake MVP.
