@@ -58,3 +58,13 @@ erDiagram
     PRODUCT ||--o{ ORDER_ITEM : ordered_as
     PRODUCT ||--|| INVENTORY : tracked_by
 ```
+
+### Οπτικοποίηση
+
+```mermaid
+erDiagram
+    TENANT ||--o{ ORDERS : places
+    ORDERS ||--|{ ORDER_ITEMS : contains
+    ORDER_ITEMS }|--|| PRODUCTS : is
+    TENANT ||--|{ PRODUCTS : offers
+```

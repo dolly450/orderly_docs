@@ -34,3 +34,10 @@
 - [[overview]] — High-level architecture.
 - [[system_architecture]] — Διάγραμμα ροής.
 - [[pos_compliance]] — Φάσεις POS / fiscal integration.
+
+
+## 5. Βάση Δεδομένων (Database) & API
+- **Λύση:** Turso (libSQL) στο Cloud (Developer tier) - Επιλέχθηκε για χαμηλό κόστος και δυνατότητα embedded replicas.
+- **ORM:** Drizzle ORM (Type-safe queries).
+- **Backend/API:** Υλοποίηση σε SvelteKit server layer (ή Go για performance-heavy task).
+- **Σημείωση:** Το Supabase απορρίφθηκε λόγω overhead πόρων για small-scale deployments.

@@ -13,3 +13,8 @@
 - **Απόφαση / Σύνοψη:** Επιλογή του "Direct sales (walking in)" με ένα "Fake MVP" demo.
 - **Αρχεία που ενημερώθηκαν:** [[business/market_strategy.md]]
 - **Σημείωση για Implementation:** Δεν χρησιμοποιούμε automated emails ακόμα. Tracking μέσω απλού CRM (Planka).
+
+### 2026-07-07 - Αρχιτεκτονική Βάσης Δεδομένων & Real-time (Database & Real-time Architecture)
+- **Απόφαση / Σύνοψη:** Επιλέχθηκε το Turso/libSQL (Cloud Developer tier) με Go backend και Drizzle ORM. Real-time updates μέσω SSE.
+- **Αρχεία που ενημερώθηκαν:** [[architecture/technical_stack.md]], [[architecture/data_model.md]]
+- **Σημείωση για Implementation:** Δεν χρησιμοποιούμε Supabase λόγω μεγάλου μεγέθους. Το Turso προσφέρει εύκολο scaling (embedded replicas δωρεάν) και microsecond reads.
