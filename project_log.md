@@ -1,5 +1,25 @@
 # Project Orderly: Log & Progress
 
+## 📝 Ημερήσια Ενημέρωση — 2026-07-07 (Knowledge Operator)
+
+### Αρχεία που ενημερώθηκαν
+| Αρχείο | Τι έγινε |
+|---|---|
+| `meta/active_investigations.md` | Διατήρηση 5 ενεργών ερωτήσεων αυστηρά. |
+| `meta/decision-log.md` | Καταγραφή απόφασης για χρήση Turso/libSQL. |
+| `architecture/technical_stack.md` | Προσθήκη πληροφοριών Turso Database. |
+| `business/pricing_model.md` | Προσθήκη task επικύρωσης. |
+| `business/Questionnaire.md` | Προσθήκη action task για ερωτηματολόγιο. |
+| `meta/user-needs.canvas` | Ημερήσια ενημέρωση timestamp. |
+| `meta/business-model.canvas` | Ημερήσια ενημέρωση timestamp. |
+| `meta/knowledge-health.md` | Ενημέρωση ιχνηλασιμότητας KB. |
+
+### Στατιστικά σήμερα
+- **Νέες ερωτήσεις (bot_questions/active_investigations):** 0
+- **Νέα tasks (- [ ]):** 2
+- **Canvases ενημερωμένα:** Ναι
+
+
 ## 🚀 Accomplishments (Phase 1)
 - [2026-03-26] **Initial Setup:** Created GitHub repo `dolly450/orderly_docs`.
 - [2026-03-26] **Obsidian Vault:** Set up folder structure (architecture, design, business, pitch, meta).
